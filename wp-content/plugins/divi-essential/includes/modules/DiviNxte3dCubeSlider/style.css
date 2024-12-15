@@ -1,0 +1,120 @@
+/* .swiper-container-cube .swiper-slide {
+  visibility: visible !important;
+} */
+.dnxte-3dcubeslider-active .dnxte-3dcubeslider-item {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.dnxte_3dcubeslider_parent .swiper-pagination {
+  width: 100% !important;
+}
+
+.dnxte_3dcubeslider_parent .swiper-pagination-none {
+  display: none;
+}
+.dnxte_3dcubeslider_parent .swiper-pagination-bullet {
+  opacity: 1;
+}
+.dnxte_3dcubeslider_parent .swiper-pagination-bullets {
+  position: relative;
+  text-align: center;
+}
+.dnxte_3dcubeslider_parent .mt-10 {
+  margin-top: 10px;
+}
+.dnxte_3dcubeslider_parent .swiper-pagination-fraction {
+  text-align: center;
+}
+
+.dnxte_3dcubeslider_parent .swiper-button-next,
+.dnxte_3dcubeslider_parent .swiper-button-prev {
+  outline: none;
+  transform: translateY(-50%);
+  margin-top: 0 !important;
+  background-image: none !important;
+}
+
+/*
+*
+* Border 
+*
+*/
+
+.dnxte_3dcubeslider_parent .swiper-container,
+.dnxte-3dcubeslider-heading,
+.dnxte-3dcubeslider-pra {
+  border-width: 0;
+  border-color: #333;
+  border-style: solid;
+}
+
+/*Arrow css*/
+.dnxte_3dcubeslider_parent .swiper-button-container {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.dnxte_3dcubeslider_parent .img-fluid {
+  width: 100%;
+}
+
+.dnexte_cubeslider_arrows_default {
+  right: -1% !important;
+  left: -1% !important;
+}
+.dnexte_cubeslider_arrows_outer {
+  right: -8% !important;
+  left: -8% !important;
+}
+.dnexte_cubeslider_arrows_inner {
+  right: 25px !important;
+  left: 25px !important;
+}
+
+.dnexte_cubeslider_arrows_default_right {
+  right: 0 !important;
+}
+.dnexte_cubeslider_arrows_default_left {
+  left: 0 !important;
+}
+
+.dnexte_cubeslider_arrows_outer_right {
+  right: -8% !important;
+}
+
+.dnexte_cubeslider_arrows_outer_left {
+  left: -8% !important;
+}
+
+.dnexte_cubeslider_arrows_inner_right {
+  right: 25px !important;
+}
+.dnexte_cubeslider_arrows_inner_left {
+  left: 25px !important;
+}
+/**Arrow Css end*/
+
+/*
+*
+* Shadow color css
+*
+*/
+
+.dnxte_3dcubeslider_parent .swiper-container-cube .swiper-cube-shadow {
+  opacity: 1 !important;
+}
+
+.dnxte-3dcubeslider-multitext {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.dnxte-3dcubeslider-pra p:empty {
+  margin: 0;
+  padding: 0;
+}

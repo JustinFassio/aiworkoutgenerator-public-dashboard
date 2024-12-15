@@ -1,0 +1,61 @@
+
+.dnxt-grdnt-text-animation_font {
+    font-size: 100px;
+}
+.dnxt-grdnt-text-animation {
+    background: -o-linear-gradient(135deg,#e52e71,#266de8,#8c65ed,#ff3366);
+    background: linear-gradient(45deg,#e52e71,#266de8,#8c65ed,#ff3366);
+    background-size: 300% 300%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     animation: dnxtgradient 8s ease-in-out infinite; 
+     -webkit-animation: dnxtgradient 8s ease-in-out infinite;
+}
+
+@-webkit-keyframes  dnxtgradient{
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes  dnxtgradient{
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+/* dnxt-grdnt-text-animation-2 */
+.dnxt-grdnt-text-animation-2 {
+    background: -webkit-gradient(linear, left top, right top, from(#ff3366), color-stop(30%, #266de8), color-stop(50%, #000000), color-stop(90%, #8c65ed));
+    background: -o-linear-gradient(left, #ff3366 0%, #266de8 30%, #000000 50%, #8c65ed 90%);
+    background: linear-gradient(90deg, #ff3366 0%, #266de8 30%, #000000 50%, #8c65ed 90%);
+    color: transparent;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: textclip 5.5s linear infinite;
+            animation: textclip 5.5s linear infinite;
+}
+@-webkit-keyframes textclip {
+to {
+    background-position: 200% center;
+}
+}
+@keyframes textclip {
+to {
+    background-position: 200% center;
+}
+}

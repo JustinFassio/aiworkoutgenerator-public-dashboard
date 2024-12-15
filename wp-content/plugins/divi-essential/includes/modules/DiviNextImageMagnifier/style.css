@@ -1,0 +1,12 @@
+.dnxte-magnifier .magnify > .magnify-lens {
+    cursor: none;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 0px solid #333;
+  }
+  .dnxte-magnifier img {
+    width: 100%;
+    border: 0px solid #333;
+  }
+  

@@ -1,0 +1,116 @@
+.dnext-team-creative-sn a span::before {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    /* border: Opx solid #333333; */
+    padding: 15px;
+}
+.dnext-team-creative-social-items span::before {
+    content: attr(data-icon);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+@media (max-width: 980px) {
+    .dnext-team-creative-social-items span::before {
+      content: attr(data-icon-tablet) !important;
+    }
+}
+@media (max-width: 767px) {
+    .dnext-team-creative-social-items span::before {
+        content: attr(data-icon-phone) !important;
+    }
+}
+
+.dnext-team-creative-facebook span::before {
+    content: "\e093";
+    font-family: ETmodules !important;
+    background-color: #3b5998;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-twitter span::before {
+    content: "\e094";
+    font-family: ETmodules !important;
+    background-color: #00aced;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-pinterest span::before {
+    content: "\e095";
+    font-family: ETmodules !important;
+    background-color: #cb2027;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-linkedin span::before {
+    content: "\e09d";
+    font-family: ETmodules !important;
+    background-color: #007bb6;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-tumblr span::before {
+    content: "\e097";
+    font-family: ETmodules !important;
+    background-color: #32506d;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-instagram span::before {
+    content: "\e09a";
+    font-family: ETmodules !important;
+    background-color: #ea2c59;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-skype span::before {
+    content: "\e0a2";
+    font-family: ETmodules !important;
+    background-color: #12a5f4;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-flikr span::before {
+    content: "\e0a6";
+    font-family: ETmodules !important;
+    background-color: #ff0084;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-dribbble span::before {
+    content: "\e09b";
+    font-family: ETmodules !important;
+    background-color: #ea4c8d;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-youtube span::before {
+    content: "\e0a3";
+    font-family: ETmodules !important;
+    background-color: #a82400;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.dnext-team-creative-vimeo span::before {
+    content: "\e09c";
+    font-family: ETmodules !important;
+    background-color: #45bbff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+li.dnext-team-creative-sn a span:before {
+    border: 0px solid #333333;
+}

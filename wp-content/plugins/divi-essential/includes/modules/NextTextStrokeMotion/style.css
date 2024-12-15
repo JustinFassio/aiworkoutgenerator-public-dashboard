@@ -1,0 +1,48 @@
+
+.text_stroke_svg_selector svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dnxt-text-stroke-animation-text {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.dnxt-text-stroke-animation-text:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1s;
+}
+
+.dnxt-text-stroke-animation-text:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.dnxt-text-stroke-animation-text:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.dnxt-text-stroke-animation-text:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.dnxt-text-stroke-animation-text:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+.dnxt-text-stroke-animation-text {
+  font-size: 100px;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}

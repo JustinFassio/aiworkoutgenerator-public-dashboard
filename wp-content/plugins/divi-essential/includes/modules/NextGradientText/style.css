@@ -1,0 +1,108 @@
+
+  .dnxt-gradient-text.dnxt-gradient-text-color {
+    display: inline-block;
+  }
+  
+  @-webkit-keyframes a-ltr-after{
+    0% {-webkit-transform: translateX(-100%);transform: translateX(-100%)}
+    100% {-webkit-transform: translateX(101%);transform: translateX(101%)}
+  }
+  
+  @keyframes a-ltr-after{
+    0% {-webkit-transform: translateX(-100%);transform: translateX(-100%)}
+    100% {-webkit-transform: translateX(101%);transform: translateX(101%)}
+  }
+  
+  @-webkit-keyframes a-ltr-before{
+    0% {-webkit-transform: translateX(0);transform: translateX(0)}
+    100% {-webkit-transform: translateX(200%);transform: translateX(200%)}
+  }
+  
+  @keyframes a-ltr-before{
+    0% {-webkit-transform: translateX(0);transform: translateX(0)}
+    100% {-webkit-transform: translateX(200%);transform: translateX(200%)}
+  }
+  /* REVEAL EFFECT */
+  .dnxt-reveal-text-container .reveal-effect {
+          overflow: hidden;
+          position: relative;
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect>* {
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          position: relative;
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect>* {
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect {
+          -webkit-transition-property: -webkit-transform;
+          transition-property: -webkit-transform;
+          transition-property: transform;
+          transition-property: transform, -webkit-transform;
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect {
+          -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+          -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+          transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect.animated {
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect.animated * {
+          -webkit-animation-name: show-img-1;
+          animation-name: show-img-1;
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect:after {
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect:after {
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); 
+          -webkit-transform-origin: left top;
+          transform-origin: left top;
+          -webkit-transform: scale(0.05, 0);
+          transform: scale(0.05, 0);
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;     
+  }
+  
+  .dnxt-reveal-text-container .reveal-effect.animated:after {
+  
+          -webkit-animation-name: slide-bg-2;
+          animation-name: slide-bg-2;
+  }
+  .dnxt-reveal-text-container{
+          background-size: cover;
+      background-repeat: no-repeat;
+  }

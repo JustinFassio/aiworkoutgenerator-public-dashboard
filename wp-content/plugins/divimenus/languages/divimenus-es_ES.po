@@ -1,0 +1,1882 @@
+# Copyright (C) 2018 DonDivi
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: DiviMenus 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: dondivi/dondivi-admin.php:40
+msgid "DonDivi Licensing Page"
+msgstr "Página de licencias de DonDivi"
+
+#: dondivi/dondivi-admin.php:41 dondivi/dondivi-admin.php:145
+msgid "Licenses"
+msgstr "Licencias"
+
+#: dondivi/dondivi-admin.php:67
+msgid ""
+"Divi is required. Please install and activate the Divi theme in order to use "
+"this plugin"
+msgstr "Por favor, instala y activa Divi para poder usar este plugin"
+
+#: dondivi/dondivi-admin.php:85
+msgid "Settings saved"
+msgstr "Ajustes guardados"
+
+#: dondivi/dondivi-admin.php:102
+msgid "DonDivi Extra Tools"
+msgstr ""
+
+#: dondivi/dondivi-admin.php:112
+msgid ""
+"Inserts a quick link to the Visual Builder below the titles of your pages, "
+"posts and layouts."
+msgstr ""
+"Inserta un enlace rápido al Visual Builder debajo de los títulos de tus "
+"páginas, posts y layouts."
+
+#: dondivi/dondivi-admin.php:123
+msgid ""
+"This tool provides you a shortcode for each Divi Library layout so that you "
+"can use it in your modules."
+msgstr ""
+"Con esta herramienta obtendrás un shortcode para cada layout de tu "
+"Biblioteca que podrás insertar dentro de tus módulos."
+
+#: dondivi/dondivi-admin.php:129
+msgid "Save changes"
+msgstr "Guardar Cambios"
+
+#: dondivi/dondivi-admin.php:137
+msgid "Help Center"
+msgstr "Centro de ayuda"
+
+#: dondivi/dondivi-admin.php:141
+msgid "Documentation"
+msgstr "Documentación"
+
+#: dondivi/dondivi-admin.php:142
+msgid "Support"
+msgstr "Soporte técnico"
+
+#: dondivi/dondivi-admin.php:143
+msgid "DonDivi Layouts"
+msgstr ""
+
+#: dondivi/dondivi-admin.php:157 dondivi/dondivi-license.php:84
+msgid "From Spain with "
+msgstr ""
+
+#: dondivi/dondivi-admin.php:204
+msgid "Use Visual Builder"
+msgstr "Usar Constructor Visual"
+
+#: dondivi/dondivi-admin.php:222
+msgid "DonDivi shortcode"
+msgstr ""
+
+#: dondivi/dondivi-license.php:15
+msgid ""
+"Divi is required. Please install and activate Divi in order to use this "
+"plugin"
+msgstr ""
+"Este plugin funciona para Divi. Por favor, instala y activa Divi para poder "
+"usarlo"
+
+#: dondivi/dondivi-license.php:61
+msgid "License key"
+msgstr ""
+
+#: dondivi/dondivi-license.php:67
+msgid "Deactivate"
+msgstr "Desactivar"
+
+#: dondivi/dondivi-license.php:69
+msgid "Activate"
+msgstr "Activar"
+
+#: dondivi/dondivi-license.php:71
+msgid "Check license"
+msgstr "Comprobar licencia"
+
+#: dondivi/dondivi-license.php:113
+msgid "This license is active for this URL."
+msgstr "Esta licencia está activa para esta URL."
+
+#: dondivi/dondivi-license.php:115
+msgid "This license is not active for this URL."
+msgstr "Esta licencia no está activa para esta URL."
+
+#: dondivi/dondivi-license.php:152 dondivi/dondivi-license.php:185
+#: dondivi/dondivi-license.php:226
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: dondivi/dondivi-license.php:163
+msgid "Your license key expired on %s."
+msgstr "Tu clave de licencia expiró el %s."
+
+#: dondivi/dondivi-license.php:169
+msgid "Your license key has been disabled."
+msgstr "Tu clave de licencia ha sido deshabilitada."
+
+#: dondivi/dondivi-license.php:172
+msgid "Invalid license."
+msgstr "Licencia inválida."
+
+#: dondivi/dondivi-license.php:176
+msgid "Your license is not active for this URL."
+msgstr "Tu licencia no está activa para esta URL."
+
+#: dondivi/dondivi-license.php:179
+msgid "This appears to be an invalid license key"
+msgstr "No parece ser una clave de licencia válida"
+
+#: dondivi/dondivi-license.php:182
+msgid "Your license key has reached its activation limit."
+msgstr "Tu clave de licencia ha alcanzado su límite de activación."
+
+#: dondivi/dondivi-license.php:195
+msgid "You have activated your license."
+msgstr "Has activado tu licencia."
+
+#: dondivi/dondivi-license.php:232
+msgid ""
+"You have deactivated your license. Remember that you need an active license "
+"to get automatic upgrades and support."
+msgstr ""
+"Has desactivado tu licencia. Recuerda que necesitas una licencia activa para "
+"que te lleguen las actualizaciones y recibir soporte."
+
+#: dondivi/dondivi-updater.php:227
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: dondivi/dondivi-updater.php:235
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+
+#: dondivi/dondivi-updater.php:473
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: dondivi/dondivi-updater.php:473
+msgid "Error"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:28
+msgid ""
+"This defines the HTML ALT text. A short description of your image can be "
+"placed here."
+msgstr ""
+
+#: includes/common/divimenus-helper.php:49
+msgid "Is Shopping Cart"
+msgstr "Es Carrito"
+
+#: includes/common/divimenus-helper.php:58
+msgid "eCommerce Platform"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:69
+msgid "Show Item Count"
+msgstr "Mostrar Número de Artículos"
+
+#: includes/common/divimenus-helper.php:78
+msgid "Show Zero Value"
+msgstr "Mostrar Cero Artículos"
+
+#: includes/common/divimenus-helper.php:86
+msgid "Cart Info Background"
+msgstr "Carrito Info Fondo"
+
+#: includes/common/divimenus-helper.php:127
+msgid "Learn more about this field in the"
+msgstr "Aprende Más sobre este campo en la"
+
+#: includes/common/divimenus-helper.php:127
+msgid "documentation"
+msgstr "documentación"
+
+#: includes/common/divimenus-helper.php:132
+msgid "-- None --"
+msgstr "-- Ninguno --"
+
+#: includes/common/divimenus-helper.php:133
+msgid "Fade"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:134
+msgid "Slide Down"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:135
+msgid "Slide Up"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:136
+msgid "Slide Left"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:137
+msgid "Slide Right"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:143
+msgid "Enter Effect"
+msgstr "Efecto de Entrada"
+
+#: includes/common/divimenus-helper.php:153
+msgid "Exit Effect"
+msgstr "Efecto de salida"
+
+#: includes/common/divimenus-helper.php:163
+msgid "Duration"
+msgstr "Duración"
+
+#: includes/common/divimenus-helper.php:177
+#: includes/common/divimenus-helper.php:215
+msgid "URL"
+msgstr "URL"
+
+#: includes/common/divimenus-helper.php:178
+msgid "Enter your destination URL here."
+msgstr "Introduce la URL aquí."
+
+#: includes/common/divimenus-helper.php:184
+#: includes/common/divimenus-helper.php:607
+msgid "URL Opens"
+msgstr "El enlace se abre"
+
+#: includes/common/divimenus-helper.php:185
+#: includes/common/divimenus-helper.php:608
+msgid "Here you can choose whether or not your link opens in a new window"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:188
+#: includes/common/divimenus-helper.php:612
+msgid "In The Same Window"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:189
+#: includes/common/divimenus-helper.php:613
+msgid "In The New Tab"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:195
+msgid "Enable Active State"
+msgstr "Habilitar estado activo"
+
+#: includes/common/divimenus-helper.php:196
+msgid ""
+"Here you can choose whether or not this menu item should be on hover state "
+"when the link URL matches the page URL"
+msgstr ""
+"Aquí puedes elegir si este Menu Item debería mostrarse en hover si su URL "
+"coincide con la URL de la página"
+
+#: includes/common/divimenus-helper.php:203
+msgid "Close DiviMenu On Click"
+msgstr "Cerrar DiviMenu al Clicar"
+
+#: includes/common/divimenus-helper.php:204
+msgid ""
+"Enable this option if you want to close the DiviMenu when clicking on this "
+"Menu Item"
+msgstr ""
+"Activa esta opción si quieres cerrar el DiviMenu al clicar este Menu Item"
+
+#: includes/common/divimenus-helper.php:212
+msgid "Link Type"
+msgstr "Tipo de Enlace"
+
+#: includes/common/divimenus-helper.php:221
+msgid "Link Relationship"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:224
+msgid ""
+"Specify the value of your link's <em>rel</em> attribute. The <em>rel</em> "
+"attribute specifies the relationship between the current document and the "
+"linked document.<br><strong>Tip:</strong> Search engines can use this "
+"attribute to get more information about a link."
+msgstr ""
+
+#: includes/common/divimenus-helper.php:311
+msgid "Apply Hover Options"
+msgstr "Aplicar Opciones de Hover en"
+
+#: includes/common/divimenus-helper.php:312
+msgid ""
+"Here you can choose whether the hover content and styles should only be "
+"applied when clicking."
+msgstr ""
+"Aquí puedes elegir si el contenido y los estilos Hover deben aplicarse solo "
+"al clicar."
+
+#: includes/common/divimenus-helper.php:315
+msgid "On Hover (Divi default)"
+msgstr "Hover (por defecto)"
+
+#: includes/common/divimenus-helper.php:316
+msgid "On Click"
+msgstr "Clic"
+
+#: includes/common/divimenus-helper.php:573
+msgid "Top Left"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:574
+msgid "Top Center"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:575
+msgid "Top Right"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:576
+msgid "Center Left"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:577
+msgid "Center"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:578
+msgid "Center Right"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:579
+msgid "Bottom Left"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:580
+msgid "Bottom Center"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:581
+msgid "Bottom Right"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:588
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:28
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:36
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:167
+msgid "Logo"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:589
+msgid "Upload an image to display beside your menu."
+msgstr ""
+
+#: includes/common/divimenus-helper.php:591
+#: includes/common/divimenus-helper.php:1375
+#: includes/modules/DiviMenus/DiviMenus.php:532
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:240
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:106
+msgid "Upload an image"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:592
+#: includes/common/divimenus-helper.php:1376
+#: includes/modules/DiviMenus/DiviMenus.php:408
+#: includes/modules/DiviMenus/DiviMenus.php:533
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:251
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:241
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:107
+msgid "Choose an Image"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:593
+msgid "Set As Logo"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:600
+msgid "Logo Link URL"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:601
+msgid ""
+"If you would like to make your logo a link, input your destination URL here."
+msgstr ""
+
+#: includes/common/divimenus-helper.php:619
+#: includes/common/divimenus-helper.php:1383
+msgid "Placement"
+msgstr "Ubicación"
+
+#: includes/common/divimenus-helper.php:628
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:289
+msgid "Horizontal Alignment"
+msgstr "Alineación Horizontal"
+
+#: includes/common/divimenus-helper.php:638
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:300
+msgid "Vertical Alignment"
+msgstr "Alineación Vertical"
+
+#: includes/common/divimenus-helper.php:640
+#: includes/common/divimenus-helper.php:959
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:303
+msgid "Top"
+msgstr "Arriba"
+
+#: includes/common/divimenus-helper.php:640
+#: includes/modules/DiviMenus/DiviMenus.php:366
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:303
+msgid "Middle"
+msgstr "Centro"
+
+#: includes/common/divimenus-helper.php:640
+#: includes/common/divimenus-helper.php:961
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:303
+msgid "Bottom"
+msgstr "Abajo"
+
+#: includes/common/divimenus-helper.php:648
+msgid "Logo Width"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:660
+msgid "Absolute Position"
+msgstr "Posición Absoluta"
+
+#: includes/common/divimenus-helper.php:665
+msgid ""
+"Enable this option if you want the DiviMenu to take up all the available "
+"space. Useful for mobile menus"
+msgstr ""
+"Activa esta opción si quieres que el DiviMenu ocupe todo el espacio "
+"disponible"
+
+#: includes/common/divimenus-helper.php:666
+msgid "Learn more here"
+msgstr "Más información"
+
+#: includes/common/divimenus-helper.php:673
+msgid "Logo Margin"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:843
+#: includes/common/divimenus-helper.php:1119
+msgid "Divi Layout"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:844
+#: includes/common/divimenus-helper.php:1120
+msgid "Here you can choose the Divi Library saved layout."
+msgstr "Aquí puedes elegir una disposición de la Biblioteca de Divi."
+
+#: includes/common/divimenus-helper.php:854
+#: includes/common/divimenus-helper.php:1025
+msgid "Show On Hover"
+msgstr "Mostrar en Hover"
+
+#: includes/common/divimenus-helper.php:855
+#: includes/common/divimenus-helper.php:1026
+msgid ""
+"Here you can choose whether this link type should be triggered on hover as "
+"well."
+msgstr ""
+"Aquí puedes elegir si este tipo de enlace debería funcionar también al hacer "
+"hover sobre el Menu Item."
+
+#: includes/common/divimenus-helper.php:863
+msgid "Show Close Icon"
+msgstr "Mostrar Icono de Cierre"
+
+#: includes/common/divimenus-helper.php:864
+msgid ""
+"Here can you choose whether or not a close icon should be also used to "
+"dismiss the popup."
+msgstr "Aquí puedes elegir si debería mostrarse un icono para cerrar el popup."
+
+#: includes/common/divimenus-helper.php:872
+msgid "Close Icon"
+msgstr "Icono de Cierre"
+
+#: includes/common/divimenus-helper.php:881
+msgid "Location"
+msgstr "Ubicación"
+
+#: includes/common/divimenus-helper.php:890
+msgid "Popup Max Width"
+msgstr "Popup Anchura Máxima"
+
+#: includes/common/divimenus-helper.php:905
+msgid "Limit Width on Large Screens"
+msgstr "Limitar Anchura en pantallas grandes"
+
+#: includes/common/divimenus-helper.php:906
+msgid ""
+"Here you can choose whether or not the popup width should be limited on "
+"screen sizes greater than 1080 pixels."
+msgstr ""
+"Aquí puedes elegir si se debería limitar la anchura del popup en tamaños de "
+"pantalla mayores a 1080 píxeles."
+
+#: includes/common/divimenus-helper.php:915
+msgid "Popup Max Height"
+msgstr "Popup Altura Máxima"
+
+#: includes/common/divimenus-helper.php:930
+msgid "Overlay Color"
+msgstr "Color del Overlay"
+
+#: includes/common/divimenus-helper.php:938
+msgid "Close Icon Color"
+msgstr "Icono de Cierre Color"
+
+#: includes/common/divimenus-helper.php:946
+msgid "Close Icon Font Size"
+msgstr "Icono de Cierre Tamaño de Fuente"
+
+#: includes/common/divimenus-helper.php:960
+msgid "Right"
+msgstr "Derecha"
+
+#: includes/common/divimenus-helper.php:962
+msgid "Left"
+msgstr "Izquierda"
+
+#: includes/common/divimenus-helper.php:964
+msgid "Inherited"
+msgstr "Heredada"
+
+#: includes/common/divimenus-helper.php:971
+msgid "-- Select --"
+msgstr "-- Seleccionar --"
+
+#: includes/common/divimenus-helper.php:994
+msgid "Element CSS ID"
+msgstr "ID del Elemento"
+
+#: includes/common/divimenus-helper.php:995
+msgid ""
+"Here you can enter the CSS ID of the element you want to show. You can also "
+"enter multiple CSS IDs separated by commas."
+msgstr ""
+"Aquí puedes introducir el ID del elemento (CSS ID) que quieres mostrar. "
+"También puedes mostrar varios IDs separados por comas."
+
+#: includes/common/divimenus-helper.php:1001
+msgid "Element CSS Class"
+msgstr "Clase del Elemento"
+
+#: includes/common/divimenus-helper.php:1002
+msgid ""
+"Here you can enter the CSS class of the element(s) you want to show. You can "
+"also enter multiple CSS classes separated by commas."
+msgstr ""
+"Aquí puedes introducir la clase CSS del elemento. También puedes mostrar "
+"varias clases separadas por comas."
+
+#: includes/common/divimenus-helper.php:1008
+msgid "Toggle Visibility"
+msgstr "Cambiar Visibilidad"
+
+#: includes/common/divimenus-helper.php:1009
+msgid ""
+"Here you choose whether or not the element should toggle from visible to "
+"hidden."
+msgstr ""
+"Aquí puedes elegir si el elemento debe cambiar de oculto a visible y "
+"viceversa."
+
+#: includes/common/divimenus-helper.php:1017
+msgid "Keep Visible"
+msgstr "Mantener Visible"
+
+#: includes/common/divimenus-helper.php:1018
+msgid ""
+"Here you choose whether or not to keep this element visible once displayed."
+msgstr ""
+"Aquí puedes elegir si el elemento debe permanecer visible una vez que se "
+"muestra."
+
+#: includes/common/divimenus-helper.php:1034
+msgid "Hide On Menu Button Click"
+msgstr "Ocultar al clicar en el Menu Button"
+
+#: includes/common/divimenus-helper.php:1035
+msgid ""
+"Here you choose whether or not to hide the element when closing the DiviMenu."
+msgstr ""
+"Aquí puedes elegir si el elemento debería ocultarse al cerrar el DiviMenu."
+
+#: includes/common/divimenus-helper.php:1043
+msgid "Hide On Page Click"
+msgstr "Ocultar al Clicar en la Página"
+
+#: includes/common/divimenus-helper.php:1044
+msgid "Here you choose whether or not to hide the element by clicking outside."
+msgstr ""
+"Aquí puedes elegir si el elemento debería ocultarse al hacer clic fuera de "
+"él."
+
+#: includes/common/divimenus-helper.php:1052
+msgid "Initial State"
+msgstr "Estado Inicial"
+
+#: includes/common/divimenus-helper.php:1053
+msgid "Choose whether the element should start as visible or not."
+msgstr "Elige si el elemento debería mostrarse al principio visible."
+
+#: includes/common/divimenus-helper.php:1056
+msgid "Hidden"
+msgstr "Oculto"
+
+#: includes/common/divimenus-helper.php:1057
+msgid "Visible"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:1063
+#: includes/common/divimenus-helper.php:1283
+msgid "Open URL"
+msgstr "Abrir URL"
+
+#: includes/common/divimenus-helper.php:1064
+#: includes/common/divimenus-helper.php:1284
+msgid ""
+"If enabled, the destination URL introduced in the URL field will be opened "
+"on Menu Item Click"
+msgstr ""
+"Aquí puedes elegir si la URL de destino introducida en el campo URL debería "
+"abrirse al clicar el Menu Item"
+
+#: includes/common/divimenus-helper.php:1107
+msgid "Sub Source"
+msgstr "Sub Origen"
+
+#: includes/common/divimenus-helper.php:1110
+msgid "Divi Library"
+msgstr "Biblioteca de Divi"
+
+#: includes/common/divimenus-helper.php:1111
+#: includes/common/divimenus-helper.php:1133
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:73
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:180
+msgid "WordPress Menu"
+msgstr "Menú WordPress"
+
+#: includes/common/divimenus-helper.php:1136
+msgid "Select a menu that should be used as the dropdown menu"
+msgstr "Selecciona un menú de WordPress"
+
+#: includes/common/divimenus-helper.php:1137
+msgid "Click here to create a new menu"
+msgstr "Clica aquí para crear un menú"
+
+#: includes/common/divimenus-helper.php:1149
+msgid "Preview in the Builder"
+msgstr "Previsualizar"
+
+#: includes/common/divimenus-helper.php:1150
+msgid ""
+"Toggle this field to temporarily preview the sub element while editing this "
+"Menu Item."
+msgstr ""
+"Activa esta opción para previsualizar temporalmente el Sub mientras editas "
+"este Menu Item."
+
+#: includes/common/divimenus-helper.php:1181
+msgid "Use Custom Display"
+msgstr "Usar Display Personalizado"
+
+#: includes/common/divimenus-helper.php:1184
+msgid ""
+"Enable this option if you want to manually set how the Sub should be "
+"displayed"
+msgstr ""
+"Habilita esta opción si quieres elegir manualmente como el Sub debe ser "
+"mostrado"
+
+#: includes/common/divimenus-helper.php:1185
+msgid "Learn more about the default display behavior"
+msgstr "Más información"
+
+#: includes/common/divimenus-helper.php:1193
+msgid "Custom Display"
+msgstr "Display Personalizado"
+
+#: includes/common/divimenus-helper.php:1196
+msgid "Over the page elements when hovering"
+msgstr "Sobre el contenido al hacer hover"
+
+#: includes/common/divimenus-helper.php:1197
+msgid "Inline when clicking"
+msgstr "Inline al clicar"
+
+#: includes/common/divimenus-helper.php:1205
+msgid "Sub Width"
+msgstr "Ancho del Sub"
+
+#: includes/common/divimenus-helper.php:1206
+msgid ""
+"You can set a width here. If using Divi Layouts, remember that you can set "
+"the width in the Layout itself."
+msgstr "Aquí puedes establecer la anchura del Sub."
+
+#: includes/common/divimenus-helper.php:1220
+msgid "Sub Offset"
+msgstr "Separación"
+
+#: includes/common/divimenus-helper.php:1229
+msgid "Collapsible"
+msgstr "Colapsable"
+
+#: includes/common/divimenus-helper.php:1240
+msgid "Collapse Icon"
+msgstr "Icono"
+
+#: includes/common/divimenus-helper.php:1252
+msgid "Accordion"
+msgstr "Acordeón"
+
+#: includes/common/divimenus-helper.php:1263
+msgid "Show Arrow"
+msgstr "Mostrar Flecha"
+
+#: includes/common/divimenus-helper.php:1271
+msgid "Arrow Direction"
+msgstr "Dirección"
+
+#: includes/common/divimenus-helper.php:1272
+msgid "Flip the arrow upwards or downwards to change its direction"
+msgstr "Aquí puedes cambiar la dirección de la flecha"
+
+#: includes/common/divimenus-helper.php:1275
+msgid "Upwards"
+msgstr "Hacia Arriba"
+
+#: includes/common/divimenus-helper.php:1276
+msgid "Downwards"
+msgstr "Hacia Abajo"
+
+#: includes/common/divimenus-helper.php:1292
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:28
+msgid "Alignment"
+msgstr "Alineación"
+
+#: includes/common/divimenus-helper.php:1302
+#: includes/modules/DiviMenus/DiviMenus.php:1149
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:329
+msgid "Menu Item Background"
+msgstr "Menu Item Fondo"
+
+#: includes/common/divimenus-helper.php:1303
+msgid "Here you can define a custom color for the menu items."
+msgstr ""
+"Aquí puedes definir un color de fondo para los ítems del menú de WordPress."
+
+#: includes/common/divimenus-helper.php:1313
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:496
+msgid "Menu Item Padding"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:1314
+msgid "Here you can define the menu items padding."
+msgstr "Aquí puedes definir el padding de los Menu Items."
+
+#: includes/common/divimenus-helper.php:1323
+msgid "Sub Menu Item Padding"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:1324
+msgid "Here you can define the sub menu items padding."
+msgstr "Aquí puedes definir el padding de los Sub Menu Items."
+
+#: includes/common/divimenus-helper.php:1333
+msgid "Arrow Color"
+msgstr "Color de la Flecha"
+
+#: includes/common/divimenus-helper.php:1347
+msgid "Show Icon / Image"
+msgstr "Mostrar Icono / Imagen"
+
+#: includes/common/divimenus-helper.php:1357
+#: includes/common/divimenus-helper.php:1365
+#: includes/modules/DiviMenus/DiviMenus.php:378
+#: includes/modules/DiviMenus/DiviMenus.php:397
+#: includes/modules/DiviMenus/DiviMenus.php:502
+#: includes/modules/DiviMenus/DiviMenus.php:521
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:220
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:239
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:213
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:229
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:96
+msgid "Icon"
+msgstr "Icono"
+
+#: includes/common/divimenus-helper.php:1358
+#: includes/common/divimenus-helper.php:1373
+#: includes/modules/DiviMenus/DiviMenus.php:379
+#: includes/modules/DiviMenus/DiviMenus.php:405
+#: includes/modules/DiviMenus/DiviMenus.php:503
+#: includes/modules/DiviMenus/DiviMenus.php:529
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:221
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:248
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:65
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:214
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:238
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:103
+msgid "Image"
+msgstr "Imagen"
+
+#: includes/common/divimenus-helper.php:1377
+#: includes/modules/DiviMenus/DiviMenus.php:409
+#: includes/modules/DiviMenus/DiviMenus.php:534
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:252
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:242
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:108
+msgid "Set As Image"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:1391
+msgid "Padding"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:1402
+msgid "Hide Text On"
+msgstr "Ocultar Texto en"
+
+#: includes/common/divimenus-helper.php:1405
+#: includes/common/divimenus-helper.php:1416
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:315
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:327
+msgid "Phone"
+msgstr "Teléfono"
+
+#: includes/common/divimenus-helper.php:1406
+#: includes/common/divimenus-helper.php:1417
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:316
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:328
+msgid "Tablet"
+msgstr "Tableta"
+
+#: includes/common/divimenus-helper.php:1407
+#: includes/common/divimenus-helper.php:1418
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:317
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:329
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: includes/common/divimenus-helper.php:1413
+msgid "Hide Icon / Image On"
+msgstr "Ocultar Icono / Imagen en"
+
+#: includes/common/divimenus-helper.php:1424
+#: includes/modules/DiviMenus/DiviMenus.php:718
+#: includes/modules/DiviMenus/DiviMenus.php:965
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:357
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:415
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:266
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:210
+msgid "Icon Color"
+msgstr "Color del Icono"
+
+#: includes/common/divimenus-helper.php:1434
+#: includes/modules/DiviMenus/DiviMenus.php:729
+#: includes/modules/DiviMenus/DiviMenus.php:976
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:368
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:424
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:276
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:221
+msgid "Icon Font Size"
+msgstr "Tamaño de fuente del icono"
+
+#: includes/common/divimenus-helper.php:1446
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:379
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:433
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:287
+msgid "Image Width"
+msgstr "Ancho de la Imagen"
+
+#: includes/common/divimenus-helper.php:1506
+msgid "No"
+msgstr ""
+
+#: includes/common/divimenus-helper.php:1507
+msgid "Yes"
+msgstr "Sí"
+
+#: includes/divimenus.php:53 includes/modules/DiviMenus/DiviMenus.php:380
+#: includes/modules/DiviMenus/DiviMenus.php:418
+#: includes/modules/DiviMenus/DiviMenus.php:504
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:222
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:261
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:215
+msgid "Text"
+msgstr "Texto"
+
+#: includes/divimenus.php:54
+msgid "Define the Text for your Menu Item."
+msgstr "Define el texto para tu Menu Item."
+
+#. Plugin Name of the plugin/theme
+msgid "DiviMenus"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:20
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:20
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:9
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:21
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:92
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:121
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:9
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:21
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:27
+msgid "Menu Item"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:27
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:27
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:35
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:163
+msgid "DiviMenu"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:28
+#: includes/modules/DiviMenus/DiviMenus.php:36
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:29
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:37
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:82
+msgid "Menu Button"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:29
+#: includes/modules/DiviMenus/DiviMenus.php:40
+#: includes/modules/DiviMenus/DiviMenus.php:454
+msgid "Menu Button Title"
+msgstr "Título del Menu Button"
+
+#: includes/modules/DiviMenus/DiviMenus.php:30
+#: includes/modules/DiviMenus/DiviMenus.php:41
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:30
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:41
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:97
+msgid "Menu Items"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:31
+#: includes/modules/DiviMenus/DiviMenus.php:45
+msgid "Menu Items Title"
+msgstr "Título de los Menu Items"
+
+#: includes/modules/DiviMenus/DiviMenus.php:37
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:38
+msgid "Menu Button TEXT"
+msgstr "Texto del Menu Button"
+
+#: includes/modules/DiviMenus/DiviMenus.php:38
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:39
+msgid "Menu Button ICON"
+msgstr "Icono del Menu Button"
+
+#: includes/modules/DiviMenus/DiviMenus.php:39
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:40
+msgid "Menu Button IMAGE"
+msgstr "Imagen del Menu Button"
+
+#: includes/modules/DiviMenus/DiviMenus.php:42
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:42
+msgid "Menu Items TEXT"
+msgstr "Texto de los Menu Items"
+
+#: includes/modules/DiviMenus/DiviMenus.php:43
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:43
+msgid "Menu Items ICON"
+msgstr "Icono de los Menu Items"
+
+#: includes/modules/DiviMenus/DiviMenus.php:44
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:44
+msgid "Menu Items IMAGE"
+msgstr "Imagen de los Menu Items"
+
+#: includes/modules/DiviMenus/DiviMenus.php:46
+#: includes/modules/DiviMenus/DiviMenus.php:1097
+msgid "DiviMenu Alignment"
+msgstr "Alineación del DiviMenu"
+
+#: includes/modules/DiviMenus/DiviMenus.php:47
+msgid "Spacing"
+msgstr "Separación"
+
+#: includes/modules/DiviMenus/DiviMenus.php:54
+msgid "Introducing DiviMenus: Define the ELEMENTS"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:55
+msgid "Introducing DiviMenus: Define the STYLE"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:56
+msgid "Introducing DiviMenus: Define the LINKS"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:57
+msgid "Introducing DiviMenus: Define the POSITION"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:58
+msgid "DonDivi Extra Tool: Layouts Shortcodes"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:95
+#: includes/modules/DiviMenus/DiviMenus.php:112
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:58
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:45
+msgid "Background"
+msgstr "Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:120
+#: includes/modules/DiviMenus/DiviMenus.php:1165
+msgid "DiviMenu Background"
+msgstr "DiviMenu Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:126
+#: includes/modules/DiviMenus/DiviMenus.php:1133
+msgid "Menu Button Background"
+msgstr "Menu Button Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:134
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:89
+msgid "Menu Button Image"
+msgstr "Imagen del Menu Button"
+
+#: includes/modules/DiviMenus/DiviMenus.php:142
+msgid "Menu Items Background"
+msgstr "Menu Items Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:149
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:104
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:53
+msgid "Menu Items Image"
+msgstr "Menu Items Imagen"
+
+#: includes/modules/DiviMenus/DiviMenus.php:157
+msgid "Menu Button Title Background"
+msgstr "Título del Menu Button Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:165
+msgid "Menu Items Title Background"
+msgstr "Título de los Menu Items Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:301
+msgid "DiviMenu Shape"
+msgstr "Forma"
+
+#: includes/modules/DiviMenus/DiviMenus.php:304
+msgid "Circular"
+msgstr "Circular"
+
+#: includes/modules/DiviMenus/DiviMenus.php:305
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:189
+msgid "Horizontal"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:306
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:190
+msgid "Vertical"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:312
+msgid "Menu Items alignment"
+msgstr "Menu Items Alineación"
+
+#: includes/modules/DiviMenus/DiviMenus.php:313
+msgid ""
+"Here you can define how the Menu Items are distributed around the Menu "
+"Button."
+msgstr ""
+"Aquí puedes elegir cómo se distribuyen los Menu Items alrededor del Menu "
+"Button."
+
+#: includes/modules/DiviMenus/DiviMenus.php:316
+msgid "Circle"
+msgstr "Círculo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:317
+msgid "Semicircle - top"
+msgstr "Semicírculo - arriba"
+
+#: includes/modules/DiviMenus/DiviMenus.php:318
+msgid "Semicircle - bottom"
+msgstr "Semicírculo - abajo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:319
+msgid "Semicircle - left"
+msgstr "Semicírculo - izquierda"
+
+#: includes/modules/DiviMenus/DiviMenus.php:320
+msgid "Semicircle - right"
+msgstr "Semicírculo - derecha"
+
+#: includes/modules/DiviMenus/DiviMenus.php:327
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:197
+msgid "Show Opened"
+msgstr "Mostrar Abierto"
+
+#: includes/modules/DiviMenus/DiviMenus.php:328
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:198
+msgid "Here you can choose whether the DiviMenu should be open at first."
+msgstr "Aquí puedes elegir si el DiviMenu debería estar abierto al principio."
+
+#: includes/modules/DiviMenus/DiviMenus.php:338
+msgid "Display Inline"
+msgstr "Mostrar Inline"
+
+#: includes/modules/DiviMenus/DiviMenus.php:339
+msgid ""
+"Here you can choose whether your DiviMenu should be placed \"inline\" with "
+"your page content, or \"over\" your page content."
+msgstr ""
+"Aquí puedes elegir si tu DiviMenu debe mostrarse \"inline\" con el contenido "
+"de la página, o \"sobre\" el contenido de la página."
+
+#: includes/modules/DiviMenus/DiviMenus.php:346
+msgid "Equal Height Open/Closed"
+msgstr "Misma Altura Abierto/Cerrado"
+
+#: includes/modules/DiviMenus/DiviMenus.php:355
+msgid "Bring to Front"
+msgstr "Traer al Frente"
+
+#: includes/modules/DiviMenus/DiviMenus.php:356
+msgid ""
+"Check to display this DiviMenu over other columns content (DiviMenus in "
+"those other columns must have this option uncheked)"
+msgstr ""
+"Activa esta opción para mostrar este DiviMenu sobre el contenido de otras "
+"columnas (los DiviMenus de esas columnas deben tener esta opción desactivada)"
+
+#: includes/modules/DiviMenus/DiviMenus.php:363
+#: includes/modules/DiviMenus/DiviMenus.php:781
+#: includes/modules/DiviMenus/DiviMenus.php:1018
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:206
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:300
+msgid "Position"
+msgstr "Posición"
+
+#: includes/modules/DiviMenus/DiviMenus.php:367
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:209
+msgid "First"
+msgstr "Inicio"
+
+#: includes/modules/DiviMenus/DiviMenus.php:368
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:210
+msgid "Last"
+msgstr "Final"
+
+#: includes/modules/DiviMenus/DiviMenus.php:375
+#: includes/modules/DiviMenus/DiviMenus.php:499
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:407
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:250
+msgid "Upload an Image"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:414
+msgid ""
+"Upload a single Image for the Menu Button. The Image will be displayed 1:1 "
+"(square) by default. You can keep the original aspect ratio from the Design "
+"tab"
+msgstr ""
+"Sube una imagen para el Menu Button. Por defecto se mostrará 1:1 (cuadrada)"
+
+#: includes/modules/DiviMenus/DiviMenus.php:425
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:270
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:113
+msgid "Hide"
+msgstr "Ocultar"
+
+#: includes/modules/DiviMenus/DiviMenus.php:426
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:271
+msgid ""
+"Here you can choose whether this DiviMenu should display only the Menu Items."
+msgstr ""
+"Aquí puedes elegir si este DiviMenu debería mostrar solo los Menu Items."
+
+#: includes/modules/DiviMenus/DiviMenus.php:436
+#: includes/modules/DiviMenus/DiviMenus.php:540
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:280
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:249
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:131
+msgid "Disable"
+msgstr "Deshabilitar"
+
+#: includes/modules/DiviMenus/DiviMenus.php:437
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:281
+msgid "Here you can choose whether disable the click event on the Menu Button."
+msgstr "Aquí puedes deshabilitar el evento clic en el Menu Button."
+
+#: includes/modules/DiviMenus/DiviMenus.php:445
+msgid "Show Title"
+msgstr "Mostrar título"
+
+#: includes/modules/DiviMenus/DiviMenus.php:446
+msgid ""
+"Here you can choose whether a Title should be displayed beside the Menu "
+"Button."
+msgstr ""
+"Aquí puedes elegir si debería mostrarse un Título junto al Menu Button."
+
+#: includes/modules/DiviMenus/DiviMenus.php:455
+msgid "Define the Title for your Menu Button."
+msgstr "Introduce el título para tu Menu Button."
+
+#: includes/modules/DiviMenus/DiviMenus.php:462
+#: includes/modules/DiviMenus/DiviMenus.php:569
+msgid "Display"
+msgstr "Mostrar"
+
+#: includes/modules/DiviMenus/DiviMenus.php:465
+#: includes/modules/DiviMenus/DiviMenus.php:572
+msgid "Always"
+msgstr "Siempre"
+
+#: includes/modules/DiviMenus/DiviMenus.php:466
+#: includes/modules/DiviMenus/DiviMenus.php:573
+msgid "Hover"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:473
+#: includes/modules/DiviMenus/DiviMenus.php:580
+msgid "Make Clickable"
+msgstr "Hacer Clicable"
+
+#: includes/modules/DiviMenus/DiviMenus.php:474
+msgid ""
+"Here you can choose whether your Title should open/close the DiviMenu as "
+"well."
+msgstr "Aquí puedes elegir si el Título debería abrir y cerrar el DiviMenu."
+
+#: includes/modules/DiviMenus/DiviMenus.php:482
+#: includes/modules/DiviMenus/DiviMenus.php:589
+msgid "Always on Tablet / Phone"
+msgstr "Siempre en Tableta / Teléfono"
+
+#: includes/modules/DiviMenus/DiviMenus.php:483
+msgid "This will always display the Title on tablet and phones"
+msgstr "Esto hará que el Título se muestre siempre en tabletas y en teléfonos"
+
+#: includes/modules/DiviMenus/DiviMenus.php:491
+msgid "Hide Title on Phone"
+msgstr "Ocultar Título en Teléfono"
+
+#: includes/modules/DiviMenus/DiviMenus.php:530
+msgid "Upload a single 1:1 Image (square) for all your Menu Items."
+msgstr "Sube una imagen 1:1 (cuadrada) para todos tus Menu Items."
+
+#: includes/modules/DiviMenus/DiviMenus.php:541
+msgid "Here you can choose whether disable the click event on the Menu Items."
+msgstr "Aquí puedes deshabilitar el evento click en los Menu Items."
+
+#: includes/modules/DiviMenus/DiviMenus.php:548
+msgid "Show Titles"
+msgstr "Mostrar Títulos"
+
+#: includes/modules/DiviMenus/DiviMenus.php:549
+msgid ""
+"Here you can choose whether the Title should be displayed beside each Menu "
+"Item."
+msgstr ""
+"Aquí puedes elegir si quieres mostrar el Título junto a cada Menu Item."
+
+#: includes/modules/DiviMenus/DiviMenus.php:581
+msgid "Here you can choose if your Titles should also be a link."
+msgstr ""
+"Aquí puedes elegir si Aquí puedes elegir si los títulos deberían ser también "
+"un enlace."
+
+#: includes/modules/DiviMenus/DiviMenus.php:590
+msgid "This will always display the titles on tablet and phones"
+msgstr "Activa para mostrar siempre los títulos en tabletas y teléfonos"
+
+#: includes/modules/DiviMenus/DiviMenus.php:598
+msgid "Hide Titles on Phone"
+msgstr "Ocultar Títulos en Teléfono"
+
+#: includes/modules/DiviMenus/DiviMenus.php:606
+msgid "Square Corners"
+msgstr "Esquinas cuadradas"
+
+#: includes/modules/DiviMenus/DiviMenus.php:607
+msgid ""
+"Here you can choose whether the DiviMenu background edges should be square "
+"instead of rounded."
+msgstr ""
+"Aquí puedes elegir si las esquinas del fondo del DiviMenu deben ser "
+"cuadradas en vez de redondeadas."
+
+#: includes/modules/DiviMenus/DiviMenus.php:614
+#: includes/modules/DiviMenus/DiviMenus.php:825
+#: includes/modules/DiviMenus/DiviMenus.php:1062
+msgid "Use Background"
+msgstr "Usar Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:615
+msgid ""
+"Here you can choose whether the Menu Button should display within a "
+"background."
+msgstr "Aquí puedes elegir si el Menu Button debería mostrarse con un fondo."
+
+#: includes/modules/DiviMenus/DiviMenus.php:623
+#: includes/modules/DiviMenus/DiviMenus.php:839
+#: includes/modules/DiviMenus/DiviMenus.php:870
+#: includes/modules/DiviMenus/DiviMenus.php:1076
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:347
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:406
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:152
+msgid "Background Color"
+msgstr "Color del Fondo"
+
+#: includes/modules/DiviMenus/DiviMenus.php:634
+#: includes/modules/DiviMenus/DiviMenus.php:773
+#: includes/modules/DiviMenus/DiviMenus.php:880
+msgid "Rounded Corners"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:635
+#: includes/modules/DiviMenus/DiviMenus.php:881
+msgid ""
+"Here you can control the corner radius of this element. Enable the link icon "
+"to control all four corners at once, or disable to define custom values for "
+"each. You can use either percentages (%) or pixels (px)."
+msgstr ""
+"Aquí puede habilitar el radio de la esquina de este elemento. Use "
+"porcentajes o píxeles."
+
+#: includes/modules/DiviMenus/DiviMenus.php:643
+#: includes/modules/DiviMenus/DiviMenus.php:888
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:162
+msgid "Show Border"
+msgstr "Mostrar Borde"
+
+#: includes/modules/DiviMenus/DiviMenus.php:644
+msgid ""
+"Here you can choose whether if the Menu Button background border should "
+"display."
+msgstr "Aquí puedes elegir si el fondo del Menu Button debe tener borde."
+
+#: includes/modules/DiviMenus/DiviMenus.php:653
+#: includes/modules/DiviMenus/DiviMenus.php:897
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:175
+msgid "Border Color"
+msgstr "Color del Borde"
+
+#: includes/modules/DiviMenus/DiviMenus.php:664
+#: includes/modules/DiviMenus/DiviMenus.php:908
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:185
+msgid "Border Width"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:679
+#: includes/modules/DiviMenus/DiviMenus.php:934
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:201
+msgid "Fit to Content"
+msgstr "Ajustar al Contenido"
+
+#: includes/modules/DiviMenus/DiviMenus.php:681
+msgid ""
+"Here you can choose whether or not the Menu Button background should be "
+"adjusted to the text."
+msgstr ""
+"Aquí puedes elegir si el fondo del Menu Button debe ajustarse al texto."
+
+#: includes/modules/DiviMenus/DiviMenus.php:689
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:338
+msgid "Resizing Effect"
+msgstr "Efecto Reducir Tamaño"
+
+#: includes/modules/DiviMenus/DiviMenus.php:690
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:339
+msgid ""
+"Here you can choose whether the Menu Button should scale down when the "
+"DiviMenu is open."
+msgstr ""
+"Aquí puedes elegir si quieres que el Menu Button se reduzca cuando el "
+"DiviMenu esté abierto."
+
+#: includes/modules/DiviMenus/DiviMenus.php:698
+#: includes/modules/DiviMenus/DiviMenus.php:945
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:253
+msgid "Font"
+msgstr "Fuente"
+
+#: includes/modules/DiviMenus/DiviMenus.php:707
+#: includes/modules/DiviMenus/DiviMenus.php:954
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:262
+msgid "Font Options"
+msgstr "Fuente Opciones"
+
+#: includes/modules/DiviMenus/DiviMenus.php:710
+#: includes/modules/DiviMenus/DiviMenus.php:957
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:265
+msgid "Bold"
+msgstr "Negrita"
+
+#: includes/modules/DiviMenus/DiviMenus.php:711
+#: includes/modules/DiviMenus/DiviMenus.php:958
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:266
+msgid "Italic"
+msgstr "Cursiva"
+
+#: includes/modules/DiviMenus/DiviMenus.php:745
+#: includes/modules/DiviMenus/DiviMenus.php:992
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:237
+msgid "Image Width (px)"
+msgstr "Anchura de la Imagen (px)"
+
+#: includes/modules/DiviMenus/DiviMenus.php:761
+msgid "Aspect Ratio"
+msgstr "Relación de Aspecto"
+
+#: includes/modules/DiviMenus/DiviMenus.php:764
+msgid "Square (1:1)"
+msgstr "Cuadrado (1:1)"
+
+#: includes/modules/DiviMenus/DiviMenus.php:765
+msgid "Original"
+msgstr ""
+
+#: includes/modules/DiviMenus/DiviMenus.php:791
+#: includes/modules/DiviMenus/DiviMenus.php:1028
+msgid "Offset"
+msgstr "Separación"
+
+#: includes/modules/DiviMenus/DiviMenus.php:792
+msgid "Define the distance between the Menu Button and the Title"
+msgstr "Define la distancia entre el Menu Button y el Título"
+
+#: includes/modules/DiviMenus/DiviMenus.php:808
+#: includes/modules/DiviMenus/DiviMenus.php:1045
+msgid "Max Width"
+msgstr "Anchura Máxima"
+
+#: includes/modules/DiviMenus/DiviMenus.php:809
+#: includes/modules/DiviMenus/DiviMenus.php:1046
+msgid ""
+"Here you can determine where the text overflows and continues on a new line."
+msgstr ""
+"Elige a partir de qué distancia quieres que el texto se corte y pase a una "
+"nueva línea."
+
+#: includes/modules/DiviMenus/DiviMenus.php:826
+msgid ""
+"Here you can choose whether the Menu Button Title background should display."
+msgstr ""
+"Aquí puedes elegir si el fondo del Título del Menu Button debe mostrarse."
+
+#: includes/modules/DiviMenus/DiviMenus.php:850
+#: includes/modules/DiviMenus/DiviMenus.php:1087
+msgid "Background Padding"
+msgstr "Fondo Padding"
+
+#: includes/modules/DiviMenus/DiviMenus.php:860
+#: includes/modules/DiviMenus/DiviMenus.php:1008
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:396
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:448
+msgid "Opacity Effect"
+msgstr "Efecto opacidad"
+
+#: includes/modules/DiviMenus/DiviMenus.php:861
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:397
+msgid ""
+"Here you can choose whether the Menu Button image should be lighter when "
+"either hovered or the DiviMenu is open."
+msgstr ""
+"Elige si quieres que la imagen del Menu Button sea más clara cuando le "
+"hagamos hover o cuando el DiviMenu esté abierto."
+
+#: includes/modules/DiviMenus/DiviMenus.php:889
+msgid "Here you can choose whether if the Menu Items border should display."
+msgstr "Aquí puedes elegir si el fondo de los Menu Items debe tener borde."
+
+#: includes/modules/DiviMenus/DiviMenus.php:924
+msgid "Equal Backgrounds"
+msgstr "Igualar Fondos"
+
+#: includes/modules/DiviMenus/DiviMenus.php:925
+msgid ""
+"Here you can choose whether all the text Menu Items background should be "
+"equal."
+msgstr ""
+"Elige si quieres igualar el tamaño de fondo de todos los Menu Items de texto."
+
+#: includes/modules/DiviMenus/DiviMenus.php:936
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:202
+msgid ""
+"Here you can choose whether or not the Menu Item background should be "
+"adjusted to the text."
+msgstr "Aquí puedes elegir si el fondo del Menu Item debe ajustarse al texto."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1009
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:449
+msgid ""
+"Here you can choose whether the Menu Item image should be lighter when "
+"hovered."
+msgstr ""
+"Elige si quieres que la imagen del Menu Item sea más clara cuando le hagamos "
+"hover."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1029
+msgid "Define the distance between the Menu Item and the Title"
+msgstr "Define la distancia entre el Menu Item y el Title"
+
+#: includes/modules/DiviMenus/DiviMenus.php:1063
+msgid ""
+"Here you can choose whether the Menu Item Title background should display."
+msgstr ""
+"Aquí puedes elegir si debería mostrarse un fondo en el título del Menu Ítem."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1098
+msgid ""
+"Choose the DiviMenu alignment (Please note that the Menu Button position "
+"(First, Middle or Last) affects the horizontal DiviMenus alignment)"
+msgstr "Elige la alineación del DiviMenu"
+
+#: includes/modules/DiviMenus/DiviMenus.php:1107
+msgid "Justify Closed DiviMenu"
+msgstr "Justificar DiviMenu Cerrado"
+
+#: includes/modules/DiviMenus/DiviMenus.php:1108
+msgid ""
+"Here you can choose whether the Menu Button should be centered when the "
+"DiviMenu is closed."
+msgstr ""
+"Elige si quieres que el Menu Button se centre cuando el DiviMenu esté "
+"cerrado."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1117
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:457
+msgid "DiviMenu Opening"
+msgstr "DiviMenu Apertura"
+
+#: includes/modules/DiviMenus/DiviMenus.php:1118
+msgid ""
+"Here you can define the distance between the Menu Button and the Menu Items."
+msgstr ""
+"Aquí puedes definir la distancia entre el Menu Button y los Menu Items."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1134
+msgid "Here you can define the Menu Button background padding."
+msgstr "Aquí puedes definir el padding del fondo del Menu Button."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1150
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:330
+msgid "Here you can define the Menu Item background padding."
+msgstr "Aquí puedes definir el padding del fondo de los Menu Items."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1166
+msgid "Here you can define the background padding."
+msgstr "Aquí puedes definir el padding del background."
+
+#: includes/modules/DiviMenus/DiviMenus.php:1184
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:505
+msgid "Menu Button Image Alt Text"
+msgstr "Imagen del Menu Button Alt Text"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:15
+msgid "DiviMenus Flex"
+msgstr ""
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:171
+msgid "Logo Image"
+msgstr "Logotipo Imagen"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:175
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:170
+msgid "Text Icon / Image"
+msgstr "Icono / Imagen del Texto"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:186
+msgid "Direction"
+msgstr "Dirección"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:217
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:210
+msgid "Content"
+msgstr "Contenido"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:290
+msgid "Here you can control the alignment of the Menu Items on the main axis."
+msgstr ""
+"Aquí puedes elegir la alineación de los Menu Items en el eje horizontal."
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:301
+msgid "Here you can control the alignment of the Menu Items on the cross axis."
+msgstr "Aquí puedes elegir la alineación de los Menu Items en el eje vertical."
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:311
+msgid "Fullwidth Menu Items"
+msgstr "Menu Items Ancho completo"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:320
+msgid "Fullwidth Menu Button"
+msgstr "Menu Button Ancho Completo"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:329
+msgid "Content Alignment"
+msgstr "Alineación del Contenido"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:330
+msgid "Here you can control the content alignment of the Menu Button."
+msgstr "Aquí puedes controlar la alineación del contenido del Menu Button."
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:466
+msgid "Show After Page Load"
+msgstr "Mostrar tras la carga de la página"
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:467
+msgid ""
+"Here you can choose whether the DiviMenu should be displayed after the page "
+"is completely loaded."
+msgstr ""
+"Aquí puedes elegir si el DiviMenu debe mostrase cuando la página esté "
+"completamente cargada."
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:478
+msgid "Menu Button Margin"
+msgstr ""
+
+#: includes/modules/DiviMenusFlex/DiviMenusFlex.php:487
+msgid "Menu Button Padding"
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:13
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:13
+msgid "New Menu Item"
+msgstr "Nuevo Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:14
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:14
+msgid "Menu Item Settings"
+msgstr "Ajustes del Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:22
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:32
+msgid "Shopping Cart"
+msgstr "Carrito de compras"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:23
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:35
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:22
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:33
+msgid "Link"
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:29
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:30
+msgid "Menu Item TEXT"
+msgstr "Texto del Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:30
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:28
+msgid "Menu Item ICON"
+msgstr "Icono del Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:31
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:29
+msgid "Menu Item IMAGE"
+msgstr "Imagen del Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:33
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:340
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:32
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:357
+msgid "Popup"
+msgstr "Popup"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:34
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:343
+msgid "Sub"
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:122
+msgid "Align this Menu Item to the left, right or center"
+msgstr "Alinea este Menu Item a la derecha, izquierda o centro"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:140
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:175
+msgid "Cart Info"
+msgstr "Carrito Info"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:166
+msgid "DiviMenu Menu Item"
+msgstr "DiviMenu Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:185
+msgid "WordPress Menu Item"
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:190
+msgid "WordPress Sub Menu Item"
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:201
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:82
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:89
+msgid "Title"
+msgstr "Título"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:202
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:83
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:90
+msgid "Define the Title for your Menu Item."
+msgstr "Define el título para tu Menu Item."
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:250
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:132
+msgid ""
+"Here you can choose whether to disable the click event on this Menu Item."
+msgstr ""
+"Aquí puedes elegir si quieres evitar o no que hagan clic en este Menu Item."
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:257
+msgid "Menu Item Content"
+msgstr "Contenido del Menu Item"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:258
+msgid "Here you can control the content alignment of this Menu Item."
+msgstr "Aquí puedes controlar la alineación del contenido de este Menu Ítem."
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:303
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:346
+msgid "CSS Class"
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:304
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:347
+msgid ""
+"Assign any number of CSS Classes to the element, separated by spaces, which "
+"can be used to assign custom CSS styles from within your child theme or from "
+"within Divi's custom CSS inputs."
+msgstr ""
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:311
+msgid "Hide On"
+msgstr "Ocultar En"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:312
+msgid "This will hide the Menu Item on selected devices"
+msgstr "Esto ocultará este Menu Item en los dispositivos seleccionados"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:323
+msgid "Force Visible On"
+msgstr "Forzar Visible En"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:324
+msgid "This will keep the Menu Item visible on selected devices"
+msgstr ""
+"Esto mantendrá este Menu Item visible en los dispositivos seleccionados"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:346
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:360
+msgid "Show"
+msgstr "Mostrar"
+
+#: includes/modules/DiviMenusFlexItem/DiviMenusFlexItem.php:351
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:365
+msgid "Image Alternative Text"
+msgstr "Texto Alternativo de la Imagen"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:31
+msgid "Menu Item TITLE"
+msgstr "Título del Menu Item"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:104
+msgid ""
+"Upload an 1:1 Image (square) specifically for this Menu Item. This "
+"overwrites the \"Menu Items Image\" field."
+msgstr ""
+"Sube una imagen 1:1 (cuadrada) para este Menu Item. Ese imagen sobrescribirá "
+"a la elegida en el campo \"Imagen de los Menu Items\"."
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:114
+msgid "Here you can choose whether or not to display this Menu Item."
+msgstr "Aquí puedes elegir si mostrar o no este Menu Item."
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:123
+msgid "Preserve Space"
+msgstr "Reservar Espacio"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:124
+msgid ""
+"Here you can choose whether or not the Menu Item space should be preserved."
+msgstr "Aquí puedes elegir si se debe reservar el espacio del Menu Item."
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:140
+msgid "Use Custom Styles for this Menu Item?"
+msgstr "¿Usar Estilos Personalizados para este Menu Item?"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:163
+msgid ""
+"Here you can choose whether if the Menu Item background border should "
+"display."
+msgstr "Elige si debe mostrarse un borde en el fondo del Menu Item."
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:273
+msgid "Text Color"
+msgstr "Color del Texto"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:284
+msgid "Text Size"
+msgstr "Tamaño del Texto"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:301
+msgid "Here you can change the Title position for this Menu Item."
+msgstr "Aquí puedes cambiar la posición del título para este Menu Item."
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:310
+msgid "Hide Title"
+msgstr "Ocultar Título"
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:311
+msgid "Here you can hide the Title for this Menu Item."
+msgstr "Aquí puedes esconder el Título para este Menu Ítem."
+
+#: includes/modules/DiviMenusItem/DiviMenusItem.php:318
+msgid "Use Custom Background for this Menu Item?"
+msgstr "¿Usar Fondo Personalizado para este Menu Item?"
+
+#. Plugin URI of the plugin/theme
+msgid "https://dondivi.com/divimenus/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A powerful menu builder that brings the coolest designs and popups to Divi!"
+msgstr ""
+"¡DiviMenus es un potente constructor de menús que te permite crear diseños y "
+"popups increíbles para Divi!"
+
+#. Author of the plugin/theme
+msgid "DonDivi"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://dondivi.com/"
+msgstr ""

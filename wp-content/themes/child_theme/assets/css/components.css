@@ -1,0 +1,211 @@
+/**
+ * Component Styles
+ */
+
+/* Common Component Styles */
+.component {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.component-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.component-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Progress Bars */
+.progress-bar {
+    background: #f0f0f0;
+    border-radius: 4px;
+    height: 20px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    background: #36A2EB;
+    height: 100%;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* Forms */
+.custom-form {
+    max-width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+/* Buttons */
+.primary-button {
+    background: #36A2EB;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.primary-button:hover {
+    background: #2e8fd0;
+}
+
+.danger-button {
+    background: #dc3545;
+    color: white;
+}
+
+.danger-button:hover {
+    background: #c82333;
+}
+
+/* Lists */
+.foods-list {
+    margin-top: 15px;
+}
+
+.food-item {
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.food-col {
+    flex: 1;
+}
+
+.food-col.actions {
+    flex: 0 0 auto;
+}
+
+/* Charts */
+.chart-container {
+    margin: 20px 0;
+    position: relative;
+    height: 300px;
+}
+
+/* Modals */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    left: 50%;
+    max-width: 600px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading::after {
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #36A2EB;
+    content: '';
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-group {
+        min-width: 100%;
+    }
+
+    .food-item {
+        flex-wrap: wrap;
+    }
+
+    .food-col {
+        flex: 0 0 100%;
+    }
+
+    .food-col.actions {
+        text-align: right;
+    }
+} 

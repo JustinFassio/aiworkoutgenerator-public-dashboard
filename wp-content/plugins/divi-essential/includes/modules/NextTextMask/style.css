@@ -1,0 +1,36 @@
+
+.dnxt-reveal-text-line{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 1.2;
+}
+.dn-dtm-text-masking {
+    font-size: 70px;
+    padding: 0 15px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+}
+
+.dn-dtm-text-masking.text_bg {
+    color: rgba(0, 0, 0, 0.15);
+    text-stroke: 10px;
+}
+.dnxt-text-writting-mode {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+}
+.dnxt-text-transform {
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+}

@@ -1,0 +1,109 @@
+
+.dnext-star-rating {
+    font-style: normal;
+    cursor: default;
+    font-family: 'ETmodules' !important;
+    color: #ccd6df;
+}
+.dnext-star-rating .et-pb-icon {
+    font-size: 14px;
+}
+.dnext-star-rating > i {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    cursor: default;
+}
+.dnext-star-rating i:before {
+    font-family: 'ETmodules' !important;
+    content: "\e033";
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-size: inherit;
+    font-family: inherit;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dnext-star-rating i.divinext-star-1:before,
+.dnext-star-rating i.divinext-star-2::before,
+.dnext-star-rating i.divinext-star-3::before,
+.dnext-star-rating i.divinext-star-4::before,
+.dnext-star-rating i.divinext-star-5::before,
+.dnext-star-rating i.divinext-star-6::before,
+.dnext-star-rating i.divinext-star-7::before,
+.dnext-star-rating i.divinext-star-8::before,
+.dnext-star-rating i.divinext-star-9::before,
+.dnext-star-rating i.divinext-star-10::before {
+    content: "\e033";
+    color: #ffbf36;
+}
+.dnext-star-rating i.divinext-star-1::before {
+    width: 10%;
+}
+.dnext-star-rating i.divinext-star-2::before {
+    width: 20%;
+}
+.dnext-star-rating i.divinext-star-3::before {
+    width: 30%;
+}
+.dnext-star-rating i.divinext-star-4::before {
+    width: 40%;
+}
+.dnext-star-rating i.divinext-star-5::before {
+    width: 50%;
+}
+.dnext-star-rating i.divinext-star-6::before {
+    width: 60%;
+}
+.dnext-star-rating i.divinext-star-7::before {
+    width: 70%;
+}
+.dnext-star-rating i.divinext-star-8::before {
+    width: 80%;
+}
+.dnext-star-rating i.divinext-star-9::before {
+    width: 90%;
+}
+.dnext-star-rating i.divinext-star-10::before {
+    width: 100%;
+}
+
+.dnext-star-rating i.divinext-star-full::before {
+    color: #ffbf36;
+}
+
+.dnext_star_rating_alignment_left {
+    text-align: left;
+  }
+  .dnext_star_rating_alignment_center {
+    text-align: center;
+  }
+  .dnext_star_rating_alignment_right {
+    text-align: right;
+  }
+  @media (max-width: 980px) {
+    .dnext_star_rating_alignment_tablet_left {
+      text-align: left;
+    }
+    .dnext_star_rating_alignment_tablet_center {
+      text-align: center;
+    }
+    .dnext_star_rating_alignment_tablet_right {
+      text-align: right;
+    }
+  }
+  @media (max-width: 767px) {
+    .dnext_star_rating_alignment_phone_left {
+      text-align: left;
+    }
+    .dnext_star_rating_alignment_phone_center {
+      text-align: center;
+    }
+    .dnext_star_rating_alignment_phone_right {
+      text-align: right;
+    }
+  }

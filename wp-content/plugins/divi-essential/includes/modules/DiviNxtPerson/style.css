@@ -1,0 +1,154 @@
+/*---------- left three alignment-------- */
+
+/* ===================image postion left top================== */
+.dnxte-nextperson-team-wrap.dnxte-nextperson-left-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* ===================image postion left center================== */
+.dnxte-nextperson-team-wrap.dnxte-nextperson-left-center {
+    display: flex;
+    align-items: center;
+}
+
+/* ===================image postion left bottom================== */
+.dnxte-nextperson-team-wrap.dnxte-nextperson-left-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+
+/*---------- top three alignment-------- */
+
+/* ===================image postion top left================== */
+.dnxte-nextperson-img.dnxte-nextperson-top-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ===================image postion top center================== */
+.dnxte-nextperson-img.dnxte-nextperson-top-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ===================image postion top right================== */
+.dnxte-nextperson-img.dnxte-nextperson-top-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.dnxte-nextperson-team-wrap {
+    overflow: hidden;
+}
+
+.dnxte-nextperson-team-wrap,
+.dnxte-nextperson-img img,
+.dnxte-nextperson-wrapper {
+    border: 0px solid #333333;
+}
+.dnxte-nextperson-img {
+    width: 100%;
+}
+.dnxte-nextperson-des {
+    width: 100%;
+}
+.dnxte-nextperson-header {
+
+}
+.dnxte-nextperson-pos {
+
+}
+.dnxte-nextperson-details {
+
+}
+.dnxte-nextperson-img img {
+     line-height: 0;
+ }
+
+.dnxte-nextperson-social {
+    list-style-type: none!important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+/*---------- social item three alignment-------- */
+/* ===================social item bottom left alignment================== */
+.dnxte-nextperson-social.dnxte-nextperson-social-bottom-left {
+    display: flex;
+    justify-content: flex-start;
+}
+/* ===================social item bottom center alignment================== */
+.dnxte-nextperson-social.dnxte-nextperson-social-bottom-center {
+    display: flex;
+    justify-content: center;
+}
+/* ===================social item bottom right alignment================== */
+.dnxte-nextperson-social.dnxte-nextperson-social-bottom-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .dnxte-nextperson-social li:nth-child(odd) {
+    background: #47239e;
+}
+
+.dnxte-nextperson-social li:nth-child(even) {
+    background: #5b37b2;
+} */
+.dnxte-nextperson-des ul {
+    padding: 0 0 0px 0em !important;
+}
+.dnxte-nextperson-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.dnxte-nextperson-social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dnxte-nextperson-social li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+    color: #fff;
+}
+
+.dnxte-nextperson-social li a:hover {
+    color: #266de8;
+}
+
+@media (min-width: 981px) {
+    .dnxte-nextperson-social .et_pb_module {
+        margin-bottom: 0% !important;
+    }
+}
+@media (max-width: 767px) {
+    .dnxte-nextperson-social .et_pb_module {
+        margin-bottom: 0% !important;
+    }
+}
+
+
+    .dnext_person_social_alignment_left {justify-content: flex-start;}
+    .dnext_person_social_alignment_center {justify-content: center;}
+    .dnext_person_social_alignment_right {justify-content: flex-end;}
+@media (max-width:980px) {
+    .dnext_person_social_alignment_tablet_left {justify-content: flex-start;}
+    .dnext_person_social_alignment_tablet_center {justify-content: center;}
+    .dnext_person_social_alignment_tablet_right {justify-content: flex-end;}
+}
+@media (max-width:767px) {
+    .dnext_person_social_alignment_phone_left {justify-content: flex-start;}
+    .dnext_person_social_alignment_phone_center {justify-content: center;}
+    .dnext_person_social_alignment_phone_right {justify-content: flex-end;}
+}

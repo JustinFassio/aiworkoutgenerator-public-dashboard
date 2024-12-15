@@ -1,0 +1,38 @@
+<wpml-config>
+	<shortcodes>
+		<shortcode>
+            <tag>et_pb_divimenus</tag>
+            <attributes>
+                <attribute>central_item_text</attribute>
+				<attribute>alt</attribute>
+				<attribute type="media-url">background_image</attribute>
+				<attribute type="link">central_item_image</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>et_pb_divimenus_item</tag>
+            <attributes>
+                <attribute>title</attribute>
+				<attribute>alt</attribute>
+				<attribute type="link">item_image</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>et_pb_divimenus_flex</tag>
+            <attributes>
+                <attribute>menu_button_text</attribute>
+                <attribute>menu_button_text__hover</attribute>
+				<attribute type="link">menu_button_image</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>et_pb_divimenus_flex_item</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>title__hover</attribute>
+				<attribute>alt</attribute>
+				<attribute type="link">item_image</attribute>
+            </attributes>
+        </shortcode>
+	</shortcodes>
+</wpml-config>

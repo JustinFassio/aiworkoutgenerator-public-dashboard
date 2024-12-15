@@ -1,0 +1,950 @@
+/**
+ * Dashboard Styles
+ */
+
+/* Container */
+.athlete-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.dashboard-section h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-section h2::after {
+    content: '▼';
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-section h2.active::after {
+    transform: rotate(180deg);
+}
+
+/* Account Details */
+.account-details {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-picture-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-picture:hover .profile-picture-overlay {
+    opacity: 1;
+}
+
+.account-info {
+    display: grid;
+    gap: 15px;
+}
+
+.account-field {
+    display: grid;
+    gap: 5px;
+}
+
+.account-field label {
+    font-weight: 600;
+    color: #666;
+}
+
+/* Progress Trackers */
+.progress-trackers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.progress-tracker {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.progress-chart-container {
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.progress-input-form {
+    display: grid;
+    gap: 10px;
+}
+
+/* Workout Lightbox */
+.workout-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.workout-lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.workout-lightbox-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.workout-lightbox-loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.workout-lightbox-overlay.loading .workout-lightbox-loading {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.workout-lightbox-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.workout-lightbox-title {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.workout-lightbox-date {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.workout-lightbox-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.workout-lightbox-detail {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.workout-lightbox-detail-label {
+    font-weight: bold;
+    margin: 0 0 5px;
+    color: #666;
+}
+
+.workout-lightbox-detail-value {
+    margin: 0;
+    font-size: 16px;
+}
+
+.workout-lightbox-exercises {
+    margin-bottom: 30px;
+}
+
+.workout-lightbox-subtitle {
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #333;
+}
+
+.exercise-list {
+    display: grid;
+    gap: 15px;
+}
+
+.exercise-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.exercise-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.exercise-details {
+    display: flex;
+    gap: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.exercise-notes {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.workout-lightbox-notes {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.modal-button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.print-workout,
+.workout-lightbox-close {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.print-workout {
+    background: #3498db;
+    color: white;
+}
+
+.print-workout:hover {
+    background: #2980b9;
+}
+
+.workout-lightbox-close {
+    background: #e74c3c;
+    color: white;
+}
+
+.workout-lightbox-close:hover {
+    background: #c0392b;
+}
+
+/* Forms */
+.dashboard-form input[type="text"],
+.dashboard-form input[type="email"],
+.dashboard-form input[type="number"],
+.dashboard-form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.dashboard-form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-form button:hover {
+    background: #0056b3;
+}
+
+.remove-exercise {
+    background: #dc3545;
+}
+
+.remove-exercise:hover {
+    background: #c82333;
+}
+
+/* Notifications */
+.notifications-container {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    z-index: 1100;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notifications-container.success {
+    background: #28a745;
+}
+
+.notifications-container.error {
+    background: #dc3545;
+}
+
+.notifications-container.info {
+    background: #17a2b8;
+}
+
+.notifications-container.warning {
+    background: #ffc107;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .account-details {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-picture {
+        margin: 0 auto;
+    }
+
+    .exercise-item {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-trackers {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Workout Logger Styles */
+.workout-logger {
+    display: grid;
+    gap: 2rem;
+}
+
+.workout-log-form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.exercise-entry {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.exercise-entry .form-row {
+    margin-bottom: 0.5rem;
+}
+
+.form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Buttons */
+.primary-button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+    background: #0056b3;
+}
+
+.secondary-button {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.secondary-button:hover {
+    background: #5a6268;
+}
+
+.danger-button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.danger-button:hover {
+    background: #c82333;
+}
+
+/* Workout History */
+.workout-history {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.workout-history h3 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.workout-history-item {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.workout-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.workout-history-header h4 {
+    margin: 0;
+    color: #333;
+}
+
+.workout-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.workout-history-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.workout-exercises {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+.workout-exercises h5 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.workout-exercises ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.workout-exercises li {
+    margin-bottom: 0.5rem;
+}
+
+.workout-exercises li small {
+    color: #666;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.workout-notes {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-style: italic;
+}
+
+.no-workouts {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Loading State */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    z-index: 1;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+} 
+
+/* Nutrition Logger Styles */
+.nutrition-logger {
+    display: grid;
+    gap: 2rem;
+}
+
+.meal-log-form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.food-entry {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.food-entry .form-row {
+    margin-bottom: 0.5rem;
+}
+
+/* Meal History */
+.meal-history {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-history h3 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.meal-history-item {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.meal-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.meal-history-header h4 {
+    margin: 0;
+    color: #333;
+}
+
+.meal-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.meal-history-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.meal-type {
+    text-transform: capitalize;
+}
+
+.meal-macros {
+    font-family: monospace;
+}
+
+.meal-foods {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+.meal-foods h5 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.meal-foods ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.meal-foods li {
+    margin-bottom: 0.5rem;
+}
+
+.meal-notes {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-style: italic;
+}
+
+.no-meals {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Macro validation */
+input.warning {
+    border-color: #ffc107;
+    background-color: #fff3cd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .meal-history-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+} 
+
+/* Nutrition Tracker Styles */
+.nutrition-tracker {
+    display: grid;
+    gap: 2rem;
+}
+
+.nutrition-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.nutrition-goals,
+.daily-nutrition {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-selector {
+    margin-bottom: 1rem;
+}
+
+.date-selector input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.macro-progress {
+    display: grid;
+    gap: 1rem;
+}
+
+.macro-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.macro-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.nutrition-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.chart-container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.daily-meals {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-entry {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.meal-header h4 {
+    margin: 0;
+    color: #333;
+}
+
+.meal-type {
+    text-transform: capitalize;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.meal-macros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.foods-list {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.foods-list h5 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.foods-list ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.foods-list li {
+    margin-bottom: 0.5rem;
+}
+
+.foods-list li small {
+    display: block;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nutrition-overview,
+    .nutrition-charts {
+        grid-template-columns: 1fr;
+    }
+
+    .meal-header,
+    .meal-macros {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+} 

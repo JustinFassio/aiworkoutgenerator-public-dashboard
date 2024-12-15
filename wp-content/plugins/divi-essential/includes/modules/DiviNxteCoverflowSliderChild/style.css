@@ -1,0 +1,124 @@
+.dnxte_coverflowslider_child .img-fluid {
+  border-width: 0px;
+  border-color: #333;
+  border-style: solid;
+}
+
+.dnxte-coverflow-image-link {
+  display: block;
+}
+
+.dnxte_coverflowslider_child img {
+  width: 100%;
+  height: auto;
+}
+
+.dnxte-coverflow-overlay-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 9999;
+  transition: all 0.3s;
+}
+.dnxte-coverflow-overlay-color-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  opacity: 0;
+  z-index: 9999;
+  transition: all 0.3s;
+}
+.dnxte-coverflow-image-container:hover .dnxte-coverflow-overlay-color-hover {
+  opacity: 1;
+  background: transparent;
+}
+.dnxte-coverflow-image-container {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.dnxte-coverflow-button-wrapper {
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+.coverflowslider_button_alignment_center {
+  justify-content: center;
+}
+
+.coverflowslider_button_alignment_right {
+  justify-content: flex-end;
+}
+
+.coverflowslider_button_alignment_left {
+  justify-content: flex-start;
+}
+
+@media (max-width: 980px) {
+  .coverflowslider_button_alignment_tablet_right {
+    justify-content: flex-end;
+  }
+  .coverflowslider_button_alignment_tablet_left {
+    justify-content: flex-start;
+  }
+  .coverflowslider_button_alignment_tablet_center {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .coverflowslider_button_alignment_phone_right {
+    justify-content: flex-end;
+  }
+  .coverflowslider_button_alignment_phone_left {
+    justify-content: flex-start;
+  }
+  .coverflowslider_button_alignment_phone_center {
+    justify-content: center;
+  }
+}
+.dnxte-coverflow-button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index:9999;
+}
+.dnxte-coverflow-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+}
+
+.mfp-arrow {
+  font-family: "ETmodules";
+  font-size: 60px;
+  color: #fff;
+}
+
+.mfp-arrow-left::after {
+  content: "4" !important;
+}
+
+.mfp-arrow-right::after {
+  content: "5" !important;
+  margin-left: 0px !important;
+}
+.mfp-zoom-out-cur .mfp-image-holder .dnxte-coverflow-mfp-config .mfp-close {
+  position: fixed;
+  top: 10px !important;
+  right: 10px !important;
+  opacity: 1 !important;
+  font-size: 60px;
+  font-weight: normal;
+}

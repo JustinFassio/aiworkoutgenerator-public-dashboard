@@ -1,0 +1,23 @@
+.dnxte-Busihr-separator {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  height: 0;
+}
+
+.dnxte-Busihr-wekname {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.dnxte-Busihr-dttime {
+  float: right;
+  display: inline-block;
+  text-transform: initial;
+}

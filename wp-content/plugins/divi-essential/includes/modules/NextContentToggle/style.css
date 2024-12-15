@@ -1,0 +1,132 @@
+
+.dnxte-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.dnxte-content-toggle-front,
+.dnxte-content-toggle-back,
+.dnxte-switch-inner,
+.dnxte-switch-inner::before {
+  border: 0px solid #2857b6;
+}
+.dnxte-toggle-left,
+.dnxte-toggle-right {
+  cursor: pointer;
+}
+
+.dnxte-toggle-left {
+  margin-right: 2%;
+}
+
+.dnxte-toggle-head-one,
+.dnxte-toggle-head-two {
+  margin: 0;
+  padding: 0;
+}
+
+.dnxte-toggle label {
+  cursor: pointer;
+}
+
+.dnxte-content-toggle .dnxte-toggle-btn {
+  font-size: 15px;
+  align-items: center;
+}
+
+.dnxte-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 4.5em;
+  height: 2.3em;
+  vertical-align: middle;
+}
+
+.dnxte-switch-label .dnxte-toggle-switch {
+  display: none;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+.dnxte-content-toggle .dnxte-switch-inner {
+  background-color: #8a2ecc;
+}
+
+.dnxte-switch-inner {
+  border-radius: 1.5em;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.4s;
+}
+
+.dnxte-content-toggle .dnxte-switch-inner::before {
+  background-color: #266de8;
+}
+
+.dnxte-switch-inner::before {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  height: 1.8em;
+  width: 1.8em;
+  left: 0.25em;
+  bottom: 0.25em;
+  transition: all 0.4s;
+}
+
+.dnxte-content-toggle .dnxte-toggle-switch:checked + .dnxte-switch-inner {
+  background-color: #2ecc71;
+}
+
+.dnxte-toggle-switch:checked + .dnxte-switch-inner::before {
+  -webkit-transform: translateX(2.1em);
+  transform: translateX(2.1em);
+}
+
+.dnxte-toggle-right {
+  margin-left: 2%;
+}
+
+.dnxte-content-toggle .dnxte-content-toggle-front,
+.dnxte-content-toggle .dnxte-content-toggle-back {
+  padding: 0;
+}
+
+.dnxte_switch_alignment_left {
+  justify-content: flex-start;
+}
+.dnxte_switch_alignment_center {
+  justify-content: center;
+}
+.dnxte_switch_alignment_right {
+  justify-content: flex-end;
+}
+@media (max-width: 980px) {
+  .dnxte_switch_alignment_tablet_left {
+    justify-content: flex-start;
+  }
+  .dnxte_switch_alignment_tablet_center {
+    justify-content: center;
+  }
+  .dnxte_switch_alignment_tablet_right {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  .dnxte_switch_alignment_phone_left {
+    justify-content: flex-start;
+  }
+  .dnxte_switch_alignment_phone_center {
+    justify-content: center;
+  }
+  .dnxte_switch_alignment_phone_right {
+    justify-content: flex-end;
+  }
+}

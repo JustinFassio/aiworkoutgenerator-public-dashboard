@@ -1,0 +1,104 @@
+.dnxte-person-sn a span::before {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.dnext-person-social-items span::before {
+    content: attr(data-icon);
+    font-family: ETmodules !important;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-facebook span::before {
+    content: "\e093";
+    font-family: ETmodules !important;
+    background-color: #3b5998;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-twitter span::before {
+    content: "\e094";
+    font-family: ETmodules !important;
+    background-color: #00aced;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-pinterest span::before {
+    content: "\e095";
+    font-family: ETmodules !important;
+    background-color: #cb2027;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-linkedin span::before {
+    content: "\e09d";
+    font-family: ETmodules !important;
+    background-color: #007bb6;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-tumblr span::before {
+    content: "\e097";
+    font-family: ETmodules !important;
+    background-color: #32506d;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-instagram span::before {
+    content: "\e09a";
+    font-family: ETmodules !important;
+    background-color: #ea2c59;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-skype span::before {
+    content: "\e0a2";
+    font-family: ETmodules !important;
+    background-color: #12a5f4;
+    display: block;
+    padding: 0px;
+}
+
+.dnext-person-flikr span::before {
+    content: "\e0a6";
+    font-family: ETmodules !important;
+    background-color: #ff0084;
+    display: block;
+    padding: 0px;
+}
+.dnext-person-dribbble span::before {
+    content: "\e09b";
+    font-family: ETmodules !important;
+    background-color: #ea4c8d;
+    display: block;
+    padding: 0px;
+}
+.dnext-person-youtube span::before {
+    content: "\e0a3";
+    font-family: ETmodules !important;
+    background-color: #a82400;
+    display: block;
+    padding: 0px;
+}
+.dnext-person-vimeo span::before {
+    content: "\e09c";
+    font-family: ETmodules !important;
+    background-color: #45bbff;
+    display: block;
+    padding: 0px;
+}
+
+li.dnxte-person-sn a {
+    border: 0px solid #333333;
+}
+
+
+

@@ -1,0 +1,172 @@
+.dnxte-stepflow-wrapper {
+  text-align: center;
+  --dnxte-stepflow-direction-origin-x: calc(
+    -1 * ((var(--dnxte-stepflow-icon-size, 46px) / 2) +
+          var(--dnxte-stepflow-icon-padding, 40px) +
+          var(--dnxte-stepflow-direction-offset-x, 20px))
+  );
+}
+.dnxte-step-direction-pad {
+  --dnxte-stepflow-icon-padding: 40px;
+  --dnxte-stepflow-direction-angle: 0deg;
+}
+
+.dnxte-stepflow-iconimg-wrap,
+.dnxte-stepflow-icon-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 40px;
+  border-radius: 50%;
+  background-color: #e9ecf0;
+  color: #8056ee;
+  text-align: center;
+}
+.dnxte-stepflow-icon-wrap {
+  font-size: 46px;
+}
+.dnxte-stepflow-iconimg-wrap {
+  width: 170px;
+}
+.dnxte-stepflow-arrow,
+.dnxte-stepflow-arrow::after {
+  position: absolute;
+  display: inline-block;
+  border-top: 1px solid #ddd;
+}
+.dnxte-stepflow-arrow {
+  left: calc(100% + 20px);
+  -ms-transform: rotate(var(--dnxte-stepflow-direction-angle, 0));
+  -webkit-transform: rotate(var(--dnxte-stepflow-direction-angle, 0));
+  transform: rotate(var(--dnxte-stepflow-direction-angle, 0));
+  -ms-transform-origin: var(--dnxte-stepflow-direction-origin-x) center;
+  -webkit-transform-origin: var(--dnxte-stepflow-direction-origin-x) center;
+  transform-origin: var(--dnxte-stepflow-direction-origin-x) center;
+  top: 49%;
+  width: 100px;
+}
+.dnxte-stepflow-arrow::after {
+  top: -2px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid #ddd;
+  color: #ddd;
+  content: "";
+  -webkit-transform: rotate(45deg) translateY(-50%);
+  -ms-transform: rotate(45deg) translateY(-50%);
+  transform: rotate(45deg) translateY(-50%);
+}
+.dnxte-stepflow-iconimg-wrap span.dnxte-stepflow-icons,
+.dnxte-stepflow-icon-wrap span.dnxte-stepflow-icons,
+.dnxte-stepflow-iconimg-wrap svg,
+.dnxte-stepflow-icon-wrap svg {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+.dnxte-stepflow-iconimg-wrap .dnxte-stepflow-badge,
+.dnxte-stepflow-icon-wrap .dnxte-stepflow-badge {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  overflow: hidden;
+  padding: 8px 10px;
+  max-width: 200%;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  background-color: #8056ee;
+  color: #fff;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1;
+}
+.dnxte-stepflow-title {
+  font-size: 20px;
+  font-weight: 400px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.dnxte-stepflow-pra {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.dnxte-stepflow-icons.dnxte-badge-icon {
+  font-family: "ETmodules";
+}
+.dnxte-stepflow-icons.dnxte-badge-icon {
+  font-family: "ETmodules";
+  /* font-size: 38px; */
+  line-height: 1;
+}
+.dnxte-stepflow-iconimg-wrap,
+.dnxte-stepflow-icon-wrap {
+  border: 0px solid #8056ee;
+  overflow: initial !important;
+}
+
+.dnxte-stepflow-image-wrap {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.dnxte-stepflow-image-wrap img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.dnxte_stepflow_alignment_left {
+  text-align: left;
+}
+.dnxte_stepflow_alignment_center {
+  text-align: center;
+}
+.dnxte_stepflow_alignment_right {
+  text-align: right;
+}
+@media (max-width: 980px) {
+  .dnxte_stepflow_alignment_tablet_left {
+    text-align: left;
+  }
+  .dnxte_stepflow_alignment_tablet_center {
+    text-align: center;
+  }
+  .dnxte_stepflow_alignment_tablet_right {
+    text-align: right;
+  }
+}
+@media (max-width: 767px) {
+  .dnxte_stepflow_alignment_phone_left {
+    text-align: left;
+  }
+  .dnxte_stepflow_alignment_phone_center {
+    text-align: center;
+  }
+  .dnxte_stepflow_alignment_phone_right {
+    text-align: right;
+  }
+}

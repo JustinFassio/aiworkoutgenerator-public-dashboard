@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+# Large media files
+*.mov
+*.mp4
+*.wmv
+*.avi

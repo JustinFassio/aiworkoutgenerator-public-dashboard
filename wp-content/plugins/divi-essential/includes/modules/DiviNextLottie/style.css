@@ -1,0 +1,109 @@
+.dnext_lottie_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.dnext_lottie_alignment_right {
+  justify-content: flex-end;
+}
+.dnext_lottie_alignment_left {
+  justify-content: flex-start;
+}
+
+.dnext_lottie_alignment_center {
+  justify-content: center;
+}
+
+.dnxte-lottie-content-setion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dnxte-lottie-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+a.dnxte-lottie-button {
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+a.dnxte-lottie-button:hover {
+  border: 1px solid transparent;
+}
+
+.dnxte-lottie-content {
+  text-align: center;
+}
+
+.dnxte-lottie-content p:empty {
+  padding: 0;
+  margin: 0;
+}
+.dnxte-lottie-content {
+  padding-bottom: 1em;
+}
+
+.dnxte-lottie-content p {
+  padding-bottom: 0em;
+}
+
+.dnxte-lottie-heading {
+  width: 100%;
+  text-align: center;
+}
+
+.dnxte-lottie-heading,
+.dnxte-lottie-content,
+.dnxte-lottie-button {
+  border: 0px solid #333;
+}
+
+.lottie_button_alignment_center {
+  justify-content: center;
+}
+
+.lottie_button_alignment_right {
+  justify-content: flex-end;
+}
+
+.lottie_button_alignment_left {
+  justify-content: flex-start;
+}
+
+@media (max-width: 980px) {
+  .dnext_lottie_alignment_tablet_right,
+  .lottie_button_alignment_tablet_right {
+    justify-content: flex-end;
+  }
+  .dnext_lottie_alignment_tablet_left,
+  .lottie_button_alignment_tablet_left {
+    justify-content: flex-start;
+  }
+  .dnext_lottie_alignment_tablet_center,
+  .lottie_button_alignment_tablet_center {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .dnext_lottie_alignment_phone_right,
+  .lottie_button_alignment_phone_right {
+    justify-content: flex-end;
+  }
+  .dnext_lottie_alignment_phone_left,
+  .lottie_button_alignment_phone_left {
+    justify-content: flex-start;
+  }
+  .dnext_lottie_alignment_phone_center,
+  .lottie_button_alignment_phone_center {
+    justify-content: center;
+  }
+}

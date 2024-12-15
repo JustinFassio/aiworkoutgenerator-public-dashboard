@@ -1,0 +1,70 @@
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dnext-sid-text-divider-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dnext-sid-text-divider-img {
+    border-style: solid;
+    max-width: 100%;
+}
+
+.dnext-sid-text-divider-icon {
+    font-family: "ETmodules"; 
+    content: attr(data-icon);
+    font-size: 30px;
+    border-style: solid;
+}
+
+.dnext-sid-text-divider-icon-hover {
+    font-family: "ETmodules"; 
+    content: attr(data-icon);
+    font-size: 96px;
+    border-style: solid;
+}
+
+.dnext-sid-text-divider {
+    border-top-style: solid;
+}
+
+.dnext-sid-text-divider-before,
+.dnext-sid-text-divider-after {
+    font-size: 0;
+    line-height: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    border-top-width: 1px;
+}
+
+.dnext-sid-text-divider {
+    padding-bottom: 0;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    margin: 0 10px;
+}
+
+.dnext-sid-text-divider-spacing {
+    padding-bottom: 0;
+    -ms-flex-negative: 1;
+    flex-shrink: 1; 
+    margin: 0 15px;
+}
+
+/* align left divider */
+.dnext-sid-text-divider-alignment-left .dnext-sid-text-divider-before,
+.dnext-sid-text-divider-alignment-right .dnext-sid-text-divider-after {
+    display: none;
+}
+
+/* align right divider */
+.dnext-sid-text-divider-alignment .dnext-sid-text-divider-before,
+.dnext-sid-text-divider-alignment-right .dnext-sid-text-divider-after {
+    display: none;
+}

@@ -1,0 +1,183 @@
+.dnxte-ovlycard-wrapper {
+  border: 0px solid #333333;
+}
+.dnxte-ovlycard-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.dnxte-ovlycard-wrap {
+  position: relative;
+  line-height: 0;
+}
+
+.dnxte-ovlycard-img {
+  display: block;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  width: 100%;
+  height: auto;
+}
+.dnxte-ovlycard-img {
+  border: 0px solid #2857b6;
+}
+.dnxte-ovlycard-img img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.dnxte-ovlycard-info {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  background: rgba(25, 25, 25, 0.65);
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.dnxte-ovlycard-wrap:hover .dnxte-ovlycard-info {
+  opacity: 1;
+}
+
+.dnxte-ovlycard-wrap:hover .dnxte-ovlycard-info .dnxte-ovlycard-name,
+.dnxte-ovlycard-wrap:hover .dnxte-ovlycard-info .dnxte-ovlycard-pos,
+.dnxte-ovlycard-wrap:hover .dnxte-ovlycard-info .dnxte-ovlycard-so-item li a {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.dnxte-ovlycard-info-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: auto;
+  left: 0;
+  padding: 37px 33px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dnxte-ovlycard-imgimg {
+  line-height: 0;
+}
+
+.dnxte-ovlycard-name {
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  text-transform: capitalize;
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dnxte-ovlycard-pos {
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  text-transform: capitalize;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.dnxte-ovlycard-so-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dnxte-ovlycard-so-item li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dnxte-ovlycard-so-item li:last-child {
+  margin-right: 0;
+}
+
+.dnxte-ovlycard-so-item li a {
+  position: relative;
+  z-index: 3;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  -webkit-transform: translate3d(0, 30px, 0);
+  transform: translate3d(0, 30px, 0);
+}
+
+.dnxte-ovlycard-so-item li a:hover {
+  color: #00e1ff;
+}
+
+.dnxte-ovlycard-title {
+  line-height: 1.5em;
+}
+
+.dnxte-ovlycard-wrap .dnxte-ovlycard-so-item .dnxte_team_overlay_card_item {
+  display: inline-block;
+  margin-right: 10px;
+}
+@media (min-width: 981px) {
+  .dnxte-ovlycard-so-item .et_pb_module {
+    margin-bottom: 0% !important;
+  }
+}
+@media (max-width: 767px) {
+  .dnxte-ovlycard-so-item .et_pb_module {
+    margin-bottom: 0% !important;
+  }
+}
+
+.dnext_teamovl_card_social_alignment_left {
+  text-align: left;
+}
+.dnext_teamovl_card_social_alignment_center {
+  text-align: center;
+}
+.dnext_teamovl_card_social_alignment_right {
+  text-align: right;
+}
+@media (max-width: 980px) {
+  .dnext_teamovl_card_social_alignment_tablet_left {
+    text-align: left;
+  }
+  .dnext_teamovl_card_social_alignment_tablet_center {
+    text-align: center;
+  }
+  .dnext_teamovl_card_social_alignment_tablet_right {
+    text-align: right;
+  }
+}
+@media (max-width: 767px) {
+  .dnext_teamovl_card_social_alignment_phone_left {
+    text-align: left;
+  }
+  .dnext_teamovl_card_social_alignment_phone_center {
+    text-align: center;
+  }
+  .dnext_teamovl_card_social_alignment_phone_right {
+    text-align: right;
+  }
+}

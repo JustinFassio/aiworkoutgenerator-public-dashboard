@@ -1,0 +1,147 @@
+.dnxte-promobx-container {
+  position: relative;
+  background-color: #eeedee;
+}
+.dnxte-promobx-inner-wrap {
+  position: relative;
+  padding: 30px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.dnxte-promobx-before-title {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0;
+  color: #312e2e;
+}
+
+.dnxte-promobx-main-title {
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+  padding: 0;
+}
+.dnxte-promobx-after-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 0;
+}
+.dnxte-promobx-description {
+  font-weight: 400;
+  margin-top: 0;
+  padding-bottom: 32px !important;
+  font-size: 18px;
+}
+.dnxte-promobx-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  /*border-radius: 5px;*/
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  /*border-radius: 6px 6px 6px 6px;*/
+  background-color: #545454;
+  text-transform: capitalize;
+}
+.dnxte-promobx-btn:hover {
+  text-decoration: none;
+  background: #a065ff;
+  color: #fff;
+}
+.dnxte-promo-box-badge {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  /* border-radius: 50%; */
+  background: #ed3270;
+  color: #fff;
+  font-size: 20px;
+  right: 3%;
+  bottom: 3%;
+  background-color: #266de8;
+}
+.dnxte-promobx-badge {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  text-align: center;
+  line-height: 1;
+  padding: 20px;
+}
+.dnxte-promobx-badge span {
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.dnxte-promobx-thumb img {
+  margin: 0 auto;
+}
+.dnxte-promobx-footer {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.dnxte-promobx-before-title,
+.dnxte-promobx-main-title,
+.dnxte-promobx-after-title,
+.dnxte-promobx-thumb img,
+.dnxte-promobx-btn,
+.dnxte-promo-box-badge,
+.dnxte-promobx-description {
+  border-color: #333;
+  border-width: 0;
+  border-style: solid;
+}
+
+.dnxte-promobx-button {
+  display: flex;
+}
+
+.dnxte-promobx-description p:empty {
+  padding: 0;
+  margin: 0;
+}
+
+.dnxte-promobx-thumb {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.dnxte-promobx-thumb img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
