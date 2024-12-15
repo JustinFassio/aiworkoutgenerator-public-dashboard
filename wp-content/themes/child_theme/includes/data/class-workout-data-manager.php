@@ -2,7 +2,7 @@
 /**
  * Workout Data Manager Class
  * 
- * Handles workout-related data operations and caching
+ * Handles workout data operations and queries
  */
 
 if (!defined('ABSPATH')) {
@@ -11,334 +11,345 @@ if (!defined('ABSPATH')) {
 
 class Athlete_Dashboard_Workout_Data_Manager extends Athlete_Dashboard_Data_Manager {
     /**
-     * Cache group for workouts
-     */
-    private $cache_group = 'athlete_workouts';
-
-    /**
      * Initialize the data manager
      */
     public function __construct() {
-        // Ensure cache group is registered
-        wp_cache_add_non_persistent_groups($this->cache_group);
+        parent::__construct('workout_data');
     }
 
     /**
-     * Get a workout by ID
+     * Get user's workouts
      *
-     * @param int $workout_id The workout ID
-     * @return array|false Workout data or false if not found
+     * @param int $user_id User ID
+     * @param array $args Optional. Query arguments
+     * @return array Array of workout posts
      */
-    public function get_workout($workout_id) {
-        // Try to get from cache first
-        $cached = wp_cache_get($workout_id, $this->cache_group);
-        if ($cached !== false) {
-            return $cached;
-        }
+    public function get_user_workouts($user_id, $args = array()) {
+        $default_args = array(
+            'post_type' => 'workout',
+            'posts_per_page' => -1,
+            'author' => $user_id,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        );
 
-        // Get the workout post
+        $args = wp_parse_args($args, $default_args);
+        return get_posts($args);
+    }
+
+    /**
+     * Get workout details
+     *
+     * @param int $workout_id Workout post ID
+     * @return array|WP_Error Workout details or error object
+     */
+    public function get_workout_details($workout_id) {
         $workout = get_post($workout_id);
         if (!$workout || $workout->post_type !== 'workout') {
-            return false;
+            return new WP_Error('invalid_workout', __('Invalid workout ID', 'athlete-dashboard'));
         }
 
-        // Check if user can read this workout
-        if (!current_user_can('read_workout', $workout_id)) {
-            return false;
-        }
-
-        // Build workout data
-        $workout_data = $this->build_workout_data($workout);
-        
-        // Cache the result
-        wp_cache_set($workout_id, $workout_data, $this->cache_group);
-
-        return $workout_data;
-    }
-
-    /**
-     * Build complete workout data from a post object
-     *
-     * @param WP_Post $workout The workout post object
-     * @return array The complete workout data
-     */
-    private function build_workout_data($workout) {
-        // Get workout metadata
-        $workout_type = get_post_meta($workout->ID, '_workout_type', true) ?: 'standard';
-        $exercises = get_post_meta($workout->ID, '_workout_exercises', true);
-        $duration = get_post_meta($workout->ID, '_workout_duration', true);
-        $intensity = get_post_meta($workout->ID, '_workout_intensity', true);
-        $target_areas = get_post_meta($workout->ID, '_workout_target_areas', true);
-        $notes = get_post_meta($workout->ID, '_workout_notes', true);
-        
-        // Ensure exercises is an array
-        if (empty($exercises) || !is_array($exercises)) {
-            $exercises = array();
-        }
-
-        // Process the content
-        $processed_content = apply_filters('the_content', $workout->post_content);
-
-        // Build the complete data structure
         return array(
             'id' => $workout->ID,
             'title' => $workout->post_title,
-            'type' => $workout_type,
-            'exercises' => $exercises,
-            'content' => $processed_content,
-            'author' => $workout->post_author,
-            'date' => get_the_date('F j, Y', $workout),
-            'duration' => $duration,
-            'intensity' => $intensity,
-            'target_areas' => $target_areas,
-            'notes' => $notes,
-            'raw_content' => $workout->post_content,
-            'modified' => get_the_modified_date('c', $workout),
-            'can_edit' => current_user_can('edit_workout', $workout->ID),
-            'can_delete' => current_user_can('delete_workout', $workout->ID)
+            'description' => $workout->post_content,
+            'type' => get_post_meta($workout_id, '_workout_type', true),
+            'duration' => get_post_meta($workout_id, '_workout_duration', true),
+            'intensity' => get_post_meta($workout_id, '_workout_intensity', true),
+            'target_areas' => get_post_meta($workout_id, '_workout_target_areas', true),
+            'exercises' => get_post_meta($workout_id, '_workout_exercises', true),
+            'categories' => wp_get_post_terms($workout_id, 'exercise_category', array('fields' => 'names')),
+            'equipment' => wp_get_post_terms($workout_id, 'exercise_equipment', array('fields' => 'names')),
+            'muscle_groups' => wp_get_post_terms($workout_id, 'exercise_muscle_group', array('fields' => 'names')),
+            'difficulty' => wp_get_post_terms($workout_id, 'exercise_difficulty', array('fields' => 'names'))
         );
     }
 
     /**
-     * Save workout data
+     * Create a new workout
      *
-     * @param array $data The workout data to save
-     * @return array|WP_Error The saved workout data or WP_Error on failure
+     * @param array $workout_data Workout data
+     * @param int $user_id User ID
+     * @return int|WP_Error Created workout ID or error object
      */
-    public function save_workout($data) {
-        if (empty($data['id'])) {
-            return new WP_Error('invalid_id', __('Invalid workout ID', 'athlete-dashboard'));
+    public function create_workout($workout_data, $user_id) {
+        if (!$this->user_can('publish_workouts')) {
+            return new WP_Error('permission_denied', __('You do not have permission to create workouts', 'athlete-dashboard'));
         }
 
-        // Check if user can edit this workout
-        if (!current_user_can('edit_workout', $data['id'])) {
+        $workout = array(
+            'post_title' => sanitize_text_field($workout_data['title']),
+            'post_content' => wp_kses_post($workout_data['description']),
+            'post_status' => 'publish',
+            'post_type' => 'workout',
+            'post_author' => $user_id
+        );
+
+        $workout_id = wp_insert_post($workout, true);
+        if (is_wp_error($workout_id)) {
+            return $workout_id;
+        }
+
+        // Update workout meta
+        $this->update_workout_meta($workout_id, $workout_data);
+
+        // Set taxonomies
+        if (!empty($workout_data['categories'])) {
+            wp_set_object_terms($workout_id, $workout_data['categories'], 'exercise_category');
+        }
+        if (!empty($workout_data['equipment'])) {
+            wp_set_object_terms($workout_id, $workout_data['equipment'], 'exercise_equipment');
+        }
+        if (!empty($workout_data['muscle_groups'])) {
+            wp_set_object_terms($workout_id, $workout_data['muscle_groups'], 'exercise_muscle_group');
+        }
+        if (!empty($workout_data['difficulty'])) {
+            wp_set_object_terms($workout_id, $workout_data['difficulty'], 'exercise_difficulty');
+        }
+
+        return $workout_id;
+    }
+
+    /**
+     * Update an existing workout
+     *
+     * @param int $workout_id Workout ID
+     * @param array $workout_data Updated workout data
+     * @return bool|WP_Error True on success, error object on failure
+     */
+    public function update_workout($workout_id, $workout_data) {
+        if (!$this->user_can('edit_workout', $workout_id)) {
             return new WP_Error('permission_denied', __('You do not have permission to edit this workout', 'athlete-dashboard'));
         }
 
-        // Start transaction
-        global $wpdb;
-        $wpdb->query('START TRANSACTION');
+        $workout = array(
+            'ID' => $workout_id,
+            'post_title' => sanitize_text_field($workout_data['title']),
+            'post_content' => wp_kses_post($workout_data['description'])
+        );
 
-        try {
-            // Prepare post data
-            $post_data = array(
-                'ID' => $data['id'],
-                'post_title' => sanitize_text_field($data['title']),
-                'post_type' => 'workout',
-                'post_status' => 'publish'
-            );
-
-            // Update the post
-            $updated = wp_update_post($post_data, true);
-            if (is_wp_error($updated)) {
-                throw new Exception($updated->get_error_message());
-            }
-
-            // Update metadata
-            if (isset($data['type'])) {
-                update_post_meta($data['id'], '_workout_type', sanitize_text_field($data['type']));
-            }
-            
-            if (isset($data['exercises'])) {
-                update_post_meta($data['id'], '_workout_exercises', $this->sanitize_exercises($data['exercises']));
-            }
-
-            // Clear caches
-            $this->clear_workout_cache($data['id']);
-
-            // Get fresh workout data
-            $workout_data = $this->get_workout($data['id']);
-            
-            $wpdb->query('COMMIT');
-            return $workout_data;
-
-        } catch (Exception $e) {
-            $wpdb->query('ROLLBACK');
-            return new WP_Error('save_failed', $e->getMessage());
-        }
-    }
-
-    /**
-     * Clear workout cache
-     *
-     * @param int $workout_id The workout ID
-     */
-    public function clear_workout_cache($workout_id) {
-        wp_cache_delete($workout_id, $this->cache_group);
-        wp_cache_delete($workout_id, 'posts');
-        wp_cache_delete($workout_id, 'post_meta');
-    }
-
-    /**
-     * Sanitize exercise data
-     *
-     * @param array $exercises Array of exercise data
-     * @return array Sanitized exercise data
-     */
-    private function sanitize_exercises($exercises) {
-        if (!is_array($exercises)) {
-            return array();
+        $updated = wp_update_post($workout, true);
+        if (is_wp_error($updated)) {
+            return $updated;
         }
 
-        return array_map(function($exercise) {
-            if (!isset($exercise['name']) || empty($exercise['name'])) {
-                return null;
-            }
+        // Update workout meta
+        $this->update_workout_meta($workout_id, $workout_data);
 
-            return array(
-                'name' => sanitize_text_field($exercise['name']),
-                'sets' => isset($exercise['sets']) ? absint($exercise['sets']) : 0,
-                'reps' => isset($exercise['reps']) ? absint($exercise['reps']) : 0,
-                'weight' => isset($exercise['weight']) ? floatval($exercise['weight']) : 0,
-                'notes' => isset($exercise['notes']) ? sanitize_textarea_field($exercise['notes']) : ''
-            );
-        }, $exercises);
-    }
-
-    /**
-     * Log a workout
-     */
-    public function log_workout($workout_data) {
-        if (!$this->validate_required_fields($workout_data, $this->required_workout_fields)) {
-            return false;
+        // Update taxonomies
+        if (isset($workout_data['categories'])) {
+            wp_set_object_terms($workout_id, $workout_data['categories'], 'exercise_category');
+        }
+        if (isset($workout_data['equipment'])) {
+            wp_set_object_terms($workout_id, $workout_data['equipment'], 'exercise_equipment');
+        }
+        if (isset($workout_data['muscle_groups'])) {
+            wp_set_object_terms($workout_id, $workout_data['muscle_groups'], 'exercise_muscle_group');
+        }
+        if (isset($workout_data['difficulty'])) {
+            wp_set_object_terms($workout_id, $workout_data['difficulty'], 'exercise_difficulty');
         }
 
-        return $this->transaction(function() use ($workout_data) {
-            $post_data = array(
-                'post_title' => sanitize_text_field($workout_data['title']),
-                'post_type' => 'workout_log',
-                'post_status' => 'publish',
-                'post_author' => get_current_user_id()
-            );
-
-            $post_id = wp_insert_post($post_data);
-            if (!$post_id) {
-                $this->add_error('insert_failed', __('Failed to create workout log entry', 'athlete-dashboard'));
-                return false;
-            }
-
-            // Save workout metadata
-            update_post_meta($post_id, '_workout_type', sanitize_text_field($workout_data['type']));
-            update_post_meta($post_id, '_workout_exercises', $workout_data['exercises']);
-            update_post_meta($post_id, '_workout_notes', sanitize_textarea_field($workout_data['notes']));
-            update_post_meta($post_id, '_workout_date', sanitize_text_field($workout_data['date']));
-
-            // Clear cached data
-            $date = substr($workout_data['date'], 0, 10);
-            $user_id = get_current_user_id();
-            $this->delete_cached_data("workouts_{$user_id}_{$date}");
-            $this->delete_cached_data("stats_{$user_id}");
-
-            return $post_id;
-        });
+        return true;
     }
 
     /**
      * Delete a workout
+     *
+     * @param int $workout_id Workout ID
+     * @return bool|WP_Error True on success, error object on failure
      */
     public function delete_workout($workout_id) {
-        $post = get_post($workout_id);
-        if (!$post || ($post->post_author != get_current_user_id() && !current_user_can('delete_others_posts'))) {
-            $this->add_error('permission_denied', __('You do not have permission to delete this workout', 'athlete-dashboard'));
-            return false;
+        if (!$this->user_can('delete_workout', $workout_id)) {
+            return new WP_Error('permission_denied', __('You do not have permission to delete this workout', 'athlete-dashboard'));
         }
 
-        return wp_delete_post($workout_id, true);
+        $result = wp_delete_post($workout_id, true);
+        return $result ? true : new WP_Error('delete_failed', __('Failed to delete workout', 'athlete-dashboard'));
     }
 
     /**
-     * Get workouts for a specific date
+     * Search workouts
+     *
+     * @param array $args Search arguments
+     * @return array Array of workout posts
      */
-    public function get_workouts($date, $user_id = null) {
-        if (!$user_id) {
-            $user_id = get_current_user_id();
+    public function search_workouts($args) {
+        $default_args = array(
+            'post_type' => 'workout',
+            'posts_per_page' => 10,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        );
+
+        // Add taxonomy queries if provided
+        $tax_query = array();
+        
+        if (!empty($args['categories'])) {
+            $tax_query[] = array(
+                'taxonomy' => 'exercise_category',
+                'field' => 'slug',
+                'terms' => $args['categories']
+            );
+        }
+        
+        if (!empty($args['equipment'])) {
+            $tax_query[] = array(
+                'taxonomy' => 'exercise_equipment',
+                'field' => 'slug',
+                'terms' => $args['equipment']
+            );
+        }
+        
+        if (!empty($args['muscle_groups'])) {
+            $tax_query[] = array(
+                'taxonomy' => 'exercise_muscle_group',
+                'field' => 'slug',
+                'terms' => $args['muscle_groups']
+            );
+        }
+        
+        if (!empty($args['difficulty'])) {
+            $tax_query[] = array(
+                'taxonomy' => 'exercise_difficulty',
+                'field' => 'slug',
+                'terms' => $args['difficulty']
+            );
         }
 
-        return $this->get_cached_data("workouts_{$user_id}_{$date}", function() use ($user_id, $date) {
-            $args = array(
-                'post_type' => 'workout_log',
-                'post_status' => 'publish',
-                'author' => $user_id,
-                'date_query' => array(
-                    array(
-                        'year' => date('Y', strtotime($date)),
-                        'month' => date('m', strtotime($date)),
-                        'day' => date('d', strtotime($date))
-                    )
+        if (!empty($tax_query)) {
+            $tax_query['relation'] = 'AND';
+            $args['tax_query'] = $tax_query;
+        }
+
+        // Add meta queries if provided
+        $meta_query = array();
+        
+        if (!empty($args['type'])) {
+            $meta_query[] = array(
+                'key' => '_workout_type',
+                'value' => $args['type']
+            );
+        }
+        
+        if (!empty($args['duration'])) {
+            $meta_query[] = array(
+                'key' => '_workout_duration',
+                'value' => $args['duration'],
+                'type' => 'NUMERIC',
+                'compare' => '<='
+            );
+        }
+        
+        if (!empty($args['intensity'])) {
+            $meta_query[] = array(
+                'key' => '_workout_intensity',
+                'value' => $args['intensity'],
+                'type' => 'NUMERIC',
+                'compare' => '<='
+            );
+        }
+
+        if (!empty($meta_query)) {
+            $meta_query['relation'] = 'AND';
+            $args['meta_query'] = $meta_query;
+        }
+
+        $query_args = wp_parse_args($args, $default_args);
+        return get_posts($query_args);
+    }
+
+    /**
+     * Update workout meta data
+     *
+     * @param int $workout_id Workout ID
+     * @param array $workout_data Workout data
+     */
+    private function update_workout_meta($workout_id, $workout_data) {
+        if (isset($workout_data['type'])) {
+            update_post_meta($workout_id, '_workout_type', sanitize_text_field($workout_data['type']));
+        }
+        if (isset($workout_data['duration'])) {
+            update_post_meta($workout_id, '_workout_duration', absint($workout_data['duration']));
+        }
+        if (isset($workout_data['intensity'])) {
+            update_post_meta($workout_id, '_workout_intensity', $this->sanitize_intensity($workout_data['intensity']));
+        }
+        if (isset($workout_data['target_areas'])) {
+            update_post_meta($workout_id, '_workout_target_areas', $this->sanitize_target_areas($workout_data['target_areas']));
+        }
+        if (isset($workout_data['exercises'])) {
+            update_post_meta($workout_id, '_workout_exercises', $this->sanitize_exercises($workout_data['exercises']));
+        }
+    }
+
+    /**
+     * Get recommended workouts for user
+     *
+     * @param int $user_id User ID
+     * @param int $limit Number of recommendations to return
+     * @return array Array of recommended workouts
+     */
+    public function get_recommended_workouts($user_id, $limit = 5) {
+        // Get user's completed workouts
+        $completed_workouts = get_posts(array(
+            'post_type' => 'workout_log',
+            'author' => $user_id,
+            'posts_per_page' => -1,
+            'fields' => 'ids'
+        ));
+
+        // Get workout IDs from logs
+        $workout_ids = array();
+        foreach ($completed_workouts as $log_id) {
+            $workout_id = get_post_meta($log_id, '_workout_id', true);
+            if ($workout_id) {
+                $workout_ids[] = $workout_id;
+            }
+        }
+
+        // Get most common categories and muscle groups from completed workouts
+        $categories = array();
+        $muscle_groups = array();
+        foreach ($workout_ids as $workout_id) {
+            $cats = wp_get_post_terms($workout_id, 'exercise_category', array('fields' => 'slugs'));
+            $muscles = wp_get_post_terms($workout_id, 'exercise_muscle_group', array('fields' => 'slugs'));
+            
+            $categories = array_merge($categories, $cats);
+            $muscle_groups = array_merge($muscle_groups, $muscles);
+        }
+
+        // Count occurrences
+        $category_counts = array_count_values($categories);
+        $muscle_group_counts = array_count_values($muscle_groups);
+
+        // Get top categories and muscle groups
+        arsort($category_counts);
+        arsort($muscle_group_counts);
+        $top_categories = array_slice(array_keys($category_counts), 0, 3);
+        $top_muscle_groups = array_slice(array_keys($muscle_group_counts), 0, 3);
+
+        // Query for recommended workouts
+        $args = array(
+            'post_type' => 'workout',
+            'posts_per_page' => $limit,
+            'post__not_in' => $workout_ids,
+            'orderby' => 'rand',
+            'tax_query' => array(
+                'relation' => 'OR',
+                array(
+                    'taxonomy' => 'exercise_category',
+                    'field' => 'slug',
+                    'terms' => $top_categories
                 ),
-                'posts_per_page' => -1
-            );
+                array(
+                    'taxonomy' => 'exercise_muscle_group',
+                    'field' => 'slug',
+                    'terms' => $top_muscle_groups
+                )
+            )
+        );
 
-            $query = new WP_Query($args);
-            $workouts = array();
-
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $workouts[] = array(
-                        'id' => get_the_ID(),
-                        'title' => get_the_title(),
-                        'type' => get_post_meta(get_the_ID(), '_workout_type', true),
-                        'exercises' => get_post_meta(get_the_ID(), '_workout_exercises', true),
-                        'notes' => get_post_meta(get_the_ID(), '_workout_notes', true),
-                        'date' => get_post_meta(get_the_ID(), '_workout_date', true)
-                    );
-                }
-                wp_reset_postdata();
-            }
-
-            return $workouts;
-        });
-    }
-
-    /**
-     * Get workout statistics
-     */
-    public function get_workout_stats($user_id = null) {
-        if (!$user_id) {
-            $user_id = get_current_user_id();
-        }
-
-        return $this->get_cached_data("stats_{$user_id}", function() use ($user_id) {
-            $args = array(
-                'post_type' => 'workout_log',
-                'post_status' => 'publish',
-                'author' => $user_id,
-                'posts_per_page' => -1
-            );
-
-            $query = new WP_Query($args);
-            $stats = array(
-                'total_workouts' => $query->found_posts,
-                'workout_types' => array(),
-                'recent_workouts' => array()
-            );
-
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $type = get_post_meta(get_the_ID(), '_workout_type', true);
-                    
-                    // Count workout types
-                    if (!isset($stats['workout_types'][$type])) {
-                        $stats['workout_types'][$type] = 0;
-                    }
-                    $stats['workout_types'][$type]++;
-
-                    // Get recent workouts
-                    if (count($stats['recent_workouts']) < 5) {
-                        $stats['recent_workouts'][] = array(
-                            'id' => get_the_ID(),
-                            'title' => get_the_title(),
-                            'type' => $type,
-                            'date' => get_post_meta(get_the_ID(), '_workout_date', true)
-                        );
-                    }
-                }
-                wp_reset_postdata();
-            }
-
-            return $stats;
-        });
+        return get_posts($args);
     }
 } 

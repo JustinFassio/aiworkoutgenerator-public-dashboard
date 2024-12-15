@@ -22,6 +22,14 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Data_Manager' => '/includes/data/class-data-manager.php',
         'Athlete_Dashboard_Nutrition_Data_Manager' => '/includes/data/class-nutrition-data-manager.php',
         'Athlete_Dashboard_Workout_Data_Manager' => '/includes/data/class-workout-data-manager.php',
+        'Athlete_Dashboard_Exercise_Data_Manager' => '/includes/data/class-exercise-data-manager.php',
+        'Athlete_Dashboard_Workout_Progress_Manager' => '/includes/data/class-workout-progress-manager.php',
+        'Athlete_Dashboard_Workout_Stats_Manager' => '/includes/data/class-workout-stats-manager.php',
+        
+        // Post Types and Taxonomies
+        'Athlete_Dashboard_Workout_Post_Type' => '/includes/post-types/class-workout-post-type.php',
+        'Athlete_Dashboard_Workout_Log_Post_Type' => '/includes/post-types/class-workout-log-post-type.php',
+        'Athlete_Dashboard_Exercise_Taxonomy' => '/includes/post-types/class-exercise-taxonomy.php',
         
         // Database classes
         'Athlete_Food_Database' => '/includes/database/class-food-database.php',
@@ -39,7 +47,9 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Progress_Tracker' => '/includes/dashboard/components/class-progress-tracker.php',
         'Athlete_Dashboard_Account_Details' => '/includes/dashboard/components/class-account-details.php',
         'Athlete_Dashboard_Welcome_Banner' => '/includes/dashboard/components/class-welcome-banner.php',
-        'Athlete_Dashboard_Workout_Lightbox' => '/includes/dashboard/components/class-workout-lightbox.php'
+        'Athlete_Dashboard_Workout_Lightbox' => '/includes/dashboard/components/class-workout-lightbox.php',
+        'Athlete_Dashboard_Workout_Stats_Display' => '/includes/dashboard/components/class-workout-stats-display.php',
+        'Athlete_Dashboard_Workout_Dashboard_Controller' => '/includes/dashboard/class-workout-dashboard-controller.php'
     );
 
     /**
@@ -90,7 +100,7 @@ class Athlete_Dashboard_Autoloader {
         $file = 'class-' . str_replace('_', '-', strtolower($class)) . '.php';
 
         // Determine directory based on class type
-        if (strpos($class, 'Data_') === 0) {
+        if (strpos($class, 'Data_') === 0 || strpos($class, 'Stats_') === 0 || strpos($class, 'Progress_') === 0) {
             return '/includes/data/' . $file;
         } elseif (strpos($class, 'Component_') === 0) {
             return '/includes/dashboard/components/' . $file;
@@ -98,6 +108,8 @@ class Athlete_Dashboard_Autoloader {
             return '/includes/dashboard/handlers/' . $file;
         } elseif (strpos($class, 'Database') !== false) {
             return '/includes/database/' . $file;
+        } elseif (strpos($class, 'Post_Type') !== false || strpos($class, 'Taxonomy') !== false) {
+            return '/includes/post-types/' . $file;
         }
 
         // Default to components directory

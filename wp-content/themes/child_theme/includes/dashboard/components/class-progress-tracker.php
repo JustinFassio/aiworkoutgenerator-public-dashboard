@@ -1,8 +1,8 @@
 <?php
 /**
  * Progress Tracker Component Class
- *
- * @package AthleteDashboard
+ * 
+ * Handles workout progress tracking and visualization in the dashboard
  */
 
 if (!defined('ABSPATH')) {
@@ -11,277 +11,347 @@ if (!defined('ABSPATH')) {
 
 class Athlete_Dashboard_Progress_Tracker {
     /**
-     * The type of progress being tracked
+     * The progress manager instance
      *
-     * @var string
+     * @var Athlete_Dashboard_Workout_Progress_Manager
      */
-    private $type;
+    private $progress_manager;
+
+    /**
+     * The workout manager instance
+     *
+     * @var Athlete_Dashboard_Workout_Data_Manager
+     */
+    private $workout_manager;
 
     /**
      * Initialize the component
-     *
-     * @param string $type The type of progress (e.g., 'body_weight', 'squat', 'bench_press')
      */
-    public function __construct($type) {
-        $this->type = $type;
-        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
-        add_action('wp_ajax_get_progress_data', array($this, 'get_progress_data'));
-        add_action('wp_ajax_save_progress_entry', array($this, 'save_progress_entry'));
-        add_action('wp_ajax_delete_progress_entry', array($this, 'delete_progress_entry'));
+    public function __construct() {
+        $this->progress_manager = new Athlete_Dashboard_Workout_Progress_Manager();
+        $this->workout_manager = new Athlete_Dashboard_Workout_Data_Manager();
+        $this->init_hooks();
     }
 
     /**
-     * Enqueue component-specific scripts
+     * Initialize WordPress hooks
      */
-    public function enqueue_scripts() {
+    private function init_hooks() {
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_assets'));
+        add_action('athlete_dashboard_progress_tracker', array($this, 'render_progress_tracker'));
+        add_action('wp_ajax_update_workout_progress', array($this, 'handle_progress_update'));
+    }
+
+    /**
+     * Enqueue necessary assets
+     */
+    public function enqueue_assets() {
+        if (!is_page('dashboard')) {
+            return;
+        }
+
+        wp_enqueue_style(
+            'progress-tracker',
+            get_stylesheet_directory_uri() . '/assets/css/components/progress-tracker.css',
+            array(),
+            ATHLETE_DASHBOARD_VERSION
+        );
+
         wp_enqueue_script(
             'progress-tracker',
-            ATHLETE_DASHBOARD_URI . '/assets/js/components/progress-tracker.js',
-            array('jquery', 'chartjs'),
-            filemtime(ATHLETE_DASHBOARD_PATH . '/assets/js/components/progress-tracker.js'),
+            get_stylesheet_directory_uri() . '/assets/js/components/progress-tracker.js',
+            array('jquery'),
+            ATHLETE_DASHBOARD_VERSION,
             true
         );
 
         wp_localize_script('progress-tracker', 'progressTrackerData', array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('progress_tracker_nonce'),
-            'type' => $this->type,
-            'strings' => array(
-                'saveSuccess' => __('Progress entry saved successfully', 'athlete-dashboard'),
-                'saveError' => __('Error saving progress entry', 'athlete-dashboard'),
-                'deleteSuccess' => __('Progress entry deleted successfully', 'athlete-dashboard'),
-                'deleteError' => __('Error deleting progress entry', 'athlete-dashboard'),
-                'confirmDelete' => __('Are you sure you want to delete this entry?', 'athlete-dashboard')
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('workout_progress_nonce'),
+            'i18n' => array(
+                'saved' => __('Progress saved successfully', 'athlete-dashboard'),
+                'error' => __('Error saving progress', 'athlete-dashboard'),
+                'confirm' => __('Are you sure you want to clear this progress?', 'athlete-dashboard')
             )
         ));
     }
 
     /**
      * Render the progress tracker
-     */
-    public function render() {
-        $template_data = array(
-            'title' => $this->get_title(),
-            'chart_id' => $this->type . '_chart',
-            'form_id' => $this->type . '_form',
-            'weight_field_name' => $this->type . '_weight',
-            'weight_unit_field_name' => $this->type . '_unit',
-            'nonce_name' => $this->type . '_nonce'
-        );
-
-        // Extract template data to make variables available in template
-        extract($template_data);
-
-        include ATHLETE_DASHBOARD_PATH . '/templates/dashboard/sections/progress-tracker.php';
-    }
-
-    /**
-     * Get progress data via AJAX
-     */
-    public function get_progress_data() {
-        check_ajax_referer('progress_tracker_nonce', 'nonce');
-
-        if (!is_user_logged_in()) {
-            wp_send_json_error(__('You must be logged in to view progress', 'athlete-dashboard'));
-        }
-
-        $user_id = get_current_user_id();
-        $entries = $this->get_progress_entries($user_id);
-
-        wp_send_json_success(array(
-            'entries' => $entries,
-            'chart_data' => $this->format_chart_data($entries)
-        ));
-    }
-
-    /**
-     * Save progress entry via AJAX
-     */
-    public function save_progress_entry() {
-        check_ajax_referer('progress_tracker_nonce', 'nonce');
-
-        if (!is_user_logged_in()) {
-            wp_send_json_error(__('You must be logged in to save progress', 'athlete-dashboard'));
-        }
-
-        $entry_data = $this->validate_entry_data($_POST);
-        if (is_wp_error($entry_data)) {
-            wp_send_json_error($entry_data->get_error_message());
-        }
-
-        $user_id = get_current_user_id();
-        $result = $this->save_entry($user_id, $entry_data);
-
-        if (is_wp_error($result)) {
-            wp_send_json_error($result->get_error_message());
-        }
-
-        wp_send_json_success(array(
-            'message' => __('Progress entry saved successfully', 'athlete-dashboard'),
-            'entry' => $result
-        ));
-    }
-
-    /**
-     * Delete progress entry via AJAX
-     */
-    public function delete_progress_entry() {
-        check_ajax_referer('progress_tracker_nonce', 'nonce');
-
-        if (!is_user_logged_in()) {
-            wp_send_json_error(__('You must be logged in to delete progress entries', 'athlete-dashboard'));
-        }
-
-        $entry_id = isset($_POST['entry_id']) ? intval($_POST['entry_id']) : 0;
-        if (!$entry_id) {
-            wp_send_json_error(__('Invalid entry ID', 'athlete-dashboard'));
-        }
-
-        $user_id = get_current_user_id();
-        $result = $this->delete_entry($user_id, $entry_id);
-
-        if (is_wp_error($result)) {
-            wp_send_json_error($result->get_error_message());
-        }
-
-        wp_send_json_success(__('Progress entry deleted successfully', 'athlete-dashboard'));
-    }
-
-    /**
-     * Get the title for this progress type
      *
-     * @return string
+     * @param array $args Optional display arguments
      */
-    private function get_title() {
-        $titles = array(
-            'body_weight' => __('Body Weight', 'athlete-dashboard'),
-            'squat' => __('Squat', 'athlete-dashboard'),
-            'bench_press' => __('Bench Press', 'athlete-dashboard'),
-            'deadlift' => __('Deadlift', 'athlete-dashboard')
+    public function render_progress_tracker($args = array()) {
+        $default_args = array(
+            'workout_id' => 0,
+            'show_history' => true
         );
 
-        return isset($titles[$this->type]) ? $titles[$this->type] : $this->type;
+        $args = wp_parse_args($args, $default_args);
+        $user_id = get_current_user_id();
+
+        if (!$args['workout_id']) {
+            return;
+        }
+
+        $workout = $this->workout_manager->get_workout($args['workout_id']);
+        if (!$workout) {
+            return;
+        }
+
+        $progress = $this->progress_manager->get_workout_progress($user_id, $args['workout_id']);
+        if (is_wp_error($progress)) {
+            $progress = array();
+        }
+
+        $this->render_progress_form($workout, $progress);
+
+        if ($args['show_history']) {
+            $this->render_progress_history($user_id, $args['workout_id']);
+        }
     }
 
     /**
-     * Get progress entries for a user
+     * Render the progress tracking form
+     *
+     * @param array $workout Workout data
+     * @param array $progress Current progress data
+     */
+    private function render_progress_form($workout, $progress) {
+        ?>
+        <div class="progress-tracker" data-workout-id="<?php echo esc_attr($workout['id']); ?>">
+            <h3><?php esc_html_e('Track Your Progress', 'athlete-dashboard'); ?></h3>
+            
+            <form class="progress-form" id="workout-progress-form">
+                <?php wp_nonce_field('workout_progress_nonce'); ?>
+                <input type="hidden" name="workout_id" value="<?php echo esc_attr($workout['id']); ?>">
+
+                <!-- Exercise Progress Section -->
+                <div class="exercise-progress-section">
+                    <h4><?php esc_html_e('Exercises', 'athlete-dashboard'); ?></h4>
+                    <?php foreach ($workout['exercises'] as $exercise): ?>
+                        <div class="exercise-progress" data-exercise-id="<?php echo esc_attr($exercise['id']); ?>">
+                            <h5><?php echo esc_html($exercise['name']); ?></h5>
+                            
+                            <div class="exercise-inputs">
+                                <div class="input-group">
+                                    <label><?php esc_html_e('Sets', 'athlete-dashboard'); ?></label>
+                                    <input type="number" 
+                                           name="exercises[<?php echo esc_attr($exercise['id']); ?>][sets_completed]" 
+                                           value="<?php echo esc_attr($this->get_exercise_progress_value($progress, $exercise['id'], 'sets_completed')); ?>"
+                                           min="0"
+                                           class="small-input">
+                                    <span class="target">/ <?php echo esc_html($exercise['sets']); ?></span>
+                                </div>
+
+                                <div class="input-group">
+                                    <label><?php esc_html_e('Reps', 'athlete-dashboard'); ?></label>
+                                    <input type="number" 
+                                           name="exercises[<?php echo esc_attr($exercise['id']); ?>][reps_completed]" 
+                                           value="<?php echo esc_attr($this->get_exercise_progress_value($progress, $exercise['id'], 'reps_completed')); ?>"
+                                           min="0"
+                                           class="small-input">
+                                    <span class="target">/ <?php echo esc_html($exercise['reps']); ?></span>
+                                </div>
+
+                                <div class="input-group">
+                                    <label><?php esc_html_e('Weight (kg)', 'athlete-dashboard'); ?></label>
+                                    <input type="number" 
+                                           name="exercises[<?php echo esc_attr($exercise['id']); ?>][weight_used]" 
+                                           value="<?php echo esc_attr($this->get_exercise_progress_value($progress, $exercise['id'], 'weight_used')); ?>"
+                                           min="0"
+                                           step="0.5"
+                                           class="small-input">
+                                </div>
+                            </div>
+
+                            <div class="notes-input">
+                                <label><?php esc_html_e('Notes', 'athlete-dashboard'); ?></label>
+                                <textarea name="exercises[<?php echo esc_attr($exercise['id']); ?>][notes]"
+                                          rows="2"><?php echo esc_textarea($this->get_exercise_progress_value($progress, $exercise['id'], 'notes')); ?></textarea>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <!-- Overall Progress Section -->
+                <div class="overall-progress-section">
+                    <h4><?php esc_html_e('Overall Progress', 'athlete-dashboard'); ?></h4>
+                    
+                    <div class="input-group">
+                        <label><?php esc_html_e('Duration (minutes)', 'athlete-dashboard'); ?></label>
+                        <input type="number" 
+                               name="duration" 
+                               value="<?php echo esc_attr($progress['duration'] ?? ''); ?>"
+                               min="0"
+                               class="medium-input">
+                    </div>
+
+                    <div class="input-group">
+                        <label><?php esc_html_e('Intensity (1-10)', 'athlete-dashboard'); ?></label>
+                        <input type="range" 
+                               name="intensity" 
+                               value="<?php echo esc_attr($progress['intensity'] ?? 5); ?>"
+                               min="1"
+                               max="10"
+                               class="intensity-slider">
+                        <span class="intensity-value"></span>
+                    </div>
+
+                    <div class="notes-input">
+                        <label><?php esc_html_e('Workout Notes', 'athlete-dashboard'); ?></label>
+                        <textarea name="notes" rows="3"><?php echo esc_textarea($progress['notes'] ?? ''); ?></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="button button-primary save-progress">
+                        <?php esc_html_e('Save Progress', 'athlete-dashboard'); ?>
+                    </button>
+                    
+                    <?php if (!empty($progress)): ?>
+                        <button type="button" class="button clear-progress">
+                            <?php esc_html_e('Clear Progress', 'athlete-dashboard'); ?>
+                        </button>
+                    <?php endif; ?>
+                </div>
+            </form>
+        </div>
+        <?php
+    }
+
+    /**
+     * Render the progress history section
      *
      * @param int $user_id User ID
-     * @return array Progress entries
+     * @param int $workout_id Workout ID
      */
-    private function get_progress_entries($user_id) {
-        return get_user_meta($user_id, '_athlete_' . $this->type . '_progress', true) ?: array();
+    private function render_progress_history($user_id, $workout_id) {
+        $history = $this->progress_manager->get_workout_progress_history($user_id, array(
+            'workout_id' => $workout_id,
+            'limit' => 5
+        ));
+
+        if (empty($history)) {
+            return;
+        }
+        ?>
+        <div class="progress-history">
+            <h3><?php esc_html_e('Recent Progress', 'athlete-dashboard'); ?></h3>
+            
+            <div class="history-entries">
+                <?php foreach ($history as $entry): ?>
+                    <div class="history-entry">
+                        <div class="entry-date">
+                            <?php echo esc_html($this->get_formatted_date($entry['last_updated'])); ?>
+                        </div>
+                        
+                        <div class="entry-stats">
+                            <span class="duration">
+                                <?php 
+                                /* translators: %d: number of minutes */
+                                printf(esc_html__('%d min', 'athlete-dashboard'), $entry['duration']); 
+                                ?>
+                            </span>
+                            <span class="intensity">
+                                <?php 
+                                /* translators: %d: intensity value */
+                                printf(esc_html__('Intensity: %d/10', 'athlete-dashboard'), $entry['intensity']); 
+                                ?>
+                            </span>
+                        </div>
+
+                        <?php if (!empty($entry['notes'])): ?>
+                            <div class="entry-notes">
+                                <?php echo esc_html($entry['notes']); ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php
     }
 
     /**
-     * Format entries for chart display
-     *
-     * @param array $entries Progress entries
-     * @return array Formatted chart data
+     * Handle progress update AJAX request
      */
-    private function format_chart_data($entries) {
-        $data = array(
-            'labels' => array(),
-            'datasets' => array(
-                array(
-                    'label' => $this->get_title(),
-                    'data' => array(),
-                    'borderColor' => '#2196F3',
-                    'backgroundColor' => 'rgba(33, 150, 243, 0.1)',
-                    'tension' => 0.4
-                )
-            )
-        );
-
-        foreach ($entries as $entry) {
-            $data['labels'][] = $entry['date'];
-            $data['datasets'][0]['data'][] = $entry['weight'];
+    public function handle_progress_update() {
+        check_ajax_referer('workout_progress_nonce');
+        
+        if (!is_user_logged_in()) {
+            wp_send_json_error(__('User not logged in', 'athlete-dashboard'));
+            return;
         }
 
-        return $data;
-    }
+        $user_id = get_current_user_id();
+        $workout_id = isset($_POST['workout_id']) ? absint($_POST['workout_id']) : 0;
 
-    /**
-     * Validate entry data
-     *
-     * @param array $data Raw entry data
-     * @return array|WP_Error Validated data or error
-     */
-    private function validate_entry_data($data) {
-        $required_fields = array(
-            $this->type . '_weight' => 'weight',
-            $this->type . '_unit' => 'unit',
-            'date' => 'date'
+        if (!$workout_id) {
+            wp_send_json_error(__('Invalid workout ID', 'athlete-dashboard'));
+            return;
+        }
+
+        // Build progress data from form submission
+        $progress_data = array(
+            'workout_id' => $workout_id,
+            'duration' => isset($_POST['duration']) ? absint($_POST['duration']) : 0,
+            'intensity' => isset($_POST['intensity']) ? absint($_POST['intensity']) : 5,
+            'notes' => isset($_POST['notes']) ? sanitize_textarea_field($_POST['notes']) : '',
+            'completed_exercises' => array()
         );
 
-        $entry = array();
-        foreach ($required_fields as $field => $key) {
-            if (empty($data[$field])) {
-                return new WP_Error(
-                    'missing_field',
-                    sprintf(__('Missing required field: %s', 'athlete-dashboard'), $key)
+        // Process exercise data
+        if (isset($_POST['exercises']) && is_array($_POST['exercises'])) {
+            foreach ($_POST['exercises'] as $exercise_id => $exercise_data) {
+                $progress_data['completed_exercises'][] = array(
+                    'id' => absint($exercise_id),
+                    'sets_completed' => isset($exercise_data['sets_completed']) ? absint($exercise_data['sets_completed']) : 0,
+                    'reps_completed' => isset($exercise_data['reps_completed']) ? absint($exercise_data['reps_completed']) : 0,
+                    'weight_used' => isset($exercise_data['weight_used']) ? floatval($exercise_data['weight_used']) : 0,
+                    'notes' => isset($exercise_data['notes']) ? sanitize_textarea_field($exercise_data['notes']) : ''
                 );
             }
-            $entry[$key] = sanitize_text_field($data[$field]);
         }
 
-        $entry['notes'] = !empty($data['notes']) ? wp_kses_post($data['notes']) : '';
-        return $entry;
+        $result = $this->progress_manager->save_workout_progress($user_id, $progress_data);
+        
+        if (is_wp_error($result)) {
+            wp_send_json_error($result->get_error_message());
+        } else {
+            wp_send_json_success($result);
+        }
     }
 
     /**
-     * Save a progress entry
+     * Get a specific value from exercise progress data
      *
-     * @param int $user_id User ID
-     * @param array $entry_data Entry data
-     * @return array|WP_Error Saved entry or error
+     * @param array $progress Progress data
+     * @param int $exercise_id Exercise ID
+     * @param string $field Field name
+     * @return mixed Field value or empty string if not found
      */
-    private function save_entry($user_id, $entry_data) {
-        $entries = $this->get_progress_entries($user_id);
-        $entry_data['id'] = time(); // Use timestamp as ID
-        $entries[] = $entry_data;
-
-        // Sort entries by date
-        usort($entries, function($a, $b) {
-            return strtotime($a['date']) - strtotime($b['date']);
-        });
-
-        $updated = update_user_meta($user_id, '_athlete_' . $this->type . '_progress', $entries);
-        if ($updated === false) {
-            return new WP_Error('save_failed', __('Failed to save progress entry', 'athlete-dashboard'));
+    private function get_exercise_progress_value($progress, $exercise_id, $field) {
+        if (empty($progress['completed_exercises'])) {
+            return '';
         }
 
-        return $entry_data;
-    }
-
-    /**
-     * Delete a progress entry
-     *
-     * @param int $user_id User ID
-     * @param int $entry_id Entry ID
-     * @return bool|WP_Error True on success, error object on failure
-     */
-    private function delete_entry($user_id, $entry_id) {
-        $entries = $this->get_progress_entries($user_id);
-        $found = false;
-
-        foreach ($entries as $key => $entry) {
-            if (isset($entry['id']) && $entry['id'] === $entry_id) {
-                unset($entries[$key]);
-                $found = true;
-                break;
+        foreach ($progress['completed_exercises'] as $exercise) {
+            if ($exercise['id'] == $exercise_id && isset($exercise[$field])) {
+                return $exercise[$field];
             }
         }
 
-        if (!$found) {
-            return new WP_Error('not_found', __('Progress entry not found', 'athlete-dashboard'));
-        }
+        return '';
+    }
 
-        $updated = update_user_meta($user_id, '_athlete_' . $this->type . '_progress', array_values($entries));
-        if ($updated === false) {
-            return new WP_Error('delete_failed', __('Failed to delete progress entry', 'athlete-dashboard'));
-        }
-
-        return true;
+    /**
+     * Get formatted date for display
+     *
+     * @param string $date Date string
+     * @return string Formatted date
+     */
+    private function get_formatted_date($date) {
+        return date_i18n(get_option('date_format') . ' ' . get_option('time_format'), strtotime($date));
     }
 } 

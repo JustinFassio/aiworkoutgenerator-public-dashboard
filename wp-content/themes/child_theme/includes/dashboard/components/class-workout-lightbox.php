@@ -21,40 +21,22 @@ class Athlete_Dashboard_Workout_Lightbox {
      * Enqueue component-specific scripts
      */
     public function enqueue_scripts() {
-        // Enqueue the lightbox script
         wp_enqueue_script(
-            'athlete-dashboard-workout-lightbox',
-            get_stylesheet_directory_uri() . '/assets/js/components/workout-lightbox.js',
+            'workout-lightbox',
+            ATHLETE_DASHBOARD_URI . '/assets/js/components/workout-lightbox.js',
             array('jquery'),
-            filemtime(get_stylesheet_directory() . '/assets/js/components/workout-lightbox.js'),
+            ATHLETE_DASHBOARD_VERSION,
             true
         );
 
-        // Enqueue the lightbox styles
-        wp_enqueue_style(
-            'athlete-dashboard-workout-lightbox',
-            get_stylesheet_directory_uri() . '/assets/css/components/workout-lightbox.css',
-            array(),
-            filemtime(get_stylesheet_directory() . '/assets/css/components/workout-lightbox.css')
-        );
-
-        // Localize script with necessary data
-        wp_localize_script('athlete-dashboard-workout-lightbox', 'workoutLightboxData', array(
+        wp_localize_script('workout-lightbox', 'workoutLightboxData', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('workout_nonce'),
-            'loginUrl' => wp_login_url(get_permalink()),
+            'loginUrl' => wp_login_url(),
             'strings' => array(
-                'loading' => __('Loading workout details...', 'athlete-dashboard'),
+                'loading' => __('Loading workout...', 'athlete-dashboard'),
                 'error' => __('Error loading workout', 'athlete-dashboard'),
-                'close' => __('Close', 'athlete-dashboard'),
-                'print' => __('Print Workout', 'athlete-dashboard'),
-                'edit' => __('Edit', 'athlete-dashboard'),
-                'save' => __('Save', 'athlete-dashboard'),
-                'cancel' => __('Cancel', 'athlete-dashboard'),
-                'addExercise' => __('Add Exercise', 'athlete-dashboard'),
-                'deleteExercise' => __('Delete Exercise', 'athlete-dashboard'),
-                'confirmDelete' => __('Are you sure you want to delete this exercise?', 'athlete-dashboard'),
-                'unsavedChanges' => __('You have unsaved changes. Are you sure you want to exit?', 'athlete-dashboard')
+                'close' => __('Close', 'athlete-dashboard')
             )
         ));
     }

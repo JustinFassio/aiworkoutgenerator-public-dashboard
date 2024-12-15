@@ -181,7 +181,20 @@ class Athlete_Dashboard_Workout_Handler {
                 throw new Exception(__('You do not have permission to view this workout', 'athlete-dashboard'), 403);
             }
 
-            wp_send_json_success($workout);
+            // Format the response data
+            $response_data = array(
+                'id' => $workout_id,
+                'title' => get_the_title($workout_id),
+                'date' => get_the_date('F j, Y', $workout_id),
+                'type' => get_post_meta($workout_id, '_workout_type', true) ?: 'standard',
+                'exercises' => get_post_meta($workout_id, '_workout_exercises', true) ?: array(),
+                'content' => apply_filters('the_content', get_post_field('post_content', $workout_id)),
+                'notes' => get_post_meta($workout_id, '_workout_notes', true),
+                'can_edit' => current_user_can('edit_post', $workout_id),
+                'can_delete' => current_user_can('delete_post', $workout_id)
+            );
+
+            wp_send_json_success($response_data);
 
         } catch (Exception $e) {
             wp_send_json_error(array(

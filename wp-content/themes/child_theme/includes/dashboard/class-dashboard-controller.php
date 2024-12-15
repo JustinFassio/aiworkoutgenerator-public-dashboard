@@ -46,11 +46,10 @@ class Athlete_Dashboard_Controller {
         $this->components['nutrition_tracker'] = new Athlete_Dashboard_Nutrition_Tracker();
         $this->components['food_manager'] = new Athlete_Dashboard_Food_Manager();
 
-        // Initialize progress trackers
-        $progress_types = array('body_weight', 'squat', 'bench_press', 'deadlift');
-        foreach ($progress_types as $type) {
-            $this->components["progress_{$type}"] = new Athlete_Dashboard_Progress_Tracker($type);
-        }
+        // Initialize workout components
+        $this->components['workout_dashboard'] = new Athlete_Dashboard_Workout_Dashboard_Controller();
+        $this->components['workout_stats'] = new Athlete_Dashboard_Workout_Stats_Display();
+        $this->components['progress_tracker'] = new Athlete_Dashboard_Progress_Tracker();
     }
 
     /**
@@ -69,6 +68,15 @@ class Athlete_Dashboard_Controller {
         wp_enqueue_style('jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
         wp_enqueue_script('jquery-ui-autocomplete');
 
+        // Chart.js for statistics
+        wp_enqueue_script(
+            'chart-js',
+            'https://cdn.jsdelivr.net/npm/chart.js',
+            array(),
+            '3.7.0',
+            true
+        );
+
         // Component scripts - ensure proper loading order
         $component_scripts = array(
             'athlete-dashboard-workout-lightbox' => array(
@@ -85,11 +93,19 @@ class Athlete_Dashboard_Controller {
             ),
             'athlete-dashboard-nutrition-tracker' => array(
                 'path' => '/assets/js/components/nutrition-tracker.js',
-                'deps' => array('jquery', 'chartjs')
+                'deps' => array('jquery', 'chart-js')
             ),
             'athlete-dashboard-food-manager' => array(
                 'path' => '/assets/js/components/food-manager.js',
                 'deps' => array('jquery', 'jquery-ui-autocomplete')
+            ),
+            'athlete-dashboard-workout-stats' => array(
+                'path' => '/assets/js/components/workout-stats-display.js',
+                'deps' => array('jquery', 'chart-js')
+            ),
+            'athlete-dashboard-progress-tracker' => array(
+                'path' => '/assets/js/components/progress-tracker.js',
+                'deps' => array('jquery')
             )
         );
 
@@ -181,6 +197,18 @@ class Athlete_Dashboard_Controller {
                     <?php $this->components['account_details']->render($current_user); ?>
                 </section>
 
+                <!-- Workout Stats Section -->
+                <section class="dashboard-section" id="workout-stats-section">
+                    <h2><?php esc_html_e('Workout Statistics', 'athlete-dashboard'); ?></h2>
+                    <?php $this->components['workout_stats']->render_stats_section(); ?>
+                </section>
+
+                <!-- Workout Progress Section -->
+                <section class="dashboard-section" id="workout-progress-section">
+                    <h2><?php esc_html_e('Workout Progress', 'athlete-dashboard'); ?></h2>
+                    <?php $this->components['progress_tracker']->render_progress_tracker(); ?>
+                </section>
+
                 <!-- Workout Logging Section -->
                 <section class="dashboard-section" id="workout-section">
                     <h2><?php esc_html_e('Workout Tracking', 'athlete-dashboard'); ?></h2>
@@ -197,19 +225,6 @@ class Athlete_Dashboard_Controller {
                 <section class="dashboard-section" id="nutrition-progress-section">
                     <h2><?php esc_html_e('Nutrition Progress', 'athlete-dashboard'); ?></h2>
                     <?php $this->components['nutrition_tracker']->render(); ?>
-                </section>
-
-                <!-- Progress Tracking Section -->
-                <section class="dashboard-section" id="progress-section">
-                    <h2><?php esc_html_e('Progress Tracking', 'athlete-dashboard'); ?></h2>
-                    <div class="progress-trackers">
-                        <?php
-                        $progress_types = array('body_weight', 'squat', 'bench_press', 'deadlift');
-                        foreach ($progress_types as $type) {
-                            $this->components["progress_{$type}"]->render();
-                        }
-                        ?>
-                    </div>
                 </section>
 
                 <!-- Workout Lightbox -->
@@ -255,12 +270,10 @@ class Athlete_Dashboard_Controller {
         return array(
             'loading' => __('Loading...', 'athlete-dashboard'),
             'error' => __('An error occurred', 'athlete-dashboard'),
-            'success' => __('Success', 'athlete-dashboard'),
+            'success' => __('Success!', 'athlete-dashboard'),
             'confirm' => __('Are you sure?', 'athlete-dashboard'),
             'save' => __('Save', 'athlete-dashboard'),
-            'cancel' => __('Cancel', 'athlete-dashboard'),
-            'delete' => __('Delete', 'athlete-dashboard'),
-            'edit' => __('Edit', 'athlete-dashboard')
+            'cancel' => __('Cancel', 'athlete-dashboard')
         );
     }
 } 
