@@ -72,17 +72,19 @@ function athlete_dashboard_init() {
     // Initialize handlers
     new Athlete_Dashboard_Workout_Handler();
     
-    // Initialize components
-    new Athlete_Dashboard_Workout_Lightbox();
-    new Athlete_Dashboard_Workout_Logger();
-    new Athlete_Dashboard_Progress_Tracker();
-    new Athlete_Dashboard_Workout_Stats_Display();
-    
-    // Initialize dashboard controller
-    new Athlete_Dashboard_Workout_Dashboard_Controller();
-
-    // Initialize asset manager
+    // Initialize asset manager first to ensure all assets are available
     new Athlete_Dashboard_Asset_Manager();
+    
+    // Initialize core components
+    new Athlete_Dashboard_Workout_Stats_Display();
+    new Athlete_Dashboard_Progress_Tracker();
+    
+    // Initialize UI components that depend on core components
+    new Athlete_Dashboard_Workout_Logger();
+    new Athlete_Dashboard_Workout_Detail();
+    
+    // Initialize dashboard controller last
+    new Athlete_Dashboard_Workout_Dashboard_Controller();
 }
 add_action('after_setup_theme', 'athlete_dashboard_init');
 

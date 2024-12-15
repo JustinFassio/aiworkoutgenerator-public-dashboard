@@ -2300,3 +2300,118 @@ function refreshRecentWorkouts() {
 
     console.log('custom-scripts.js fully loaded and executed');
 });
+
+// Workout Detail Component Initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize workout detail view handlers
+    initWorkoutDetailHandlers();
+});
+
+function initWorkoutDetailHandlers() {
+    // Delegate click events for workout detail triggers
+    document.addEventListener('click', function(e) {
+        const workoutTrigger = e.target.closest('[data-action="view-workout"]');
+        if (workoutTrigger) {
+            const workoutId = workoutTrigger.dataset.workoutId;
+            if (workoutId) {
+                loadWorkoutDetail(workoutId);
+            }
+        }
+    });
+}
+
+function loadWorkoutDetail(workoutId) {
+    const formData = new FormData();
+    formData.append('action', 'get_workout_detail');
+    formData.append('workout_id', workoutId);
+    formData.append('nonce', workoutDetailData.nonce);
+
+    fetch(workoutDetailData.ajaxurl, {
+        method: 'POST',
+        credentials: 'same-origin',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Update the workout detail container
+            const container = document.querySelector('.workout-detail-container');
+            if (container) {
+                container.innerHTML = data.html;
+                setupWorkoutDetailEvents(container);
+            }
+        } else {
+            console.error('Error loading workout:', data.data?.message);
+            showError(data.data?.message || 'Error loading workout details');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showError('An error occurred while loading the workout details');
+    });
+}
+
+function setupWorkoutDetailEvents(container) {
+    // Handle print button click
+    const printButton = container.querySelector('.print-workout');
+    if (printButton) {
+        printButton.addEventListener('click', function() {
+            printWorkoutDetail(container);
+        });
+    }
+
+    // Handle close button click
+    const closeButton = container.querySelector('.close-detail');
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            container.innerHTML = '';
+        });
+    }
+}
+
+function printWorkoutDetail(container) {
+    const printContent = container.cloneNode(true);
+    const closeButton = printContent.querySelector('.close-detail');
+    if (closeButton) {
+        closeButton.remove();
+    }
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Print Workout</title>
+            <link rel="stylesheet" href="${document.querySelector('link[rel="stylesheet"]').href}">
+            <style>
+                body { padding: 20px; }
+                .workout-detail__actions { display: none; }
+                @media print {
+                    .workout-detail {
+                        box-shadow: none;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            ${printContent.innerHTML}
+        </body>
+        </html>
+    `);
+    printWindow.document.close();
+    printWindow.focus();
+    printWindow.print();
+    printWindow.close();
+}
+
+function showError(message) {
+    const container = document.querySelector('.workout-detail-container');
+    if (container) {
+        container.innerHTML = `
+            <div class="workout-detail__error">
+                <p>${message}</p>
+                <button type="button" class="close-detail">Close</button>
+            </div>
+        `;
+    }
+}

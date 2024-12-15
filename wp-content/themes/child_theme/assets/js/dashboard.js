@@ -49,8 +49,8 @@ class AthleteDashboard {
             this.components.progressTracker = new ProgressTrackerComponent();
         }
 
-        if (document.querySelector('.workout-lightbox')) {
-            this.components.workoutLightbox = new WorkoutLightboxComponent();
+        if (document.querySelector('#workout-detail-component')) {
+            this.components.workoutDetail = new WorkoutDetailComponent();
         }
 
         if (document.querySelector('.workout-logger')) {

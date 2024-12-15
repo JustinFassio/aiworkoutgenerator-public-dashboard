@@ -18,7 +18,7 @@ class Athlete_Dashboard_Workout_Manager {
     /**
      * Component instances
      */
-    private $lightbox;
+    private $detail;
     private $logger;
 
     /**
@@ -29,7 +29,7 @@ class Athlete_Dashboard_Workout_Manager {
         $this->data_manager = new Athlete_Dashboard_Workout_Data_Manager();
 
         // Initialize components
-        $this->lightbox = new Athlete_Dashboard_Workout_Lightbox();
+        $this->detail = new Athlete_Dashboard_Workout_Detail();
         $this->logger = new Athlete_Dashboard_Workout_Logger();
 
         // Add action hooks
@@ -77,7 +77,7 @@ class Athlete_Dashboard_Workout_Manager {
         ));
 
         // Enqueue component scripts
-        $this->lightbox->enqueue_scripts();
+        $this->detail->enqueue_scripts();
         $this->logger->enqueue_scripts();
     }
 

@@ -47,9 +47,9 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Progress_Tracker' => '/includes/dashboard/components/class-progress-tracker.php',
         'Athlete_Dashboard_Account_Details' => '/includes/dashboard/components/class-account-details.php',
         'Athlete_Dashboard_Welcome_Banner' => '/includes/dashboard/components/class-welcome-banner.php',
-        'Athlete_Dashboard_Workout_Lightbox' => '/includes/dashboard/components/class-workout-lightbox.php',
         'Athlete_Dashboard_Workout_Stats_Display' => '/includes/dashboard/components/class-workout-stats-display.php',
-        'Athlete_Dashboard_Workout_Dashboard_Controller' => '/includes/dashboard/class-workout-dashboard-controller.php'
+        'Athlete_Dashboard_Workout_Dashboard_Controller' => '/includes/dashboard/class-workout-dashboard-controller.php',
+        'Athlete_Dashboard_Workout_Detail' => '/includes/dashboard/components/class-workout-detail.php'
     );
 
     /**

@@ -40,7 +40,7 @@ class Athlete_Dashboard_Controller {
         // Initialize core components
         $this->components['welcome_banner'] = new Athlete_Dashboard_Welcome_Banner();
         $this->components['account_details'] = new Athlete_Dashboard_Account_Details();
-        $this->components['workout_lightbox'] = new Athlete_Dashboard_Workout_Lightbox();
+        $this->components['workout_detail'] = new Athlete_Dashboard_Workout_Detail();
         $this->components['workout_logger'] = new Athlete_Dashboard_Workout_Logger();
         $this->components['nutrition_logger'] = new Athlete_Dashboard_Nutrition_Logger();
         $this->components['nutrition_tracker'] = new Athlete_Dashboard_Nutrition_Tracker();
@@ -227,8 +227,8 @@ class Athlete_Dashboard_Controller {
                     <?php $this->components['nutrition_tracker']->render(); ?>
                 </section>
 
-                <!-- Workout Lightbox -->
-                <?php $this->components['workout_lightbox']->render(); ?>
+                <!-- Workout Detail Component -->
+                <?php $this->components['workout_detail']->render(); ?>
             </div>
         </div>
         <?php
