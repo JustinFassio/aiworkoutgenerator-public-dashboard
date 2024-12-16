@@ -477,3 +477,99 @@ function athlete_dashboard_recent_messages_shortcode($atts) {
     return ob_get_clean();
 }
 add_shortcode('athlete_recent_messages', 'athlete_dashboard_recent_messages_shortcode');
+
+/**
+ * Shortcode to display workout logging form
+ */
+function athlete_dashboard_log_workout_content() {
+    ob_start();
+    include get_stylesheet_directory() . '/templates/dashboard/sections/workout-logger.php';
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_log_workout_content', 'athlete_dashboard_log_workout_content');
+
+/**
+ * Shortcode to display body weight progress
+ */
+function athlete_dashboard_body_weight_progress_content() {
+    ob_start();
+    $template_vars = array(
+        'title' => __('Body Weight', 'athlete-dashboard'),
+        'chart_id' => 'bodyWeightChart',
+        'form_id' => 'bodyWeightProgressForm',
+        'weight_field_name' => 'body_weight',
+        'weight_unit_field_name' => 'body_weight_unit',
+        'nonce_name' => 'body_weight_progress_nonce'
+    );
+    extract($template_vars);
+    include get_stylesheet_directory() . '/templates/dashboard/sections/progress-tracker.php';
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_body_weight_progress_content', 'athlete_dashboard_body_weight_progress_content');
+
+/**
+ * Shortcode to display comprehensive body composition
+ */
+function athlete_dashboard_comprehensive_body_composition_content() {
+    ob_start();
+    include get_stylesheet_directory() . '/templates/dashboard/sections/charts-section.php';
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_comprehensive_body_composition_content', 'athlete_dashboard_comprehensive_body_composition_content');
+
+/**
+ * Shortcode to display squat progress
+ */
+function athlete_dashboard_squat_progress_content() {
+    ob_start();
+    $template_vars = array(
+        'title' => __('Squat', 'athlete-dashboard'),
+        'chart_id' => 'squatChart',
+        'form_id' => 'squatProgressForm',
+        'weight_field_name' => 'squat_weight',
+        'weight_unit_field_name' => 'squat_weight_unit',
+        'nonce_name' => 'squat_progress_nonce'
+    );
+    extract($template_vars);
+    include get_stylesheet_directory() . '/templates/dashboard/sections/progress-tracker.php';
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_squat_progress_content', 'athlete_dashboard_squat_progress_content');
+
+/**
+ * Shortcode to display bench press progress
+ */
+function athlete_dashboard_bench_press_progress_content() {
+    ob_start();
+    $template_vars = array(
+        'title' => __('Bench Press', 'athlete-dashboard'),
+        'chart_id' => 'benchPressChart',
+        'form_id' => 'benchPressProgressForm',
+        'weight_field_name' => 'bench_press_weight',
+        'weight_unit_field_name' => 'bench_press_weight_unit',
+        'nonce_name' => 'bench_press_progress_nonce'
+    );
+    extract($template_vars);
+    include get_stylesheet_directory() . '/templates/dashboard/sections/progress-tracker.php';
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_bench_press_progress_content', 'athlete_dashboard_bench_press_progress_content');
+
+/**
+ * Shortcode to display deadlift progress
+ */
+function athlete_dashboard_deadlift_progress_content() {
+    ob_start();
+    $template_vars = array(
+        'title' => __('Deadlift', 'athlete-dashboard'),
+        'chart_id' => 'deadliftChart',
+        'form_id' => 'deadliftProgressForm',
+        'weight_field_name' => 'deadlift_weight',
+        'weight_unit_field_name' => 'deadlift_weight_unit',
+        'nonce_name' => 'deadlift_progress_nonce'
+    );
+    extract($template_vars);
+    include get_stylesheet_directory() . '/templates/dashboard/sections/progress-tracker.php';
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_deadlift_progress_content', 'athlete_dashboard_deadlift_progress_content');

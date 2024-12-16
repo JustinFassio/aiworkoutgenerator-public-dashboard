@@ -40,6 +40,7 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Goals_Data_Manager' => '/includes/data/class-goals-data-manager.php',
         'Athlete_Dashboard_Attendance_Data_Manager' => '/includes/data/class-attendance-data-manager.php',
         'Athlete_Dashboard_User_Data_Manager' => '/includes/data/class-user-data-manager.php',
+        'Athlete_Dashboard_Charts_Data_Manager' => '/includes/data/class-charts-data-manager.php',
 
         // Dashboard Components
         'Athlete_Dashboard_Welcome_Banner' => '/includes/dashboard/components/class-welcome-banner.php',

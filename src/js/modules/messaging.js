@@ -72,14 +72,14 @@ export class AthleteMessaging {
         }
 
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'search_recipients',
-                    nonce: athleteDashboardData.nonce,
+                    nonce: window.athleteDashboard.nonce,
                     search: search
                 })
             });
@@ -124,14 +124,14 @@ export class AthleteMessaging {
         const loader = UI.showLoading(container);
 
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'get_messages',
-                    nonce: athleteDashboardData.nonce
+                    nonce: window.athleteDashboard.nonce
                 })
             });
 
@@ -161,14 +161,14 @@ export class AthleteMessaging {
 
     async checkNewMessages() {
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'check_new_messages',
-                    nonce: athleteDashboardData.nonce,
+                    nonce: window.athleteDashboard.nonce,
                     last_check: this.lastMessageCheck
                 })
             });
@@ -196,14 +196,14 @@ export class AthleteMessaging {
         const formData = new FormData(form);
 
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'send_message',
-                    nonce: athleteDashboardData.nonce,
+                    nonce: window.athleteDashboard.nonce,
                     message_data: JSON.stringify(Object.fromEntries(formData))
                 })
             });
@@ -239,14 +239,14 @@ export class AthleteMessaging {
         const loader = UI.showLoading(container);
 
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'delete_message',
-                    nonce: athleteDashboardData.nonce,
+                    nonce: window.athleteDashboard.nonce,
                     message_id: messageId
                 })
             });
@@ -308,14 +308,14 @@ export class AthleteMessaging {
 
     async markMessageAsRead(messageId, messageItem) {
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'mark_message_read',
-                    nonce: athleteDashboardData.nonce,
+                    nonce: window.athleteDashboard.nonce,
                     message_id: messageId
                 })
             });
@@ -338,14 +338,14 @@ export class AthleteMessaging {
         const loader = UI.showLoading(container);
 
         try {
-            const response = await fetch(athleteDashboardData.ajax_url, {
+            const response = await fetch(window.athleteDashboard.ajax_url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: new URLSearchParams({
                     action: 'get_message_content',
-                    nonce: athleteDashboardData.nonce,
+                    nonce: window.athleteDashboard.nonce,
                     message_id: messageId
                 })
             });

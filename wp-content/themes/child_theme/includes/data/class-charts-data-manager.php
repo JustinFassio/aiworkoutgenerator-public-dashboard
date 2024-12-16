@@ -54,7 +54,7 @@ class Athlete_Dashboard_Charts_Data_Manager extends Athlete_Dashboard_Data_Manag
         ));
 
         // Get progress data
-        $progress_data = $progress_manager->get_progress_history($user_id, $start_date, $end_date);
+        $progress_data = $progress_manager->get_progress_over_time($user_id, 'volume', 30);
 
         return array(
             'workouts' => $this->format_workout_data($workouts),

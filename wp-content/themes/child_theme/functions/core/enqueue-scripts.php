@@ -100,6 +100,20 @@ function athlete_dashboard_enqueue_scripts() {
         )
     );
 
+    // Prepare localization data
+    $localization_data = array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('athlete_dashboard_nonce'),
+        'is_user_logged_in' => is_user_logged_in(),
+        'current_user_id' => get_current_user_id(),
+        'theme_url' => get_stylesheet_directory_uri(),
+        'messages' => array(
+            'error' => __('An error occurred. Please try again.', 'athlete-dashboard'),
+            'success' => __('Operation completed successfully.', 'athlete-dashboard'),
+            'loading' => __('Loading...', 'athlete-dashboard')
+        )
+    );
+
     // Enqueue module scripts with type="module"
     foreach ($module_scripts as $handle => $script) {
         $file_path = ATHLETE_DASHBOARD_PATH . $script['path'];
@@ -120,6 +134,9 @@ function athlete_dashboard_enqueue_scripts() {
                 }
                 return $tag;
             }, 10, 2);
+            
+            // Localize each module script
+            wp_localize_script($handle, 'athleteDashboardData', $localization_data);
         }
     }
 
@@ -152,6 +169,8 @@ function athlete_dashboard_enqueue_scripts() {
                 filemtime($file_path),
                 true
             );
+            // Localize each legacy script
+            wp_localize_script($handle, 'athleteDashboardData', $localization_data);
         }
     }
 
@@ -163,6 +182,10 @@ function athlete_dashboard_enqueue_scripts() {
         filemtime(ATHLETE_DASHBOARD_PATH . '/js/dashboard.js'),
         true
     );
+    
+    // Localize main dashboard script
+    wp_localize_script('athlete-dashboard-main', 'athleteDashboardData', $localization_data);
+    
     // Add type="module" to main dashboard script
     add_filter("script_loader_tag", function($tag, $handle) {
         if ('athlete-dashboard-main' === $handle) {
