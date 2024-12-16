@@ -1,0 +1,224 @@
+.workout-logger {
+    background: var(--color-background-light);
+    border-radius: var(--border-radius-md);
+    padding: var(--section-padding);
+}
+
+.workout-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.workout-type-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.workout-type-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.workout-type-btn:hover {
+    background: rgba(247, 37, 133, 0.1);
+}
+
+.workout-type-btn.active {
+    background: var(--color-primary);
+    color: var(--color-background);
+}
+
+.exercise-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.exercise-item {
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exercise-name {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.remove-exercise {
+    background: none;
+    border: none;
+    color: var(--color-danger);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.remove-exercise:hover {
+    color: var(--color-danger-dark);
+}
+
+.exercise-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.exercise-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.exercise-input label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.exercise-input input {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background: var(--color-background);
+}
+
+.exercise-input input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(247, 37, 133, 0.1);
+}
+
+.add-exercise-btn {
+    background: var(--color-secondary);
+    color: var(--color-background);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-self: start;
+}
+
+.add-exercise-btn:hover {
+    background: var(--color-secondary-dark);
+    transform: translateY(-2px);
+}
+
+.workout-notes {
+    margin-top: 1.5rem;
+}
+
+.workout-notes textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background: var(--color-background);
+    resize: vertical;
+}
+
+.workout-notes textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(247, 37, 133, 0.1);
+}
+
+.save-workout-btn {
+    background: var(--color-primary);
+    color: var(--color-background);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-self: start;
+}
+
+.save-workout-btn:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.save-workout-btn:disabled {
+    background: var(--color-border);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading state */
+.workout-logger.loading {
+    position: relative;
+}
+
+.workout-logger.loading::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-md);
+}
+
+/* Success/Error messages */
+.workout-message {
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 1rem;
+}
+
+.workout-message.success {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid green;
+    color: green;
+}
+
+.workout-message.error {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .workout-type-selector {
+        padding-bottom: 0.75rem;
+    }
+
+    .exercise-details {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .save-workout-btn {
+        width: 100%;
+        justify-self: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .exercise-details {
+        grid-template-columns: 1fr;
+    }
+} 

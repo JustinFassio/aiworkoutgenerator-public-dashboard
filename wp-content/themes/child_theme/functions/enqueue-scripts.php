@@ -30,7 +30,7 @@ function enqueue_styles() {
     // Enqueue variables.css
     wp_enqueue_style(
         'variables-style',
-        get_stylesheet_directory_uri() . '/variables.css',
+        get_stylesheet_directory_uri() . '/assets/css/variables.css',
         array(),
         wp_get_theme()->get('Version')
     );
@@ -42,11 +42,40 @@ function enqueue_styles() {
         array('parent-style', 'variables-style'),
         wp_get_theme()->get('Version')
     );
+
+    // Enqueue module-specific CSS files
+    $css_files = array(
+        'workout-detail' => array('deps' => array()),
+        'workout-calendar' => array('deps' => array()),
+        'progress-charts' => array('deps' => array()),
+        'workout-recommendations' => array('deps' => array()),
+        'utils' => array('deps' => array())
+    );
+
+    foreach ($css_files as $handle => $css) {
+        $file_path = get_stylesheet_directory() . '/assets/css/components/' . $handle . '.css';
+        $version = file_exists($file_path) ? filemtime($file_path) : wp_get_theme()->get('Version');
+        
+        wp_enqueue_style(
+            $handle,
+            get_stylesheet_directory_uri() . '/assets/css/components/' . $handle . '.css',
+            $css['deps'],
+            $version
+        );
+    }
+    
+    // Enqueue utils.css
+    wp_enqueue_style(
+        'utils-styles',
+        get_stylesheet_directory_uri() . '/assets/css/utils.css',
+        array('parent-style'),
+        wp_get_theme()->get('Version')
+    );
     
     // Enqueue custom CSS file
     wp_enqueue_style(
         'custom-styles', 
-        get_stylesheet_directory_uri() . '/custom-styles.css', 
+        get_stylesheet_directory_uri() . '/assets/css/custom-styles.css', 
         array('parent-style'), 
         wp_get_theme()->get('Version')
     );
@@ -56,22 +85,43 @@ function enqueue_styles() {
 }
 
 function enqueue_scripts() {
-    // Enqueue jQuery and its dependencies
+    // Enqueue jQuery and its dependencies first
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-ui-core');
     wp_enqueue_script('jquery-ui-tabs');
     wp_enqueue_script('jquery-effects-core');
     
-    // Enqueue Chart.js
+    // Register athlete-ui first and make it a jQuery dependency
+    $athlete_ui_path = get_stylesheet_directory() . '/assets/js/components/athlete-ui.js';
+    if (file_exists($athlete_ui_path)) {
+        $version = filemtime($athlete_ui_path);
+        
+        wp_register_script(
+            'athlete-ui',
+            get_stylesheet_directory_uri() . '/assets/js/components/athlete-ui.js',
+            array('jquery', 'jquery-ui-core'),
+            $version,
+            true
+        );
+        
+        // Ensure it's loaded in the body
+        wp_enqueue_script('athlete-ui');
+        
+        // Add it to Divi's body scripts early
+        if (function_exists('et_core_is_fb_enabled')) {
+            et_builder_add_body_script('athlete-ui');
+        }
+    }
+    
+    // Enqueue Chart.js after athlete-ui
     wp_enqueue_script(
         'chartjs', 
         'https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js', 
-        array(), 
+        array('athlete-ui'), 
         '4.3.0', 
         true
     );
     
-    // Enqueue Chart.js Adapter
     wp_enqueue_script(
         'chartjs-adapter-date-fns',
         'https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js',
@@ -79,27 +129,87 @@ function enqueue_scripts() {
         '3.0.0',
         true
     );
+
+    // Define module dependencies including athlete-ui
+    $module_dependencies = array('jquery', 'jquery-ui-core', 'jquery-ui-tabs', 'athlete-ui', 'chartjs');
+
+    // Athlete Dashboard Module Scripts
+    $modules = array(
+        'athlete-workout' => array(
+            'path' => 'assets/js/components/athlete-workout.js',
+            'deps' => $module_dependencies
+        ),
+        'athlete-goals' => array(
+            'path' => 'assets/js/components/athlete-goals.js',
+            'deps' => $module_dependencies
+        ),
+        'athlete-attendance' => array(
+            'path' => 'assets/js/components/athlete-attendance.js',
+            'deps' => $module_dependencies
+        ),
+        'athlete-membership' => array(
+            'path' => 'assets/js/components/athlete-membership.js',
+            'deps' => $module_dependencies
+        ),
+        'athlete-messaging' => array(
+            'path' => 'assets/js/components/athlete-messaging.js',
+            'deps' => $module_dependencies
+        ),
+        'athlete-charts' => array(
+            'path' => 'assets/js/components/athlete-charts.js',
+            'deps' => array_merge($module_dependencies, array('chartjs-adapter-date-fns'))
+        )
+    );
+
+    // Register and enqueue remaining modules
+    foreach ($modules as $handle => $module) {
+        $file_path = get_stylesheet_directory() . '/' . $module['path'];
+        
+        if (file_exists($file_path)) {
+            $version = filemtime($file_path);
+            
+            wp_register_script(
+                $handle,
+                get_stylesheet_directory_uri() . '/' . $module['path'],
+                $module['deps'],
+                $version,
+                true
+            );
+            
+            wp_enqueue_script($handle);
+            
+            // Add to Divi's body scripts
+            if (function_exists('et_core_is_fb_enabled')) {
+                et_builder_add_body_script($handle);
+            }
+        }
+    }
     
     // Enqueue custom JS file with dynamic version
-    $custom_js_file = get_stylesheet_directory() . '/js/custom-scripts.js';
-    $custom_js_version = file_exists($custom_js_file) ? filemtime($custom_js_file) : '1.0';
-    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/js/custom-scripts.js', array('jquery', 'jquery-ui-core', 'jquery-ui-tabs', 'jquery-effects-core', 'chartjs', 'chartjs-adapter-date-fns'), $custom_js_version, true);
-
-    // Enqueue messaging JS file
-    $messaging_js_file = get_stylesheet_directory() . '/js/messaging.js';
-    $messaging_js_version = file_exists($messaging_js_file) ? filemtime($messaging_js_file) : '1.0';
-    wp_enqueue_script(
-        'messaging-scripts',
-        get_stylesheet_directory_uri() . '/js/messaging.js',
-        array('jquery'),
-        $messaging_js_version,
-        true
-    );
+    $custom_js_file = get_stylesheet_directory() . '/assets/js/custom-scripts.js';
+    if (file_exists($custom_js_file)) {
+        $custom_js_version = filemtime($custom_js_file);
+        wp_enqueue_script(
+            'custom-scripts', 
+            get_stylesheet_directory_uri() . '/assets/js/custom-scripts.js', 
+            array_merge(array('athlete-ui'), array_keys($modules)), 
+            $custom_js_version, 
+            true
+        );
+        
+        // Add custom scripts to Divi's body scripts
+        if (function_exists('et_core_is_fb_enabled')) {
+            et_builder_add_body_script('custom-scripts');
+        }
+    }
 }
 
-// Make sure this function is called
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
-add_action('admin_enqueue_scripts', 'enqueue_scripts');
+// Remove the register_with_divi_builder function since we're handling it directly
+remove_action('wp_enqueue_scripts', 'register_with_divi_builder', 21);
+
+// Ensure our scripts are loaded after Divi's core scripts
+remove_action('wp_enqueue_scripts', 'divi_child_enqueue_styles_and_scripts', 20);
+add_action('wp_enqueue_scripts', 'divi_child_enqueue_styles_and_scripts', 15);
 
 function localize_script() {
     wp_localize_script('custom-scripts', 'athleteDashboard', array(
@@ -118,9 +228,6 @@ function localize_script() {
         'is_admin' => current_user_can('edit_users') || in_array('author', wp_get_current_user()->roles)
     ));
 }
-
-// Hook the main function to the wp_enqueue_scripts action
-add_action('wp_enqueue_scripts', 'divi_child_enqueue_styles_and_scripts', 20);
 
 /**
  * Enqueue styles and scripts for the Athlete Dashboard.

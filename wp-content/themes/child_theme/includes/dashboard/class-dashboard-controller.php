@@ -37,19 +37,69 @@ class Athlete_Dashboard_Controller {
      * Initialize dashboard components
      */
     private function init_components() {
-        // Initialize core components
-        $this->components['welcome_banner'] = new Athlete_Dashboard_Welcome_Banner();
-        $this->components['account_details'] = new Athlete_Dashboard_Account_Details();
-        $this->components['workout_detail'] = new Athlete_Dashboard_Workout_Detail();
-        $this->components['workout_logger'] = new Athlete_Dashboard_Workout_Logger();
-        $this->components['nutrition_logger'] = new Athlete_Dashboard_Nutrition_Logger();
-        $this->components['nutrition_tracker'] = new Athlete_Dashboard_Nutrition_Tracker();
-        $this->components['food_manager'] = new Athlete_Dashboard_Food_Manager();
+        // Define component dependencies
+        $component_dependencies = array(
+            'Athlete_Dashboard_Nutrition_Tracker' => array('Athlete_Dashboard_Nutrition_Data_Manager'),
+            'Athlete_Dashboard_Food_Manager' => array('Athlete_Dashboard_Food_Data_Manager'),
+            'Athlete_Dashboard_Workout_Detail' => array('Athlete_Dashboard_Workout_Data_Manager'),
+            'Athlete_Dashboard_Progress_Tracker' => array('Athlete_Dashboard_Goals_Data_Manager')
+        );
 
-        // Initialize workout components
-        $this->components['workout_dashboard'] = new Athlete_Dashboard_Workout_Dashboard_Controller();
-        $this->components['workout_stats'] = new Athlete_Dashboard_Workout_Stats_Display();
-        $this->components['progress_tracker'] = new Athlete_Dashboard_Progress_Tracker();
+        // Initialize core components first
+        $core_components = array(
+            'welcome_banner' => 'Athlete_Dashboard_Welcome_Banner',
+            'account_details' => 'Athlete_Dashboard_Account_Details'
+        );
+
+        foreach ($core_components as $key => $class) {
+            if (class_exists($class)) {
+                $this->components[$key] = new $class();
+            } else {
+                error_log("Core component not found: {$class}");
+            }
+        }
+
+        // Initialize components with dependency checks
+        $dependent_components = array(
+            'workout_detail' => 'Athlete_Dashboard_Workout_Detail',
+            'workout_logger' => 'Athlete_Dashboard_Workout_Logger',
+            'nutrition_logger' => 'Athlete_Dashboard_Nutrition_Logger',
+            'nutrition_tracker' => 'Athlete_Dashboard_Nutrition_Tracker',
+            'food_manager' => 'Athlete_Dashboard_Food_Manager',
+            'progress_tracker' => 'Athlete_Dashboard_Progress_Tracker'
+        );
+
+        foreach ($dependent_components as $key => $class) {
+            // Check dependencies first
+            if (isset($component_dependencies[$class])) {
+                $dependencies_met = true;
+                foreach ($component_dependencies[$class] as $dependency) {
+                    if (!class_exists($dependency)) {
+                        error_log("Dependency not found for {$class}: {$dependency}");
+                        $dependencies_met = false;
+                        break;
+                    }
+                }
+                if (!$dependencies_met) {
+                    continue;
+                }
+            }
+
+            // Initialize component if dependencies are met
+            if (class_exists($class)) {
+                $this->components[$key] = new $class();
+            } else {
+                error_log("Component not found: {$class}");
+            }
+        }
+
+        // Initialize workout dashboard components last
+        if (class_exists('Athlete_Dashboard_Workout_Dashboard_Controller')) {
+            $this->components['workout_dashboard'] = new Athlete_Dashboard_Workout_Dashboard_Controller();
+        }
+        if (class_exists('Athlete_Dashboard_Workout_Stats_Display')) {
+            $this->components['workout_stats'] = new Athlete_Dashboard_Workout_Stats_Display();
+        }
     }
 
     /**
@@ -64,75 +114,35 @@ class Athlete_Dashboard_Controller {
      * Enqueue dashboard-specific scripts and styles
      */
     public function enqueue_dashboard_scripts() {
-        // jQuery UI for autocomplete
-        wp_enqueue_style('jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
+        // Core dependencies
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('jquery-ui-core');
         wp_enqueue_script('jquery-ui-autocomplete');
+        wp_enqueue_style('jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
 
-        // Chart.js for statistics
+        // Chart.js
         wp_enqueue_script(
             'chart-js',
             'https://cdn.jsdelivr.net/npm/chart.js',
-            array(),
+            array('jquery'),
             '3.7.0',
             true
         );
 
-        // Component scripts - ensure proper loading order
-        $component_scripts = array(
-            'athlete-dashboard-workout-lightbox' => array(
-                'path' => '/assets/js/components/workout-lightbox.js',
-                'deps' => array('jquery')
-            ),
-            'athlete-dashboard-workout-logger' => array(
-                'path' => '/assets/js/components/workout-logger.js',
-                'deps' => array('jquery', 'athlete-dashboard-workout-lightbox')
-            ),
-            'athlete-dashboard-nutrition-logger' => array(
-                'path' => '/assets/js/components/nutrition-logger.js',
-                'deps' => array('jquery')
-            ),
-            'athlete-dashboard-nutrition-tracker' => array(
-                'path' => '/assets/js/components/nutrition-tracker.js',
-                'deps' => array('jquery', 'chart-js')
-            ),
-            'athlete-dashboard-food-manager' => array(
-                'path' => '/assets/js/components/food-manager.js',
-                'deps' => array('jquery', 'jquery-ui-autocomplete')
-            ),
-            'athlete-dashboard-workout-stats' => array(
-                'path' => '/assets/js/components/workout-stats-display.js',
-                'deps' => array('jquery', 'chart-js')
-            ),
-            'athlete-dashboard-progress-tracker' => array(
-                'path' => '/assets/js/components/progress-tracker.js',
-                'deps' => array('jquery')
-            )
+        // Dashboard Components Bundle
+        wp_enqueue_script(
+            'athlete-dashboard-components',
+            ATHLETE_DASHBOARD_URI . '/assets/js/components-bundle.js',
+            array('jquery', 'jquery-ui-core', 'jquery-ui-autocomplete', 'chart-js'),
+            filemtime(ATHLETE_DASHBOARD_PATH . '/assets/js/components-bundle.js'),
+            true
         );
 
-        // Enqueue component scripts
-        foreach ($component_scripts as $handle => $script) {
-            $file_path = ATHLETE_DASHBOARD_PATH . $script['path'];
-            $file_uri = ATHLETE_DASHBOARD_URI . $script['path'];
-            
-            if (file_exists($file_path)) {
-                wp_enqueue_script(
-                    $handle,
-                    $file_uri,
-                    $script['deps'],
-                    filemtime($file_path),
-                    true
-                );
-            }
-        }
-
-        // Main dashboard script - load after all components
+        // Main dashboard script
         wp_enqueue_script(
-            'athlete-dashboard',
+            'athlete-dashboard-main',
             ATHLETE_DASHBOARD_URI . '/assets/js/dashboard.js',
-            array_merge(
-                array('jquery'),
-                array_keys($component_scripts)
-            ),
+            array('jquery', 'athlete-dashboard-components'),
             filemtime(ATHLETE_DASHBOARD_PATH . '/assets/js/dashboard.js'),
             true
         );
@@ -145,32 +155,12 @@ class Athlete_Dashboard_Controller {
             filemtime(ATHLETE_DASHBOARD_PATH . '/assets/css/dashboard.css')
         );
 
-        // Localize scripts for each component
-        $this->localize_component_scripts();
-    }
-
-    /**
-     * Localize scripts for components
-     */
-    private function localize_component_scripts() {
-        // Main dashboard data
-        wp_localize_script('athlete-dashboard', 'athleteDashboardData', array(
+        // Localize script data
+        wp_localize_script('athlete-dashboard-components', 'athleteDashboardData', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('athlete_dashboard_nonce'),
             'user_id' => get_current_user_id(),
             'strings' => $this->get_localized_strings()
-        ));
-
-        // Workout lightbox data
-        wp_localize_script('athlete-dashboard-workout-lightbox', 'workoutLightboxData', array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('athlete_dashboard_nonce'),
-            'strings' => array(
-                'loading' => __('Loading workout details...', 'athlete-dashboard'),
-                'error' => __('Error loading workout', 'athlete-dashboard'),
-                'close' => __('Close', 'athlete-dashboard'),
-                'print' => __('Print Workout', 'athlete-dashboard')
-            )
         ));
     }
 

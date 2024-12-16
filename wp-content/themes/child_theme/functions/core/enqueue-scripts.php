@@ -68,40 +68,79 @@ function athlete_dashboard_enqueue_scripts() {
         }
     }
 
-    // Component scripts
-    $component_scripts = array(
-        'athlete-dashboard-account' => array(
-            'path' => '/assets/js/components/account-details.js',
-            'deps' => array('jquery')
+    // New modular component scripts
+    $module_scripts = array(
+        'athlete-ui' => array(
+            'path' => '/js/modules/ui.js',
+            'deps' => array()
         ),
-        'athlete-dashboard-progress' => array(
-            'path' => '/assets/js/components/progress-tracker.js',
-            'deps' => array('jquery', 'chart-js', 'chart-js-adapter')
+        'athlete-workout' => array(
+            'path' => '/js/modules/workout.js',
+            'deps' => array('chart-js')
         ),
-        'athlete-dashboard-workout-logger' => array(
-            'path' => '/assets/js/components/workout-logger.js',
-            'deps' => array('jquery')
+        'athlete-goals' => array(
+            'path' => '/js/modules/goals.js',
+            'deps' => array('chart-js')
         ),
-        'athlete-dashboard-workout-lightbox' => array(
-            'path' => '/assets/js/components/workout-lightbox.js',
-            'deps' => array('jquery')
+        'athlete-attendance' => array(
+            'path' => '/js/modules/attendance.js',
+            'deps' => array()
         ),
+        'athlete-membership' => array(
+            'path' => '/js/modules/membership.js',
+            'deps' => array('stripe-js')
+        ),
+        'athlete-messaging' => array(
+            'path' => '/js/modules/messaging.js',
+            'deps' => array()
+        ),
+        'athlete-charts' => array(
+            'path' => '/js/modules/charts.js',
+            'deps' => array('chart-js', 'chart-js-adapter')
+        )
+    );
+
+    // Enqueue module scripts with type="module"
+    foreach ($module_scripts as $handle => $script) {
+        $file_path = ATHLETE_DASHBOARD_PATH . $script['path'];
+        $file_uri = ATHLETE_DASHBOARD_URI . $script['path'];
+        
+        if (file_exists($file_path)) {
+            wp_enqueue_script(
+                $handle,
+                $file_uri,
+                $script['deps'],
+                filemtime($file_path),
+                true
+            );
+            // Add type="module" attribute
+            add_filter("script_loader_tag", function($tag, $handle_check) use ($handle) {
+                if ($handle === $handle_check) {
+                    return str_replace("<script ", "<script type='module' ", $tag);
+                }
+                return $tag;
+            }, 10, 2);
+        }
+    }
+
+    // Legacy component scripts (to be migrated)
+    $legacy_scripts = array(
         'athlete-dashboard-nutrition-logger' => array(
-            'path' => '/assets/js/components/nutrition-logger.js',
+            'path' => '/js/legacy/nutrition-logger.js',
             'deps' => array('jquery')
         ),
         'athlete-dashboard-nutrition-tracker' => array(
-            'path' => '/assets/js/components/nutrition-tracker.js',
+            'path' => '/js/legacy/nutrition-tracker.js',
             'deps' => array('jquery', 'chart-js')
         ),
         'athlete-dashboard-food-manager' => array(
-            'path' => '/assets/js/components/food-manager.js',
+            'path' => '/js/legacy/food-manager.js',
             'deps' => array('jquery', 'jquery-ui-autocomplete')
         )
     );
 
-    // Enqueue component scripts
-    foreach ($component_scripts as $handle => $script) {
+    // Enqueue legacy scripts
+    foreach ($legacy_scripts as $handle => $script) {
         $file_path = ATHLETE_DASHBOARD_PATH . $script['path'];
         $file_uri = ATHLETE_DASHBOARD_URI . $script['path'];
         
@@ -119,31 +158,18 @@ function athlete_dashboard_enqueue_scripts() {
     // Main dashboard script (load last)
     wp_enqueue_script(
         'athlete-dashboard-main',
-        ATHLETE_DASHBOARD_URI . '/assets/js/dashboard.js',
-        array_merge(
-            array('jquery'),
-            array_keys($component_scripts)
-        ),
-        filemtime(ATHLETE_DASHBOARD_PATH . '/assets/js/dashboard.js'),
+        ATHLETE_DASHBOARD_URI . '/js/dashboard.js',
+        array_merge(array_keys($module_scripts), array_keys($legacy_scripts)),
+        filemtime(ATHLETE_DASHBOARD_PATH . '/js/dashboard.js'),
         true
     );
-
-    // Localize script data
-    wp_localize_script('athlete-dashboard-main', 'athleteDashboardData', array(
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce('athlete_dashboard_nonce'),
-        'user_id' => get_current_user_id(),
-        'strings' => array(
-            'loading' => __('Loading...', 'athlete-dashboard'),
-            'error' => __('An error occurred', 'athlete-dashboard'),
-            'success' => __('Success', 'athlete-dashboard'),
-            'confirm' => __('Are you sure?', 'athlete-dashboard'),
-            'save' => __('Save', 'athlete-dashboard'),
-            'cancel' => __('Cancel', 'athlete-dashboard'),
-            'delete' => __('Delete', 'athlete-dashboard'),
-            'edit' => __('Edit', 'athlete-dashboard')
-        )
-    ));
+    // Add type="module" to main dashboard script
+    add_filter("script_loader_tag", function($tag, $handle) {
+        if ('athlete-dashboard-main' === $handle) {
+            return str_replace("<script ", "<script type='module' ", $tag);
+        }
+        return $tag;
+    }, 10, 2);
 }
 
 // Remove old enqueue functions

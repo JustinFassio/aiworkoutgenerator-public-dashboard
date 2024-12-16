@@ -12,80 +12,94 @@ define('ATHLETE_DASHBOARD_VERSION', '1.0.0');
 
 // Load autoloader first
 require_once ATHLETE_DASHBOARD_PATH . '/includes/class-autoloader.php';
+
+// Initialize autoloader
 $autoloader = new Athlete_Dashboard_Autoloader();
 $autoloader->register();
 
 // Load core files
 require_once ATHLETE_DASHBOARD_PATH . '/functions/core/enqueue-scripts.php';
 
-// Load feature-specific files
-$required_files = array(
-    // Core functionality
-    '/functions/custom-post-types.php',
-    '/functions/ajax-handlers.php',
-    
-    // User functionality
-    '/functions/user-profile.php',
-    '/functions/user-data.php',
-    
-    // Dashboard functionality
-    '/functions/progress-tracking.php',
-    '/functions/exercise-ajax-handlers.php',
-    '/functions/exercise-data.php',
-    
-    // Utility functions
-    '/functions/utilities.php',
-    '/functions/debug.php',
-    
-    // Feature-specific functions
-    '/functions/messaging-functions.php',
-    '/functions/database-setup.php',
-    '/functions/athlete-dashboard-functions.php',
-    '/functions/shortcodes.php',
-);
+/**
+ * Initialize the athlete dashboard functionality
+ */
+function athlete_dashboard_init() {
+    try {
+        // Initialize data managers first
+        $data_managers = array(
+            'Athlete_Dashboard_Data_Manager',
+            'Athlete_Dashboard_Workout_Data_Manager',
+            'Athlete_Dashboard_Exercise_Data_Manager',
+            'Athlete_Dashboard_Workout_Progress_Manager',
+            'Athlete_Dashboard_Workout_Stats_Manager',
+            'Athlete_Dashboard_Goals_Data_Manager',
+            'Athlete_Dashboard_Attendance_Data_Manager',
+            'Athlete_Dashboard_Membership_Data_Manager',
+            'Athlete_Dashboard_Messaging_Data_Manager',
+            'Athlete_Dashboard_Charts_Data_Manager'
+        );
 
-// Include each required file with error checking
-foreach ($required_files as $file) {
-    $file_path = ATHLETE_DASHBOARD_PATH . $file;
-    if (file_exists($file_path)) {
-        require_once $file_path;
-    } else {
-        error_log('Missing required file: ' . $file_path);
+        foreach ($data_managers as $manager) {
+            if (!class_exists($manager)) {
+                error_log("Required data manager class not found: {$manager}");
+                return;
+            }
+        }
+
+        // Initialize store classes
+        $store_classes = array(
+            'Athlete_Dashboard_Settings_Store',
+            'Athlete_Dashboard_User_Preferences_Store'
+        );
+
+        foreach ($store_classes as $store) {
+            if (!class_exists($store)) {
+                error_log("Required store class not found: {$store}");
+                return;
+            }
+            new $store();
+        }
+        
+        // Initialize core components
+        if (!class_exists('Athlete_Dashboard_Core_Components')) {
+            error_log('Core Components class not found');
+            return;
+        }
+        $core = new Athlete_Dashboard_Core_Components();
+        
+        // Initialize manager classes with dependency checks
+        $manager_classes = array(
+            'Athlete_Dashboard_UI_Manager',
+            'Athlete_Dashboard_Workout_Manager',
+            'Athlete_Dashboard_Goals_Manager',
+            'Athlete_Dashboard_Attendance_Manager',
+            'Athlete_Dashboard_Membership_Manager',
+            'Athlete_Dashboard_Messaging_Manager',
+            'Athlete_Dashboard_Charts_Manager'
+        );
+
+        foreach ($manager_classes as $manager) {
+            if (!class_exists($manager)) {
+                error_log("Manager class not found: {$manager}");
+                continue;
+            }
+            new $manager();
+        }
+        
+        // Initialize dashboard controller last
+        if (!class_exists('Athlete_Dashboard_Controller')) {
+            error_log('Dashboard Controller class not found');
+            return;
+        }
+        new Athlete_Dashboard_Controller();
+        
+    } catch (Exception $e) {
+        error_log('Athlete Dashboard initialization error: ' . $e->getMessage());
+        error_log('Stack trace: ' . $e->getTraceAsString());
     }
 }
 
-/**
- * Initialize the workout functionality
- */
-function athlete_dashboard_init() {
-    // Initialize post types and taxonomies first
-    new Athlete_Dashboard_Workout_Post_Type();
-    new Athlete_Dashboard_Workout_Log_Post_Type();
-    new Athlete_Dashboard_Exercise_Taxonomy();
-    
-    // Initialize data managers
-    new Athlete_Dashboard_Workout_Data_Manager();
-    new Athlete_Dashboard_Exercise_Data_Manager();
-    new Athlete_Dashboard_Workout_Progress_Manager();
-    new Athlete_Dashboard_Workout_Stats_Manager();
-    
-    // Initialize handlers
-    new Athlete_Dashboard_Workout_Handler();
-    
-    // Initialize asset manager first to ensure all assets are available
-    new Athlete_Dashboard_Asset_Manager();
-    
-    // Initialize core components
-    new Athlete_Dashboard_Workout_Stats_Display();
-    new Athlete_Dashboard_Progress_Tracker();
-    
-    // Initialize UI components that depend on core components
-    new Athlete_Dashboard_Workout_Logger();
-    new Athlete_Dashboard_Workout_Detail();
-    
-    // Initialize dashboard controller last
-    new Athlete_Dashboard_Workout_Dashboard_Controller();
-}
+// Initialize after theme setup
 add_action('after_setup_theme', 'athlete_dashboard_init');
 
 /**
@@ -105,12 +119,44 @@ function athlete_dashboard_theme_activation() {
 }
 add_action('after_switch_theme', 'athlete_dashboard_theme_activation');
 
-// Initialize dashboard after components are loaded
-function athlete_dashboard_late_init() {
-    global $dashboard;
-    $dashboard = new Athlete_Dashboard_Controller();
+/**
+ * Register REST API endpoints for modular components
+ */
+function athlete_dashboard_register_rest_routes() {
+    // Core endpoints
+    register_rest_route('athlete-dashboard/v1', '/workouts', array(
+        'methods' => 'GET',
+        'callback' => 'athlete_dashboard_get_workouts',
+        'permission_callback' => 'athlete_dashboard_rest_permission'
+    ));
+    
+    // Module-specific endpoints
+    register_rest_route('athlete-dashboard/v1', '/goals', array(
+        'methods' => 'GET',
+        'callback' => 'athlete_dashboard_get_goals',
+        'permission_callback' => 'athlete_dashboard_rest_permission'
+    ));
+    
+    register_rest_route('athlete-dashboard/v1', '/attendance', array(
+        'methods' => 'GET',
+        'callback' => 'athlete_dashboard_get_attendance',
+        'permission_callback' => 'athlete_dashboard_rest_permission'
+    ));
+    
+    register_rest_route('athlete-dashboard/v1', '/membership', array(
+        'methods' => 'GET',
+        'callback' => 'athlete_dashboard_get_membership',
+        'permission_callback' => 'athlete_dashboard_rest_permission'
+    ));
 }
-add_action('init', 'athlete_dashboard_late_init');
+add_action('rest_api_init', 'athlete_dashboard_register_rest_routes');
+
+/**
+ * REST API permission callback
+ */
+function athlete_dashboard_rest_permission() {
+    return is_user_logged_in();
+}
 
 // Register dashboard shortcode
 function athlete_dashboard_shortcode() {
