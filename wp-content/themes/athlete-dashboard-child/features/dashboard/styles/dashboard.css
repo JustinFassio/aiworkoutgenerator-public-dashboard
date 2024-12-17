@@ -1,0 +1,138 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.dashboard-welcome {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dashboard-welcome p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dashboard-sections {
+    display: grid;
+    gap: 2rem;
+}
+
+.dashboard-section {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.view-all-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.view-all-link:hover {
+    color: #66BB6A;
+}
+
+.dashboard-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.stat-box {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-2px);
+}
+
+.stat-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Workout section specific styles */
+.workout-viewer {
+    margin: 0;
+    background: #2d2d2d;
+}
+
+.workout-viewer .workout-header {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .dashboard-sections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard-welcome h1 {
+        font-size: 2rem;
+    }
+    
+    .dashboard-welcome p {
+        font-size: 1.1rem;
+    }
+    
+    .dashboard-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+} 
