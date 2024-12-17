@@ -31,6 +31,29 @@
     font-size: 1rem;
 }
 
+/* Height fields layout */
+.form-group[data-field="height_feet"],
+.form-group[data-field="height_inches"] {
+    display: inline-block;
+    width: calc(50% - 0.5rem);
+    vertical-align: top;
+}
+
+.form-group[data-field="height_feet"] {
+    margin-right: 1rem;
+}
+
+/* Unit preference styling */
+.form-group[data-field="unit_preference"] {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group[data-field="unit_preference"] select {
+    max-width: 200px;
+}
+
 .form-group select[multiple] {
     height: auto;
     min-height: 120px;
@@ -41,6 +64,18 @@
     outline: none;
     border-color: #4CAF50;
     box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Number input styling */
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .submit-button {
@@ -89,5 +124,99 @@
     .form-group input,
     .form-group select {
         padding: 0.5rem;
+    }
+
+    .form-group[data-field="height_feet"],
+    .form-group[data-field="height_inches"] {
+        width: 100%;
+        display: block;
+        margin-right: 0;
+    }
+}
+
+/* Equipment selector styling */
+.equipment-selector {
+    display: flex;
+    gap: 1rem;
+}
+
+.equipment-options {
+    flex: 1;
+}
+
+.equipment-input {
+    flex: 1;
+}
+
+.equipment-select {
+    width: 100%;
+    min-height: 150px !important;
+    margin-bottom: 0.5rem;
+}
+
+.equipment-list {
+    width: 100%;
+    min-height: 150px !important;
+    resize: vertical;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.equipment-list:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.add-equipment {
+    width: 100%;
+    background: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-equipment:hover {
+    background: #3d3d3d;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.equipment-tag {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.equipment-tag .remove {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.equipment-tag .remove:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .equipment-selector {
+        flex-direction: column;
+    }
+    
+    .equipment-select,
+    .equipment-list {
+        min-height: 100px !important;
     }
 } 

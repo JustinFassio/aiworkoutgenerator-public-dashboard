@@ -12,7 +12,15 @@ require_once __DIR__ . '/components/Profile.php';
 
 // Initialize the feature
 function init_profile_feature() {
-    // Register styles
+    $profile = new Profile();
+
+    // Add profile fields to WP Admin User Profile
+    add_action('show_user_profile', array($profile, 'render_admin_fields'));
+    add_action('edit_user_profile', array($profile, 'render_admin_fields'));
+    add_action('personal_options_update', array($profile, 'save_admin_fields'));
+    add_action('edit_user_profile_update', array($profile, 'save_admin_fields'));
+
+    // Register frontend assets
     add_action('wp_enqueue_scripts', function() {
         if (is_page_template('features/dashboard/templates/dashboard.php')) {
             wp_enqueue_style(
@@ -32,7 +40,8 @@ function init_profile_feature() {
 
             wp_localize_script('athlete-profile', 'profileData', array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
-                'nonce' => wp_create_nonce('profile_nonce')
+                'nonce' => wp_create_nonce('profile_nonce'),
+                'user_id' => get_current_user_id()
             ));
         }
     });
