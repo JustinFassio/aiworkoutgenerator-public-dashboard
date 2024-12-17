@@ -129,8 +129,8 @@ jQuery(document).ready(function($) {
             
             // Prepare form data
             const formData = new FormData($form[0]);
-            formData.append('action', 'save_profile');
-            formData.append('nonce', profileData.nonce);
+            formData.append('action', 'update_profile');
+            formData.append('profile_nonce', profileData.nonce);
 
             // Clean up equipment list
             const $equipmentList = $form.find('.equipment-list');

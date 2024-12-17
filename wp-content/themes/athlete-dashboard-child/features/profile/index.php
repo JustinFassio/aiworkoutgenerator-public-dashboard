@@ -3,11 +3,17 @@
  * Profile Feature Initialization
  */
 
+use AthleteDashboard\Features\Profile\Components\Profile;
+use AthleteDashboard\Features\Profile\Models\ProfileData;
+use AthleteDashboard\Features\Profile\Services\ProfileService;
+
 if (!defined('ABSPATH')) {
     exit;
 }
 
-// Load feature components
+// Load dependencies in correct order
+require_once __DIR__ . '/models/ProfileData.php';
+require_once __DIR__ . '/services/ProfileService.php';
 require_once __DIR__ . '/components/Profile.php';
 
 // Initialize the feature
@@ -15,10 +21,10 @@ function init_profile_feature() {
     $profile = new Profile();
 
     // Add profile fields to WP Admin User Profile
-    add_action('show_user_profile', array($profile, 'render_admin_fields'));
-    add_action('edit_user_profile', array($profile, 'render_admin_fields'));
-    add_action('personal_options_update', array($profile, 'save_admin_fields'));
-    add_action('edit_user_profile_update', array($profile, 'save_admin_fields'));
+    add_action('show_user_profile', [$profile, 'render_admin_fields']);
+    add_action('edit_user_profile', [$profile, 'render_admin_fields']);
+    add_action('personal_options_update', [$profile, 'save_admin_fields']);
+    add_action('edit_user_profile_update', [$profile, 'save_admin_fields']);
 
     // Register frontend assets
     add_action('wp_enqueue_scripts', function() {
@@ -46,4 +52,5 @@ function init_profile_feature() {
         }
     });
 }
+
 add_action('init', 'init_profile_feature'); 

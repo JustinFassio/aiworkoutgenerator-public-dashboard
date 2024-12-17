@@ -10,7 +10,6 @@ if (!defined('ABSPATH')) {
 // Load features
 require_once get_stylesheet_directory() . '/features/dashboard/index.php';
 require_once get_stylesheet_directory() . '/features/profile/index.php';
-require_once get_stylesheet_directory() . '/features/workout/index.php';
 
 /**
  * Theme Setup
@@ -69,14 +68,6 @@ function athlete_dashboard_enqueue_assets() {
             wp_get_theme()->get('Version')
         );
 
-        // Workout Generator styles
-        wp_enqueue_style(
-            'athlete-workout-generator',
-            get_stylesheet_directory_uri() . '/features/workout/assets/css/workout-generator.css',
-            array('athlete-dashboard-style'),
-            wp_get_theme()->get('Version')
-        );
-
         // Profile scripts
         wp_enqueue_script(
             'athlete-profile',
@@ -86,24 +77,10 @@ function athlete_dashboard_enqueue_assets() {
             true
         );
 
-        // Workout Generator scripts
-        wp_enqueue_script(
-            'athlete-workout-generator',
-            get_stylesheet_directory_uri() . '/features/workout/assets/js/workout-generator.js',
-            array('jquery'),
-            wp_get_theme()->get('Version'),
-            true
-        );
-
         // Localize scripts
         wp_localize_script('athlete-profile', 'athleteDashboard', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('profile_nonce')
-        ));
-
-        wp_localize_script('athlete-workout-generator', 'athleteDashboard', array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('workout_generator_nonce')
         ));
     }
 }
