@@ -6161,3 +6161,47 @@ Stack trace:
 [17-Dec-2024 21:10:57 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
 [17-Dec-2024 21:14:27 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
 [17-Dec-2024 21:17:50 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[17-Dec-2024 21:18:57 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[17-Dec-2024 21:21:47 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[17-Dec-2024 21:21:54 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[17-Dec-2024 21:27:57 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Features\Dashboard\Models\NavigationCard" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/NavigationCards.php:25
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/NavigationCards.php(20): AthleteDashboard\Features\Dashboard\Components\NavigationCards->registerDefaultCards()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/Dashboard.php(22): AthleteDashboard\Features\Dashboard\Components\NavigationCards->__construct()
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/hooks/dashboard-hooks.php(26): AthleteDashboard\Features\Dashboard\Components\Dashboard->__construct()
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): init_dashboard_feature_hooks('')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(700): do_action('init')
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#10 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/NavigationCards.php on line 25
+[17-Dec-2024 21:28:11 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Features\Dashboard\Models\NavigationCard" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/NavigationCards.php:25
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/NavigationCards.php(20): AthleteDashboard\Features\Dashboard\Components\NavigationCards->registerDefaultCards()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/Dashboard.php(22): AthleteDashboard\Features\Dashboard\Components\NavigationCards->__construct()
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/hooks/dashboard-hooks.php(26): AthleteDashboard\Features\Dashboard\Components\Dashboard->__construct()
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): init_dashboard_feature_hooks('')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(700): do_action('init')
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#10 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#11 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/NavigationCards.php on line 25
+[17-Dec-2024 21:33:23 UTC] PHP Fatal error:  Uncaught TypeError: AthleteDashboard\Features\Dashboard\Components\Modal::__construct(): Argument #3 ($content) must be of type string, Closure given, called in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/Modal.php on line 85 and defined in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/Modal.php:20
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/Modal.php(85): AthleteDashboard\Features\Dashboard\Components\Modal->__construct('profile-modal', '', Object(Closure), Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/templates/dashboard.php(43): AthleteDashboard\Features\Dashboard\Components\Modal::renderContainer('profile-modal', Object(Closure), Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/template-loader.php(106): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(19): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#5 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/dashboard/components/Modal.php on line 20
+[17-Dec-2024 21:36:48 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[17-Dec-2024 21:39:20 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[17-Dec-2024 21:41:59 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085

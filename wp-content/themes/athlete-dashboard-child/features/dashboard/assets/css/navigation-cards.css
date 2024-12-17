@@ -1,106 +1,72 @@
-/* Navigation Cards Styles */
-
-.navigation-cards {
+/* Navigation Cards Grid */
+.dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 1rem;
-}
-
-.nav-card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.nav-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.nav-card h3 {
-    color: #333;
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-}
-
-.nav-card p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.nav-card-link {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-
-.nav-card-link:hover {
-    background: #0056b3;
-    color: white;
-    text-decoration: none;
-}
-
-/* Recent Workouts */
-.recent-workouts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.workout-card {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.workout-card h4 {
-    margin: 0 0 0.5rem;
-    color: #333;
-}
-
-.workout-date {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.view-workout-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.view-workout-link:hover {
-    text-decoration: underline;
-}
-
-.no-workouts {
-    text-align: center;
-    color: #666;
     padding: 2rem;
-    background: #f8f9fa;
-    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Responsive adjustments */
+/* Card Styling */
+.dashboard-card {
+    aspect-ratio: 1;
+    background: var(--charcoal-medium, #2d2d2d);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    border: 1px solid var(--charcoal-border, rgba(255, 255, 255, 0.1));
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--green-highlight, #ddff0e);
+}
+
+/* Icon Styling */
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--green-highlight, #ddff0e);
+    transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+/* Title Styling */
+.card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .navigation-cards {
+    .dashboard-grid {
         grid-template-columns: 1fr;
+        max-width: 400px;
     }
     
-    .recent-workouts {
-        grid-template-columns: 1fr;
+    .dashboard-card {
+        aspect-ratio: auto;
+        padding: 1.5rem;
     }
 }

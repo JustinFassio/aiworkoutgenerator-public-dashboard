@@ -5,16 +5,19 @@
  */
 
 use AthleteDashboard\Features\Dashboard\Components\Dashboard;
+use AthleteDashboard\Features\Dashboard\Components\NavigationCards;
+use AthleteDashboard\Features\Dashboard\Components\Modal;
 use AthleteDashboard\Features\Profile\Components\Profile;
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-require_once get_stylesheet_directory() . '/features/dashboard/components/Dashboard.php';
-require_once get_stylesheet_directory() . '/features/profile/components/Profile.php';
+require_once get_stylesheet_directory() . '/features/dashboard/index.php';
+require_once get_stylesheet_directory() . '/features/profile/index.php';
 
 $dashboard = new Dashboard();
+$navigation = new NavigationCards();
 $profile = new Profile();
 
 get_header();
@@ -29,15 +32,17 @@ get_header();
                     <p><?php echo esc_html__('Track your workouts and monitor your fitness progress.', 'athlete-dashboard-child'); ?></p>
                 </div>
 
-                <div class="dashboard-sections">
-                    <!-- Profile Section -->
-                    <div class="dashboard-section">
-                        <div class="section-header">
-                            <h2><?php echo esc_html__('Your Profile', 'athlete-dashboard-child'); ?></h2>
-                        </div>
-                        <?php echo $profile->render_form(); ?>
-                    </div>
-                </div>
+                <?php $navigation->render(); ?>
+
+                <?php
+                // Render profile modal
+                Modal::renderContainer('profile-modal', function() use ($profile) {
+                    $profile->render_form();
+                }, [
+                    'size' => 'medium',
+                    'title' => __('Your Profile', 'athlete-dashboard-child')
+                ]);
+                ?>
             </div>
         </div>
     </div>
