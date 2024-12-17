@@ -4,7 +4,6 @@
  * 
  * @var array $fields Field definitions from ProfileData
  * @var array $data Current profile data
- * @var string $unit_preference Current unit preference
  */
 
 if (!defined('ABSPATH')) {
@@ -12,31 +11,13 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<form id="profile-form" class="profile-form" data-unit-preference="<?php echo esc_attr($unit_preference); ?>">
+<form id="profile-form" class="profile-form">
     <?php wp_nonce_field('profile_nonce', 'profile_nonce'); ?>
     
     <?php foreach ($fields as $field => $config): ?>
         <?php
-        // Skip hidden fields
-        if (isset($config['hidden']) && $config['hidden']) {
-            continue;
-        }
-        
-        // Skip fields based on unit preference
-        if (isset($config['group'])) {
-            if ($config['group'] === 'height' && $unit_preference === 'metric' && $field !== 'height_cm') {
-                continue;
-            }
-            if ($config['group'] === 'height' && $unit_preference === 'imperial' && $field === 'height_cm') {
-                continue;
-            }
-            if ($config['group'] === 'weight' && $unit_preference === 'metric' && $field === 'weight_lbs') {
-                continue;
-            }
-            if ($config['group'] === 'weight' && $unit_preference === 'imperial' && $field === 'weight_kg') {
-                continue;
-            }
-        }
+        // Skip unit fields
+        if (strpos($field, '_unit') !== false) continue;
         ?>
         <div class="form-group" data-field="<?php echo esc_attr($field); ?>">
             <label for="<?php echo esc_attr($field); ?>">
@@ -59,27 +40,72 @@ if (!defined('ABSPATH')) {
                     <?php endforeach; ?>
                 </select>
 
-            <?php elseif ($config['type'] === 'equipment'): ?>
-                <div class="equipment-selector">
-                    <div class="equipment-options">
-                        <select class="equipment-select" multiple>
-                            <?php foreach ($config['options'] as $value => $label): ?>
-                                <option value="<?php echo esc_attr($label); ?>">
+            <?php elseif ($config['type'] === 'height_with_unit'): ?>
+                <div class="measurement-group">
+                    <?php 
+                    $current_unit = $data[$field . '_unit'] ?? 'imperial';
+                    $current_value = $data[$field] ?? '';
+                    ?>
+                    <?php if ($current_unit === 'imperial'): ?>
+                        <select name="<?php echo esc_attr($field); ?>" 
+                                id="<?php echo esc_attr($field); ?>"
+                                class="measurement-value"
+                                <?php echo $config['required'] ? 'required' : ''; ?>>
+                            <option value="">Select height</option>
+                            <?php foreach ($config['imperial_options'] as $value => $label): ?>
+                                <option value="<?php echo esc_attr($value); ?>"
+                                        <?php selected($current_value, $value); ?>>
                                     <?php echo esc_html($label); ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
-                        <button type="button" class="add-equipment">Add Selected</button>
-                    </div>
-                    <div class="equipment-input">
-                        <textarea name="<?php echo esc_attr($field); ?>" 
-                                 id="<?php echo esc_attr($field); ?>"
-                                 class="equipment-list"
-                                 placeholder="Your available equipment will appear here. Add custom equipment by typing and pressing Enter."
-                                 <?php echo $config['required'] ? 'required' : ''; ?>><?php 
-                            echo esc_textarea($data[$field] ?? ''); 
-                        ?></textarea>
-                    </div>
+                    <?php else: ?>
+                        <input type="number" 
+                               name="<?php echo esc_attr($field); ?>"
+                               id="<?php echo esc_attr($field); ?>"
+                               class="measurement-value"
+                               value="<?php echo esc_attr($current_value); ?>"
+                               min="<?php echo esc_attr($config['metric_range']['min']); ?>"
+                               max="<?php echo esc_attr($config['metric_range']['max']); ?>"
+                               <?php echo $config['required'] ? 'required' : ''; ?>>
+                    <?php endif; ?>
+                    
+                    <select name="<?php echo esc_attr($field); ?>_unit"
+                            id="<?php echo esc_attr($field); ?>_unit"
+                            class="unit-selector">
+                        <?php foreach ($config['units'] as $unit_key => $unit_label): ?>
+                            <option value="<?php echo esc_attr($unit_key); ?>"
+                                    <?php selected($current_unit, $unit_key); ?>>
+                                <?php echo esc_html(strtoupper($unit_label)); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+            <?php elseif ($config['type'] === 'weight_with_unit'): ?>
+                <div class="measurement-group">
+                    <?php 
+                    $current_unit = $data[$field . '_unit'] ?? 'imperial';
+                    $current_value = $data[$field] ?? '';
+                    ?>
+                    <input type="number" 
+                           name="<?php echo esc_attr($field); ?>"
+                           id="<?php echo esc_attr($field); ?>"
+                           class="measurement-value"
+                           value="<?php echo esc_attr($current_value); ?>"
+                           step="0.1"
+                           <?php echo $config['required'] ? 'required' : ''; ?>>
+                    
+                    <select name="<?php echo esc_attr($field); ?>_unit"
+                            id="<?php echo esc_attr($field); ?>_unit"
+                            class="unit-selector">
+                        <?php foreach ($config['units'] as $unit_key => $unit_label): ?>
+                            <option value="<?php echo esc_attr($unit_key); ?>"
+                                    <?php selected($current_unit, $unit_key); ?>>
+                                <?php echo esc_html(strtoupper($unit_label)); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
 
             <?php else: ?>

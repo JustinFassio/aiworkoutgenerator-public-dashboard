@@ -3,82 +3,117 @@ jQuery(document).ready(function($) {
         init: function() {
             this.form = $('#profile-form');
             this.bindEvents();
-            this.setupUnitPreference();
-            this.setupEquipmentSelector();
+            this.setupMeasurementFields();
         },
 
         bindEvents: function() {
             this.form.on('submit', this.saveProfile.bind(this));
-            this.form.on('change', '#unit_preference', this.handleUnitChange.bind(this));
-            this.form.on('input', '#weight_lbs, #weight_kg', this.handleWeightInput.bind(this));
-            this.form.on('change', '#height_feet, #height_inches, #height_cm', this.handleHeightInput.bind(this));
+            this.form.on('change', '.unit-selector', this.handleUnitChange.bind(this));
+            this.form.on('input', '[data-field="weight"] .measurement-value', this.handleWeightInput.bind(this));
         },
 
-        setupEquipmentSelector: function() {
-            const $selector = $('.equipment-selector');
-            if (!$selector.length) return;
-
-            const $select = $selector.find('.equipment-select');
-            const $textarea = $selector.find('.equipment-list');
-            const $addButton = $selector.find('.add-equipment');
-
-            // Add selected equipment
-            $addButton.on('click', function() {
-                const selected = $select.val();
-                if (!selected || !selected.length) return;
-
-                let current = $textarea.val().split('\n').filter(item => item.trim());
-                const newItems = selected.filter(item => !current.includes(item));
+        setupMeasurementFields: function() {
+            // Initialize any measurement fields that need setup
+            this.form.find('.unit-selector').each((i, selector) => {
+                const $selector = $(selector);
+                const $group = $selector.closest('.measurement-group');
+                const $value = $group.find('.measurement-value');
                 
-                if (newItems.length) {
-                    current = current.concat(newItems);
-                    $textarea.val(current.join('\n'));
-                }
-                
-                $select.val([]);
+                // Store initial values
+                $group.data('lastValue', $value.val());
+                $group.data('lastUnit', $selector.val());
             });
-
-            // Handle manual entry with Enter key
-            $textarea.on('keydown', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    const value = $(this).val();
-                    const lines = value.split('\n');
-                    const lastLine = lines[lines.length - 1];
-
-                    if (lastLine.trim()) {
-                        $(this).val(value + '\n');
-                    }
-                }
-            });
-        },
-
-        setupUnitPreference: function() {
-            const preference = this.form.data('unit-preference');
-            this.toggleUnitFields(preference);
         },
 
         handleUnitChange: function(e) {
-            const preference = $(e.target).val();
-            this.toggleUnitFields(preference);
+            const $selector = $(e.target);
+            const $group = $selector.closest('.measurement-group');
+            const $field = $group.closest('.form-group');
+            const fieldType = $field.data('field');
+            const newUnit = $selector.val();
+            const oldUnit = $group.data('lastUnit');
+            const currentValue = $group.find('.measurement-value').val();
+
+            if (currentValue && oldUnit !== newUnit) {
+                if (fieldType === 'height') {
+                    this.convertHeight($group, currentValue, oldUnit, newUnit);
+                } else if (fieldType === 'weight') {
+                    this.convertWeight($group, currentValue, oldUnit, newUnit);
+                }
+            }
+
+            // Update last unit
+            $group.data('lastUnit', newUnit);
         },
 
-        toggleUnitFields: function(preference) {
-            const heightImperial = this.form.find('[data-field="height_feet"], [data-field="height_inches"]');
-            const heightMetric = this.form.find('[data-field="height_cm"]');
-            const weightImperial = this.form.find('[data-field="weight_lbs"]');
-            const weightMetric = this.form.find('[data-field="weight_kg"]');
+        convertHeight: function($group, value, fromUnit, toUnit) {
+            const $input = $group.find('.measurement-value');
+            
+            if (fromUnit === 'imperial' && toUnit === 'metric') {
+                // Convert from inches to cm
+                const cm = Math.round(value * 2.54);
+                this.updateHeightField($group, cm, 'metric');
+            } else if (fromUnit === 'metric' && toUnit === 'imperial') {
+                // Convert from cm to inches
+                const inches = Math.round(value / 2.54);
+                this.updateHeightField($group, inches, 'imperial');
+            }
+        },
 
-            if (preference === 'imperial') {
-                heightImperial.show();
-                heightMetric.hide();
-                weightImperial.show();
-                weightMetric.hide();
+        updateHeightField: function($group, value, unit) {
+            const $container = $group.find('.measurement-value').parent();
+            let $input;
+
+            if (unit === 'imperial') {
+                // Create select for imperial
+                $input = $('<select>', {
+                    class: 'measurement-value',
+                    name: $group.closest('.form-group').data('field'),
+                    required: true
+                }).append($('<option>', {
+                    value: '',
+                    text: 'Select height'
+                }));
+
+                // Add height options
+                for (let feet = 4; feet <= 8; feet++) {
+                    for (let inches = 0; inches < (feet === 8 ? 1 : 12); inches++) {
+                        const totalInches = (feet * 12) + inches;
+                        $input.append($('<option>', {
+                            value: totalInches,
+                            text: `${feet}'${inches}"`,
+                            selected: totalInches === value
+                        }));
+                    }
+                }
             } else {
-                heightImperial.hide();
-                heightMetric.show();
-                weightImperial.hide();
-                weightMetric.show();
+                // Create number input for metric
+                $input = $('<input>', {
+                    type: 'number',
+                    class: 'measurement-value',
+                    name: $group.closest('.form-group').data('field'),
+                    value: value,
+                    min: 120,
+                    max: 244,
+                    required: true
+                });
+            }
+
+            // Replace the existing input/select
+            $group.find('.measurement-value').replaceWith($input);
+        },
+
+        convertWeight: function($group, value, fromUnit, toUnit) {
+            const $input = $group.find('.measurement-value');
+            
+            if (fromUnit === 'imperial' && toUnit === 'metric') {
+                // Convert from lbs to kg
+                const kg = Math.round(value * 0.453592 * 10) / 10;
+                $input.val(kg);
+            } else if (fromUnit === 'metric' && toUnit === 'imperial') {
+                // Convert from kg to lbs
+                const lbs = Math.round(value * 2.20462 * 10) / 10;
+                $input.val(lbs);
             }
         },
 
@@ -87,36 +122,9 @@ jQuery(document).ready(function($) {
             const value = parseFloat($input.val());
             
             if (isNaN(value)) return;
-
-            if ($input.attr('id') === 'weight_lbs') {
-                const kg = Math.round(value * 0.453592);
-                $('#weight_kg').val(kg);
-            } else {
-                const lbs = Math.round(value * 2.20462);
-                $('#weight_lbs').val(lbs);
-            }
-        },
-
-        handleHeightInput: function(e) {
-            const $input = $(e.target);
             
-            if ($input.attr('id') === 'height_cm') {
-                const cm = parseInt($input.val());
-                if (isNaN(cm)) return;
-                
-                const totalInches = Math.round(cm / 2.54);
-                const feet = Math.floor(totalInches / 12);
-                const inches = totalInches % 12;
-                
-                $('#height_feet').val(feet);
-                $('#height_inches').val(inches);
-            } else {
-                const feet = parseInt($('#height_feet').val()) || 0;
-                const inches = parseInt($('#height_inches').val()) || 0;
-                const cm = Math.round((feet * 30.48) + (inches * 2.54));
-                
-                $('#height_cm').val(cm);
-            }
+            // Store the last valid value
+            $input.closest('.measurement-group').data('lastValue', value);
         },
 
         saveProfile: function(e) {
@@ -131,17 +139,6 @@ jQuery(document).ready(function($) {
             const formData = new FormData($form[0]);
             formData.append('action', 'update_profile');
             formData.append('profile_nonce', profileData.nonce);
-
-            // Clean up equipment list
-            const $equipmentList = $form.find('.equipment-list');
-            if ($equipmentList.length) {
-                const equipment = $equipmentList.val()
-                    .split('\n')
-                    .map(item => item.trim())
-                    .filter(item => item)
-                    .join('\n');
-                formData.set('equipment_access', equipment);
-            }
 
             $.ajax({
                 url: profileData.ajaxurl,

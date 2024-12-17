@@ -26,10 +26,30 @@ class ProfileService {
         $profile = new ProfileData();
         $fields = $profile->getFields();
 
-        foreach (array_keys($fields) as $field) {
-            $value = get_user_meta($user_id, $this->meta_prefix . $field, true);
-            if ($value !== '') {
-                $data[$field] = $value;
+        foreach ($fields as $field => $config) {
+            if ($config['type'] === 'height_with_unit') {
+                $unit = get_user_meta($user_id, $this->meta_prefix . 'height_unit', true) ?: 'imperial';
+                if ($unit === 'imperial') {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'height_imperial', true);
+                } else {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'height_cm', true);
+                }
+                $data[$field . '_unit'] = $unit;
+            }
+            elseif ($config['type'] === 'weight_with_unit') {
+                $unit = get_user_meta($user_id, $this->meta_prefix . 'weight_unit', true) ?: 'imperial';
+                if ($unit === 'imperial') {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'weight_lbs', true);
+                } else {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'weight_kg', true);
+                }
+                $data[$field . '_unit'] = $unit;
+            }
+            else {
+                $value = get_user_meta($user_id, $this->meta_prefix . $field, true);
+                if ($value !== '') {
+                    $data[$field] = $value;
+                }
             }
         }
 
@@ -38,40 +58,56 @@ class ProfileService {
 
     public function updateProfile(int $user_id, array $data): bool {
         $profile = new ProfileData($data);
-        $unit_preference = $profile->get('unit_preference');
-
+        
         try {
             foreach ($profile->toArray() as $field => $value) {
                 if ($value === null) {
                     continue;
                 }
 
-                // Handle unit conversions
-                if ($unit_preference === 'imperial') {
-                    if ($field === 'height_cm') {
-                        $value = $this->convertHeightToMetric(
-                            intval($profile->get('height_feet')),
-                            intval($profile->get('height_inches'))
-                        );
-                    } elseif ($field === 'weight_kg') {
-                        $value = $this->convertWeightToMetric(
-                            floatval($profile->get('weight_lbs'))
-                        );
-                    }
-                } elseif ($unit_preference === 'metric') {
-                    if ($field === 'height_feet' || $field === 'height_inches') {
-                        $imperial = $this->convertHeightToImperial(
-                            intval($profile->get('height_cm'))
-                        );
-                        $value = $field === 'height_feet' ? $imperial['feet'] : $imperial['inches'];
-                    } elseif ($field === 'weight_lbs') {
-                        $value = $this->convertWeightToImperial(
-                            floatval($profile->get('weight_kg'))
-                        );
-                    }
+                // Handle unit conversions and storage
+                if (strpos($field, '_unit') !== false) {
+                    continue; // Skip unit fields, they're handled with their main field
                 }
 
-                update_user_meta($user_id, $this->meta_prefix . $field, $value);
+                $field_config = $profile->getFields()[$field] ?? null;
+                if (!$field_config) {
+                    continue;
+                }
+
+                if ($field_config['type'] === 'height_with_unit') {
+                    $unit = $data[$field . '_unit'] ?? 'imperial';
+                    $stored_value = $value;
+                    
+                    // Always store both imperial and metric values
+                    if ($unit === 'imperial') {
+                        update_user_meta($user_id, $this->meta_prefix . 'height_imperial', $value);
+                        $stored_value = $this->convertHeightToMetric($value);
+                    } else {
+                        update_user_meta($user_id, $this->meta_prefix . 'height_imperial', $this->convertHeightToImperial($value)['total_inches']);
+                        $stored_value = $value;
+                    }
+                    update_user_meta($user_id, $this->meta_prefix . 'height_cm', $stored_value);
+                    update_user_meta($user_id, $this->meta_prefix . 'height_unit', $unit);
+                }
+                elseif ($field_config['type'] === 'weight_with_unit') {
+                    $unit = $data[$field . '_unit'] ?? 'imperial';
+                    $stored_value = $value;
+                    
+                    // Always store both imperial and metric values
+                    if ($unit === 'imperial') {
+                        update_user_meta($user_id, $this->meta_prefix . 'weight_lbs', $value);
+                        $stored_value = $this->convertWeightToMetric($value);
+                    } else {
+                        update_user_meta($user_id, $this->meta_prefix . 'weight_lbs', $this->convertWeightToImperial($value));
+                        $stored_value = $value;
+                    }
+                    update_user_meta($user_id, $this->meta_prefix . 'weight_kg', $stored_value);
+                    update_user_meta($user_id, $this->meta_prefix . 'weight_unit', $unit);
+                }
+                else {
+                    update_user_meta($user_id, $this->meta_prefix . $field, $value);
+                }
             }
             return true;
         } catch (\Exception $e) {
@@ -80,8 +116,7 @@ class ProfileService {
         }
     }
 
-    private function convertHeightToMetric(int $feet, int $inches): int {
-        $total_inches = ($feet * 12) + $inches;
+    private function convertHeightToMetric(int $total_inches): int {
         return round($total_inches * 2.54);
     }
 
@@ -89,7 +124,8 @@ class ProfileService {
         $total_inches = round($cm / 2.54);
         return [
             'feet' => floor($total_inches / 12),
-            'inches' => $total_inches % 12
+            'inches' => $total_inches % 12,
+            'total_inches' => $total_inches
         ];
     }
 

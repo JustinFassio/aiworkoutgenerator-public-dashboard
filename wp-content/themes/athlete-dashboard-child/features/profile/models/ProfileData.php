@@ -39,6 +39,18 @@ class ProfileData {
     }
 
     private function defineFields(): array {
+        // Generate height options in imperial format (4'0" to 8'0" in 1" increments)
+        $height_options = [];
+        for ($feet = 4; $feet <= 8; $feet++) {
+            for ($inches = 0; $inches < 12; $inches++) {
+                // Skip inches for 8 feet to cap at 8'0"
+                if ($feet === 8 && $inches > 0) continue;
+                
+                $total_inches = ($feet * 12) + $inches;
+                $height_options[$total_inches] = sprintf("%d'%d\"", $feet, $inches);
+            }
+        }
+
         return [
             'age' => [
                 'type' => 'number',
@@ -59,49 +71,47 @@ class ProfileData {
                 'validation' => fn($value) => in_array($value, ['male', 'female', 'other']),
                 'description' => 'Your gender'
             ],
-            'height_feet' => [
-                'type' => 'select',
-                'label' => 'Height (ft)',
-                'options' => array_combine(
-                    range(4, 8),
-                    array_map(fn($ft) => $ft . ' ft', range(4, 8))
-                ),
+            'height' => [
+                'type' => 'height_with_unit',
+                'label' => 'Height',
                 'required' => true,
-                'group' => 'height',
-                'validation' => fn($value) => filter_var($value, FILTER_VALIDATE_INT) && $value >= 4 && $value <= 8,
-                'description' => 'Your height in feet'
-            ],
-            'height_inches' => [
-                'type' => 'select',
-                'label' => 'Height (in)',
-                'options' => array_combine(
-                    range(0, 11),
-                    array_map(fn($in) => $in . ' in', range(0, 11))
-                ),
-                'required' => true,
-                'group' => 'height',
-                'validation' => fn($value) => filter_var($value, FILTER_VALIDATE_INT) && $value >= 0 && $value <= 11,
-                'description' => 'Additional inches'
-            ],
-            'weight_lbs' => [
-                'type' => 'number',
-                'label' => 'Weight (lbs)',
-                'required' => true,
-                'group' => 'weight',
-                'validation' => fn($value) => filter_var($value, FILTER_VALIDATE_FLOAT) && $value > 0,
-                'description' => 'Your weight in pounds'
-            ],
-            'unit_preference' => [
-                'type' => 'select',
-                'label' => 'Preferred Units',
-                'options' => [
-                    'imperial' => 'Imperial (lbs/ft)',
-                    'metric' => 'Metric (kg/cm)'
+                'imperial_options' => $height_options,
+                'metric_range' => [
+                    'min' => 120, // 4 feet in cm
+                    'max' => 244  // 8 feet in cm
                 ],
+                'units' => [
+                    'imperial' => 'in',
+                    'metric' => 'cm'
+                ],
+                'validation' => function($value, $unit) {
+                    if ($unit === 'imperial') {
+                        return filter_var($value, FILTER_VALIDATE_INT) && $value >= 48 && $value <= 96;
+                    } else {
+                        return filter_var($value, FILTER_VALIDATE_INT) && $value >= 120 && $value <= 244;
+                    }
+                },
+                'description' => 'Your height'
+            ],
+            'weight' => [
+                'type' => 'weight_with_unit',
+                'label' => 'Weight',
                 'required' => true,
-                'default' => 'imperial',
-                'validation' => fn($value) => in_array($value, ['imperial', 'metric']),
-                'description' => 'Your preferred unit system'
+                'units' => [
+                    'imperial' => 'lbs',
+                    'metric' => 'kg'
+                ],
+                'validation' => function($value, $unit) {
+                    $val = filter_var($value, FILTER_VALIDATE_FLOAT);
+                    if (!$val) return false;
+                    
+                    if ($unit === 'imperial') {
+                        return $val >= 50 && $val <= 500; // Reasonable lbs range
+                    } else {
+                        return $val >= 23 && $val <= 227; // Converted kg range
+                    }
+                },
+                'description' => 'Your weight'
             ]
         ];
     }
@@ -110,7 +120,16 @@ class ProfileData {
         $validated = [];
         foreach ($this->fields as $key => $field) {
             if (isset($data[$key])) {
-                $validated[$key] = $this->validateField($key, $data[$key]);
+                if (in_array($field['type'], ['height_with_unit', 'weight_with_unit'])) {
+                    $value = $data[$key];
+                    $unit = $data[$key . '_unit'] ?? 'imperial';
+                    if (isset($field['validation']) && is_callable($field['validation'])) {
+                        $validated[$key] = $field['validation']($value, $unit) ? $value : null;
+                        $validated[$key . '_unit'] = $unit;
+                    }
+                } else {
+                    $validated[$key] = $this->validateField($key, $data[$key]);
+                }
             } elseif (isset($field['default'])) {
                 $validated[$key] = $field['default'];
             } elseif ($field['required']) {
@@ -127,6 +146,9 @@ class ProfileData {
 
         $field = $this->fields[$key];
         if (isset($field['validation']) && is_callable($field['validation'])) {
+            if (in_array($field['type'], ['height_with_unit', 'weight_with_unit'])) {
+                return $field['validation']($value, $field['units']['imperial']) ? $value : null;
+            }
             return $field['validation']($value) ? $value : null;
         }
 

@@ -1,5 +1,15 @@
+/* Color Variables */
+:root {
+    --green-highlight: #ddff0e;
+    --charcoal-dark: #1a1a1a;
+    --charcoal-medium: #2d2d2d;
+    --charcoal-light: #3d3d3d;
+    --charcoal-border: rgba(255, 255, 255, 0.1);
+    --error-red: #ff5252;
+}
+
 .profile-form {
-    background: #2d2d2d;
+    background: var(--charcoal-medium);
     padding: 2rem;
     border-radius: 8px;
 }
@@ -16,7 +26,7 @@
 }
 
 .form-group .required {
-    color: #ff5252;
+    color: var(--error-red);
     margin-left: 0.25rem;
 }
 
@@ -24,46 +34,30 @@
 .form-group select {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--charcoal-border);
     border-radius: 4px;
-    background: #1a1a1a;
+    background: var(--charcoal-dark);
     color: #ffffff;
     font-size: 1rem;
+    transition: all 0.2s ease;
 }
 
-/* Height fields layout */
-.form-group[data-field="height_feet"],
-.form-group[data-field="height_inches"] {
-    display: inline-block;
-    width: calc(50% - 0.5rem);
-    vertical-align: top;
+/* Measurement group styling */
+.measurement-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
 }
 
-.form-group[data-field="height_feet"] {
-    margin-right: 1rem;
+.measurement-group .measurement-value {
+    flex: 1;
+    min-width: 0; /* Prevent flex item from overflowing */
 }
 
-/* Unit preference styling */
-.form-group[data-field="unit_preference"] {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.form-group[data-field="unit_preference"] select {
-    max-width: 200px;
-}
-
-.form-group select[multiple] {
-    height: auto;
-    min-height: 120px;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+.measurement-group .unit-selector {
+    width: auto;
+    min-width: 70px;
+    padding-right: 2rem; /* Space for the dropdown arrow */
 }
 
 /* Number input styling */
@@ -78,24 +72,35 @@
     margin: 0;
 }
 
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
+}
+
 .submit-button {
-    background: #4CAF50;
-    color: white;
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .submit-button:hover {
-    background: #45a049;
+    background: #c5e60c;
+    transform: translateY(-1px);
 }
 
 .submit-button:disabled {
-    background: #cccccc;
+    background: var(--charcoal-light);
+    color: rgba(255, 255, 255, 0.5);
     cursor: not-allowed;
+    transform: none;
 }
 
 .success-message,
@@ -106,13 +111,15 @@
 }
 
 .success-message {
-    background: #4CAF50;
-    color: white;
+    background: var(--charcoal-dark);
+    color: var(--green-highlight);
+    border: 1px solid var(--green-highlight);
 }
 
 .error-message {
-    background: #ff5252;
-    color: white;
+    background: var(--charcoal-dark);
+    color: var(--error-red);
+    border: 1px solid var(--error-red);
 }
 
 /* Responsive adjustments */
@@ -126,97 +133,11 @@
         padding: 0.5rem;
     }
 
-    .form-group[data-field="height_feet"],
-    .form-group[data-field="height_inches"] {
-        width: 100%;
-        display: block;
-        margin-right: 0;
-    }
-}
-
-/* Equipment selector styling */
-.equipment-selector {
-    display: flex;
-    gap: 1rem;
-}
-
-.equipment-options {
-    flex: 1;
-}
-
-.equipment-input {
-    flex: 1;
-}
-
-.equipment-select {
-    width: 100%;
-    min-height: 150px !important;
-    margin-bottom: 0.5rem;
-}
-
-.equipment-list {
-    width: 100%;
-    min-height: 150px !important;
-    resize: vertical;
-    padding: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    background: #1a1a1a;
-    color: #ffffff;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.equipment-list:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
-}
-
-.add-equipment {
-    width: 100%;
-    background: #2d2d2d;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.add-equipment:hover {
-    background: #3d3d3d;
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.equipment-tag {
-    display: inline-block;
-    background: #4CAF50;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    margin: 0.25rem;
-    font-size: 0.9rem;
-}
-
-.equipment-tag .remove {
-    margin-left: 0.5rem;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.equipment-tag .remove:hover {
-    opacity: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .equipment-selector {
+    .measurement-group {
         flex-direction: column;
     }
-    
-    .equipment-select,
-    .equipment-list {
-        min-height: 100px !important;
+
+    .measurement-group .unit-selector {
+        width: 100%;
     }
 } 
