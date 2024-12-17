@@ -10,30 +10,56 @@ if (!defined('ABSPATH')) {
 $current_user = wp_get_current_user();
 ?>
 
-<div class="dashboard-section overview-section">
-    <h2>Trailhead</h2>
-    <div class="overview-content">
-        <?php echo do_shortcode('[user_overview]'); ?>
-    </div>
-</div>
+<div class="dashboard-content">
+    <!-- Overview Cards -->
+    <div class="card-grid">
+        <div class="dashboard-card" id="trailhead">
+            <div class="card-header">
+                <h3 class="card-title"><?php esc_html_e('Trailhead', 'athlete-dashboard'); ?></h3>
+            </div>
+            <div class="card-content">
+                <?php echo do_shortcode('[user_overview]'); ?>
+            </div>
+        </div>
 
-<div class="dashboard-section current-workout-section">
-    <h2>Current Workout</h2>
-    <div class="current-workout-content">
-        <?php echo do_shortcode('[user_workouts]'); ?>
+        <div class="dashboard-card" id="current-workout">
+            <div class="card-header">
+                <h3 class="card-title"><?php esc_html_e('Current Workout', 'athlete-dashboard'); ?></h3>
+                <div class="card-actions">
+                    <button type="button" class="btn btn-secondary refresh-card" data-card="current-workout">
+                        <?php esc_html_e('Refresh', 'athlete-dashboard'); ?>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <?php echo do_shortcode('[user_workouts]'); ?>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="dashboard-section log-workout-section">
-    <h2>Log Workout</h2>
-    <div class="log-workout-content">
-        <?php echo do_shortcode('[athlete_dashboard_log_workout_content]'); ?>
-    </div>
-</div>
+    <!-- Progress Cards -->
+    <div class="card-grid">
+        <div class="dashboard-card" id="squat-progress">
+            <div class="card-header">
+                <h3 class="card-title"><?php esc_html_e('Squat Progress', 'athlete-dashboard'); ?></h3>
+                <div class="card-actions">
+                    <button type="button" class="btn btn-primary add-entry-button">
+                        <?php esc_html_e('Add Entry', 'athlete-dashboard'); ?>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <?php echo do_shortcode('[user_squat_progress]'); ?>
+            </div>
+        </div>
 
-<div class="dashboard-section upcoming-workouts-section">
-    <h2>Upcoming Workouts</h2>
-    <div class="upcoming-workouts-content">
-        <?php echo do_shortcode('[user_upcoming_workouts]'); ?>
+        <div class="dashboard-card" id="upcoming-workouts">
+            <div class="card-header">
+                <h3 class="card-title"><?php esc_html_e('Upcoming Workouts', 'athlete-dashboard'); ?></h3>
+            </div>
+            <div class="card-content">
+                <?php echo do_shortcode('[user_upcoming_workouts]'); ?>
+            </div>
+        </div>
     </div>
 </div> 

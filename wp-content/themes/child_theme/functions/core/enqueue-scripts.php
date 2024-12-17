@@ -6,200 +6,85 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Enqueue scripts and styles for the theme
+ * Enqueue scripts and styles for the athlete dashboard
  */
 function athlete_dashboard_enqueue_scripts() {
-    // Get theme directories
-    $parent_theme_dir = get_template_directory_uri();
-    $child_theme_dir = get_stylesheet_directory_uri();
-
-    // Enqueue parent (Divi) style with correct path
-    wp_enqueue_style('parent-style', $parent_theme_dir . '/style.css');
-    
-    // Enqueue child theme's main style.css
-    wp_enqueue_style(
-        'child-style',
-        $child_theme_dir . '/style.css',
-        array('parent-style')
-    );
-
-    // Core WordPress scripts
+    // Core dependencies
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-ui-core');
     wp_enqueue_script('jquery-ui-tabs');
-    wp_enqueue_script('jquery-effects-core');
-    wp_enqueue_script('jquery-ui-autocomplete');
     
-    // Third-party libraries
-    wp_enqueue_style('jquery-ui-css', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-    wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/buy-button.js', array(), null, true);
-    wp_enqueue_script('chart-js', 'https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js', array(), '3.7.0', true);
-    wp_enqueue_script('chart-js-adapter', 'https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js', array('chart-js'), '2.0.0', true);
-
-    // Theme styles with updated dependencies
-    $css_files = array(
-        'variables-style' => array(
-            'path' => '/assets/css/variables.css',
-            'deps' => array('parent-style', 'child-style')
-        ),
-        'custom-styles' => array(
-            'path' => '/assets/css/custom-styles.css',
-            'deps' => array('parent-style', 'child-style')
-        ),
-        'athlete-dashboard' => array(
-            'path' => '/assets/css/dashboard.css',
-            'deps' => array('parent-style', 'child-style')
-        )
+    // Base styles
+    wp_enqueue_style(
+        'athlete-dashboard-variables',
+        get_stylesheet_directory_uri() . '/assets/css/variables.css',
+        array(),
+        ATHLETE_DASHBOARD_VERSION
     );
 
-    // Enqueue each CSS file
-    foreach ($css_files as $handle => $file) {
-        $file_path = ATHLETE_DASHBOARD_PATH . $file['path'];
-        $file_uri = ATHLETE_DASHBOARD_URI . $file['path'];
-        
-        if (file_exists($file_path)) {
-            wp_enqueue_style(
-                $handle,
-                $file_uri,
-                $file['deps'],
-                filemtime($file_path)
-            );
-        }
-    }
-
-    // New modular component scripts
-    $module_scripts = array(
-        'athlete-ui' => array(
-            'path' => '/js/modules/ui.js',
-            'deps' => array()
-        ),
-        'athlete-workout' => array(
-            'path' => '/js/modules/workout.js',
-            'deps' => array('chart-js')
-        ),
-        'athlete-goals' => array(
-            'path' => '/js/modules/goals.js',
-            'deps' => array('chart-js')
-        ),
-        'athlete-attendance' => array(
-            'path' => '/js/modules/attendance.js',
-            'deps' => array()
-        ),
-        'athlete-membership' => array(
-            'path' => '/js/modules/membership.js',
-            'deps' => array('stripe-js')
-        ),
-        'athlete-messaging' => array(
-            'path' => '/js/modules/messaging.js',
-            'deps' => array()
-        ),
-        'athlete-charts' => array(
-            'path' => '/js/modules/charts.js',
-            'deps' => array('chart-js', 'chart-js-adapter')
-        )
+    wp_enqueue_style(
+        'athlete-dashboard-base',
+        get_stylesheet_directory_uri() . '/assets/css/style.css',
+        array('athlete-dashboard-variables'),
+        ATHLETE_DASHBOARD_VERSION
     );
 
-    // Prepare localization data
-    $localization_data = array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce('athlete_dashboard_nonce'),
-        'is_user_logged_in' => is_user_logged_in(),
-        'current_user_id' => get_current_user_id(),
-        'theme_url' => get_stylesheet_directory_uri(),
-        'messages' => array(
-            'error' => __('An error occurred. Please try again.', 'athlete-dashboard'),
-            'success' => __('Operation completed successfully.', 'athlete-dashboard'),
-            'loading' => __('Loading...', 'athlete-dashboard')
-        )
-    );
-
-    // Enqueue module scripts with type="module"
-    foreach ($module_scripts as $handle => $script) {
-        $file_path = ATHLETE_DASHBOARD_PATH . $script['path'];
-        $file_uri = ATHLETE_DASHBOARD_URI . $script['path'];
-        
-        if (file_exists($file_path)) {
-            wp_enqueue_script(
-                $handle,
-                $file_uri,
-                $script['deps'],
-                filemtime($file_path),
-                true
-            );
-            // Add type="module" attribute
-            add_filter("script_loader_tag", function($tag, $handle_check) use ($handle) {
-                if ($handle === $handle_check) {
-                    return str_replace("<script ", "<script type='module' ", $tag);
-                }
-                return $tag;
-            }, 10, 2);
-            
-            // Localize each module script
-            wp_localize_script($handle, 'athleteDashboardData', $localization_data);
-        }
-    }
-
-    // Legacy component scripts (to be migrated)
-    $legacy_scripts = array(
-        'athlete-dashboard-nutrition-logger' => array(
-            'path' => '/js/legacy/nutrition-logger.js',
-            'deps' => array('jquery')
-        ),
-        'athlete-dashboard-nutrition-tracker' => array(
-            'path' => '/js/legacy/nutrition-tracker.js',
-            'deps' => array('jquery', 'chart-js')
-        ),
-        'athlete-dashboard-food-manager' => array(
-            'path' => '/js/legacy/food-manager.js',
-            'deps' => array('jquery', 'jquery-ui-autocomplete')
-        )
-    );
-
-    // Enqueue legacy scripts
-    foreach ($legacy_scripts as $handle => $script) {
-        $file_path = ATHLETE_DASHBOARD_PATH . $script['path'];
-        $file_uri = ATHLETE_DASHBOARD_URI . $script['path'];
-        
-        if (file_exists($file_path)) {
-            wp_enqueue_script(
-                $handle,
-                $file_uri,
-                $script['deps'],
-                filemtime($file_path),
-                true
-            );
-            // Localize each legacy script
-            wp_localize_script($handle, 'athleteDashboardData', $localization_data);
-        }
-    }
-
-    // Main dashboard script (load last)
+    // UI Components
     wp_enqueue_script(
-        'athlete-dashboard-main',
-        ATHLETE_DASHBOARD_URI . '/js/dashboard.js',
-        array_merge(array_keys($module_scripts), array_keys($legacy_scripts)),
-        filemtime(ATHLETE_DASHBOARD_PATH . '/js/dashboard.js'),
+        'athlete-dashboard-ui',
+        get_stylesheet_directory_uri() . '/assets/js/components/athlete-ui.js',
+        array('jquery', 'jquery-ui-core', 'jquery-ui-tabs'),
+        ATHLETE_DASHBOARD_VERSION,
         true
     );
-    
-    // Localize main dashboard script
-    wp_localize_script('athlete-dashboard-main', 'athleteDashboardData', $localization_data);
-    
-    // Add type="module" to main dashboard script
-    add_filter("script_loader_tag", function($tag, $handle) {
-        if ('athlete-dashboard-main' === $handle) {
-            return str_replace("<script ", "<script type='module' ", $tag);
-        }
-        return $tag;
-    }, 10, 2);
+
+    wp_enqueue_style(
+        'athlete-dashboard-ui',
+        get_stylesheet_directory_uri() . '/assets/css/components/ui.css',
+        array('athlete-dashboard-base'),
+        ATHLETE_DASHBOARD_VERSION
+    );
+
+    // Squat Progress Component
+    wp_enqueue_script(
+        'athlete-dashboard-squat-progress',
+        get_stylesheet_directory_uri() . '/includes/components/exercise-progress/squat/js/squat-progress.js',
+        array('jquery', 'athlete-dashboard-ui'),
+        ATHLETE_DASHBOARD_VERSION,
+        true
+    );
+
+    wp_enqueue_style(
+        'athlete-dashboard-squat-progress',
+        get_stylesheet_directory_uri() . '/includes/components/exercise-progress/squat/css/squat-progress.css',
+        array('athlete-dashboard-ui'),
+        ATHLETE_DASHBOARD_VERSION
+    );
+
+    // Main dashboard script
+    wp_enqueue_script(
+        'athlete-dashboard-main',
+        get_stylesheet_directory_uri() . '/assets/js/dashboard.js',
+        array('jquery', 'athlete-dashboard-ui', 'athlete-dashboard-squat-progress'),
+        ATHLETE_DASHBOARD_VERSION,
+        true
+    );
+
+    // Localize script data
+    $localize_data = array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('athlete_dashboard_nonce'),
+        'user_id' => get_current_user_id(),
+        'strings' => array(
+            'loading' => __('Loading...', 'athlete-dashboard'),
+            'error' => __('An error occurred', 'athlete-dashboard'),
+            'success' => __('Success!', 'athlete-dashboard')
+        )
+    );
+
+    // Localize for both UI and main scripts
+    wp_localize_script('athlete-dashboard-ui', 'athleteDashboardData', $localize_data);
+    wp_localize_script('athlete-dashboard-main', 'athleteDashboardData', $localize_data);
 }
-
-// Remove old enqueue functions
-remove_action('wp_enqueue_scripts', 'divi_child_enqueue_styles_and_scripts', 20);
-remove_action('wp_enqueue_scripts', 'enqueue_stripe_js');
-remove_action('wp_enqueue_scripts', 'enqueue_font_awesome');
-
-// Add consolidated enqueue function
-add_action('wp_enqueue_scripts', 'athlete_dashboard_enqueue_scripts', 20);
+add_action('wp_enqueue_scripts', 'athlete_dashboard_enqueue_scripts');
   

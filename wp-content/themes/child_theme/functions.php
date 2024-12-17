@@ -24,28 +24,47 @@ require_once get_stylesheet_directory() . '/functions/core/theme-setup.php';
 require_once get_stylesheet_directory() . '/functions/core/capabilities.php';
 require_once get_stylesheet_directory() . '/functions/api/rest-routes.php';
 require_once get_stylesheet_directory() . '/functions/shortcodes.php';
+require_once get_stylesheet_directory() . '/functions/dashboard-rendering.php';
+
+// Load helper functions
+require_once get_stylesheet_directory() . '/includes/helpers/training-functions.php';
+require_once get_stylesheet_directory() . '/includes/helpers/bookings-functions.php';
+require_once get_stylesheet_directory() . '/includes/helpers/membership-functions.php';
+require_once get_stylesheet_directory() . '/includes/helpers/attendance-functions.php';
+require_once get_stylesheet_directory() . '/includes/helpers/goals-functions.php';
+require_once get_stylesheet_directory() . '/includes/helpers/recommendations-functions.php';
+require_once get_stylesheet_directory() . '/includes/helpers/messaging-functions.php';
 
 // Load core files
 require_once get_stylesheet_directory() . '/functions/core/enqueue-scripts.php';
+
+// Include migration trigger
+require_once get_stylesheet_directory() . '/includes/data/exercise-progress/squat/trigger-migration.php';
 
 /**
  * Register dashboard shortcode
  */
 function athlete_dashboard_shortcode() {
-    if (!is_user_logged_in()) {
-        return 'Please log in to view your dashboard.';
-    }
-
-    ob_start();
-    
-    // Include template parts
-    include_once get_stylesheet_directory() . '/templates/dashboard/header.php';
-    include_once get_stylesheet_directory() . '/templates/dashboard/overview.php';
-    include_once get_stylesheet_directory() . '/templates/dashboard/workouts.php';
-    include_once get_stylesheet_directory() . '/templates/dashboard/progress.php';
-    include_once get_stylesheet_directory() . '/templates/dashboard/nutrition.php';
-    include_once get_stylesheet_directory() . '/templates/dashboard/footer.php';
-    
-    return ob_get_clean();
+    return athlete_dashboard_render_dashboard();
 }
 add_shortcode('athlete_dashboard', 'athlete_dashboard_shortcode');
+
+/**
+ * Run database migrations on theme activation
+ */
+function athlete_dashboard_run_migrations() {
+    // Run squat progress migration
+    require_once get_stylesheet_directory() . '/includes/data/exercise-progress/squat/class-squat-progress-migration.php';
+    $migration = new Athlete_Dashboard_Squat_Progress_Migration();
+    $migration->run();
+}
+add_action('after_switch_theme', 'athlete_dashboard_run_migrations');
+
+/**
+ * Initialize components
+ */
+function athlete_dashboard_init_components() {
+    // Initialize squat progress component
+    new Athlete_Dashboard_Squat_Progress_Component();
+}
+add_action('init', 'athlete_dashboard_init_components');

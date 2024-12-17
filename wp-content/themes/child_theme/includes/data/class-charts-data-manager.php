@@ -19,50 +19,6 @@ class Athlete_Dashboard_Charts_Data_Manager extends Athlete_Dashboard_Data_Manag
     }
 
     /**
-     * Get workout progress data for charts
-     *
-     * @param int $user_id User ID
-     * @param string $period Time period (week, month, year)
-     * @return array Chart data
-     */
-    public function get_workout_progress_data($user_id, $period = 'month') {
-        $workout_manager = new Athlete_Dashboard_Workout_Data_Manager();
-        $progress_manager = new Athlete_Dashboard_Workout_Progress_Manager();
-        
-        // Get date range based on period
-        $end_date = current_time('Y-m-d');
-        switch ($period) {
-            case 'week':
-                $start_date = date('Y-m-d', strtotime('-1 week'));
-                break;
-            case 'year':
-                $start_date = date('Y-m-d', strtotime('-1 year'));
-                break;
-            default: // month
-                $start_date = date('Y-m-d', strtotime('-1 month'));
-        }
-
-        // Get workouts completed in the period
-        $workouts = $workout_manager->get_user_workouts($user_id, array(
-            'date_query' => array(
-                array(
-                    'after' => $start_date,
-                    'before' => $end_date,
-                    'inclusive' => true
-                )
-            )
-        ));
-
-        // Get progress data
-        $progress_data = $progress_manager->get_progress_over_time($user_id, 'volume', 30);
-
-        return array(
-            'workouts' => $this->format_workout_data($workouts),
-            'progress' => $this->format_progress_data($progress_data)
-        );
-    }
-
-    /**
      * Get attendance data for charts
      *
      * @param int $user_id User ID
@@ -100,66 +56,6 @@ class Athlete_Dashboard_Charts_Data_Manager extends Athlete_Dashboard_Data_Manag
         $goals = $goals_manager->get_user_goals($user_id);
 
         return $this->format_goals_data($goals);
-    }
-
-    /**
-     * Format workout data for charts
-     *
-     * @param array $workouts Raw workout data
-     * @return array Formatted chart data
-     */
-    private function format_workout_data($workouts) {
-        $data = array(
-            'labels' => array(),
-            'datasets' => array(
-                array(
-                    'label' => __('Workouts Completed', 'athlete-dashboard'),
-                    'data' => array()
-                )
-            )
-        );
-
-        $grouped_data = array();
-        foreach ($workouts as $workout) {
-            $date = date('Y-m-d', strtotime($workout['date']));
-            if (!isset($grouped_data[$date])) {
-                $grouped_data[$date] = 0;
-            }
-            $grouped_data[$date]++;
-        }
-
-        ksort($grouped_data);
-        foreach ($grouped_data as $date => $count) {
-            $data['labels'][] = $date;
-            $data['datasets'][0]['data'][] = $count;
-        }
-
-        return $data;
-    }
-
-    /**
-     * Format progress data for charts
-     *
-     * @param array $progress_data Raw progress data
-     * @return array Formatted chart data
-     */
-    private function format_progress_data($progress_data) {
-        $data = array(
-            'labels' => array(),
-            'datasets' => array(
-                array(
-                    'label' => __('Progress Score', 'athlete-dashboard'),
-                    'data' => array()
-                )
-            )
-        );
-
-        foreach ($progress_data as $entry) {
-            $data['labels'][] = date('Y-m-d', strtotime($entry['date']));
-            $data['datasets'][0]['data'][] = floatval($entry['score']);
-        }
-
-        return $data;
     }
 
     /**
@@ -250,12 +146,10 @@ class Athlete_Dashboard_Charts_Data_Manager extends Athlete_Dashboard_Data_Manag
      * @return array Dashboard statistics
      */
     public function get_dashboard_stats($user_id) {
-        $workout_stats = new Athlete_Dashboard_Workout_Stats_Manager();
         $attendance_manager = new Athlete_Dashboard_Attendance_Data_Manager();
         $goals_manager = new Athlete_Dashboard_Goals_Data_Manager();
 
         return array(
-            'workouts' => $workout_stats->get_user_stats($user_id),
             'attendance' => $attendance_manager->calculate_attendance_stats($user_id),
             'goals' => $goals_manager->get_goal_stats($user_id)
         );

@@ -26,8 +26,20 @@ function athlete_dashboard_init() {
             'Athlete_Dashboard_Attendance_Data_Manager',
             'Athlete_Dashboard_Membership_Data_Manager',
             'Athlete_Dashboard_Messaging_Data_Manager',
-            'Athlete_Dashboard_Charts_Data_Manager'
+            'Athlete_Dashboard_Charts_Data_Manager',
+            'Athlete_Dashboard_Squat_Progress_Data'
         );
+
+        // Initialize progress components
+        $progress_components = array(
+            'Athlete_Dashboard_Squat_Progress'
+        );
+
+        foreach ($progress_components as $component) {
+            if (class_exists($component)) {
+                new $component();
+            }
+        }
 
         foreach ($data_managers as $manager) {
             if (!class_exists($manager)) {
@@ -101,8 +113,59 @@ function athlete_dashboard_theme_activation() {
     // Add default terms
     $exercise_taxonomy->add_default_terms();
     
+    // Run progress migrations
+    Athlete_Dashboard_Progress_Migration::run_migrations();
+    
     // Flush rewrite rules
     flush_rewrite_rules();
+}
+
+/**
+ * Initialize AJAX handlers
+ */
+function athlete_dashboard_init_ajax_handlers() {
+    add_action('wp_ajax_get_section_content', 'athlete_dashboard_get_section_content');
+    add_action('wp_ajax_nopriv_get_section_content', 'athlete_dashboard_get_section_content');
+    add_action('wp_ajax_do_shortcode', 'athlete_dashboard_do_shortcode_ajax');
+    add_action('wp_ajax_nopriv_do_shortcode', 'athlete_dashboard_do_shortcode_ajax');
+}
+add_action('init', 'athlete_dashboard_init_ajax_handlers');
+
+/**
+ * AJAX handler for getting section content
+ */
+function athlete_dashboard_get_section_content() {
+    check_ajax_referer('athlete_dashboard_nonce', 'nonce');
+    
+    $section = isset($_POST['section']) ? sanitize_text_field($_POST['section']) : '';
+    if (empty($section)) {
+        wp_send_json_error('No section specified');
+    }
+
+    ob_start();
+    do_action('athlete_dashboard_section_content_' . $section);
+    $content = ob_get_clean();
+
+    if (!empty($content)) {
+        wp_send_json_success($content);
+    } else {
+        wp_send_json_error('No content found for section: ' . $section);
+    }
+}
+
+/**
+ * AJAX handler for processing shortcodes
+ */
+function athlete_dashboard_do_shortcode_ajax() {
+    check_ajax_referer('athlete_dashboard_nonce', 'nonce');
+    
+    $shortcode = isset($_POST['shortcode']) ? sanitize_text_field($_POST['shortcode']) : '';
+    if (empty($shortcode)) {
+        wp_send_json_error('No shortcode specified');
+    }
+
+    $content = do_shortcode('[' . $shortcode . ']');
+    wp_send_json_success($content);
 }
 
 // Initialize after theme setup

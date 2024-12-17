@@ -200,4 +200,120 @@ class Athlete_Dashboard_Attendance_Data_Manager extends Athlete_Dashboard_Data_M
 
         return wp_delete_post($record_id, true);
     }
+
+    /**
+     * Get user's attendance statistics
+     *
+     * @param int $user_id User ID
+     * @return array Attendance statistics
+     */
+    public function get_user_attendance_stats($user_id) {
+        // Get check-ins from the last 30 days
+        $args = array(
+            'post_type' => 'check_in',
+            'posts_per_page' => -1,
+            'author' => $user_id,
+            'date_query' => array(
+                array(
+                    'after' => '30 days ago'
+                )
+            )
+        );
+
+        $check_ins = get_posts($args);
+        
+        // Calculate monthly visits
+        $monthly_visits = count($check_ins);
+
+        // Calculate total visits (all time)
+        $total_args = array(
+            'post_type' => 'check_in',
+            'posts_per_page' => -1,
+            'author' => $user_id,
+            'fields' => 'ids'
+        );
+        $total_visits = count(get_posts($total_args));
+
+        // Calculate current streak
+        $current_streak = $this->calculate_current_streak($user_id);
+
+        return array(
+            'total_visits' => $total_visits,
+            'monthly_visits' => $monthly_visits,
+            'current_streak' => $current_streak,
+            'recent_check_ins' => $this->format_check_ins($check_ins)
+        );
+    }
+
+    /**
+     * Calculate user's current attendance streak
+     *
+     * @param int $user_id User ID
+     * @return int Current streak count
+     */
+    private function calculate_current_streak($user_id) {
+        $streak = 0;
+        $current_date = current_time('Y-m-d');
+        $checking_date = $current_date;
+        $has_current_day = false;
+
+        while (true) {
+            $args = array(
+                'post_type' => 'check_in',
+                'posts_per_page' => 1,
+                'author' => $user_id,
+                'date_query' => array(
+                    array(
+                        'year' => date('Y', strtotime($checking_date)),
+                        'month' => date('m', strtotime($checking_date)),
+                        'day' => date('d', strtotime($checking_date)),
+                    ),
+                )
+            );
+
+            $check_in = get_posts($args);
+
+            if (!empty($check_in)) {
+                if ($checking_date === $current_date) {
+                    $has_current_day = true;
+                }
+                $streak++;
+                $checking_date = date('Y-m-d', strtotime($checking_date . ' -1 day'));
+            } else {
+                // If we don't have the current day, but we have a streak from previous days
+                if (!$has_current_day && $streak > 0) {
+                    // Check if we missed just one day
+                    $yesterday = date('Y-m-d', strtotime('-1 day', strtotime($current_date)));
+                    if ($checking_date === $yesterday) {
+                        break; // Keep the streak
+                    }
+                }
+                break;
+            }
+        }
+
+        return $streak;
+    }
+
+    /**
+     * Format check-ins for display
+     *
+     * @param array $check_ins Array of check-in posts
+     * @return array Formatted check-ins
+     */
+    private function format_check_ins($check_ins) {
+        $formatted = array();
+
+        foreach ($check_ins as $check_in) {
+            $formatted[] = array(
+                'id' => $check_in->ID,
+                'date' => get_the_date('Y-m-d', $check_in->ID),
+                'time' => get_post_meta($check_in->ID, '_check_in_time', true),
+                'location' => get_post_meta($check_in->ID, '_check_in_location', true),
+                'type' => get_post_meta($check_in->ID, '_check_in_type', true)
+            );
+        }
+
+        return $formatted;
+    }
 } 

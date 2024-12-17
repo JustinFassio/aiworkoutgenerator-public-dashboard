@@ -7,22 +7,52 @@
 
     class WorkoutDetailComponent {
         constructor() {
+            this.initialized = false;
             this.initializeComponent();
         }
 
         initializeComponent() {
             // Wait for DOM to be ready
             $(document).ready(() => {
-                this.container = $('[data-component="workout-detail"]');
-                this.detailContainer = this.container.find('.workout-detail-container');
-                
-                if (this.container.length === 0 || this.detailContainer.length === 0) {
-                    console.warn('Workout detail component elements not found - will be initialized when content loads');
-                    return;
-                }
+                this.tryInitialize();
+            });
 
-                this.bindEvents();
-                this.initializeEventListeners();
+            // Set up mutation observer to watch for dynamic content
+            this.setupObserver();
+        }
+
+        tryInitialize() {
+            // Skip if already initialized
+            if (this.initialized) return;
+
+            this.container = $('[data-component="workout-detail"]');
+            this.detailContainer = this.container.find('.workout-detail-container');
+            
+            if (this.container.length === 0 || this.detailContainer.length === 0) {
+                console.log('Workout detail component elements not found - will be initialized when content loads');
+                return;
+            }
+
+            console.log('Workout detail component initializing...');
+            this.initialized = true;
+            this.bindEvents();
+            this.initializeEventListeners();
+        }
+
+        setupObserver() {
+            // Create an observer instance
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.addedNodes.length) {
+                        this.tryInitialize();
+                    }
+                });
+            });
+
+            // Start observing the document with the configured parameters
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
             });
         }
 
@@ -30,9 +60,9 @@
          * Bind events for workout detail interactions
          */
         bindEvents() {
-            // Close detail view when clicking outside
+            // Use event delegation for all event bindings
             $(document).on('click', (e) => {
-                if (!$(e.target).closest(this.container).length) {
+                if (!$(e.target).closest(this.container).length && this.initialized) {
                     this.hideDetail();
                 }
             });
@@ -40,6 +70,8 @@
             // Handle workout detail triggers
             $(document).on('click', '[data-workout-detail]', (e) => {
                 e.preventDefault();
+                if (!this.initialized) return;
+                
                 const workoutId = $(e.currentTarget).data('workout-detail');
                 this.loadWorkoutDetail(workoutId);
             });
@@ -58,6 +90,7 @@
          * Load workout detail
          */
         loadWorkoutDetail(workoutId) {
+            console.log('Loading workout detail:', workoutId);
             $.ajax({
                 url: athleteDashboardData.ajaxurl,
                 type: 'POST',
@@ -108,5 +141,12 @@
 
     // Initialize the component
     window.athleteWorkoutDetail = new WorkoutDetailComponent();
+
+    // Also initialize on Turbolinks or similar page loads
+    $(document).on('page:load turbolinks:load', function() {
+        if (window.athleteWorkoutDetail) {
+            window.athleteWorkoutDetail.tryInitialize();
+        }
+    });
 
 })(jQuery); 

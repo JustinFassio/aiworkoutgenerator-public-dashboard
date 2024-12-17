@@ -38,23 +38,6 @@ const AthleteForms = (function($) {
     }
 
     /**
-     * Initialize squat progress form
-     */
-    function initializeSquatProgressForm() {
-        $(config.selectors.squatForm).on('submit', function(e) {
-            e.preventDefault();
-            submitProgressForm($(this), {
-                action: 'athlete_dashboard_handle_squat_progress_submission',
-                successCallback: function() {
-                    if (typeof window.AthleteCharts !== 'undefined') {
-                        window.AthleteCharts.updateSquatProgressChart();
-                    }
-                }
-            });
-        });
-    }
-
-    /**
      * Initialize bench press progress form
      */
     function initializeBenchPressProgressForm() {
@@ -259,7 +242,6 @@ const AthleteForms = (function($) {
      */
     function initialize() {
         initializeBodyWeightProgressForm();
-        initializeSquatProgressForm();
         initializeBenchPressProgressForm();
         initializeDeadliftProgressForm();
         initializeExerciseProgressForm();

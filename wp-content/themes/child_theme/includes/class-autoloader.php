@@ -20,6 +20,15 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_User_Preferences_Store' => '/includes/stores/class-user-preferences-store.php',
         'Athlete_Dashboard_Controller' => '/includes/dashboard/class-dashboard-controller.php',
         
+        // Body Composition
+        'Athlete_Dashboard_Body_Composition_Data' => '/includes/data/body-composition/class-body-composition-data.php',
+        'Athlete_Dashboard_Body_Composition_Component' => '/includes/components/body-composition/class-body-composition.php',
+        'Athlete_Dashboard_Body_Composition_Migration' => '/includes/data/body-composition/class-body-composition-migration.php',
+        
+        // Exercise Progress - Squat
+        'Athlete_Dashboard_Squat_Progress_Data' => '/includes/data/exercise-progress/squat/class-squat-progress-data.php',
+        'Athlete_Dashboard_Squat_Progress_Component' => '/includes/components/exercise-progress/squat/class-squat-progress.php',
+        
         // Manager classes
         'Athlete_Dashboard_UI_Manager' => '/includes/dashboard/class-ui-manager.php',
         'Athlete_Dashboard_Workout_Manager' => '/includes/dashboard/class-workout-manager.php',
@@ -33,7 +42,6 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Data_Manager' => '/includes/data/class-data-manager.php',
         'Athlete_Dashboard_Workout_Data_Manager' => '/includes/data/class-workout-data-manager.php',
         'Athlete_Dashboard_Exercise_Data_Manager' => '/includes/data/class-exercise-data-manager.php',
-        'Athlete_Dashboard_Workout_Progress_Manager' => '/includes/data/class-workout-progress-manager.php',
         'Athlete_Dashboard_Workout_Stats_Manager' => '/includes/data/class-workout-stats-manager.php',
         'Athlete_Dashboard_Nutrition_Data_Manager' => '/includes/data/class-nutrition-data-manager.php',
         'Athlete_Dashboard_Food_Data_Manager' => '/includes/data/class-food-data-manager.php',
@@ -41,6 +49,11 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Attendance_Data_Manager' => '/includes/data/class-attendance-data-manager.php',
         'Athlete_Dashboard_User_Data_Manager' => '/includes/data/class-user-data-manager.php',
         'Athlete_Dashboard_Charts_Data_Manager' => '/includes/data/class-charts-data-manager.php',
+        'Athlete_Dashboard_Training_Data_Manager' => '/includes/data/class-training-data-manager.php',
+        'Athlete_Dashboard_Bookings_Data_Manager' => '/includes/data/class-bookings-data-manager.php',
+        'Athlete_Dashboard_Membership_Data_Manager' => '/includes/data/class-membership-data-manager.php',
+        'Athlete_Dashboard_Recommendations_Data_Manager' => '/includes/data/class-recommendations-data-manager.php',
+        'Athlete_Dashboard_Messaging_Data_Manager' => '/includes/data/class-messaging-data-manager.php',
 
         // Dashboard Components
         'Athlete_Dashboard_Welcome_Banner' => '/includes/dashboard/components/class-welcome-banner.php',
@@ -51,12 +64,7 @@ class Athlete_Dashboard_Autoloader {
         'Athlete_Dashboard_Nutrition_Tracker' => '/includes/dashboard/components/class-nutrition-tracker.php',
         'Athlete_Dashboard_Food_Manager' => '/includes/dashboard/components/class-food-manager.php',
         'Athlete_Dashboard_Workout_Stats_Display' => '/includes/dashboard/components/class-workout-stats-display.php',
-        'Athlete_Dashboard_Progress_Tracker' => '/includes/dashboard/components/class-progress-tracker.php',
-
-        // Handlers
-        'Athlete_Dashboard_Workout_Handler' => '/includes/dashboard/handlers/class-workout-handler.php',
-        'Athlete_Dashboard_Account_Handler' => '/includes/dashboard/handlers/class-account-handler.php',
-        'Athlete_Dashboard_Nutrition_Handler' => '/includes/dashboard/handlers/class-nutrition-handler.php'
+        'Athlete_Dashboard_Progress_Tracker' => '/includes/dashboard/components/class-progress-tracker.php'
     );
 
     /**

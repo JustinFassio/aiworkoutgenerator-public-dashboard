@@ -1,9 +1,8 @@
 <?php
 /**
  * Messaging Data Manager Class
- * Handles data operations for athlete messaging system
- *
- * @package AthleteDashboard
+ * 
+ * Handles messaging data operations
  */
 
 if (!defined('ABSPATH')) {
@@ -19,151 +18,74 @@ class Athlete_Dashboard_Messaging_Data_Manager extends Athlete_Dashboard_Data_Ma
     }
 
     /**
-     * Send a message
-     *
-     * @param array $data Message data
-     * @return int|false Message ID on success, false on failure
-     */
-    public function send_message($data) {
-        $post_data = array(
-            'post_type' => 'athlete_message',
-            'post_status' => 'publish',
-            'post_author' => get_current_user_id(),
-            'post_title' => isset($data['subject']) ? sanitize_text_field($data['subject']) : '',
-            'post_content' => isset($data['content']) ? wp_kses_post($data['content']) : '',
-        );
-
-        $message_id = wp_insert_post($post_data);
-
-        if ($message_id && !is_wp_error($message_id)) {
-            // Save recipient
-            if (isset($data['recipient_id'])) {
-                update_post_meta($message_id, 'message_recipient', $data['recipient_id']);
-            }
-
-            // Save additional meta
-            $meta_fields = array(
-                'read_status' => 'unread',
-                'priority' => isset($data['priority']) ? $data['priority'] : 'normal',
-                'thread_id' => isset($data['thread_id']) ? $data['thread_id'] : $message_id
-            );
-
-            foreach ($meta_fields as $field => $value) {
-                update_post_meta($message_id, 'message_' . $field, $value);
-            }
-
-            do_action('athlete_dashboard_message_sent', $message_id, $data);
-            return $message_id;
-        }
-
-        return false;
-    }
-
-    /**
-     * Get messages for a user
+     * Get user's recent messages
      *
      * @param int $user_id User ID
-     * @param string $box Inbox or sent
-     * @param array $args Additional arguments
-     * @return array Array of messages
+     * @param int $limit Number of messages to return
+     * @return array Array of recent messages
      */
-    public function get_messages($user_id, $box = 'inbox', $args = array()) {
-        $default_args = array(
-            'post_type' => 'athlete_message',
-            'posts_per_page' => 20,
-            'paged' => 1,
+    public function get_recent_messages($user_id, $limit = 5) {
+        $args = array(
+            'post_type' => 'message',
+            'posts_per_page' => $limit,
+            'meta_query' => array(
+                'relation' => 'OR',
+                array(
+                    'key' => '_recipient_id',
+                    'value' => $user_id,
+                    'compare' => '='
+                ),
+                array(
+                    'key' => '_sender_id',
+                    'value' => $user_id,
+                    'compare' => '='
+                )
+            ),
             'orderby' => 'date',
             'order' => 'DESC'
         );
 
-        if ($box === 'inbox') {
-            $default_args['meta_query'] = array(
-                array(
-                    'key' => 'message_recipient',
-                    'value' => $user_id
-                )
+        $messages = get_posts($args);
+        $formatted_messages = array();
+
+        foreach ($messages as $message) {
+            $sender_id = get_post_meta($message->ID, '_sender_id', true);
+            $sender = get_userdata($sender_id);
+            
+            $formatted_messages[] = array(
+                'id' => $message->ID,
+                'sender' => $sender ? $sender->display_name : __('Unknown', 'athlete-dashboard'),
+                'sender_id' => $sender_id,
+                'content' => $message->post_content,
+                'timestamp' => $message->post_date,
+                'is_read' => (bool) get_post_meta($message->ID, '_is_read', true),
+                'type' => get_post_meta($message->ID, '_message_type', true),
+                'subject' => $message->post_title
             );
-        } else {
-            $default_args['author'] = $user_id;
         }
 
-        $args = wp_parse_args($args, $default_args);
-        $messages = get_posts($args);
-
-        return array_map(array($this, 'format_message'), $messages);
-    }
-
-    /**
-     * Format message for API response
-     *
-     * @param WP_Post $message Message post object
-     * @return array Formatted message data
-     */
-    private function format_message($message) {
-        $recipient_id = get_post_meta($message->ID, 'message_recipient', true);
-        
-        return array(
-            'id' => $message->ID,
-            'subject' => $message->post_title,
-            'content' => $message->post_content,
-            'sender' => array(
-                'id' => $message->post_author,
-                'name' => get_the_author_meta('display_name', $message->post_author)
-            ),
-            'recipient' => array(
-                'id' => $recipient_id,
-                'name' => get_the_author_meta('display_name', $recipient_id)
-            ),
-            'date' => $message->post_date,
-            'read_status' => get_post_meta($message->ID, 'message_read_status', true),
-            'priority' => get_post_meta($message->ID, 'message_priority', true),
-            'thread_id' => get_post_meta($message->ID, 'message_thread_id', true)
-        );
+        return $formatted_messages;
     }
 
     /**
      * Mark message as read
      *
      * @param int $message_id Message ID
-     * @return bool True on success, false on failure
+     * @param int $user_id User ID
+     * @return bool Success status
      */
-    public function mark_as_read($message_id) {
-        return update_post_meta($message_id, 'message_read_status', 'read');
-    }
-
-    /**
-     * Delete message
-     *
-     * @param int $message_id Message ID
-     * @return bool True on success, false on failure
-     */
-    public function delete_message($message_id) {
+    public function mark_as_read($message_id, $user_id) {
         $message = get_post($message_id);
-        if (!$message || $message->post_type !== 'athlete_message') {
+        if (!$message || $message->post_type !== 'message') {
             return false;
         }
 
-        return wp_delete_post($message_id, true);
-    }
+        $recipient_id = get_post_meta($message_id, '_recipient_id', true);
+        if ($recipient_id != $user_id) {
+            return false;
+        }
 
-    /**
-     * Get message thread
-     *
-     * @param int $thread_id Thread ID
-     * @return array Array of messages in thread
-     */
-    public function get_thread($thread_id) {
-        $args = array(
-            'post_type' => 'athlete_message',
-            'posts_per_page' => -1,
-            'meta_key' => 'message_thread_id',
-            'meta_value' => $thread_id,
-            'orderby' => 'date',
-            'order' => 'ASC'
-        );
-
-        $messages = get_posts($args);
-        return array_map(array($this, 'format_message'), $messages);
+        return update_post_meta($message_id, '_is_read', true);
     }
 
     /**
@@ -174,50 +96,64 @@ class Athlete_Dashboard_Messaging_Data_Manager extends Athlete_Dashboard_Data_Ma
      */
     public function get_unread_count($user_id) {
         $args = array(
-            'post_type' => 'athlete_message',
+            'post_type' => 'message',
+            'posts_per_page' => -1,
             'meta_query' => array(
                 'relation' => 'AND',
                 array(
-                    'key' => 'message_recipient',
-                    'value' => $user_id
+                    'key' => '_recipient_id',
+                    'value' => $user_id,
+                    'compare' => '='
                 ),
                 array(
-                    'key' => 'message_read_status',
-                    'value' => 'unread'
+                    'key' => '_is_read',
+                    'value' => '1',
+                    'compare' => '!='
                 )
             ),
-            'posts_per_page' => -1
+            'fields' => 'ids'
         );
 
-        $messages = get_posts($args);
-        return count($messages);
+        $unread_messages = get_posts($args);
+        return count($unread_messages);
     }
 
     /**
-     * Search messages
+     * Send a new message
      *
-     * @param int $user_id User ID
-     * @param string $query Search query
-     * @return array Array of matching messages
+     * @param array $data Message data
+     * @return int|WP_Error Message ID on success, WP_Error on failure
      */
-    public function search_messages($user_id, $query) {
-        $args = array(
-            'post_type' => 'athlete_message',
-            's' => $query,
-            'meta_query' => array(
-                'relation' => 'OR',
-                array(
-                    'key' => 'message_recipient',
-                    'value' => $user_id
-                ),
-                array(
-                    'key' => 'post_author',
-                    'value' => $user_id
-                )
-            )
+    public function send_message($data) {
+        $required_fields = array('sender_id', 'recipient_id', 'content');
+        foreach ($required_fields as $field) {
+            if (empty($data[$field])) {
+                return new WP_Error('missing_field', sprintf(__('Missing required field: %s', 'athlete-dashboard'), $field));
+            }
+        }
+
+        $post_data = array(
+            'post_type' => 'message',
+            'post_status' => 'publish',
+            'post_title' => !empty($data['subject']) ? $data['subject'] : __('New Message', 'athlete-dashboard'),
+            'post_content' => wp_kses_post($data['content']),
+            'post_author' => $data['sender_id']
         );
 
-        $messages = get_posts($args);
-        return array_map(array($this, 'format_message'), $messages);
+        $message_id = wp_insert_post($post_data, true);
+
+        if (is_wp_error($message_id)) {
+            return $message_id;
+        }
+
+        // Save message meta
+        update_post_meta($message_id, '_sender_id', $data['sender_id']);
+        update_post_meta($message_id, '_recipient_id', $data['recipient_id']);
+        update_post_meta($message_id, '_is_read', false);
+        update_post_meta($message_id, '_message_type', !empty($data['type']) ? $data['type'] : 'standard');
+
+        do_action('athlete_dashboard_message_sent', $message_id, $data);
+
+        return $message_id;
     }
 } 

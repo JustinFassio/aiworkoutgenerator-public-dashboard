@@ -55,7 +55,7 @@ function athlete_dashboard_render_dashboard() {
     <div class="athlete-dashboard-container">
         <?php athlete_dashboard_render_welcome_banner($current_user); ?>
         <div class="athlete-dashboard">
-            <?php echo athlete_dashboard_render_all_sections(); ?>
+            <?php echo athlete_dashboard_render_all_cards(); ?>
         </div>
     </div>
     <?php
@@ -66,30 +66,48 @@ function athlete_dashboard_render_dashboard() {
 add_shortcode('athlete_dashboard', 'athlete_dashboard_render_dashboard');
 
 /**
- * Render a single dashboard section.
+ * Render a single dashboard card.
  *
- * @param string $id The section ID.
- * @param string $title The section title.
- * @param string $content The section content (can be shortcode or callback function name).
- * @param string $width The section width class (default: 'full-width').
+ * @param string $id The card ID.
+ * @param string $title The card title.
+ * @param string $content The card content (can be shortcode or callback function name).
+ * @param array $actions Optional array of action buttons for the card header.
  * @return void
  */
-function athlete_dashboard_render_section($id, $title, $content, $width = 'full-width') {
+function athlete_dashboard_render_card($id, $title, $content, $actions = []) {
     ?>
-    <div class="dashboard-section <?php echo esc_attr($width); ?>" id="<?php echo esc_attr($id); ?>-section">
-        <div class="section-header">
-            <h3><?php echo esc_html($title); ?></h3>
+    <div class="dashboard-card" id="<?php echo esc_attr($id); ?>">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false" aria-controls="<?php echo esc_attr($id); ?>-content">
+            <h3 class="card-title"><?php echo esc_html($title); ?></h3>
+            <div class="card-actions">
+                <?php if (!empty($actions)): ?>
+                    <?php foreach ($actions as $action): ?>
+                        <button type="button" 
+                                class="<?php echo esc_attr($action['class']); ?>"
+                                <?php echo isset($action['attrs']) ? $action['attrs'] : ''; ?>>
+                            <?php echo esc_html($action['text']); ?>
+                        </button>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <button type="button" class="btn btn-icon toggle-card">
+                    <span class="toggle-icon" aria-hidden="true">+</span>
+                    <span class="screen-reader-text"><?php 
+                        printf(
+                            /* translators: %s: Card title */
+                            esc_html__('Toggle %s', 'athlete-dashboard'), 
+                            esc_html($title)
+                        ); 
+                    ?></span>
+                </button>
+            </div>
         </div>
-        <div class="section-content">
+        <div class="card-content" id="<?php echo esc_attr($id); ?>-content" aria-hidden="true" style="display: none;">
             <?php
             if (substr($content, 0, 1) === '[' && substr($content, -1) === ']') {
-                // Content is a shortcode
                 echo do_shortcode($content);
             } elseif (function_exists($content)) {
-                // Content is a callback function
                 call_user_func($content);
             } else {
-                // Content is plain text/HTML
                 echo wp_kses_post($content);
             }
             ?>
@@ -98,137 +116,151 @@ function athlete_dashboard_render_section($id, $title, $content, $width = 'full-
     <?php
 }
 
-function athlete_dashboard_render_all_sections() {
+/**
+ * Render all dashboard cards.
+ *
+ * @return string The HTML content of all dashboard cards.
+ */
+function athlete_dashboard_render_all_cards() {
     ob_start();
     ?>
     <div class="dashboard-content">
-        <?php
-        athlete_dashboard_render_section('overview', __('Trailhead', 'athlete-dashboard'), '[user_overview]', 'full-width');
-        
-        // Group A: Workout Journey
-        ?>
-        <div class="dashboard-group collapsible-group" data-group-name="Workout Journey">
-            <div class="group-header">
-                <h2><?php esc_html_e('Train, Sleep, Repeat', 'athlete-dashboard'); ?></h2>
-                <button class="toggle-group" aria-expanded="true">
-                    <span class="screen-reader-text"><?php esc_html_e('Toggle Workout Journey', 'athlete-dashboard'); ?></span>
-                    <span class="fa fa-chevron-up" aria-hidden="true"></span>
-                    <span class="fa fa-chevron-down" aria-hidden="true" style="display:none;"></span>
-                </button>
-            </div>
-            <div class="group-content">
-                <div class="workout-list-scrollable">
-                    <?php
-                    athlete_dashboard_render_section('workouts', __('Current Workout', 'athlete-dashboard'), '[user_workouts]', 'full-width');
-                    ?>
-                </div>
-                <?php
-                athlete_dashboard_render_section('log-workout', __('Log Workout', 'athlete-dashboard'), 'athlete_dashboard_log_workout_content', 'full-width');
-                athlete_dashboard_render_section('upcoming-workouts', __('Upcoming Workouts', 'athlete-dashboard'), '[user_upcoming_workouts]', 'full-width');
-                ?>
-            </div>
+        <div class="card-grid">
+            <?php
+            // Overview Cards
+            athlete_dashboard_render_card(
+                'overview',
+                __('Trailhead', 'athlete-dashboard'),
+                '[user_overview]'
+            );
+            
+            athlete_dashboard_render_card(
+                'current-workout',
+                __('Current Workout', 'athlete-dashboard'),
+                '[user_workouts]',
+                [
+                    [
+                        'class' => 'btn btn-secondary refresh-card',
+                        'text' => __('Refresh', 'athlete-dashboard'),
+                        'attrs' => 'data-card="current-workout"'
+                    ]
+                ]
+            );
+
+            // Progress Cards
+            athlete_dashboard_render_card(
+                'squat-progress',
+                __('Squat Progress', 'athlete-dashboard'),
+                'athlete_dashboard_squat_progress',
+                [
+                    [
+                        'class' => 'btn btn-primary add-entry-button',
+                        'text' => __('Add Entry', 'athlete-dashboard')
+                    ]
+                ]
+            );
+
+            athlete_dashboard_render_card(
+                'bench-press-progress',
+                __('Bench Press Progress', 'athlete-dashboard'),
+                'athlete_dashboard_bench_press_progress_content',
+                [
+                    [
+                        'class' => 'btn btn-primary add-entry-button',
+                        'text' => __('Add Entry', 'athlete-dashboard')
+                    ]
+                ]
+            );
+
+            athlete_dashboard_render_card(
+                'deadlift-progress',
+                __('Deadlift Progress', 'athlete-dashboard'),
+                'athlete_dashboard_deadlift_progress_content',
+                [
+                    [
+                        'class' => 'btn btn-primary add-entry-button',
+                        'text' => __('Add Entry', 'athlete-dashboard')
+                    ]
+                ]
+            );
+
+            // Body Composition Cards
+            athlete_dashboard_render_card(
+                'body-weight',
+                __('Body Weight Progress', 'athlete-dashboard'),
+                'athlete_dashboard_body_weight_progress_content',
+                [
+                    [
+                        'class' => 'btn btn-primary add-entry-button',
+                        'text' => __('Add Entry', 'athlete-dashboard')
+                    ]
+                ]
+            );
+
+            athlete_dashboard_render_card(
+                'body-composition',
+                __('Body Composition', 'athlete-dashboard'),
+                'athlete_dashboard_comprehensive_body_composition_content',
+                [
+                    [
+                        'class' => 'btn btn-primary add-entry-button',
+                        'text' => __('Add Entry', 'athlete-dashboard')
+                    ]
+                ]
+            );
+
+            // Nutrition Cards
+            athlete_dashboard_render_card(
+                'log-meal',
+                __('Log Meal', 'athlete-dashboard'),
+                'athlete_dashboard_meal_log_content'
+            );
+
+            athlete_dashboard_render_card(
+                'nutrition',
+                __('Nutrition Overview', 'athlete-dashboard'),
+                '[user_nutrition]'
+            );
+
+            // Training Cards
+            athlete_dashboard_render_card(
+                'personal-training',
+                __('Personal Training', 'athlete-dashboard'),
+                'athlete_dashboard_personal_training_sessions_content'
+            );
+
+            athlete_dashboard_render_card(
+                'class-bookings',
+                __('Class Bookings', 'athlete-dashboard'),
+                'athlete_dashboard_class_bookings_content'
+            );
+
+            // Additional Cards
+            athlete_dashboard_render_card(
+                'messaging',
+                __('Messages', 'athlete-dashboard'),
+                'athlete_dashboard_render_messaging_preview'
+            );
+
+            athlete_dashboard_render_card(
+                'account',
+                __('Account Details', 'athlete-dashboard'),
+                'athlete_dashboard_account_details_content'
+            );
+            ?>
         </div>
-        
-        <!-- Group B: Progress Tracking -->
-        <div class="dashboard-group collapsible-group" data-group-name="Progress Tracking">
-            <div class="group-header">
-                <h2><?php esc_html_e('Your Roadmap to Success', 'athlete-dashboard'); ?></h2>
-                <button class="toggle-group" aria-expanded="true">
-                    <span class="screen-reader-text"><?php esc_html_e('Toggle Progress Tracking', 'athlete-dashboard'); ?></span>
-                    <span class="fa fa-chevron-up" aria-hidden="true"></span>
-                    <span class="fa fa-chevron-down" aria-hidden="true" style="display:none;"></span>
-                </button>
-            </div>
-            <div class="group-content">
-                <?php
-                athlete_dashboard_render_section('progress', __('Body Weight Progress', 'athlete-dashboard'), 'athlete_dashboard_body_weight_progress_content', 'full-width');
-                athlete_dashboard_render_section('comprehensive-body-composition', __('Body Composition', 'athlete-dashboard'), 'athlete_dashboard_comprehensive_body_composition_content', 'full-width');
-                ?>
-            </div>
-        </div>
-        
-        <!-- Group C: Strength Milestones -->
-        <div class="dashboard-group collapsible-group" data-group-name="Strength Milestones">
-            <div class="group-header">
-                <h2><?php esc_html_e('Crushing Personal Records', 'athlete-dashboard'); ?></h2>
-                <button class="toggle-group" aria-expanded="true">
-                    <span class="screen-reader-text"><?php esc_html_e('Toggle Strength Milestones', 'athlete-dashboard'); ?></span>
-                    <span class="fa fa-chevron-up" aria-hidden="true"></span>
-                    <span class="fa fa-chevron-down" aria-hidden="true" style="display:none;"></span>
-                </button>
-            </div>
-            <div class="group-content">
-                <?php
-                athlete_dashboard_render_section('squat-progress', __('Squat Progress', 'athlete-dashboard'), 'athlete_dashboard_squat_progress_content', 'full-width');    
-                athlete_dashboard_render_section('bench-press-progress', __('Bench Press Progress', 'athlete-dashboard'), 'athlete_dashboard_bench_press_progress_content', 'full-width');
-                athlete_dashboard_render_section('deadlift-progress', __('Deadlift Progress', 'athlete-dashboard'), 'athlete_dashboard_deadlift_progress_content', 'full-width');
-                ?>
-            </div>
-        </div>
-        
-        <!-- Group D: Performance Metrics -->
-        <div class="dashboard-group collapsible-group" data-group-name="Performance Metrics">
-            <div class="group-header">
-                <h2><?php esc_html_e('Benchmark Your Beast Mode', 'athlete-dashboard'); ?></h2>
-                <button class="toggle-group" aria-expanded="true">
-                    <span class="screen-reader-text"><?php esc_html_e('Toggle Performance Metrics', 'athlete-dashboard'); ?></span>
-                    <span class="fa fa-chevron-up" aria-hidden="true"></span>
-                    <span class="fa fa-chevron-down" aria-hidden="true" style="display:none;"></span>
-                </button>
-            </div>
-            <div class="group-content">
-                <?php
-                athlete_dashboard_render_section('exercise-progress', __('Benchmark Tests', 'athlete-dashboard'), 'athlete_dashboard_exercise_progress_content', 'full-width');
-                ?>
-            </div>
-        </div>
-        
-		<!-- Group E: Nutrition Insights -->
-		<div class="dashboard-group collapsible-group" data-group-name="Nutrition Insights">
-			<div class="group-header">
-				<h2><?php esc_html_e('Fuel Your Fire', 'athlete-dashboard'); ?></h2>
-				<button class="toggle-group" aria-expanded="true">
-					<span class="screen-reader-text"><?php esc_html_e('Toggle Nutrition Insights', 'athlete-dashboard'); ?></span>
-					<span class="fa fa-chevron-up" aria-hidden="true"></span>
-					<span class="fa fa-chevron-down" aria-hidden="true" style="display:none;"></span>
-				</button>
-			</div>
-			<div class="group-content">
-				<?php
-				athlete_dashboard_render_section('log-meal', __('Log Meal', 'athlete-dashboard'), 'athlete_dashboard_meal_log_content', 'full-width');
-				athlete_dashboard_render_section('nutrition', __('Nutrition', 'athlete-dashboard'), '[user_nutrition]', 'full-width');
-				?>
-			</div>
-		</div>
-        
-        <!-- Group F: Member Dashboard & Insights -->
-        <div class="dashboard-group collapsible-group" data-group-name="Member Dashboard & Insights">
-            <div class="group-header">
-                <h2><?php esc_html_e('Member Engagement & Progress', 'athlete-dashboard'); ?></h2>
-                <button class="toggle-group" aria-expanded="true">
-                    <span class="screen-reader-text"><?php esc_html_e('Toggle Member Dashboard & Insights', 'athlete-dashboard'); ?></span>
-                    <span class="fa fa-chevron-up" aria-hidden="true"></span>
-                    <span class="fa fa-chevron-down" aria-hidden="true" style="display:none;"></span>
-                </button>
-            </div>
-            <div class="group-content">
-                <?php
-                athlete_dashboard_render_section('personal-training-sessions', __('Personal Training Sessions', 'athlete-dashboard'), 'athlete_dashboard_personal_training_sessions_content', 'full-width');
-                athlete_dashboard_render_section('class-bookings', __('Class Bookings', 'athlete-dashboard'), 'athlete_dashboard_class_bookings_content', 'full-width');
-                athlete_dashboard_render_section('membership-status', __('Membership Status', 'athlete-dashboard'), 'athlete_dashboard_membership_status_content', 'full-width');
-                athlete_dashboard_render_section('check-ins-attendance', __('Check-Ins and Attendance', 'athlete-dashboard'), 'athlete_dashboard_check_ins_attendance_content', 'full-width');
-                athlete_dashboard_render_section('goal-tracking-progress', __('Goal Tracking and Progress', 'athlete-dashboard'), 'athlete_dashboard_goal_tracking_progress_content', 'full-width');
-                athlete_dashboard_render_section('personalized-recommendations', __('Personalized Recommendations', 'athlete-dashboard'), 'athlete_dashboard_personalized_recommendations_content', 'full-width');
-                ?>
-            </div>
-        </div>
-        <?php
-        // Remaining ungrouped sections
-        athlete_dashboard_render_section('fitness-plan', __('Fitness Plan', 'athlete-dashboard'), '[user_fitness_plan]', 'full-width');
-        athlete_dashboard_render_section('messaging', __('Messages', 'athlete-dashboard'), 'athlete_dashboard_render_messaging_preview', 'full-width');
-        athlete_dashboard_render_section('account-details', __('Account Details', 'athlete-dashboard'), 'athlete_dashboard_account_details_content', 'full-width');
-        ?>
     </div>
     <?php
     return ob_get_clean();
+}
+
+/**
+ * Render the squat progress card content
+ */
+function athlete_dashboard_squat_progress() {
+    // Initialize the squat progress component
+    $squat_progress = new Athlete_Dashboard_Squat_Progress_Component();
+    
+    // Render the component
+    echo $squat_progress->render();
 }

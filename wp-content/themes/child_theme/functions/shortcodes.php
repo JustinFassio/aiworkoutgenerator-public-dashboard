@@ -573,3 +573,389 @@ function athlete_dashboard_deadlift_progress_content() {
     return ob_get_clean();
 }
 add_shortcode('athlete_dashboard_deadlift_progress_content', 'athlete_dashboard_deadlift_progress_content');
+
+/**
+ * Shortcode for exercise progress benchmarks
+ */
+function athlete_dashboard_exercise_progress_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your exercise progress.';
+    }
+
+    ob_start();
+    ?>
+    <div class="benchmark-tests-section">
+        <h3><?php _e('Your Benchmark Progress', 'athlete-dashboard'); ?></h3>
+        <div class="benchmark-grid">
+            <?php
+            $exercises = array('squat', 'bench_press', 'deadlift');
+            foreach ($exercises as $exercise) {
+                echo do_shortcode("[athlete_dashboard_{$exercise}_progress_content]");
+            }
+            ?>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_exercise_progress_content', 'athlete_dashboard_exercise_progress_content');
+
+/**
+ * Shortcode for meal logging interface
+ */
+function athlete_dashboard_meal_log_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to log your meals.';
+    }
+
+    ob_start();
+    ?>
+    <div class="meal-log-section">
+        <h3><?php _e('Log Your Meal', 'athlete-dashboard'); ?></h3>
+        <form id="meal-log-form" class="meal-log-form">
+            <?php wp_nonce_field('log_meal_nonce', 'meal_nonce'); ?>
+            <div class="form-group">
+                <label for="meal-type"><?php _e('Meal Type', 'athlete-dashboard'); ?></label>
+                <select id="meal-type" name="meal_type" required>
+                    <option value="breakfast"><?php _e('Breakfast', 'athlete-dashboard'); ?></option>
+                    <option value="lunch"><?php _e('Lunch', 'athlete-dashboard'); ?></option>
+                    <option value="dinner"><?php _e('Dinner', 'athlete-dashboard'); ?></option>
+                    <option value="snack"><?php _e('Snack', 'athlete-dashboard'); ?></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="meal-description"><?php _e('Description', 'athlete-dashboard'); ?></label>
+                <textarea id="meal-description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="calories"><?php _e('Calories', 'athlete-dashboard'); ?></label>
+                <input type="number" id="calories" name="calories" min="0" required>
+            </div>
+            <button type="submit" class="submit-button"><?php _e('Log Meal', 'athlete-dashboard'); ?></button>
+        </form>
+        <div id="meal-log-message" class="message-container"></div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_meal_log_content', 'athlete_dashboard_meal_log_content');
+
+/**
+ * Shortcode for personal training sessions
+ */
+function athlete_dashboard_personal_training_sessions_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your personal training sessions.';
+    }
+
+    ob_start();
+    ?>
+    <div class="personal-training-section">
+        <h3><?php _e('Your Personal Training Sessions', 'athlete-dashboard'); ?></h3>
+        <?php
+        $sessions = athlete_dashboard_get_user_training_sessions(get_current_user_id());
+        if (!empty($sessions)) {
+            ?>
+            <div class="training-sessions-grid">
+                <?php foreach ($sessions as $session): ?>
+                    <div class="training-session-card">
+                        <div class="session-date"><?php echo esc_html(date_i18n(get_option('date_format'), strtotime($session['date']))); ?></div>
+                        <div class="session-time"><?php echo esc_html($session['time']); ?></div>
+                        <div class="trainer-name"><?php echo esc_html($session['trainer_name']); ?></div>
+                        <div class="session-status"><?php echo esc_html($session['status']); ?></div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php
+        } else {
+            echo '<p>' . __('No upcoming personal training sessions scheduled.', 'athlete-dashboard') . '</p>';
+        }
+        ?>
+        <button class="book-session-button"><?php _e('Book a Session', 'athlete-dashboard'); ?></button>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_personal_training_sessions_content', 'athlete_dashboard_personal_training_sessions_content');
+
+/**
+ * Shortcode for class bookings
+ */
+function athlete_dashboard_class_bookings_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your class bookings.';
+    }
+
+    ob_start();
+    ?>
+    <div class="class-bookings-section">
+        <h3><?php _e('Your Class Bookings', 'athlete-dashboard'); ?></h3>
+        <?php
+        $bookings = athlete_dashboard_get_user_class_bookings(get_current_user_id());
+        if (!empty($bookings)) {
+            ?>
+            <div class="class-bookings-grid">
+                <?php foreach ($bookings as $booking): ?>
+                    <div class="class-booking-card">
+                        <div class="class-name"><?php echo esc_html($booking['class_name']); ?></div>
+                        <div class="class-date"><?php echo esc_html(date_i18n(get_option('date_format'), strtotime($booking['date']))); ?></div>
+                        <div class="class-time"><?php echo esc_html($booking['time']); ?></div>
+                        <div class="instructor"><?php echo esc_html($booking['instructor']); ?></div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php
+        } else {
+            echo '<p>' . __('No upcoming class bookings.', 'athlete-dashboard') . '</p>';
+        }
+        ?>
+        <button class="book-class-button"><?php _e('Book a Class', 'athlete-dashboard'); ?></button>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_class_bookings_content', 'athlete_dashboard_class_bookings_content');
+
+/**
+ * Shortcode for membership status
+ */
+function athlete_dashboard_membership_status_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your membership status.';
+    }
+
+    ob_start();
+    ?>
+    <div class="membership-status-section">
+        <h3><?php _e('Your Membership', 'athlete-dashboard'); ?></h3>
+        <?php
+        $membership = athlete_dashboard_get_user_membership(get_current_user_id());
+        ?>
+        <div class="membership-card">
+            <div class="membership-type"><?php echo esc_html($membership['type']); ?></div>
+            <div class="membership-status"><?php echo esc_html($membership['status']); ?></div>
+            <div class="membership-expiry">
+                <?php echo sprintf(__('Valid until: %s', 'athlete-dashboard'), 
+                    esc_html(date_i18n(get_option('date_format'), strtotime($membership['expiry_date'])))); ?>
+            </div>
+            <div class="membership-benefits">
+                <h4><?php _e('Benefits', 'athlete-dashboard'); ?></h4>
+                <ul>
+                    <?php foreach ($membership['benefits'] as $benefit): ?>
+                        <li><?php echo esc_html($benefit); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+        <button class="upgrade-membership-button"><?php _e('Upgrade Membership', 'athlete-dashboard'); ?></button>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_membership_status_content', 'athlete_dashboard_membership_status_content');
+
+/**
+ * Shortcode for check-ins and attendance
+ */
+function athlete_dashboard_check_ins_attendance_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your attendance record.';
+    }
+
+    ob_start();
+    ?>
+    <div class="attendance-section">
+        <h3><?php _e('Check-Ins & Attendance', 'athlete-dashboard'); ?></h3>
+        <div class="attendance-stats">
+            <?php
+            $attendance = athlete_dashboard_get_user_attendance_stats(get_current_user_id());
+            ?>
+            <div class="stat-card">
+                <div class="stat-value"><?php echo esc_html($attendance['total_visits']); ?></div>
+                <div class="stat-label"><?php _e('Total Visits', 'athlete-dashboard'); ?></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value"><?php echo esc_html($attendance['current_streak']); ?></div>
+                <div class="stat-label"><?php _e('Current Streak', 'athlete-dashboard'); ?></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value"><?php echo esc_html($attendance['monthly_visits']); ?></div>
+                <div class="stat-label"><?php _e('This Month', 'athlete-dashboard'); ?></div>
+            </div>
+        </div>
+        <div class="attendance-calendar">
+            <!-- Calendar will be populated by JavaScript -->
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_check_ins_attendance_content', 'athlete_dashboard_check_ins_attendance_content');
+
+/**
+ * Shortcode for goal tracking and progress
+ */
+function athlete_dashboard_goal_tracking_progress_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your goals and progress.';
+    }
+
+    ob_start();
+    ?>
+    <div class="goals-section">
+        <h3><?php _e('Your Goals & Progress', 'athlete-dashboard'); ?></h3>
+        <?php
+        $goals = athlete_dashboard_get_user_goals(get_current_user_id());
+        if (!empty($goals)) {
+            ?>
+            <div class="goals-grid">
+                <?php foreach ($goals as $goal): ?>
+                    <div class="goal-card">
+                        <div class="goal-title"><?php echo esc_html($goal['title']); ?></div>
+                        <div class="goal-progress">
+                            <div class="progress-bar" style="width: <?php echo esc_attr($goal['progress']); ?>%"></div>
+                        </div>
+                        <div class="goal-stats">
+                            <span class="current"><?php echo esc_html($goal['current']); ?></span>
+                            <span class="target"><?php echo esc_html($goal['target']); ?></span>
+                        </div>
+                        <div class="goal-deadline">
+                            <?php echo sprintf(__('Target Date: %s', 'athlete-dashboard'), 
+                                esc_html(date_i18n(get_option('date_format'), strtotime($goal['deadline'])))); ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php
+        } else {
+            echo '<p>' . __('No goals set yet.', 'athlete-dashboard') . '</p>';
+        }
+        ?>
+        <button class="add-goal-button"><?php _e('Add New Goal', 'athlete-dashboard'); ?></button>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_goal_tracking_progress_content', 'athlete_dashboard_goal_tracking_progress_content');
+
+/**
+ * Shortcode for personalized recommendations
+ */
+function athlete_dashboard_personalized_recommendations_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your personalized recommendations.';
+    }
+
+    ob_start();
+    ?>
+    <div class="recommendations-section">
+        <h3><?php _e('Personalized Recommendations', 'athlete-dashboard'); ?></h3>
+        <?php
+        $recommendations = athlete_dashboard_get_user_recommendations(get_current_user_id());
+        if (!empty($recommendations)) {
+            ?>
+            <div class="recommendations-grid">
+                <?php foreach ($recommendations as $recommendation): ?>
+                    <div class="recommendation-card">
+                        <div class="recommendation-type"><?php echo esc_html($recommendation['type']); ?></div>
+                        <div class="recommendation-content"><?php echo wp_kses_post($recommendation['content']); ?></div>
+                        <div class="recommendation-action">
+                            <button class="action-button" data-action="<?php echo esc_attr($recommendation['action']); ?>">
+                                <?php echo esc_html($recommendation['action_text']); ?>
+                            </button>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php
+        } else {
+            echo '<p>' . __('No recommendations available yet.', 'athlete-dashboard') . '</p>';
+        }
+        ?>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_personalized_recommendations_content', 'athlete_dashboard_personalized_recommendations_content');
+
+/**
+ * Shortcode for messaging preview
+ */
+function athlete_dashboard_render_messaging_preview() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your messages.';
+    }
+
+    ob_start();
+    ?>
+    <div class="messaging-preview-section">
+        <h3><?php _e('Recent Messages', 'athlete-dashboard'); ?></h3>
+        <?php
+        $messages = athlete_dashboard_get_recent_messages(get_current_user_id(), 5);
+        if (!empty($messages)) {
+            ?>
+            <div class="messages-preview">
+                <?php foreach ($messages as $message): ?>
+                    <div class="message-preview-card">
+                        <div class="sender"><?php echo esc_html($message['sender']); ?></div>
+                        <div class="preview"><?php echo wp_trim_words($message['content'], 10); ?></div>
+                        <div class="timestamp"><?php echo esc_html(human_time_diff(strtotime($message['timestamp']), current_time('timestamp'))); ?> ago</div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_path('messages'))); ?>" class="view-all-messages">
+                <?php _e('View All Messages', 'athlete-dashboard'); ?>
+            </a>
+            <?php
+        } else {
+            echo '<p>' . __('No recent messages.', 'athlete-dashboard') . '</p>';
+        }
+        ?>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_render_messaging_preview', 'athlete_dashboard_render_messaging_preview');
+
+/**
+ * Shortcode for account details
+ */
+function athlete_dashboard_account_details_content() {
+    if (!is_user_logged_in()) {
+        return 'Please log in to view your account details.';
+    }
+
+    ob_start();
+    ?>
+    <div class="account-details-section">
+        <h3><?php _e('Account Details', 'athlete-dashboard'); ?></h3>
+        <?php
+        $user = wp_get_current_user();
+        $user_meta = get_user_meta($user->ID);
+        ?>
+        <div class="account-info">
+            <div class="profile-section">
+                <div class="profile-picture">
+                    <?php echo get_avatar($user->ID, 150); ?>
+                    <button class="update-profile-picture"><?php _e('Update Picture', 'athlete-dashboard'); ?></button>
+                </div>
+                <div class="profile-details">
+                    <h4><?php echo esc_html($user->display_name); ?></h4>
+                    <p class="email"><?php echo esc_html($user->user_email); ?></p>
+                    <p class="member-since">
+                        <?php echo sprintf(__('Member since: %s', 'athlete-dashboard'), 
+                            date_i18n(get_option('date_format'), strtotime($user->user_registered))); ?>
+                    </p>
+                </div>
+            </div>
+            <div class="account-actions">
+                <button class="edit-profile"><?php _e('Edit Profile', 'athlete-dashboard'); ?></button>
+                <button class="change-password"><?php _e('Change Password', 'athlete-dashboard'); ?></button>
+                <button class="notification-settings"><?php _e('Notification Settings', 'athlete-dashboard'); ?></button>
+            </div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('athlete_dashboard_account_details_content', 'athlete_dashboard_account_details_content');

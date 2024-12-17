@@ -13,3 +13,6 @@ if (!defined('ABSPATH')) {
 // Core theme paths and URIs
 define('ATHLETE_DASHBOARD_PATH', get_stylesheet_directory());
 define('ATHLETE_DASHBOARD_URI', get_stylesheet_directory_uri());
+
+// Theme version
+define('ATHLETE_DASHBOARD_VERSION', '1.0.0');

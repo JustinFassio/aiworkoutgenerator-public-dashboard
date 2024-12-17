@@ -18,8 +18,6 @@ $charts_manager = new Athlete_Dashboard_Charts_Manager();
         <h2><?php _e('Progress Charts', 'athlete-dashboard'); ?></h2>
         <div class="chart-controls">
             <select id="chart-type-selector">
-                <option value="workout"><?php _e('Workout Stats', 'athlete-dashboard'); ?></option>
-                <option value="progress"><?php _e('Body Progress', 'athlete-dashboard'); ?></option>
                 <option value="attendance"><?php _e('Attendance', 'athlete-dashboard'); ?></option>
                 <option value="goals"><?php _e('Goals Progress', 'athlete-dashboard'); ?></option>
             </select>
@@ -33,79 +31,8 @@ $charts_manager = new Athlete_Dashboard_Charts_Manager();
     </div>
 
     <div class="charts-content">
-        <!-- Workout Stats Chart -->
-        <div class="chart-panel active" id="workout-stats-chart">
-            <div class="chart-header">
-                <h3><?php _e('Workout Statistics', 'athlete-dashboard'); ?></h3>
-                <div class="chart-legend"></div>
-            </div>
-            <div class="chart-container">
-                <canvas id="workout-stats-canvas"></canvas>
-            </div>
-            <div class="chart-summary">
-                <?php
-                $workout_stats = $charts_manager->get_workout_statistics($user_id, '30days');
-                if (!empty($workout_stats)) :
-                ?>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-label"><?php _e('Total Workouts', 'athlete-dashboard'); ?></span>
-                            <span class="stat-value"><?php echo esc_html($workout_stats->total_workouts); ?></span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label"><?php _e('Average Duration', 'athlete-dashboard'); ?></span>
-                            <span class="stat-value"><?php echo esc_html($workout_stats->avg_duration); ?> min</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label"><?php _e('Calories Burned', 'athlete-dashboard'); ?></span>
-                            <span class="stat-value"><?php echo esc_html($workout_stats->total_calories); ?></span>
-                        </div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <!-- Progress Chart -->
-        <div class="chart-panel" id="progress-chart">
-            <div class="chart-header">
-                <h3><?php _e('Body Progress', 'athlete-dashboard'); ?></h3>
-                <select id="progress-metric-selector">
-                    <option value="weight"><?php _e('Weight', 'athlete-dashboard'); ?></option>
-                    <option value="body_fat"><?php _e('Body Fat %', 'athlete-dashboard'); ?></option>
-                    <option value="muscle_mass"><?php _e('Muscle Mass', 'athlete-dashboard'); ?></option>
-                    <option value="waist"><?php _e('Waist', 'athlete-dashboard'); ?></option>
-                </select>
-            </div>
-            <div class="chart-container">
-                <canvas id="progress-canvas"></canvas>
-            </div>
-            <div class="chart-summary">
-                <?php
-                $progress_stats = $charts_manager->get_progress_metrics($user_id, 'weight');
-                if (!empty($progress_stats)) :
-                ?>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-label"><?php _e('Starting', 'athlete-dashboard'); ?></span>
-                            <span class="stat-value"><?php echo esc_html($progress_stats->starting); ?></span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label"><?php _e('Current', 'athlete-dashboard'); ?></span>
-                            <span class="stat-value"><?php echo esc_html($progress_stats->current); ?></span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label"><?php _e('Change', 'athlete-dashboard'); ?></span>
-                            <span class="stat-value <?php echo $progress_stats->change >= 0 ? 'positive' : 'negative'; ?>">
-                                <?php echo esc_html($progress_stats->change); ?>
-                            </span>
-                        </div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-
         <!-- Attendance Chart -->
-        <div class="chart-panel" id="attendance-chart">
+        <div class="chart-panel active" id="attendance-chart">
             <div class="chart-header">
                 <h3><?php _e('Workout Attendance', 'athlete-dashboard'); ?></h3>
             </div>
@@ -177,26 +104,6 @@ $charts_manager = new Athlete_Dashboard_Charts_Manager();
 <!-- Chart Configuration Template -->
 <script type="text/template" id="chart-config-template">
     {
-        "workout_stats": {
-            "type": "bar",
-            "options": {
-                "responsive": true,
-                "maintainAspectRatio": false,
-                "scales": {
-                    "y": {
-                        "beginAtZero": true
-                    }
-                }
-            }
-        },
-        "progress": {
-            "type": "line",
-            "options": {
-                "responsive": true,
-                "maintainAspectRatio": false,
-                "tension": 0.4
-            }
-        },
         "attendance": {
             "type": "bar",
             "options": {

@@ -20,12 +20,12 @@ if (is_user_logged_in()) :
     <div class="athlete-dashboard-container">
         <?php athlete_dashboard_render_welcome_banner($current_user); ?>
         <div class="athlete-dashboard">
-            <?php echo athlete_dashboard_render_all_sections(); ?>
+            <?php echo athlete_dashboard_render_all_cards(); ?>
         </div>
     </div>
     <?php
 else :
-    athlete_dashboard_render_login_message();
+    echo athlete_dashboard_render_login_message();
 endif;
 
 get_footer();
