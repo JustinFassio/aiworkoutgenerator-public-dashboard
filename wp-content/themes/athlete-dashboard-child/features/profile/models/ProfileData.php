@@ -112,6 +112,53 @@ class ProfileData {
                     }
                 },
                 'description' => 'Your weight'
+            ],
+            'injuries' => [
+                'type' => 'tag_input',
+                'label' => 'Current Injuries',
+                'required' => false,
+                'predefined_options' => [
+                    'lower_back' => 'Lower Back Pain or Injuries',
+                    'knee' => 'Knee Pain or Injuries',
+                    'shoulder' => 'Shoulder Pain or Injuries',
+                    'hip' => 'Hip Pain or Injuries',
+                    'neck' => 'Neck Pain or Injuries',
+                    'wrist_elbow' => 'Wrist or Elbow Pain',
+                    'ankle_foot' => 'Ankle or Foot Injuries'
+                ],
+                'validation' => function($value) {
+                    if (empty($value)) return true;
+                    
+                    // Handle JSON string input
+                    if (is_string($value)) {
+                        $decoded = json_decode(stripslashes($value), true);
+                        if (is_array($decoded)) {
+                            $value = $decoded;
+                        }
+                    }
+                    
+                    if (!is_array($value)) return false;
+                    
+                    foreach ($value as $item) {
+                        if (!is_array($item) || !isset($item['value'], $item['type'])) {
+                            return false;
+                        }
+                        if ($item['type'] === 'predefined' && !isset($this->fields['injuries']['predefined_options'][$item['value']])) {
+                            return false;
+                        }
+                    }
+                    return true;
+                },
+                'description' => 'Select from common injuries or type your own. Press Enter or comma to add custom injuries.'
+            ],
+            'injuries_other' => [
+                'type' => 'textarea',
+                'label' => 'Describe Injuries',
+                'required' => false,
+                'validation' => fn($value) => empty($value) || (is_string($value) && strlen($value) <= 500),
+                'maxlength' => 500,
+                'rows' => 3,
+                'description' => 'Provide additional details about your injuries, including severity and duration.'
             ]
         ];
     }
@@ -127,6 +174,9 @@ class ProfileData {
                         $validated[$key] = $field['validation']($value, $unit) ? $value : null;
                         $validated[$key . '_unit'] = $unit;
                     }
+                } elseif ($field['type'] === 'multi_select') {
+                    $value = is_array($data[$key]) ? $data[$key] : [$data[$key]];
+                    $validated[$key] = $this->validateField($key, $value);
                 } else {
                     $validated[$key] = $this->validateField($key, $data[$key]);
                 }

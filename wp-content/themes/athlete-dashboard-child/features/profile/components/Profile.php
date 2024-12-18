@@ -66,6 +66,9 @@ class Profile {
             $profile_data = $this->service->getProfileData($user->ID);
             ?>
             <h3><?php _e('Athlete Profile Information', 'athlete-dashboard-child'); ?></h3>
+            <p class="description" style="margin-bottom: 1rem;">
+                <?php _e('This information can only be edited by the athlete through their dashboard.', 'athlete-dashboard-child'); ?>
+            </p>
             <table class="form-table" role="presentation">
                 <?php foreach ($profile_data->getFields() as $field => $config): ?>
                     <?php
@@ -76,99 +79,81 @@ class Profile {
                         <th>
                             <label for="<?php echo esc_attr($field); ?>">
                                 <?php echo esc_html($config['label']); ?>
-                                <?php if ($config['required']): ?>
-                                    <span class="required">*</span>
-                                <?php endif; ?>
                             </label>
                         </th>
                         <td>
-                            <?php if ($config['type'] === 'select'): ?>
-                                <select name="<?php echo esc_attr($field); ?>" 
-                                        id="<?php echo esc_attr($field); ?>"
-                                        <?php echo $config['required'] ? 'required' : ''; ?>>
-                                    <option value="">Select <?php echo esc_html($config['label']); ?></option>
-                                    <?php foreach ($config['options'] as $value => $label): ?>
-                                        <option value="<?php echo esc_attr($value); ?>"
-                                                <?php selected($profile_data->get($field), $value); ?>>
-                                            <?php echo esc_html($label); ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>
+                            <?php if ($config['type'] === 'multi_select'): ?>
+                                <?php
+                                $selected_values = $profile_data->get($field);
+                                // Ensure we have an array and it's not empty
+                                $selected_values = is_array($selected_values) ? $selected_values : [];
+                                if (!empty($selected_values)): ?>
+                                    <div class="selected-injuries-admin">
+                                        <?php
+                                        foreach ($selected_values as $value) {
+                                            if (isset($config['options'][$value])) {
+                                                echo '<div class="injury-item">' . esc_html($config['options'][$value]) . '</div>';
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="selected-injuries-admin empty">
+                                        <?php _e('No injuries reported', 'athlete-dashboard-child'); ?>
+                                    </div>
+                                <?php endif; ?>
 
                             <?php elseif ($config['type'] === 'height_with_unit'): ?>
-                                <div class="measurement-group">
-                                    <?php 
-                                    $current_unit = $profile_data->get($field . '_unit') ?? 'imperial';
-                                    $current_value = $profile_data->get($field) ?? '';
-                                    ?>
-                                    <?php if ($current_unit === 'imperial'): ?>
-                                        <select name="<?php echo esc_attr($field); ?>" 
-                                                id="<?php echo esc_attr($field); ?>"
-                                                class="measurement-value"
-                                                <?php echo $config['required'] ? 'required' : ''; ?>>
-                                            <option value="">Select height</option>
-                                            <?php foreach ($config['imperial_options'] as $value => $label): ?>
-                                                <option value="<?php echo esc_attr($value); ?>"
-                                                        <?php selected($current_value, $value); ?>>
-                                                    <?php echo esc_html($label); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    <?php else: ?>
-                                        <input type="number" 
-                                               name="<?php echo esc_attr($field); ?>"
-                                               id="<?php echo esc_attr($field); ?>"
-                                               class="measurement-value"
-                                               value="<?php echo esc_attr($current_value); ?>"
-                                               min="<?php echo esc_attr($config['metric_range']['min']); ?>"
-                                               max="<?php echo esc_attr($config['metric_range']['max']); ?>"
-                                               <?php echo $config['required'] ? 'required' : ''; ?>>
-                                    <?php endif; ?>
-                                    
-                                    <select name="<?php echo esc_attr($field); ?>_unit"
-                                            id="<?php echo esc_attr($field); ?>_unit"
-                                            class="unit-selector">
-                                        <?php foreach ($config['units'] as $unit_key => $unit_label): ?>
-                                            <option value="<?php echo esc_attr($unit_key); ?>"
-                                                    <?php selected($current_unit, $unit_key); ?>>
-                                                <?php echo esc_html(strtoupper($unit_label)); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </div>
+                                <?php
+                                $current_unit = $profile_data->get($field . '_unit') ?? 'imperial';
+                                $value = $profile_data->get($field);
+                                if ($current_unit === 'imperial' && isset($config['imperial_options'][$value])) {
+                                    echo esc_html($config['imperial_options'][$value]);
+                                } else {
+                                    echo esc_html($value . ' ' . strtoupper($config['units'][$current_unit]));
+                                }
+                                ?>
 
                             <?php elseif ($config['type'] === 'weight_with_unit'): ?>
-                                <div class="measurement-group">
-                                    <?php 
-                                    $current_unit = $profile_data->get($field . '_unit') ?? 'imperial';
-                                    $current_value = $profile_data->get($field) ?? '';
-                                    ?>
-                                    <input type="number" 
-                                           name="<?php echo esc_attr($field); ?>"
-                                           id="<?php echo esc_attr($field); ?>"
-                                           class="measurement-value"
-                                           value="<?php echo esc_attr($current_value); ?>"
-                                           step="0.1"
-                                           <?php echo $config['required'] ? 'required' : ''; ?>>
-                                    
-                                    <select name="<?php echo esc_attr($field); ?>_unit"
-                                            id="<?php echo esc_attr($field); ?>_unit"
-                                            class="unit-selector">
-                                        <?php foreach ($config['units'] as $unit_key => $unit_label): ?>
-                                            <option value="<?php echo esc_attr($unit_key); ?>"
-                                                    <?php selected($current_unit, $unit_key); ?>>
-                                                <?php echo esc_html(strtoupper($unit_label)); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                <?php
+                                $current_unit = $profile_data->get($field . '_unit') ?? 'imperial';
+                                $value = $profile_data->get($field);
+                                echo esc_html($value . ' ' . strtoupper($config['units'][$current_unit]));
+                                ?>
+
+                            <?php elseif ($config['type'] === 'textarea'): ?>
+                                <div class="injury-description">
+                                    <?php echo nl2br(esc_html($profile_data->get($field))); ?>
                                 </div>
 
+                            <?php elseif ($config['type'] === 'tag_input'): ?>
+                                <?php
+                                $injuries = $profile_data->get($field);
+                                if (!empty($injuries) && is_array($injuries)): ?>
+                                    <div class="selected-injuries-admin">
+                                        <?php
+                                        foreach ($injuries as $injury) {
+                                            if (isset($injury['type']) && isset($injury['label'])) {
+                                                echo '<div class="injury-item">' . esc_html($injury['label']) . '</div>';
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="selected-injuries-admin empty">
+                                        <?php _e('No injuries reported', 'athlete-dashboard-child'); ?>
+                                    </div>
+                                <?php endif; ?>
+
                             <?php else: ?>
-                                <input type="<?php echo esc_attr($config['type']); ?>"
-                                       name="<?php echo esc_attr($field); ?>"
-                                       id="<?php echo esc_attr($field); ?>"
-                                       value="<?php echo esc_attr($profile_data->get($field)); ?>"
-                                       <?php echo $config['required'] ? 'required' : ''; ?>>
+                                <?php 
+                                $value = $profile_data->get($field);
+                                if ($config['type'] === 'select' && isset($config['options'][$value])) {
+                                    echo esc_html($config['options'][$value]);
+                                } else {
+                                    echo esc_html($value);
+                                }
+                                ?>
                             <?php endif; ?>
 
                             <?php if (!empty($config['description'])): ?>
@@ -178,6 +163,35 @@ class Profile {
                     </tr>
                 <?php endforeach; ?>
             </table>
+
+            <style>
+                .selected-injuries-admin {
+                    background: #f0f0f1;
+                    border: 1px solid #c3c4c7;
+                    border-radius: 4px;
+                    padding: 0.75rem;
+                    min-height: 80px;
+                }
+                .selected-injuries-admin.empty {
+                    color: #646970;
+                    font-style: italic;
+                }
+                .selected-injuries-admin .injury-item {
+                    margin-bottom: 0.5rem;
+                    padding: 0.5rem;
+                    background: #fff;
+                    border: 1px solid #c3c4c7;
+                    border-radius: 4px;
+                }
+                .injury-description {
+                    background: #f0f0f1;
+                    border: 1px solid #c3c4c7;
+                    border-radius: 4px;
+                    padding: 0.75rem;
+                    min-height: 80px;
+                    white-space: pre-wrap;
+                }
+            </style>
             <?php
         } catch (\Exception $e) {
             error_log('Failed to render admin fields: ' . $e->getMessage());
@@ -235,15 +249,25 @@ class Profile {
             $data = [];
             foreach ($_POST as $key => $value) {
                 if ($key !== 'action' && $key !== 'profile_nonce') {
-                    $data[$key] = sanitize_text_field($value);
+                    // Handle array data from multi-select fields
+                    if (is_array($value)) {
+                        $data[$key] = array_map('sanitize_text_field', $value);
+                    } else {
+                        $data[$key] = sanitize_text_field($value);
+                    }
                 }
             }
 
+            error_log('Profile Update Data: ' . print_r($data, true)); // Debug log
+
             $result = $this->service->updateProfile($user_id, $data);
             if ($result) {
+                $updated_data = $this->service->getProfileData($user_id)->toArray();
+                error_log('Updated Profile Data: ' . print_r($updated_data, true)); // Debug log
+                
                 wp_send_json_success([
                     'message' => __('Profile updated successfully', 'athlete-dashboard-child'),
-                    'data' => $this->service->getProfileData($user_id)->toArray()
+                    'data' => $updated_data
                 ]);
             } else {
                 wp_send_json_error([

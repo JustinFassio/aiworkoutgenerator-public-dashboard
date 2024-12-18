@@ -26,8 +26,6 @@ function init_profile_feature() {
     // Add profile fields to WP Admin User Profile
     add_action('show_user_profile', [$profile, 'render_admin_fields']);
     add_action('edit_user_profile', [$profile, 'render_admin_fields']);
-    add_action('personal_options_update', [$profile, 'save_admin_fields']);
-    add_action('edit_user_profile_update', [$profile, 'save_admin_fields']);
 
     // Register frontend assets
     add_action('wp_enqueue_scripts', function() {

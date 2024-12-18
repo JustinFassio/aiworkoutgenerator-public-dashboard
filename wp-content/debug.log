@@ -6277,3 +6277,2586 @@ Stack trace:
 [18-Dec-2024 04:21:56 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
 [18-Dec-2024 04:22:39 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
 [18-Dec-2024 04:25:44 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:01:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:04:09 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:07:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:21:13 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:31:00 UTC] Raw meta value for injuries: 
+[18-Dec-2024 13:31:00 UTC] Processed value for injuries: Array
+(
+)
+
+[18-Dec-2024 13:31:59 UTC] Raw meta value for injuries: 
+[18-Dec-2024 13:31:59 UTC] Processed value for injuries: Array
+(
+)
+
+[18-Dec-2024 13:31:59 UTC] Raw meta value for injuries: 
+[18-Dec-2024 13:31:59 UTC] Processed value for injuries: Array
+(
+)
+
+[18-Dec-2024 13:32:07 UTC] Raw meta value for injuries: 
+[18-Dec-2024 13:32:07 UTC] Processed value for injuries: Array
+(
+)
+
+[18-Dec-2024 13:32:07 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => knee
+            [1] => shoulder
+        )
+
+    [injuries_other] => Testing more injuries
+)
+
+[18-Dec-2024 13:32:07 UTC] Saving multi-select value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:32:07 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:32:07 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:32:07 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => knee
+            [1] => shoulder
+        )
+
+    [injuries_other] => Testing more injuries
+)
+
+[18-Dec-2024 13:32:13 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:32:13 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:32:13 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:32:13 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:33:13 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:33:13 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:36:33 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:37:21 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:37:51 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => []
+    [injuries_other] => Testing more injuries
+)
+
+[18-Dec-2024 13:37:51 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Testing more injuries
+)
+
+[18-Dec-2024 13:40:49 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:42:08 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:44:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 13:46:13 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"hip\",\"type\":\"predefined\",\"label\":\"Hip Pain or Injuries\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:46:13 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:51:17 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:51:17 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:53:41 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:53:41 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:56:20 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:20 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:22 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:22 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:22 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:22 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:33 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:33 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:33 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:56:33 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:33 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:33 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:56:37 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:37 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:37 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:56:37 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:19 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:19 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:19 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:57:19 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:19 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:19 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 13:57:23 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:23 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:23 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:23 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:25 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:25 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:25 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:57:25 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:58:26 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 13:58:26 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:00:02 UTC] PHP Deprecated:  AthleteDashboard\Features\Profile\Services\ProfileService::getProfileData(): Implicitly marking parameter $user_id as nullable is deprecated, the explicit nullable type must be used instead in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php on line 20
+[18-Dec-2024 14:00:02 UTC] Raw injuries data: 
+[18-Dec-2024 14:00:02 UTC] Processed injuries data: Array
+(
+)
+
+[18-Dec-2024 14:00:02 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:00:02 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:00:26 UTC] Raw injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:00:26 UTC] Processed injuries data: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:00 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:01:00 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:01:00 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:01:00 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:00 UTC] Value is already an array
+[18-Dec-2024 14:01:00 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:00 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 14:01:00 UTC] === Updating Profile for User: 3 ===
+[18-Dec-2024 14:01:00 UTC] Input data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 14:01:00 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:01:00 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:01:00 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:01:00 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:00 UTC] Value is already an array
+[18-Dec-2024 14:01:00 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:00 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 14:01:07 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:01:07 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:01:07 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:01:07 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:07 UTC] Value is already an array
+[18-Dec-2024 14:01:07 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:07 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:01:07 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:01:07 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:01:07 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:07 UTC] Value is already an array
+[18-Dec-2024 14:01:07 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:01:19 UTC] === Getting Profile Data for User: 0 ===
+[18-Dec-2024 14:01:19 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:01:19 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:01:19 UTC] Raw value: 
+[18-Dec-2024 14:01:19 UTC] Empty value, returning empty array
+[18-Dec-2024 14:01:19 UTC] Final processed value: Array
+(
+)
+
+[18-Dec-2024 14:01:19 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:01:19 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:01:32 UTC] === Getting Profile Data for User: 0 ===
+[18-Dec-2024 14:01:32 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:01:32 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:01:32 UTC] Raw value: 
+[18-Dec-2024 14:01:32 UTC] Empty value, returning empty array
+[18-Dec-2024 14:01:32 UTC] Final processed value: Array
+(
+)
+
+[18-Dec-2024 14:01:32 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:01:32 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:02:07 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:02:07 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:02:07 UTC] === Processing field: injuries ===
+[18-Dec-2024 14:02:07 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:02:07 UTC] Value is already an array
+[18-Dec-2024 14:02:07 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:04:07 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:04:07 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:04:07 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:04:07 UTC] Raw value type: array
+[18-Dec-2024 14:04:07 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:04:07 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:04:07 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:04:07 UTC] === Getting Profile Data for User: 0 ===
+[18-Dec-2024 14:04:07 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:04:07 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:04:07 UTC] Raw value type: boolean
+[18-Dec-2024 14:04:07 UTC] Raw value: 
+[18-Dec-2024 14:04:07 UTC] Empty value, returning empty array
+[18-Dec-2024 14:04:07 UTC] Final processed value: Array
+(
+)
+
+[18-Dec-2024 14:05:25 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:25 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:25 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:25 UTC] Raw value type: array
+[18-Dec-2024 14:05:25 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:25 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:25 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:32 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:32 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:32 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:32 UTC] Raw value type: array
+[18-Dec-2024 14:05:32 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:32 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:32 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:32 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:32 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:32 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:32 UTC] Raw value type: array
+[18-Dec-2024 14:05:32 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:32 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:32 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:32 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:32 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:32 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:32 UTC] Raw value type: array
+[18-Dec-2024 14:05:32 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:32 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:32 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:37 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:37 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:37 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:37 UTC] Raw value type: array
+[18-Dec-2024 14:05:37 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:37 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:37 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:37 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:37 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:37 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:37 UTC] Raw value type: array
+[18-Dec-2024 14:05:37 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:37 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:37 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:51 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:51 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:51 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:51 UTC] Raw value type: array
+[18-Dec-2024 14:05:51 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:51 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:51 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:51 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 14:05:51 UTC] 
+=== Updating Profile for User: 3 ===
+[18-Dec-2024 14:05:51 UTC] Raw input data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 14:05:51 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:51 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:51 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:51 UTC] Raw value type: array
+[18-Dec-2024 14:05:51 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:51 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:51 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:51 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis
+)
+
+[18-Dec-2024 14:05:57 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:57 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:57 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:57 UTC] Raw value type: array
+[18-Dec-2024 14:05:57 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:57 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:57 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:57 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:05:57 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:05:57 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:05:57 UTC] Raw value type: array
+[18-Dec-2024 14:05:57 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:05:57 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:05:57 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:39 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:06:39 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:06:39 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:06:39 UTC] Raw value type: array
+[18-Dec-2024 14:06:39 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:39 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:06:39 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:39 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options
+)
+
+[18-Dec-2024 14:06:39 UTC] 
+=== Updating Profile for User: 3 ===
+[18-Dec-2024 14:06:39 UTC] Raw input data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options
+)
+
+[18-Dec-2024 14:06:39 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:06:39 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:06:39 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:06:39 UTC] Raw value type: array
+[18-Dec-2024 14:06:39 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:39 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:06:39 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:39 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options
+)
+
+[18-Dec-2024 14:06:47 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:06:47 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:06:47 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:06:47 UTC] Raw value type: array
+[18-Dec-2024 14:06:47 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:47 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:06:47 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:47 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:06:47 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:06:47 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:06:47 UTC] Raw value type: array
+[18-Dec-2024 14:06:47 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:06:47 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:06:47 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:07:39 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:07:39 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:07:39 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:07:39 UTC] Raw value type: array
+[18-Dec-2024 14:07:39 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:07:39 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:07:39 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:07:39 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options
+)
+
+[18-Dec-2024 14:07:39 UTC] 
+=== Updating Profile for User: 3 ===
+[18-Dec-2024 14:07:39 UTC] Raw input data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options
+)
+
+[18-Dec-2024 14:07:39 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:07:39 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:07:39 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:07:39 UTC] Raw value type: array
+[18-Dec-2024 14:07:39 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:07:39 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:07:39 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:07:39 UTC] Updated Profile Data: Array
+(
+    [age] => 75
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195.1
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options
+)
+
+[18-Dec-2024 14:07:48 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:07:48 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:07:48 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:07:48 UTC] Raw value type: array
+[18-Dec-2024 14:07:48 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:07:48 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:07:48 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:08:48 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:08:48 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:08:48 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:08:48 UTC] Raw value type: array
+[18-Dec-2024 14:08:48 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:08:48 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:08:48 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:10:48 UTC] === Getting Profile Data for User: 3 ===
+[18-Dec-2024 14:10:48 UTC] Getting tag input data for: _athlete_injuries
+[18-Dec-2024 14:10:48 UTC] 
+=== Processing field: injuries ===
+[18-Dec-2024 14:10:48 UTC] Raw value type: array
+[18-Dec-2024 14:10:48 UTC] Raw value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:10:48 UTC] Value is already an array with 2 items
+[18-Dec-2024 14:10:48 UTC] Final processed value: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 14:12:11 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:12:45 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 49
+    [gender] => other
+    [height] => 71
+    [height_unit] => imperial
+    [weight] => 200
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope.
+)
+
+[18-Dec-2024 14:12:45 UTC] Updated Profile Data: Array
+(
+    [age] => 49
+    [gender] => other
+    [height] => 71
+    [height_unit] => imperial
+    [weight] => 200
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope.
+)
+
+[18-Dec-2024 14:15:49 UTC] Automatic updates starting...
+[18-Dec-2024 14:15:50 UTC]   Automatic plugin updates starting...
+[18-Dec-2024 14:15:50 UTC]   Automatic plugin updates complete.
+[18-Dec-2024 14:15:50 UTC] Automatic updates complete.
+[18-Dec-2024 14:16:41 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:16:52 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 49
+    [gender] => other
+    [height] => 71
+    [height_unit] => imperial
+    [weight] => 200
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope.
+)
+
+[18-Dec-2024 14:16:52 UTC] Updated Profile Data: Array
+(
+    [age] => 49
+    [gender] => other
+    [height] => 71
+    [height_unit] => imperial
+    [weight] => 200
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope.
+)
+
+[18-Dec-2024 14:17:52 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:17:52 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:24:11 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:24:11 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:24:52 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:24:52 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:24:58 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:24:58 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:25:04 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:25:04 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:26:33 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:26:39 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:26:39 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:27:35 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:27:35 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:29:11 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:29:11 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:29:37 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:29:37 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:29:46 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:29:46 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:29:53 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:29:53 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:29:59 UTC] PHP Deprecated:  Mustache_Engine::loadSource(): Implicitly marking parameter $cache as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Engine.php on line 727
+[18-Dec-2024 14:29:59 UTC] PHP Deprecated:  Mustache_Parser::buildTree(): Implicitly marking parameter $parent as nullable is deprecated, the explicit nullable type must be used instead in phar:///usr/local/bin/wp/vendor/mustache/mustache/src/Mustache/Parser.php on line 73
+[18-Dec-2024 14:30:08 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:30:16 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:30:16 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:30:37 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:30:43 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:30:43 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:30:48 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:30:48 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:30:50 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:31:46 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:31:46 UTC] Updated Profile Data: Array
+(
+    [age] => 50
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 205
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope
+)
+
+[18-Dec-2024 14:31:52 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:32:44 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php:58
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php(58): json_decode(Array, true)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/components/Profile.php(26): AthleteDashboard\Features\Profile\Services\ProfileService->getProfileData()
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/index.php(24): AthleteDashboard\Features\Profile\Components\Profile->__construct()
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): init_profile_feature('')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(700): do_action('init')
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#10 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#11 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php on line 58
+[18-Dec-2024 14:33:22 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php:58
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php(58): json_decode(Array, true)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/components/Profile.php(26): AthleteDashboard\Features\Profile\Services\ProfileService->getProfileData()
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/index.php(24): AthleteDashboard\Features\Profile\Components\Profile->__construct()
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): init_profile_feature('')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(700): do_action('init')
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#10 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/services/ProfileService.php on line 58
+[18-Dec-2024 14:33:55 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:34:25 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 14:34:25 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 14:34:29 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:34:39 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 14:34:39 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 14:36:13 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:36:25 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 14:36:25 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 14:36:33 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:46:50 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:48:40 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:54:57 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 14:59:01 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:00:59 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:01:48 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Pain in arch\",\"type\":\"custom\",\"label\":\"Pain in arch\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"}]
+    [injuries_description] => Current Injuries: Lower Back Pain or Injuries, Pain in arch, Shoulder Pain or Injuries ---
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:01:48 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:06:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:06:52 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Bicept\",\"type\":\"custom\",\"label\":\"Bicept\"}]
+    [injuries_description] => Current Injuries: Lower Back Pain or Injuries, Bicept ---
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:06:52 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:07:09 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:09:13 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:12:18 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:12:37 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch\",\"type\":\"custom\",\"label\":\"Arch\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:12:37 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:14:04 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch\",\"type\":\"custom\",\"label\":\"Arch\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:14:04 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:14:12 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:17:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:17:29 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:17:29 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:20:07 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:21:24 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:21:51 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"hip\",\"type\":\"predefined\",\"label\":\"Hip Pain or Injuries\"}]
+    [injuries_description] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:21:51 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:22:38 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:22:47 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:22:47 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:22:54 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:24:03 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:24:12 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:24:12 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => 
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:24:19 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:33:11 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 16:33:11 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 16:33:11 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 16:33:11 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 16:33:11 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:33:24 UTC] Raw meta value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 16:33:24 UTC] Processed value for injuries: Array
+(
+    [0] => knee
+    [1] => shoulder
+)
+
+[18-Dec-2024 16:33:24 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch Pain\",\"type\":\"custom\",\"label\":\"Arch Pain\"}]
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:33:24 UTC] Saving tag input value: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:33:24 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:33:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:33:24 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => Array
+                (
+                    [value] => lower_back
+                    [type] => predefined
+                    [label] => Lower Back Pain or Injuries
+                )
+
+            [1] => Array
+                (
+                    [value] => Arch Pain
+                    [type] => custom
+                    [label] => Arch Pain
+                )
+
+        )
+
+    [injuries_other] => Plantar fasciatis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:33:31 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:33:31 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:33:31 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:33:31 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:33:31 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:33:38 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:33:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:33:38 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:33:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:33:38 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[18-Dec-2024 16:34:39 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:34:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:36:32 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:36:32 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:36:36 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:36:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:36:36 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:36:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:36:54 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:36:54 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:36:54 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:36:54 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:36:54 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:37:25 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"}]
+[18-Dec-2024 16:37:25 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+)
+
+[18-Dec-2024 16:37:25 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch Pain\",\"type\":\"custom\",\"label\":\"Arch Pain\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"},{\"value\":\"hip\",\"type\":\"predefined\",\"label\":\"Hip Pain or Injuries\"}]
+    [injuries_other] => Plantar fasciitis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:37:25 UTC] Saving tag input value: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:37:25 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:37:25 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:37:25 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => Array
+                (
+                    [value] => lower_back
+                    [type] => predefined
+                    [label] => Lower Back Pain or Injuries
+                )
+
+            [1] => Array
+                (
+                    [value] => Arch Pain
+                    [type] => custom
+                    [label] => Arch Pain
+                )
+
+            [2] => Array
+                (
+                    [value] => knee
+                    [type] => predefined
+                    [label] => Knee Pain or Injuries
+                )
+
+            [3] => Array
+                (
+                    [value] => hip
+                    [type] => predefined
+                    [label] => Hip Pain or Injuries
+                )
+
+        )
+
+    [injuries_other] => Plantar fasciitis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 16:37:36 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:37:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:38:37 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:38:37 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:39:36 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:39:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:39:36 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:39:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:39:36 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 16:39:38 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:39:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:40:39 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:40:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:42:39 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:42:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:44:40 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:44:40 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:46:42 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:46:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 16:48:43 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 16:48:43 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:35:25 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:35:25 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:35:25 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:35:25 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:35:26 UTC] Raw meta value for injuries: 
+[18-Dec-2024 21:35:26 UTC] Processed value for injuries: Array
+(
+)
+
+[18-Dec-2024 21:35:26 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085

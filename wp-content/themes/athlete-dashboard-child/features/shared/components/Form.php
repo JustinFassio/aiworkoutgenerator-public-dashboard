@@ -87,6 +87,9 @@ class Form {
                 case 'select':
                     $this->renderSelect($field, $config, $value);
                     break;
+                case 'tag_input':
+                    $this->renderTagInput($field, $config, $value);
+                    break;
                 case 'height_with_unit':
                     $this->renderHeightWithUnit($field, $config, $value);
                     break;
@@ -119,6 +122,39 @@ class Form {
                 </option>
             <?php endforeach; ?>
         </select>
+        <?php
+    }
+
+    private function renderTagInput(string $field, array $config, $value): void {
+        $values = is_array($value) ? $value : [];
+        ?>
+        <div class="tag-input-container">
+            <div class="tag-input-wrapper">
+                <div class="tag-list"></div>
+                <input type="text" 
+                       class="tag-input" 
+                       placeholder="Type or select injuries..."
+                       autocomplete="off"
+                       aria-label="Add or select injuries">
+            </div>
+            
+            <div class="tag-suggestions" role="listbox" aria-label="Injury suggestions">
+                <?php foreach ($config['predefined_options'] as $key => $label): ?>
+                    <div class="tag-suggestion" 
+                         role="option"
+                         data-value="<?php echo esc_attr($key); ?>"
+                         data-type="predefined">
+                        <?php echo esc_html($label); ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <input type="hidden" 
+                   name="<?php echo esc_attr($field); ?>" 
+                   id="<?php echo esc_attr($field); ?>"
+                   value="<?php echo esc_attr(json_encode($values)); ?>"
+                   <?php echo !empty($config['required']) ? 'required' : ''; ?>>
+        </div>
         <?php
     }
 
@@ -191,6 +227,17 @@ class Form {
     }
 
     private function renderInput(string $field, array $config, $value): void {
+        if ($config['type'] === 'textarea') {
+            ?>
+            <textarea name="<?php echo esc_attr($field); ?>"
+                      id="<?php echo esc_attr($field); ?>"
+                      rows="<?php echo esc_attr($config['rows'] ?? 3); ?>"
+                      maxlength="<?php echo esc_attr($config['maxlength'] ?? 255); ?>"
+                      <?php if (!empty($config['required'])): ?>required<?php endif; ?>
+                      class="auto-expand"><?php echo esc_textarea($value); ?></textarea>
+            <?php
+            return;
+        }
         ?>
         <input type="<?php echo esc_attr($config['type']); ?>"
                name="<?php echo esc_attr($field); ?>"
@@ -199,7 +246,8 @@ class Form {
                <?php if (!empty($config['required'])): ?>required<?php endif; ?>
                <?php if (isset($config['min'])): ?>min="<?php echo esc_attr($config['min']); ?>"<?php endif; ?>
                <?php if (isset($config['max'])): ?>max="<?php echo esc_attr($config['max']); ?>"<?php endif; ?>
-               <?php if (isset($config['step'])): ?>step="<?php echo esc_attr($config['step']); ?>"<?php endif; ?>>
+               <?php if (isset($config['step'])): ?>step="<?php echo esc_attr($config['step']); ?>"<?php endif; ?>
+               <?php if (isset($config['maxlength'])): ?>maxlength="<?php echo esc_attr($config['maxlength']); ?>"<?php endif; ?>>
         <?php
     }
 } 
