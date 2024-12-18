@@ -87,8 +87,11 @@ class Form {
                 case 'select':
                     $this->renderSelect($field, $config, $value);
                     break;
-                case 'measurement':
-                    $this->renderMeasurement($field, $config, $value);
+                case 'height_with_unit':
+                    $this->renderHeightWithUnit($field, $config, $value);
+                    break;
+                case 'weight_with_unit':
+                    $this->renderWeightWithUnit($field, $config, $value);
                     break;
                 default:
                     $this->renderInput($field, $config, $value);
@@ -119,16 +122,16 @@ class Form {
         <?php
     }
 
-    private function renderMeasurement(string $field, array $config, $value): void {
-        $current_unit = $this->data[$field . '_unit'] ?? $config['default_unit'] ?? 'imperial';
+    private function renderHeightWithUnit(string $field, array $config, $value): void {
+        $current_unit = $this->data[$field . '_unit'] ?? 'imperial';
         ?>
         <div class="measurement-group">
-            <?php if ($config['unit_type'] === 'imperial' && $current_unit === 'imperial'): ?>
+            <?php if ($current_unit === 'imperial'): ?>
                 <select name="<?php echo esc_attr($field); ?>" 
                         id="<?php echo esc_attr($field); ?>"
                         class="measurement-value"
                         <?php echo !empty($config['required']) ? 'required' : ''; ?>>
-                    <option value="">Select <?php echo esc_html($config['label']); ?></option>
+                    <option value="">Select height</option>
                     <?php foreach ($config['imperial_options'] as $option_value => $label): ?>
                         <option value="<?php echo esc_attr($option_value); ?>"
                                 <?php selected($value, $option_value); ?>>
@@ -142,11 +145,36 @@ class Form {
                        id="<?php echo esc_attr($field); ?>"
                        class="measurement-value"
                        value="<?php echo esc_attr($value); ?>"
-                       min="<?php echo esc_attr($config['range']['min'] ?? ''); ?>"
-                       max="<?php echo esc_attr($config['range']['max'] ?? ''); ?>"
-                       step="<?php echo esc_attr($config['step'] ?? '1'); ?>"
+                       min="<?php echo esc_attr($config['metric_range']['min']); ?>"
+                       max="<?php echo esc_attr($config['metric_range']['max']); ?>"
                        <?php echo !empty($config['required']) ? 'required' : ''; ?>>
             <?php endif; ?>
+            
+            <select name="<?php echo esc_attr($field); ?>_unit"
+                    id="<?php echo esc_attr($field); ?>_unit"
+                    class="unit-selector">
+                <?php foreach ($config['units'] as $unit_key => $unit_label): ?>
+                    <option value="<?php echo esc_attr($unit_key); ?>"
+                            <?php selected($current_unit, $unit_key); ?>>
+                        <?php echo esc_html(strtoupper($unit_label)); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <?php
+    }
+
+    private function renderWeightWithUnit(string $field, array $config, $value): void {
+        $current_unit = $this->data[$field . '_unit'] ?? 'imperial';
+        ?>
+        <div class="measurement-group">
+            <input type="number" 
+                   name="<?php echo esc_attr($field); ?>"
+                   id="<?php echo esc_attr($field); ?>"
+                   class="measurement-value"
+                   value="<?php echo esc_attr($value); ?>"
+                   step="0.1"
+                   <?php echo !empty($config['required']) ? 'required' : ''; ?>>
             
             <select name="<?php echo esc_attr($field); ?>_unit"
                     id="<?php echo esc_attr($field); ?>_unit"

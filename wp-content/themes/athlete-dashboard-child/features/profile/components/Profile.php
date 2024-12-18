@@ -44,7 +44,10 @@ class Profile {
                     'context' => 'modal',
                     'submitText' => __('Save Profile', 'athlete-dashboard-child'),
                     'showLoader' => true,
-                    'classes' => ['profile-form']
+                    'classes' => ['profile-form'],
+                    'attributes' => [
+                        'data-form-context' => 'modal'
+                    ]
                 ]
             );
             $form->render();

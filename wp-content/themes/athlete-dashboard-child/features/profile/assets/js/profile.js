@@ -15,51 +15,79 @@ jQuery(document).ready(function($) {
     function setupHeightUnitHandler(element) {
         $(element).on('change', function() {
             const heightField = $('#height');
-            const currentUnit = $(this).val();
+            const currentValue = parseFloat(heightField.val());
+            const newUnit = $(this).val();
             
-            if (currentUnit === 'imperial') {
-                // Switch to select for imperial
-                const select = $('<select>', {
-                    name: 'height',
-                    id: 'height',
-                    class: 'measurement-value',
-                    required: heightField.prop('required')
-                });
-
-                // Add options
-                select.append($('<option>', {
-                    value: '',
-                    text: 'Select height'
-                }));
-
-                // Add height options from 4'0" to 7'0"
-                for (let feet = 4; feet <= 7; feet++) {
-                    for (let inches = 0; inches <= 11; inches++) {
-                        const value = (feet * 12) + inches;
-                        const label = `${feet}'${inches}"`;
-                        select.append($('<option>', {
-                            value: value,
-                            text: label
-                        }));
-                    }
+            if (!currentValue) {
+                // If no value, just switch the input type
+                if (newUnit === 'imperial') {
+                    switchToImperialHeight(heightField);
+                } else {
+                    switchToMetricHeight(heightField);
                 }
+                return;
+            }
 
-                heightField.replaceWith(select);
+            if (newUnit === 'metric') {
+                // Convert from inches to cm
+                const cm = Math.round(currentValue * 2.54);
+                switchToMetricHeight(heightField, cm);
             } else {
-                // Switch to number input for metric
-                const input = $('<input>', {
-                    type: 'number',
-                    name: 'height',
-                    id: 'height',
-                    class: 'measurement-value',
-                    min: '100',
-                    max: '250',
-                    required: heightField.prop('required')
-                });
-
-                heightField.replaceWith(input);
+                // Convert from cm to inches
+                const inches = Math.round(currentValue / 2.54);
+                switchToImperialHeight(heightField, inches);
             }
         });
+    }
+
+    function switchToMetricHeight(heightField, value = '') {
+        const input = $('<input>', {
+            type: 'number',
+            name: 'height',
+            id: 'height',
+            class: 'measurement-value',
+            min: '100',
+            max: '250',
+            required: heightField.prop('required'),
+            value: value
+        });
+
+        heightField.replaceWith(input);
+    }
+
+    function switchToImperialHeight(heightField, totalInches = '') {
+        const select = $('<select>', {
+            name: 'height',
+            id: 'height',
+            class: 'measurement-value',
+            required: heightField.prop('required')
+        });
+
+        // Add default option
+        select.append($('<option>', {
+            value: '',
+            text: 'Select height'
+        }));
+
+        // Add height options from 4'0" to 7'0"
+        for (let feet = 4; feet <= 7; feet++) {
+            for (let inches = 0; inches <= 11; inches++) {
+                const value = (feet * 12) + inches;
+                const label = `${feet}'${inches}"`;
+                const option = $('<option>', {
+                    value: value,
+                    text: label
+                });
+                
+                if (value === totalInches) {
+                    option.prop('selected', true);
+                }
+                
+                select.append(option);
+            }
+        }
+
+        heightField.replaceWith(select);
     }
 
     function setupWeightUnitHandler(element) {
