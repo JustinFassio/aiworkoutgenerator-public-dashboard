@@ -123,7 +123,22 @@ class Profile {
 
                             <?php elseif ($config['type'] === 'textarea'): ?>
                                 <div class="injury-description">
-                                    <?php echo nl2br(esc_html($profile_data->get($field))); ?>
+                                    <?php
+                                    if ($field === 'injuries_other') {
+                                        $description = $profile_data->get($field);
+                                        $lines = explode("\n", $description);
+                                        foreach ($lines as $line) {
+                                            if (strpos($line, ':') !== false) {
+                                                // This is a header line
+                                                echo '<strong>' . esc_html($line) . '</strong>';
+                                            } else {
+                                                echo esc_html($line) . "\n";
+                                            }
+                                        }
+                                    } else {
+                                        echo nl2br(esc_html($profile_data->get($field)));
+                                    }
+                                    ?>
                                 </div>
 
                             <?php elseif ($config['type'] === 'tag_input'): ?>

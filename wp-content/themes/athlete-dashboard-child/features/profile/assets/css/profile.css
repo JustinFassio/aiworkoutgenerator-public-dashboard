@@ -685,4 +685,26 @@
 .modal-body .tag-item .remove-tag:hover {
     opacity: 1;
     background: rgba(0, 0, 0, 0.4);
+}
+
+/* Injury Description Textarea Styling */
+.form-group[data-field="injuries_other"] textarea {
+    font-family: monospace;
+    line-height: 1.6;
+    padding: 1rem;
+    white-space: pre-wrap;
+    min-height: 200px;
+}
+
+/* Admin View Injury Description Styling */
+.injury-description {
+    font-family: monospace;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.injury-description strong {
+    color: var(--green-highlight);
+    display: block;
+    margin-top: 1rem;
 } 

@@ -8860,3 +8860,394 @@ Stack trace:
 )
 
 [18-Dec-2024 21:35:26 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 21:41:22 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:41:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:41:22 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:41:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:41:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 21:42:04 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:42:04 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:42:04 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:42:04 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:42:04 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[18-Dec-2024 21:42:24 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"hip","type":"predefined","label":"Hip Pain or Injuries"}]
+[18-Dec-2024 21:42:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => hip
+            [type] => predefined
+            [label] => Hip Pain or Injuries
+        )
+
+)
+
+[18-Dec-2024 21:42:24 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch Pain\",\"type\":\"custom\",\"label\":\"Arch Pain\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"},{\"value\":\"wrist_elbow\",\"type\":\"predefined\",\"label\":\"Wrist or Elbow Pain\"}]
+    [injuries_other] => Plantar fasciitis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 21:42:24 UTC] Saving tag input value: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[18-Dec-2024 21:42:24 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[18-Dec-2024 21:42:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[18-Dec-2024 21:42:24 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => Array
+                (
+                    [value] => lower_back
+                    [type] => predefined
+                    [label] => Lower Back Pain or Injuries
+                )
+
+            [1] => Array
+                (
+                    [value] => Arch Pain
+                    [type] => custom
+                    [label] => Arch Pain
+                )
+
+            [2] => Array
+                (
+                    [value] => knee
+                    [type] => predefined
+                    [label] => Knee Pain or Injuries
+                )
+
+            [3] => Array
+                (
+                    [value] => shoulder
+                    [type] => predefined
+                    [label] => Shoulder Pain or Injuries
+                )
+
+            [4] => Array
+                (
+                    [value] => wrist_elbow
+                    [type] => predefined
+                    [label] => Wrist or Elbow Pain
+                )
+
+        )
+
+    [injuries_other] => Plantar fasciitis, testing more options, all is good, I hope. But losing hope, and more hope.
+)
+
+[18-Dec-2024 21:44:22 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[18-Dec-2024 21:44:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[18-Dec-2024 21:44:22 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[18-Dec-2024 21:44:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[18-Dec-2024 21:44:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085

@@ -266,6 +266,10 @@ jQuery(document).ready(function($) {
 
         updateHiddenInput() {
             this.hiddenInput.value = JSON.stringify(this.tags);
+            // Trigger injury description update when tags change
+            if (this.container.closest('form').id === 'profile-form') {
+                formatInjuryDescription(this.tags);
+            }
         }
     }
 
@@ -313,4 +317,41 @@ jQuery(document).ready(function($) {
     $(document).on('modal:contentLoaded', function() {
         initializeComponents();
     });
+
+    // Handle injury description formatting
+    function formatInjuryDescription(injuries) {
+        const textarea = document.querySelector('textarea[name="injuries_other"]');
+        if (!textarea) return;
+
+        // Get existing text content and parse it into sections
+        const existingContent = textarea.value;
+        const sections = {};
+        
+        // Parse existing content into sections
+        let currentSection = '';
+        existingContent.split('\n').forEach(line => {
+            if (line.endsWith(':')) {
+                currentSection = line.slice(0, -1);
+            } else if (currentSection && line.trim()) {
+                sections[currentSection] = line.trim();
+            }
+        });
+
+        // Create new formatted content
+        let newContent = '';
+        if (injuries && injuries.length > 0) {
+            injuries.forEach((injury) => {
+                const injuryLabel = injury.label.toUpperCase();
+                // Add existing description if available, otherwise add placeholder
+                const description = sections[injuryLabel] || '[Add description here]';
+                newContent += `${injuryLabel}:\n${description}\n\n`;
+            });
+        }
+
+        // Update textarea
+        textarea.value = newContent.trim();
+        
+        // Trigger auto-expand
+        textarea.dispatchEvent(new Event('input'));
+    }
 }); 
