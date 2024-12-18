@@ -49,14 +49,18 @@ class NavigationCards {
     }
 
     private function renderCard(NavigationCard $card): void {
-        $attributes = $card->isModal() 
-            ? sprintf('data-modal-target="%s"', esc_attr($card->getModalTarget()))
-            : sprintf('href="%s"', esc_url($card->getLink()));
-
-        $tag = $card->isModal() ? 'div' : 'a';
+        $classes = ['dashboard-card'];
+        if ($card->isModal()) {
+            $classes[] = 'modal-trigger';
+            $attributes = sprintf('data-modal-target="%s" type="button" role="button"', esc_attr($card->getModalTarget()));
+            $tag = 'button';
+        } else {
+            $attributes = sprintf('href="%s"', esc_url($card->getLink()));
+            $tag = 'a';
+        }
         ?>
         <<?php echo $tag; ?> 
-            class="dashboard-card" 
+            class="<?php echo esc_attr(implode(' ', $classes)); ?>"
             <?php echo $attributes; ?>
             id="<?php echo esc_attr($card->getId()); ?>-card"
         >

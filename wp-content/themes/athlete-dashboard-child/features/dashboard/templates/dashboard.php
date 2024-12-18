@@ -40,7 +40,10 @@ get_header();
                     $profile->render_form();
                 }, [
                     'size' => 'medium',
-                    'title' => __('Your Profile', 'athlete-dashboard-child')
+                    'title' => __('Your Profile', 'athlete-dashboard-child'),
+                    'closeOnEscape' => true,
+                    'closeOnBackdropClick' => true,
+                    'showCloseButton' => true
                 ]);
                 ?>
             </div>

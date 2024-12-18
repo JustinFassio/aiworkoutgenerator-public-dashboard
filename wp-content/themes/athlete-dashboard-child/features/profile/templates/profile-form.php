@@ -4,6 +4,7 @@
  * 
  * @var array $fields Field definitions from ProfileData
  * @var array $data Current profile data
+ * @var string $context Form context ('modal' or 'admin')
  */
 
 if (!defined('ABSPATH')) {
@@ -11,7 +12,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<form id="profile-form" class="profile-form" data-form-context="modal">
+<form id="profile-form" class="profile-form" data-form-context="<?php echo esc_attr($context); ?>">
     <?php wp_nonce_field('profile_nonce', 'profile_nonce'); ?>
     
     <div class="form-grid">
@@ -124,6 +125,7 @@ if (!defined('ABSPATH')) {
         <?php endforeach; ?>
     </div>
 
+    <?php if ($context !== 'admin'): ?>
     <div class="form-actions">
         <button type="submit" class="submit-button">
             <span class="button-text">Save Profile</span>
@@ -135,4 +137,5 @@ if (!defined('ABSPATH')) {
     </div>
 
     <div class="form-messages"></div>
+    <?php endif; ?>
 </form> 

@@ -7,6 +7,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Load shared components first
+require_once get_stylesheet_directory() . '/features/shared/index.php';
+
 // Load dependencies in correct order
 require_once __DIR__ . '/models/NavigationCard.php';
 require_once __DIR__ . '/components/NavigationCards.php';
@@ -46,7 +49,7 @@ function init_dashboard_feature() {
             // Dashicons
             wp_enqueue_style('dashicons');
         }
-    });
+    }, 5); // Lower priority to ensure it runs before other scripts
 }
 
 add_action('init', 'init_dashboard_feature'); 

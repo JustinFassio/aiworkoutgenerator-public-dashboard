@@ -11,6 +11,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Load shared components first
+require_once get_stylesheet_directory() . '/features/shared/index.php';
+
 // Load dependencies in correct order
 require_once __DIR__ . '/models/ProfileData.php';
 require_once __DIR__ . '/services/ProfileService.php';
@@ -29,17 +32,22 @@ function init_profile_feature() {
     // Register frontend assets
     add_action('wp_enqueue_scripts', function() {
         if (is_page_template('features/dashboard/templates/dashboard.php')) {
+            // Enqueue shared assets
+            wp_enqueue_style('athlete-shared-forms');
+            wp_enqueue_script('athlete-form-handler');
+
+            // Then load profile-specific assets
             wp_enqueue_style(
                 'athlete-profile',
                 get_stylesheet_directory_uri() . '/features/profile/assets/css/profile.css',
-                array(),
+                ['athlete-shared-forms'],
                 '1.0.0'
             );
 
             wp_enqueue_script(
                 'athlete-profile',
                 get_stylesheet_directory_uri() . '/features/profile/assets/js/profile.js',
-                array('jquery'),
+                ['jquery', 'athlete-form-handler'],
                 '1.0.0',
                 true
             );

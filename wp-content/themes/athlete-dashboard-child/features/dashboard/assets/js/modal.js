@@ -2,12 +2,11 @@ jQuery(document).ready(function($) {
     const modal = {
         init: function() {
             this.bindEvents();
-            this.setupAccessibility();
         },
 
         bindEvents: function() {
             // Open modal
-            $(document).on('click', '[data-modal-target]', this.openModal.bind(this));
+            $(document).on('click', '.dashboard-card.modal-trigger', this.openModal.bind(this));
 
             // Close modal
             $(document).on('click', '.modal-close', this.closeModal.bind(this));
@@ -31,33 +30,10 @@ jQuery(document).ready(function($) {
             }.bind(this));
         },
 
-        setupAccessibility: function() {
-            // Trap focus within modal when open
-            $(document).on('keydown', '.dashboard-modal.is-active', function(e) {
-                if (e.key === 'Tab') {
-                    const $modal = $(e.currentTarget);
-                    const $focusable = $modal.find('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-                    const $firstFocusable = $focusable.first();
-                    const $lastFocusable = $focusable.last();
-
-                    if (e.shiftKey) {
-                        if (document.activeElement === $firstFocusable[0]) {
-                            e.preventDefault();
-                            $lastFocusable.focus();
-                        }
-                    } else {
-                        if (document.activeElement === $lastFocusable[0]) {
-                            e.preventDefault();
-                            $firstFocusable.focus();
-                        }
-                    }
-                }
-            });
-        },
-
         openModal: function(e) {
             e.preventDefault();
-            const targetId = $(e.currentTarget).data('modal-target');
+            const $trigger = $(e.currentTarget);
+            const targetId = $trigger.data('modal-target');
             const $modal = $(`#${targetId}`);
             
             if ($modal.length) {
@@ -87,8 +63,10 @@ jQuery(document).ready(function($) {
         },
 
         closeModal: function(e) {
-            e.preventDefault();
-            const $modal = $(e.target).closest('.dashboard-modal');
+            if (e) {
+                e.preventDefault();
+            }
+            const $modal = e ? $(e.target).closest('.dashboard-modal') : $('.dashboard-modal.is-active');
             
             if ($modal.length) {
                 $modal.removeClass('is-active');

@@ -1,0 +1,216 @@
+/* Form Variables */
+:root {
+    --form-bg: var(--charcoal-medium, #2d2d2d);
+    --form-border: var(--charcoal-border, rgba(255, 255, 255, 0.1));
+    --form-text: #ffffff;
+    --form-text-muted: rgba(255, 255, 255, 0.7);
+    --form-control-bg: var(--charcoal-dark, #1a1a1a);
+    --form-control-border: var(--charcoal-border, rgba(255, 255, 255, 0.1));
+    --form-control-focus: var(--green-highlight, #ddff0e);
+    --form-error: var(--error-red, #ff5252);
+    --form-success: var(--green-highlight, #ddff0e);
+    --form-spacing: 1.5rem;
+    --form-radius: 8px;
+    --form-transition: all 0.2s ease;
+}
+
+/* Base Form Styles */
+.dynamic-form {
+    background: var(--form-bg);
+    border-radius: var(--form-radius);
+    padding: var(--form-spacing);
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--form-spacing);
+}
+
+/* Form Groups */
+.form-group {
+    margin: 0;
+}
+
+.form-group label {
+    display: block;
+    color: var(--form-text);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group .required {
+    color: var(--form-error);
+    margin-left: 0.25rem;
+}
+
+.form-group .description {
+    font-size: 0.875rem;
+    color: var(--form-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Form Controls */
+.form-control,
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--form-control-border);
+    border-radius: var(--form-radius);
+    background: var(--form-control-bg);
+    color: var(--form-text);
+    font-size: 1rem;
+    transition: var(--form-transition);
+}
+
+.form-control:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--form-control-focus);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
+}
+
+/* Measurement Groups */
+.measurement-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.measurement-group .measurement-value {
+    flex: 1;
+    min-width: 0;
+}
+
+.measurement-group .unit-selector {
+    width: auto;
+    min-width: 70px;
+    padding-right: 2rem;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: var(--form-spacing);
+    padding-top: var(--form-spacing);
+    border-top: 1px solid var(--form-border);
+    text-align: right;
+}
+
+/* Submit Button */
+.submit-button {
+    background: var(--form-control-focus);
+    color: var(--charcoal-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--form-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--form-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+    background: var(--charcoal-light);
+    color: var(--form-text-muted);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading State */
+.button-loader .spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form Messages */
+.form-messages {
+    margin-top: var(--form-spacing);
+}
+
+.success-message,
+.error-message {
+    padding: 1rem;
+    border-radius: var(--form-radius);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.success-message {
+    background: var(--form-control-bg);
+    color: var(--form-success);
+    border: 1px solid var(--form-success);
+}
+
+.error-message {
+    background: var(--form-control-bg);
+    color: var(--form-error);
+    border: 1px solid var(--form-error);
+}
+
+/* Number Input Styling */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Modal Context */
+.form-context-modal {
+    background: transparent;
+    padding: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.5rem;
+    }
+
+    .measurement-group {
+        flex-direction: column;
+    }
+
+    .measurement-group .unit-selector {
+        width: 100%;
+    }
+
+    .form-actions {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .submit-button {
+        width: 100%;
+        justify-content: center;
+    }
+} 

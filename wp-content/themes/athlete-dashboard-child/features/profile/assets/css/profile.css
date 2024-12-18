@@ -204,4 +204,73 @@
         width: 100%;
         justify-content: center;
     }
+}
+
+/* Admin Context Adjustments */
+.profile-form-admin {
+    background: transparent;
+    padding: 0;
+    max-width: none;
+}
+
+/* WordPress Admin Table Styles */
+.form-table .measurement-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    max-width: 25em;
+}
+
+.form-table .measurement-group .measurement-value {
+    flex: 2;
+}
+
+.form-table .measurement-group .unit-selector {
+    flex: 1;
+    max-width: 100px;
+}
+
+.form-table .required {
+    color: #d63638;
+    margin-left: 0.25rem;
+}
+
+/* Ensure proper spacing in admin context */
+.form-table th {
+    padding-top: 1rem;
+}
+
+.form-table td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.form-table .description {
+    font-size: 13px;
+    margin: 4px 0 0;
+    color: #646970;
+    font-style: italic;
+}
+
+/* Responsive admin adjustments */
+@media screen and (max-width: 782px) {
+    .form-table .measurement-group {
+        max-width: 100%;
+    }
+    
+    .form-table td input[type="number"],
+    .form-table td select {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 0.5rem;
+    }
+    
+    .form-table .measurement-group {
+        flex-direction: column;
+    }
+    
+    .form-table .measurement-group .unit-selector {
+        max-width: none;
+    }
 } 
