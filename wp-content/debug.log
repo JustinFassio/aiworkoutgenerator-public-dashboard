@@ -9251,3 +9251,2127 @@ Stack trace:
 )
 
 [18-Dec-2024 21:44:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[19-Dec-2024 03:54:53 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:54:53 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:54:53 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch Pain\",\"type\":\"custom\",\"label\":\"Arch Pain\"},{\"value\":\"knee\",\"type\":\"predefined\",\"label\":\"Knee Pain or Injuries\"},{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"},{\"value\":\"wrist_elbow\",\"type\":\"predefined\",\"label\":\"Wrist or Elbow Pain\"}]
+    [injuries_other] => LOWER BACK PAIN OR INJURIES: Sharp pinching between disks ARCH PAIN: I have plantar fasciitis that hurts when squatting. KNEE PAIN OR INJURIES: [Add description here] SHOULDER PAIN OR INJURIES: [Add description here] WRIST OR ELBOW PAIN: [Add description here]
+)
+
+[19-Dec-2024 03:54:53 UTC] Saving tag input value: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:54:53 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:54:53 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:54:53 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => Array
+                (
+                    [value] => lower_back
+                    [type] => predefined
+                    [label] => Lower Back Pain or Injuries
+                )
+
+            [1] => Array
+                (
+                    [value] => Arch Pain
+                    [type] => custom
+                    [label] => Arch Pain
+                )
+
+            [2] => Array
+                (
+                    [value] => knee
+                    [type] => predefined
+                    [label] => Knee Pain or Injuries
+                )
+
+            [3] => Array
+                (
+                    [value] => shoulder
+                    [type] => predefined
+                    [label] => Shoulder Pain or Injuries
+                )
+
+            [4] => Array
+                (
+                    [value] => wrist_elbow
+                    [type] => predefined
+                    [label] => Wrist or Elbow Pain
+                )
+
+        )
+
+    [injuries_other] => LOWER BACK PAIN OR INJURIES: Sharp pinching between disks ARCH PAIN: I have plantar fasciitis that hurts when squatting. KNEE PAIN OR INJURIES: [Add description here] SHOULDER PAIN OR INJURIES: [Add description here] WRIST OR ELBOW PAIN: [Add description here]
+)
+
+[19-Dec-2024 03:54:53 UTC] Raw meta value for injuries: 
+[19-Dec-2024 03:54:53 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 03:54:54 UTC] Automatic updates starting...
+[19-Dec-2024 03:54:55 UTC]   Automatic plugin updates starting...
+[19-Dec-2024 03:54:55 UTC]   Automatic plugin updates complete.
+[19-Dec-2024 03:54:55 UTC] Automatic updates complete.
+[19-Dec-2024 03:54:58 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:54:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:55:02 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:55:02 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:55:02 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:55:02 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:56:03 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:56:03 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:57:03 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:57:03 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:57:36 UTC] Raw meta value for injuries: [{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Pain","type":"custom","label":"Arch Pain"},{"value":"knee","type":"predefined","label":"Knee Pain or Injuries"},{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[19-Dec-2024 03:57:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => Arch Pain
+            [type] => custom
+            [label] => Arch Pain
+        )
+
+    [2] => Array
+        (
+            [value] => knee
+            [type] => predefined
+            [label] => Knee Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [4] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[19-Dec-2024 03:57:36 UTC] Profile Update Data: Array
+(
+    [profile-form_nonce] => 0863a4143d
+    [_wp_http_referer] => /dashboard/
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => [{\"value\":\"shoulder\",\"type\":\"predefined\",\"label\":\"Shoulder Pain or Injuries\"},{\"value\":\"wrist_elbow\",\"type\":\"predefined\",\"label\":\"Wrist or Elbow Pain\"},{\"value\":\"lower_back\",\"type\":\"predefined\",\"label\":\"Lower Back Pain or Injuries\"},{\"value\":\"Arch Support\",\"type\":\"custom\",\"label\":\"Arch Support\"}]
+    [injuries_other] => SHOULDER PAIN OR INJURIES: Hurts sharply when I raise it to the side. WRIST OR ELBOW PAIN: [Add description here] LOWER BACK PAIN OR INJURIES: [Add description here] ARCH SUPPORT: Plantar faciitis
+)
+
+[19-Dec-2024 03:57:36 UTC] Saving tag input value: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 03:57:36 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 03:57:36 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 03:57:36 UTC] Updated Profile Data: Array
+(
+    [age] => 48
+    [gender] => male
+    [height] => 70
+    [height_unit] => imperial
+    [weight] => 195
+    [weight_unit] => imperial
+    [injuries] => Array
+        (
+            [0] => Array
+                (
+                    [value] => shoulder
+                    [type] => predefined
+                    [label] => Shoulder Pain or Injuries
+                )
+
+            [1] => Array
+                (
+                    [value] => wrist_elbow
+                    [type] => predefined
+                    [label] => Wrist or Elbow Pain
+                )
+
+            [2] => Array
+                (
+                    [value] => lower_back
+                    [type] => predefined
+                    [label] => Lower Back Pain or Injuries
+                )
+
+            [3] => Array
+                (
+                    [value] => Arch Support
+                    [type] => custom
+                    [label] => Arch Support
+                )
+
+        )
+
+    [injuries_other] => SHOULDER PAIN OR INJURIES: Hurts sharply when I raise it to the side. WRIST OR ELBOW PAIN: [Add description here] LOWER BACK PAIN OR INJURIES: [Add description here] ARCH SUPPORT: Plantar faciitis
+)
+
+[19-Dec-2024 03:57:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 03:57:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 03:57:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 03:57:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 03:58:48 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 03:58:48 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 04:00:48 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 04:00:48 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 04:01:48 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 04:01:48 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 04:03:49 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 04:03:49 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 04:03:49 UTC] Raw meta value for injuries: 
+[19-Dec-2024 04:03:49 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 04:05:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 04:05:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 04:07:51 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 04:07:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 04:09:52 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 04:09:52 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:21:35 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:21:35 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:21:35 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:21:35 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:21:35 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:21:35 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:21:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[19-Dec-2024 14:21:35 UTC] Automatic updates starting...
+[19-Dec-2024 14:21:36 UTC]   Automatic plugin updates starting...
+[19-Dec-2024 14:21:36 UTC]   Automatic plugin updates complete.
+[19-Dec-2024 14:21:36 UTC] Automatic updates complete.
+[19-Dec-2024 14:21:59 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:21:59 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:22:00 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:22:00 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:22:14 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:22:14 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:22:14 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:22:14 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:23:32 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:32 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:32 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:32 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:46 UTC] Raw meta value for injuries: 
+[19-Dec-2024 14:23:46 UTC] Processed value for injuries: Array
+(
+)
+
+[19-Dec-2024 14:23:46 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:46 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:46 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:46 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:51 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:51 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:59 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:59 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:59 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:23:59 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:23:59 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[19-Dec-2024 14:24:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:40 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:40 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:40 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:40 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:43 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:43 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:43 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[19-Dec-2024 14:24:48 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:48 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:52 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:52 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:24:52 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:24:52 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:25:54 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:25:54 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:27:55 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:27:55 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:29:56 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:29:56 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:31:57 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:31:57 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:33:58 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:33:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:34:59 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:34:59 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:37:00 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:37:00 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:39:00 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:39:00 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:40:06 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:40:06 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:41:06 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:41:06 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:43:07 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:43:07 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:44:08 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:44:08 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:46:09 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:46:09 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:48:10 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:48:10 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:50:11 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:50:11 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:52:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:52:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
+[19-Dec-2024 14:54:13 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"}]
+[19-Dec-2024 14:54:13 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+    [2] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [3] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+)
+
