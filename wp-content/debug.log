@@ -22746,3 +22746,5461 @@ Stack trace:
 
 )
 
+[20-Dec-2024 14:58:06 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 14:58:06 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:00:07 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:00:07 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:02:08 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:02:08 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:03:09 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:03:09 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:03:09 UTC] Raw meta value for injuries: 
+[20-Dec-2024 15:03:09 UTC] Processed value for injuries: Array
+(
+)
+
+[20-Dec-2024 15:05:10 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:05:10 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:07:11 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:07:11 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:09:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:09:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:10:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:10:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:10:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:10:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:10:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:10:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:10:38 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:10:38 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:10:38 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:10:39 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:10:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:11:13 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:11:13 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:17:23 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:17:23 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:17:23 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:17:23 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:17:23 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:17:23 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:17:23 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:17:23 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:17:23 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:17:23 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:17:23 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:24:24 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:24:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:24:24 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:24:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:24:24 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:24:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:24:24 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:24:24 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:24:24 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:24:25 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:24:25 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:31:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for goals: 
+[20-Dec-2024 15:31:12 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:31:12 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:31:12 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:31:12 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:31:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for goals: 
+[20-Dec-2024 15:31:12 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:31:12 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:31:12 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:31:12 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:31:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for goals: 
+[20-Dec-2024 15:31:12 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:31:12 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:31:12 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:31:12 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:31:12 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:31:12 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:31:12 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:31:12 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for goals: 
+[20-Dec-2024 15:31:12 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:31:12 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:31:12 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:31:12 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:31:12 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:32:32 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for goals: 
+[20-Dec-2024 15:32:32 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:32:32 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:32:32 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:32:32 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Saving tag input value: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:32:32 UTC] Saving tag input value: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Saving multi-select value: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Saving multi-select value: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:32:32 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:32:32 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:32:32 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:32:32 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:32:32 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:32:35 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:32:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:32:35 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:32:35 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:32:35 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:32:35 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:32:35 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:32:35 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:32:35 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:32:35 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:32:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:32:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:32:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:32:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:32:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:32:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:32:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:32:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:32:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:32:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:32:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:33:39 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:33:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:33:39 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:33:39 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:33:39 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:33:39 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:33:39 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:33:39 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:33:39 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:33:39 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:35:40 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:35:40 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:35:40 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:35:40 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:35:40 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:35:40 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:35:40 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:35:40 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:35:40 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:35:40 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:37:33 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:37:33 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:37:33 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:37:33 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:37:33 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:37:33 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:37:33 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:37:33 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:37:33 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:37:33 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:37:33 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:37:33 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:37:33 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:37:33 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:37:33 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:37:33 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:37:33 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:37:41 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:37:41 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:37:41 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:37:41 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:37:41 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:37:41 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:37:41 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:37:41 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:37:41 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:37:41 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:39:42 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:39:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:39:42 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:39:42 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:39:42 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:39:42 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:39:42 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:39:42 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:39:42 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:39:42 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:41:21 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:41:21 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:41:21 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:41:21 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:41:21 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:41:21 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:41:21 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:41:21 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:41:21 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:41:21 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:41:43 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:41:43 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:41:43 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:41:43 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:41:43 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:41:43 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:41:43 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:41:43 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:41:43 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:41:43 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:43:14 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:43:14 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:43:14 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:43:14 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:43:14 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:43:14 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:43:14 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:43:14 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:43:14 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:43:14 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:43:14 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:43:14 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:43:14 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:43:14 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:43:14 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:43:14 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:43:14 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:43:44 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:43:44 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:43:44 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:43:44 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:43:44 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:43:44 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:43:44 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:43:44 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:43:44 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:43:44 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:45:34 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:45:34 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:45:34 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:45:34 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:45:34 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:45:34 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:45:34 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:45:34 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:45:34 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:45:34 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:45:37 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:45:37 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:45:37 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:45:37 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:45:37 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:45:37 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:45:37 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:45:37 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:45:37 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:45:37 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:45:37 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:46:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:46:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:46:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:46:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:46:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:46:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:46:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:46:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:46:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:46:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:48:39 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:48:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:48:39 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:48:39 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:48:39 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:48:39 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:48:39 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:48:39 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:48:39 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:48:39 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:50:40 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:50:40 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:50:40 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:50:40 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:50:40 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:50:40 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:50:40 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:50:40 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:50:40 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:50:40 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:20 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:20 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:20 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:20 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:20 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:20 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:20 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:20 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:20 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:20 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:20 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:20 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:20 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:51:20 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:51:20 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:51:21 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:21 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:21 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:21 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:21 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:21 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:21 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:21 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:21 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:21 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:47 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:47 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:47 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:47 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:47 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:47 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:47 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:47 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:47 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:47 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:47 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:47 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:47 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:51:47 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:51:47 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:51:47 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:51:48 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:51:48 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:51:48 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:51:48 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:51:48 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:51:48 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:51:48 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:51:48 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:51:48 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:51:48 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:52:41 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:52:41 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:52:41 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:52:41 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:52:41 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:52:41 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:52:41 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:52:41 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:52:41 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:52:41 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:54:42 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:54:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:54:42 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:54:42 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:54:42 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:54:42 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:54:42 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:54:42 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:54:42 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:54:42 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:59:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:59:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:59:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:59:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:59:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:59:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:59:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:59:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:59:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:59:38 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 15:59:38 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 15:59:38 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 15:59:38 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 15:59:38 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for barriers: 
+[20-Dec-2024 15:59:38 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 15:59:38 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 15:59:38 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 16:00:01 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for barriers: 
+[20-Dec-2024 16:00:01 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 16:00:01 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 16:00:01 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for barriers: 
+[20-Dec-2024 16:00:01 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 16:00:01 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 16:00:01 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for barriers: 
+[20-Dec-2024 16:00:01 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 16:00:01 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 16:00:01 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 16:00:01 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 16:00:01 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 16:00:01 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 16:00:01 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for barriers: 
+[20-Dec-2024 16:00:01 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 16:00:01 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 16:00:01 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:17:02 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:17:02 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:17:02 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:17:02 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:17:02 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:17:02 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:17:02 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:17:02 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:17:02 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:17:02 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:17:03 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:17:03 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:17:03 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:17:03 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:17:03 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:17:03 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:17:03 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:17:03 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:17:03 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:17:03 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:17:03 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:17:03 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 17:17:03 UTC] Raw meta value for injuries: 
+[20-Dec-2024 17:17:03 UTC] Processed value for injuries: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for goals: 
+[20-Dec-2024 17:17:03 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:17:03 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:17:03 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:17:03 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:17:03 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:17:04 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:17:04 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:17:04 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:17:04 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:17:04 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:17:04 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:17:04 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:17:04 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:17:04 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:17:04 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:03 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:03 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:03 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:03 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:03 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:03 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:03 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:03 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:03 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:03 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:34 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:34 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:34 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:34 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:34 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:34 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:34 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:34 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:34 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:34 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:34 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:35 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:35 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:35 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:35 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:35 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:35 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:35 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:35 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:35 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:50 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:50 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:50 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:50 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:50 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:50 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:50 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:50 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:50 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:56 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:56 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:56 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:56 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:56 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:56 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:56 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:56 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:56 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:18:56 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:18:56 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 17:18:56 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:18:56 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:18:56 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:18:56 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:18:56 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:18:56 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:20:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:20:22 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:20:22 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:20:22 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:20:22 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:20:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:20:22 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:20:22 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:20:22 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:20:22 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:20:22 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:20:22 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:20:22 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:20:22 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:20:22 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:20:22 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:20:22 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:20:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 17:20:23 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:20:23 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:20:23 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:20:23 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:20:23 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:20:23 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:20:23 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:20:23 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:20:23 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:20:23 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:20 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:20 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:20 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:20 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:20 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:20 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:20 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:20 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:20 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:20 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:20 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:20 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:20 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:20 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:22:20 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:22:20 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 17:22:21 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:21 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:21 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:21 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:21 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:21 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:21 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:21 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:21 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:21 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:50 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:50 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:50 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:50 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:50 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:50 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:50 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:50 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:50 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:22:50 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 17:22:50 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 17:22:50 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 17:22:50 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 17:22:50 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for barriers: 
+[20-Dec-2024 17:22:50 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 17:22:50 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 17:22:50 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 19:41:18 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for barriers: 
+[20-Dec-2024 19:41:18 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 19:41:18 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 19:41:18 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for barriers: 
+[20-Dec-2024 19:41:18 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 19:41:18 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 19:41:18 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for barriers: 
+[20-Dec-2024 19:41:18 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 19:41:18 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 19:41:18 UTC] PHP Warning:  Array to string conversion in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/formatting.php on line 1096
+[20-Dec-2024 19:41:18 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[20-Dec-2024 19:41:18 UTC] Raw meta value for injuries: 
+[20-Dec-2024 19:41:18 UTC] Processed value for injuries: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for goals: 
+[20-Dec-2024 19:41:18 UTC] Processed value for goals: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 19:41:18 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for barriers: 
+[20-Dec-2024 19:41:18 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 19:41:18 UTC] Processed value for support_needs: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for injuries: [{"value":"shoulder","type":"predefined","label":"Shoulder Pain or Injuries"},{"value":"lower_back","type":"predefined","label":"Lower Back Pain or Injuries"},{"value":"Arch Support","type":"custom","label":"Arch Support"},{"value":"wrist_elbow","type":"predefined","label":"Wrist or Elbow Pain"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => shoulder
+            [type] => predefined
+            [label] => Shoulder Pain or Injuries
+        )
+
+    [1] => Array
+        (
+            [value] => lower_back
+            [type] => predefined
+            [label] => Lower Back Pain or Injuries
+        )
+
+    [2] => Array
+        (
+            [value] => Arch Support
+            [type] => custom
+            [label] => Arch Support
+        )
+
+    [3] => Array
+        (
+            [value] => wrist_elbow
+            [type] => predefined
+            [label] => Wrist or Elbow Pain
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for goals: [{"value":"strength","type":"predefined","label":"Increase Overall Strength"}]
+[20-Dec-2024 19:41:18 UTC] Processed value for goals: Array
+(
+    [0] => Array
+        (
+            [value] => strength
+            [type] => predefined
+            [label] => Increase Overall Strength
+        )
+
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for current_activities: 
+[20-Dec-2024 19:41:18 UTC] Processed value for current_activities: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for barriers: 
+[20-Dec-2024 19:41:18 UTC] Processed value for barriers: Array
+(
+)
+
+[20-Dec-2024 19:41:18 UTC] Raw meta value for support_needs: 
+[20-Dec-2024 19:41:18 UTC] Processed value for support_needs: Array
+(
+)
+
