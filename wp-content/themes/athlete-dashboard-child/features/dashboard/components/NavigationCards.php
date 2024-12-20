@@ -13,6 +13,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once get_stylesheet_directory() . '/features/dashboard/models/NavigationCard.php';
+
 class NavigationCards {
     private array $cards = [];
 
@@ -27,6 +29,15 @@ class NavigationCards {
             'title' => __('Profile', 'athlete-dashboard-child'),
             'icon' => 'dashicons-admin-users',
             'modal_target' => 'profile-modal',
+            'is_modal' => true
+        ]));
+
+        // Register Training Persona card
+        $this->addCard(new NavigationCard([
+            'id' => 'training-persona',
+            'title' => __('Training Persona', 'athlete-dashboard-child'),
+            'icon' => 'dashicons-performance',
+            'modal_target' => 'training-persona-modal',
             'is_modal' => true
         ]));
 

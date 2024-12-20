@@ -1,0 +1,321 @@
+/* Color Variables */
+:root {
+    --green-highlight: #ddff0e;
+    --charcoal-dark: #1a1a1a;
+    --charcoal-medium: #2d2d2d;
+    --charcoal-light: #3d3d3d;
+    --charcoal-border: rgba(255, 255, 255, 0.1);
+    --error-red: #ff5252;
+}
+
+/* Training Persona Form */
+.training-persona-form {
+    background: var(--charcoal-medium);
+    border-radius: 8px;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group .required {
+    color: var(--error-red);
+    margin-left: 0.25rem;
+}
+
+/* Form Controls */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--charcoal-border);
+    border-radius: 4px;
+    background: var(--charcoal-dark);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+/* Textarea Specific */
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
+}
+
+/* Focus States */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
+}
+
+/* Description Text */
+.description {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+}
+
+/* Character Counter */
+.form-group {
+    position: relative;
+}
+
+.form-group .char-counter {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--charcoal-border);
+    text-align: right;
+}
+
+.submit-button {
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-button:hover {
+    background: #c5e60c;
+    transform: translateY(-1px);
+}
+
+/* Modal Context Adjustments */
+.training-persona-form[data-form-context="modal"] {
+    background: transparent;
+    padding: 0;
+}
+
+.modal-body .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.modal-body .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+    background-color: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
+    border-radius: 6px;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.modal-body input:hover,
+.modal-body select:hover,
+.modal-body textarea:hover {
+    background-color: #333333;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-body input:focus,
+.modal-body select:focus,
+.modal-body textarea:focus {
+    background-color: #383838;
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.1);
+}
+
+/* Select Styling */
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-actions {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .submit-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Form Messages */
+.form-messages {
+    margin-top: 1rem;
+}
+
+.success-message,
+.error-message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.success-message {
+    background: var(--charcoal-dark);
+    color: var(--green-highlight);
+    border: 1px solid var(--green-highlight);
+}
+
+.error-message {
+    background: var(--charcoal-dark);
+    color: var(--error-red);
+    border: 1px solid var(--error-red);
+}
+
+/* Goals Section */
+.form-group[data-field="goals"],
+.form-group[data-field="goals_detail"] {
+    grid-column: 1 / -1;
+    order: 1;
+}
+
+.form-group[data-field="goals"] {
+    order: 1;
+}
+
+.form-group[data-field="goals_detail"] {
+    order: 2;
+}
+
+.form-group[data-field="goals"] select,
+.form-group[data-field="goals_detail"] textarea {
+    width: 100%;
+    max-width: none;
+}
+
+/* Goals Description Textarea Styling */
+.form-group[data-field="goals_detail"] textarea {
+    font-family: monospace;
+    line-height: 1.6;
+    padding: 1rem;
+    white-space: pre-wrap;
+    min-height: 200px;
+}
+
+/* Admin View Goals Description Styling */
+.training-persona-value.textarea {
+    font-family: monospace;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.training-persona-value.textarea strong {
+    color: var(--green-highlight);
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Character Counter */
+.form-group[data-field="goals_detail"] {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.form-group[data-field="goals_detail"] .char-counter {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary, rgba(255, 255, 255, 0.7));
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .form-group[data-field="goals"],
+    .form-group[data-field="goals_detail"] {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Admin View Styling */
+.training-persona-value {
+    background: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 0.75rem;
+    min-height: 80px;
+}
+
+.training-persona-value.empty {
+    color: #646970;
+    font-style: italic;
+}
+
+.training-persona-value.multi-value {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.training-persona-value .tag-item {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+} 

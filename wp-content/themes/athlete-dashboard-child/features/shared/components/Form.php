@@ -127,18 +127,20 @@ class Form {
 
     private function renderTagInput(string $field, array $config, $value): void {
         $values = is_array($value) ? $value : [];
+        $placeholder = strpos($field, 'goal') !== false ? 'Type or select goals...' : 'Type or select injuries...';
+        $aria_label = strpos($field, 'goal') !== false ? 'Add or select goals' : 'Add or select injuries';
         ?>
         <div class="tag-input-container">
             <div class="tag-input-wrapper">
                 <div class="tag-list"></div>
                 <input type="text" 
                        class="tag-input" 
-                       placeholder="Type or select injuries..."
+                       placeholder="<?php echo esc_attr($placeholder); ?>"
                        autocomplete="off"
-                       aria-label="Add or select injuries">
+                       aria-label="<?php echo esc_attr($aria_label); ?>">
             </div>
             
-            <div class="tag-suggestions" role="listbox" aria-label="Injury suggestions">
+            <div class="tag-suggestions" role="listbox" aria-label="<?php echo esc_attr($aria_label); ?>">
                 <?php foreach ($config['predefined_options'] as $key => $label): ?>
                     <div class="tag-suggestion" 
                          role="option"

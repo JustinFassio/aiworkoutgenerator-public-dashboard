@@ -2,7 +2,7 @@
 /**
  * Navigation Card Model
  * 
- * Defines the structure and validation for dashboard navigation cards.
+ * Defines the structure for dashboard navigation cards.
  */
 
 namespace AthleteDashboard\Features\Dashboard\Models;
@@ -15,52 +15,17 @@ class NavigationCard {
     private string $id;
     private string $title;
     private string $icon;
-    private string $modalTarget;
-    private bool $isModal;
     private ?string $link;
+    private bool $is_modal;
+    private ?string $modal_target;
 
     public function __construct(array $data) {
-        $this->id = $data['id'] ?? '';
-        $this->title = $data['title'] ?? '';
-        $this->icon = $data['icon'] ?? '';
-        $this->modalTarget = $data['modal_target'] ?? '';
-        $this->isModal = $data['is_modal'] ?? true;
+        $this->id = $data['id'];
+        $this->title = $data['title'];
+        $this->icon = $data['icon'];
         $this->link = $data['link'] ?? null;
-
-        $this->validate();
-    }
-
-    private function validate(): void {
-        if (empty($this->id)) {
-            throw new \InvalidArgumentException('Card ID is required');
-        }
-
-        if (empty($this->title)) {
-            throw new \InvalidArgumentException('Card title is required');
-        }
-
-        if (empty($this->icon)) {
-            throw new \InvalidArgumentException('Card icon is required');
-        }
-
-        if ($this->isModal && empty($this->modalTarget)) {
-            throw new \InvalidArgumentException('Modal target is required for modal cards');
-        }
-
-        if (!$this->isModal && empty($this->link)) {
-            throw new \InvalidArgumentException('Link is required for non-modal cards');
-        }
-    }
-
-    public function toArray(): array {
-        return [
-            'id' => $this->id,
-            'title' => $this->title,
-            'icon' => $this->icon,
-            'modal_target' => $this->modalTarget,
-            'is_modal' => $this->isModal,
-            'link' => $this->link,
-        ];
+        $this->is_modal = $data['is_modal'] ?? false;
+        $this->modal_target = $data['modal_target'] ?? null;
     }
 
     public function getId(): string {
@@ -75,15 +40,15 @@ class NavigationCard {
         return $this->icon;
     }
 
-    public function getModalTarget(): string {
-        return $this->modalTarget;
+    public function getLink(): ?string {
+        return $this->link;
     }
 
     public function isModal(): bool {
-        return $this->isModal;
+        return $this->is_modal;
     }
 
-    public function getLink(): ?string {
-        return $this->link;
+    public function getModalTarget(): ?string {
+        return $this->modal_target;
     }
 } 

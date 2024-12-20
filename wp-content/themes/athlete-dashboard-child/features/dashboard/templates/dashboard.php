@@ -8,6 +8,7 @@ use AthleteDashboard\Features\Dashboard\Components\Dashboard;
 use AthleteDashboard\Features\Dashboard\Components\NavigationCards;
 use AthleteDashboard\Features\Dashboard\Components\Modal;
 use AthleteDashboard\Features\Profile\Components\Profile;
+use AthleteDashboard\Features\TrainingPersona\Components\TrainingPersona;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -15,10 +16,12 @@ if (!defined('ABSPATH')) {
 
 require_once get_stylesheet_directory() . '/features/dashboard/index.php';
 require_once get_stylesheet_directory() . '/features/profile/index.php';
+require_once get_stylesheet_directory() . '/features/training-persona/index.php';
 
 $dashboard = new Dashboard();
 $navigation = new NavigationCards();
 $profile = new Profile();
+$training_persona = new TrainingPersona();
 
 get_header();
 ?>
@@ -41,6 +44,17 @@ get_header();
                 }, [
                     'size' => 'medium',
                     'title' => __('Your Profile', 'athlete-dashboard-child'),
+                    'closeOnEscape' => true,
+                    'closeOnBackdropClick' => true,
+                    'showCloseButton' => true
+                ]);
+
+                // Render training persona modal
+                Modal::renderContainer('training-persona-modal', function() use ($training_persona) {
+                    $training_persona->render_form();
+                }, [
+                    'size' => 'medium',
+                    'title' => __('Training Persona', 'athlete-dashboard-child'),
                     'closeOnEscape' => true,
                     'closeOnBackdropClick' => true,
                     'showCloseButton' => true

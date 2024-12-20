@@ -10,6 +10,7 @@ if (!defined('ABSPATH')) {
 // Load features
 require_once get_stylesheet_directory() . '/features/dashboard/index.php';
 require_once get_stylesheet_directory() . '/features/profile/index.php';
+require_once get_stylesheet_directory() . '/features/training-persona/index.php';
 
 /**
  * Theme Setup
@@ -68,6 +69,14 @@ function athlete_dashboard_enqueue_assets() {
             wp_get_theme()->get('Version')
         );
 
+        // Training Persona styles
+        wp_enqueue_style(
+            'athlete-training-persona',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/css/training-persona.css',
+            array('athlete-dashboard-style'),
+            wp_get_theme()->get('Version')
+        );
+
         // Profile scripts
         wp_enqueue_script(
             'athlete-profile',
@@ -77,10 +86,24 @@ function athlete_dashboard_enqueue_assets() {
             true
         );
 
+        // Training Persona scripts
+        wp_enqueue_script(
+            'athlete-training-persona',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
+            array('jquery'),
+            wp_get_theme()->get('Version'),
+            true
+        );
+
         // Localize scripts
         wp_localize_script('athlete-profile', 'athleteDashboard', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('profile_nonce')
+        ));
+
+        wp_localize_script('athlete-training-persona', 'trainingPersona', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('training_persona_nonce')
         ));
     }
 }
