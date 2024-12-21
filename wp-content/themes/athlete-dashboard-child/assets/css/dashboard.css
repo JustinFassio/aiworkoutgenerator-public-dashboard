@@ -2,10 +2,24 @@
  * Dashboard Styles
  */
 
+:root {
+    --green-highlight: #ddff0e;
+    --charcoal-dark: #1a1a1a;
+    --charcoal-medium: #2d2d2d;
+    --charcoal-light: #3d3d3d;
+    --charcoal-border: rgba(255, 255, 255, 0.1);
+    --error-red: #ff5252;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
 .dashboard-container {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background: var(--charcoal-dark);
+    min-height: 100vh;
+    color: var(--text-primary);
 }
 
 .dashboard-welcome {
@@ -16,6 +30,12 @@
 .dashboard-welcome h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.dashboard-welcome p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
 }
 
 /* Navigation Cards */
@@ -27,25 +47,27 @@
 }
 
 .nav-card {
-    background: #fff;
+    background: var(--charcoal-medium);
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    border: 1px solid var(--charcoal-border);
 }
 
 .nav-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: var(--green-highlight);
 }
 
 .card-icon {
     font-size: 2rem;
-    color: #2ea3f2;
+    color: var(--green-highlight);
 }
 
 .card-icon .dashicons {
@@ -61,12 +83,12 @@
 .card-content h3 {
     margin: 0 0 0.5rem;
     font-size: 1.25rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .card-content p {
     margin: 0;
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -92,8 +114,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1001;
+    backdrop-filter: blur(4px);
 }
 
 .modal-container {
@@ -101,13 +124,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--charcoal-medium);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     z-index: 1002;
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
+    border: 1px solid var(--charcoal-border);
 }
 
 .modal-container[data-size="small"] {
@@ -124,47 +148,129 @@
 
 .modal-header {
     padding: 1.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--charcoal-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--charcoal-dark);
 }
 
 .modal-header h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .close-modal {
     background: none;
     border: none;
-    padding: 0;
+    padding: 0.5rem;
     cursor: pointer;
-    color: #666;
-    transition: color 0.2s ease;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-modal:hover {
-    color: #333;
+    color: var(--text-primary);
+    background: var(--charcoal-light);
 }
 
 .modal-body {
+    padding: 0;
+    background: var(--charcoal-medium);
+    color: var(--text-primary);
+}
+
+/* Form Styles */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     padding: 1.5rem;
-    background: var(--charcoal-medium, #2d2d2d);
-    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.form-group label .required {
+    color: var(--error-red);
+    margin-left: 0.25rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--charcoal-border);
+    border-radius: 6px;
+    background: var(--charcoal-dark);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
+}
+
+.form-group .description {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Form Actions */
+.form-actions {
+    padding: 1.5rem;
+    background: var(--charcoal-dark);
+    border-top: 1px solid var(--charcoal-border);
+    text-align: right;
+}
+
+.submit-button {
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(221, 255, 14, 0.2);
 }
 
 /* Animation classes */
 .modal-container {
     opacity: 0;
     transform: translate(-50%, -48%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-backdrop {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dashboard-modal.is-active .modal-container {
@@ -193,25 +299,36 @@
     .modal-container {
         width: 95%;
     }
-} 
 
-/* Profile Modal Specific Styles */
-#profile-modal .modal-body {
-    padding: 0;
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
-#profile-modal .profile-form {
-    margin: 0;
-    border-radius: 0 0 8px 8px;
+/* Custom Form Elements */
+.measurement-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
 }
 
-#profile-modal .form-grid {
-    padding: 1.5rem;
+.measurement-group input,
+.measurement-group select {
+    background: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
+    color: var(--text-primary);
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
 }
 
-#profile-modal .form-actions {
-    padding: 1rem 1.5rem;
-    margin-top: 0;
-    background: var(--charcoal-dark, #1a1a1a);
-    border-radius: 0 0 8px 8px;
+.measurement-group select {
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
 } 

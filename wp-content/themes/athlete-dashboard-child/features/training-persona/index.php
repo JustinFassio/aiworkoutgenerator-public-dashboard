@@ -35,6 +35,9 @@ class TrainingPersonaFeature {
         add_action('wp_ajax_export_training_persona', [self::getInstance(), 'handle_export_request']);
         add_action('wp_ajax_track_goal_progress', [self::class, 'handle_goal_progress']);
         add_action('wp_ajax_get_goal_progress', [self::class, 'handle_get_progress']);
+
+        // Add form render action
+        add_action('athlete_dashboard_training_persona_form', [self::getInstance(), 'render_form']);
     }
 
     public static function admin_setup(): void {

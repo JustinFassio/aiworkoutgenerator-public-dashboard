@@ -121,6 +121,15 @@ function athlete_dashboard_enqueue_assets() {
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('training_persona_nonce')
         ));
+
+        // Enqueue Profile feature assets
+        wp_enqueue_style('athlete-profile');
+        wp_enqueue_script('athlete-profile');
+
+        // Enqueue Training Persona feature assets
+        wp_enqueue_style('athlete-training-persona');
+        wp_enqueue_script('athlete-training-persona-form-handler');
+        wp_enqueue_script('athlete-training-persona');
     }
 }
 add_action('wp_enqueue_scripts', 'athlete_dashboard_enqueue_assets');
