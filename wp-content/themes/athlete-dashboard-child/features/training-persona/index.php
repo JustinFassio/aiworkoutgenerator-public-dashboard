@@ -80,29 +80,47 @@ class TrainingPersonaFeature {
     }
 
     public static function enqueue_assets(): void {
+        if (!is_page_template('features/dashboard/templates/dashboard.php')) {
+            return;
+        }
+
         $version = '1.0.0';
         
-        // Register and enqueue CSS
+        // Enqueue shared styles
+        wp_enqueue_style('athlete-shared-forms');
+        
+        // Register and enqueue feature styles
         wp_register_style(
-            'training-persona-styles',
+            'athlete-training-persona',
             get_stylesheet_directory_uri() . '/features/training-persona/assets/css/training-persona.css',
-            [],
+            ['athlete-shared-forms'],
             $version
         );
-        wp_enqueue_style('training-persona-styles');
+        wp_enqueue_style('athlete-training-persona');
 
-        // Register and enqueue JavaScript
+        // Register form handler first
         wp_register_script(
-            'training-persona-scripts',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
-            ['jquery', 'form-handler', 'tag-input'],
+            'athlete-training-persona-form-handler',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/form-handler.js',
+            ['jquery'],
             $version,
             true
         );
 
-        wp_localize_script('training-persona-scripts', 'trainingPersonaData', [
+        // Register main script with dependency on form handler
+        wp_register_script(
+            'athlete-training-persona',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
+            ['jquery', 'athlete-training-persona-form-handler'],
+            $version,
+            true
+        );
+
+        // Localize script data
+        wp_localize_script('athlete-training-persona', 'trainingPersonaData', [
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('training_persona_nonce'),
+            'user_id' => get_current_user_id(),
             'i18n' => [
                 'exportSuccess' => __('Data exported successfully', 'athlete-dashboard-child'),
                 'exportError' => __('Failed to export data', 'athlete-dashboard-child'),
@@ -111,7 +129,9 @@ class TrainingPersonaFeature {
             ]
         ]);
 
-        wp_enqueue_script('training-persona-scripts');
+        // Enqueue scripts in correct order
+        wp_enqueue_script('athlete-training-persona-form-handler');
+        wp_enqueue_script('athlete-training-persona');
     }
 
     public static function getInstance(): TrainingPersona {
@@ -124,35 +144,3 @@ class TrainingPersonaFeature {
 
 // Initialize the feature
 TrainingPersonaFeature::init(); 
-
-// Register frontend assets
-add_action('wp_enqueue_scripts', function() {
-    if (is_page_template('features/dashboard/templates/dashboard.php')) {
-        // Enqueue shared assets
-        wp_enqueue_style('athlete-shared-forms');
-        wp_enqueue_script('athlete-form-handler');
-
-        // Then load training-persona-specific assets
-        wp_enqueue_style(
-            'athlete-training-persona',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/css/training-persona.css',
-            ['athlete-shared-forms'],
-            '1.0.0'
-        );
-
-        wp_enqueue_script(
-            'athlete-training-persona',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
-            ['jquery', 'athlete-form-handler'],
-            '1.0.0',
-            true
-        );
-
-        // Localize script data
-        wp_localize_script('athlete-training-persona', 'trainingPersonaData', array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('training_persona_nonce'),
-            'user_id' => get_current_user_id()
-        ));
-    }
-}); 

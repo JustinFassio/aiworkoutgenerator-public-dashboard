@@ -32,7 +32,15 @@ function init_profile_feature() {
         if (is_page_template('features/dashboard/templates/dashboard.php')) {
             // Enqueue shared assets
             wp_enqueue_style('athlete-shared-forms');
-            wp_enqueue_script('athlete-form-handler');
+
+            // Register profile form handler first
+            wp_register_script(
+                'athlete-profile-form-handler',
+                get_stylesheet_directory_uri() . '/features/profile/assets/js/form-handler.js',
+                ['jquery'],
+                '1.0.0',
+                true
+            );
 
             // Then load profile-specific assets
             wp_enqueue_style(
@@ -42,10 +50,11 @@ function init_profile_feature() {
                 '1.0.0'
             );
 
-            wp_enqueue_script(
+            // Register main profile script with dependency on profile form handler
+            wp_register_script(
                 'athlete-profile',
                 get_stylesheet_directory_uri() . '/features/profile/assets/js/profile.js',
-                ['jquery', 'athlete-form-handler'],
+                ['jquery', 'athlete-profile-form-handler'],
                 '1.0.0',
                 true
             );
@@ -55,6 +64,10 @@ function init_profile_feature() {
                 'nonce' => wp_create_nonce('profile_nonce'),
                 'user_id' => get_current_user_id()
             ));
+
+            // Enqueue scripts in correct order
+            wp_enqueue_script('athlete-profile-form-handler');
+            wp_enqueue_script('athlete-profile');
         }
     });
 }

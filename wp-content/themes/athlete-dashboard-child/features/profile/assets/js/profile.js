@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     // Initialize form handler
-    const profileForm = new FormHandler('profile-form', {
+    const profileForm = new ProfileFormHandler('profile-form', {
         endpoint: profileData.ajaxurl,
         additionalData: {
             action: 'update_profile',

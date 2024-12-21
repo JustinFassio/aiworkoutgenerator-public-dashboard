@@ -1,3 +1,7 @@
+/**
+ * Dashboard JavaScript
+ */
+
 jQuery(document).ready(function($) {
     const modal = {
         init: function() {
@@ -6,10 +10,10 @@ jQuery(document).ready(function($) {
 
         bindEvents: function() {
             // Open modal
-            $(document).on('click', '.dashboard-card.modal-trigger', this.openModal.bind(this));
+            $(document).on('click', '.nav-card[data-action="openModal"]', this.openModal.bind(this));
 
             // Close modal
-            $(document).on('click', '.modal-close', this.closeModal.bind(this));
+            $(document).on('click', '.close-modal', this.closeModal.bind(this));
             $(document).on('click', '.modal-backdrop', function(e) {
                 if ($(e.target).hasClass('modal-backdrop')) {
                     const $modal = $(e.target).closest('.dashboard-modal');
@@ -33,7 +37,7 @@ jQuery(document).ready(function($) {
         openModal: function(e) {
             e.preventDefault();
             const $trigger = $(e.currentTarget);
-            const targetId = $trigger.data('modal-target');
+            const targetId = $trigger.data('target');
             const $modal = $(`#${targetId}`);
             
             if ($modal.length) {

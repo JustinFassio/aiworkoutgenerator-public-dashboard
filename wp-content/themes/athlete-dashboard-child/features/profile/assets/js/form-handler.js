@@ -1,9 +1,9 @@
 /**
- * Form Handler
+ * Form Handler for Profile Feature
  * 
- * A reusable form handler that can be used across features.
+ * A form handler specifically for profile-related forms.
  */
-class FormHandler {
+class ProfileFormHandler {
     constructor(formId, options = {}) {
         this.form = document.getElementById(formId);
         if (!this.form) {
@@ -173,5 +173,5 @@ class FormHandler {
 
 // Export for module usage
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = FormHandler;
+    module.exports = ProfileFormHandler;
 } 

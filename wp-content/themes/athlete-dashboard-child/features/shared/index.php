@@ -20,15 +20,6 @@ function init_shared_components() {
             [],
             '1.0.0'
         );
-
-        // Register shared scripts
-        wp_register_script(
-            'athlete-form-handler',
-            get_stylesheet_directory_uri() . '/features/shared/assets/js/form-handler.js',
-            ['jquery'],
-            '1.0.0',
-            true
-        );
     });
 }
 

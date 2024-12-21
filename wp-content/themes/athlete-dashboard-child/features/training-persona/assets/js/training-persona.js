@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     // Initialize form handler
-    const trainingPersonaForm = new FormHandler('training-persona-form', {
+    const trainingPersonaForm = new TrainingPersonaFormHandler('training-persona-form', {
         endpoint: trainingPersonaData.ajaxurl,
         additionalData: {
             action: 'update_training_persona',
