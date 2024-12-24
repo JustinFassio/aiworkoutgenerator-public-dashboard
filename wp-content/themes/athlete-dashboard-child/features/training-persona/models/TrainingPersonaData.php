@@ -195,7 +195,7 @@ class TrainingPersonaData {
                 'description' => 'Describe your typical sleep pattern (hours and quality)'
             ],
             'barriers' => [
-                'type' => 'multi_select',
+                'type' => 'select',
                 'label' => 'Training Barriers',
                 'options' => [
                     'time_constraints' => 'Time Constraints',
@@ -208,10 +208,10 @@ class TrainingPersonaData {
                     'recovery_time' => 'Recovery Time'
                 ],
                 'required' => false,
-                'description' => 'Select any barriers that may affect your training'
+                'description' => 'Select your primary training barrier'
             ],
             'support_needs' => [
-                'type' => 'multi_select',
+                'type' => 'select',
                 'label' => 'Support Needed',
                 'options' => [
                     'flexible_scheduling' => 'Flexible Scheduling',
@@ -222,7 +222,7 @@ class TrainingPersonaData {
                     'technique_guidance' => 'Technique Guidance'
                 ],
                 'required' => false,
-                'description' => 'Select the types of support that would help you'
+                'description' => 'Select your primary support need'
             ],
             'schedule_availability' => [
                 'type' => 'schedule_grid',

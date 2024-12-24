@@ -96,11 +96,20 @@ function athlete_dashboard_enqueue_assets() {
             true
         );
 
+        // Training Persona form handler
+        wp_enqueue_script(
+            'athlete-training-persona-form-handler',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/form-handler.js',
+            array('jquery'),
+            wp_get_theme()->get('Version'),
+            true
+        );
+
         // Training Persona scripts
         wp_enqueue_script(
             'athlete-training-persona',
             get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
-            array('jquery'),
+            array('jquery', 'athlete-training-persona-form-handler'),
             wp_get_theme()->get('Version'),
             true
         );

@@ -1,75 +1,140 @@
 <?php
 /**
- * Profile Feature Initialization
+ * Profile Feature
+ * 
+ * Initializes the profile feature and sets up necessary hooks.
  */
+
+namespace AthleteDashboard\Features\Profile;
 
 use AthleteDashboard\Features\Profile\Components\Profile;
 use AthleteDashboard\Features\Profile\Models\ProfileData;
 use AthleteDashboard\Features\Profile\Services\ProfileService;
+use AthleteDashboard\Features\Profile\Injuries\Components\InjuryTracking;
+use AthleteDashboard\Features\Profile\Injuries\Models\Injury;
+use AthleteDashboard\Features\Profile\Injuries\Services\InjuryService;
 
 if (!defined('ABSPATH')) {
     exit;
 }
-
-// Load shared components first
-require_once get_stylesheet_directory() . '/features/shared/index.php';
 
 // Load dependencies in correct order
 require_once __DIR__ . '/models/ProfileData.php';
 require_once __DIR__ . '/services/ProfileService.php';
 require_once __DIR__ . '/components/Profile.php';
 
-// Initialize the feature
-function init_profile_feature() {
-    $profile = new Profile();
+// Load injury tracking components
+require_once __DIR__ . '/injuries/models/Injury.php';
+require_once __DIR__ . '/injuries/services/InjuryService.php';
+require_once __DIR__ . '/injuries/components/InjuryTracking.php';
 
-    // Add profile fields to WP Admin User Profile
-    add_action('show_user_profile', [$profile, 'render_admin_fields']);
-    add_action('edit_user_profile', [$profile, 'render_admin_fields']);
+class ProfileFeature {
+    private static ?Profile $instance = null;
+    private static ?InjuryTracking $injury_tracking = null;
 
-    // Register frontend assets
-    add_action('wp_enqueue_scripts', function() {
-        if (is_page_template('features/dashboard/templates/dashboard.php')) {
-            // Enqueue shared assets
-            wp_enqueue_style('athlete-shared-forms');
+    public static function init(): void {
+        add_action('init', [self::class, 'setup']);
+        add_action('admin_init', [self::class, 'admin_setup']);
+    }
 
-            // Register profile form handler first
-            wp_register_script(
-                'athlete-profile-form-handler',
-                get_stylesheet_directory_uri() . '/features/profile/assets/js/form-handler.js',
-                ['jquery'],
-                '1.0.0',
-                true
-            );
+    public static function setup(): void {
+        // Initialize components
+        self::$injury_tracking = new InjuryTracking();
 
-            // Then load profile-specific assets
-            wp_enqueue_style(
-                'athlete-profile',
-                get_stylesheet_directory_uri() . '/features/profile/assets/css/profile.css',
-                ['athlete-shared-forms'],
-                '1.0.0'
-            );
+        // Enqueue assets
+        add_action('wp_enqueue_scripts', [self::class, 'enqueue_assets']);
+        
+        // Initialize AJAX handlers
+        add_action('wp_ajax_update_profile', [self::getInstance(), 'handleProfileUpdate']);
+        add_action('wp_ajax_track_injury', [self::$injury_tracking, 'handleAjaxTrackInjury']);
+        add_action('wp_ajax_get_injury_progress', [self::$injury_tracking, 'handleAjaxGetInjuryProgress']);
+        add_action('wp_ajax_delete_injury_progress', [self::$injury_tracking, 'handleAjaxDeleteInjuryProgress']);
 
-            // Register main profile script with dependency on profile form handler
-            wp_register_script(
-                'athlete-profile',
-                get_stylesheet_directory_uri() . '/features/profile/assets/js/profile.js',
-                ['jquery', 'athlete-profile-form-handler'],
-                '1.0.0',
-                true
-            );
+        // Add form render action
+        add_action('athlete_dashboard_profile_form', [self::getInstance(), 'render_form']);
+    }
 
-            wp_localize_script('athlete-profile', 'profileData', array(
-                'ajaxurl' => admin_url('admin-ajax.php'),
-                'nonce' => wp_create_nonce('profile_nonce'),
-                'user_id' => get_current_user_id()
-            ));
+    public static function admin_setup(): void {
+        // Add admin hooks
+        add_action('show_user_profile', [self::getInstance(), 'render_admin_fields']);
+        add_action('edit_user_profile', [self::getInstance(), 'render_admin_fields']);
+    }
 
-            // Enqueue scripts in correct order
-            wp_enqueue_script('athlete-profile-form-handler');
-            wp_enqueue_script('athlete-profile');
+    public static function enqueue_assets(): void {
+        if (!is_page_template('features/dashboard/templates/dashboard.php')) {
+            return;
         }
-    });
+
+        $version = '1.0.0';
+        
+        // Enqueue shared assets
+        wp_enqueue_style('athlete-shared-forms');
+        
+        // Register and enqueue feature styles
+        wp_register_style(
+            'athlete-profile',
+            get_stylesheet_directory_uri() . '/features/profile/assets/css/profile.css',
+            ['athlete-shared-forms'],
+            $version
+        );
+        wp_enqueue_style('athlete-profile');
+
+        // Register form handler first
+        wp_register_script(
+            'athlete-profile-form-handler',
+            get_stylesheet_directory_uri() . '/features/profile/assets/js/form-handler.js',
+            ['jquery'],
+            $version,
+            true
+        );
+
+        // Register injury tracking script
+        wp_register_script(
+            'athlete-injury-tracking',
+            get_stylesheet_directory_uri() . '/features/profile/assets/js/injury-tracking.js',
+            ['jquery', 'athlete-profile-form-handler'],
+            $version,
+            true
+        );
+
+        // Register main script with dependencies
+        wp_register_script(
+            'athlete-profile',
+            get_stylesheet_directory_uri() . '/features/profile/assets/js/profile.js',
+            ['jquery', 'athlete-profile-form-handler', 'athlete-injury-tracking'],
+            $version,
+            true
+        );
+
+        // Localize scripts
+        wp_localize_script('athlete-profile', 'profileData', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('profile_nonce'),
+            'user_id' => get_current_user_id(),
+            'i18n' => [
+                'saveSuccess' => __('Profile saved successfully', 'athlete-dashboard-child'),
+                'saveError' => __('Failed to save profile', 'athlete-dashboard-child')
+            ]
+        ]);
+
+        wp_localize_script('athlete-injury-tracking', 'injuryData', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('injury_nonce')
+        ]);
+
+        // Enqueue scripts in correct order
+        wp_enqueue_script('athlete-profile-form-handler');
+        wp_enqueue_script('athlete-injury-tracking');
+        wp_enqueue_script('athlete-profile');
+    }
+
+    public static function getInstance(): Profile {
+        if (self::$instance === null) {
+            self::$instance = new Profile();
+        }
+        return self::$instance;
+    }
 }
 
-add_action('init', 'init_profile_feature'); 
+// Initialize the feature
+ProfileFeature::init(); 

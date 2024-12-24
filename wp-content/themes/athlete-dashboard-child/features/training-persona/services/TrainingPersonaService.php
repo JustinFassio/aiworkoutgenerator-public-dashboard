@@ -26,7 +26,25 @@ class TrainingPersonaService {
         $fields = $persona->getFields();
 
         foreach ($fields as $field => $config) {
-            if ($config['type'] === 'tag_input') {
+            if ($config['type'] === 'height_with_unit') {
+                $unit = get_user_meta($user_id, $this->meta_prefix . 'height_unit', true) ?: 'imperial';
+                if ($unit === 'imperial') {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'height_imperial', true);
+                } else {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'height_cm', true);
+                }
+                $data[$field . '_unit'] = $unit;
+            }
+            elseif ($config['type'] === 'weight_with_unit') {
+                $unit = get_user_meta($user_id, $this->meta_prefix . 'weight_unit', true) ?: 'imperial';
+                if ($unit === 'imperial') {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'weight_lbs', true);
+                } else {
+                    $data[$field] = get_user_meta($user_id, $this->meta_prefix . 'weight_kg', true);
+                }
+                $data[$field . '_unit'] = $unit;
+            }
+            elseif ($config['type'] === 'tag_input') {
                 // Get raw meta value first
                 $raw_value = get_user_meta($user_id, $this->meta_prefix . $field, true);
                 error_log('Raw meta value for ' . $field . ': ' . print_r($raw_value, true)); // Debug log
@@ -81,7 +99,35 @@ class TrainingPersonaService {
                     continue;
                 }
 
-                if ($field_config['type'] === 'tag_input') {
+                if ($field_config['type'] === 'height_with_unit') {
+                    $unit = $data[$field . '_unit'] ?? 'imperial';
+                    $stored_value = $value;
+                    
+                    if ($unit === 'imperial') {
+                        update_user_meta($user_id, $this->meta_prefix . 'height_imperial', $value);
+                        $stored_value = $this->convertHeightToMetric($value);
+                    } else {
+                        update_user_meta($user_id, $this->meta_prefix . 'height_imperial', $this->convertHeightToImperial($value)['total_inches']);
+                        $stored_value = $value;
+                    }
+                    update_user_meta($user_id, $this->meta_prefix . 'height_cm', $stored_value);
+                    update_user_meta($user_id, $this->meta_prefix . 'height_unit', $unit);
+                }
+                elseif ($field_config['type'] === 'weight_with_unit') {
+                    $unit = $data[$field . '_unit'] ?? 'imperial';
+                    $stored_value = $value;
+                    
+                    if ($unit === 'imperial') {
+                        update_user_meta($user_id, $this->meta_prefix . 'weight_lbs', $value);
+                        $stored_value = $this->convertWeightToMetric($value);
+                    } else {
+                        update_user_meta($user_id, $this->meta_prefix . 'weight_lbs', $this->convertWeightToImperial($value));
+                        $stored_value = $value;
+                    }
+                    update_user_meta($user_id, $this->meta_prefix . 'weight_kg', $stored_value);
+                    update_user_meta($user_id, $this->meta_prefix . 'weight_unit', $unit);
+                }
+                elseif ($field_config['type'] === 'tag_input') {
                     // Ensure we have a clean value
                     if (is_string($value) && !empty($value)) {
                         // Try to decode if it's a JSON string
@@ -126,13 +172,50 @@ class TrainingPersonaService {
     }
 
     public function deletePersona(int $user_id): bool {
-        $persona = new TrainingPersonaData();
-        $fields = $persona->getFields();
-        
-        foreach ($fields as $field => $config) {
-            delete_user_meta($user_id, $this->meta_prefix . $field);
+        try {
+            $persona = new TrainingPersonaData();
+            $fields = $persona->getFields();
+            
+            foreach ($fields as $field => $config) {
+                delete_user_meta($user_id, $this->meta_prefix . $field);
+                
+                // Clean up unit-specific fields
+                if ($config['type'] === 'height_with_unit') {
+                    delete_user_meta($user_id, $this->meta_prefix . 'height_unit');
+                    delete_user_meta($user_id, $this->meta_prefix . 'height_imperial');
+                    delete_user_meta($user_id, $this->meta_prefix . 'height_cm');
+                }
+                elseif ($config['type'] === 'weight_with_unit') {
+                    delete_user_meta($user_id, $this->meta_prefix . 'weight_unit');
+                    delete_user_meta($user_id, $this->meta_prefix . 'weight_lbs');
+                    delete_user_meta($user_id, $this->meta_prefix . 'weight_kg');
+                }
+            }
+            return true;
+        } catch (\Exception $e) {
+            error_log('Failed to delete training persona: ' . $e->getMessage());
+            return false;
         }
-        
-        return true;
+    }
+
+    private function convertHeightToMetric(int $total_inches): int {
+        return round($total_inches * 2.54);
+    }
+
+    private function convertHeightToImperial(int $cm): array {
+        $total_inches = round($cm / 2.54);
+        return [
+            'feet' => floor($total_inches / 12),
+            'inches' => $total_inches % 12,
+            'total_inches' => $total_inches
+        ];
+    }
+
+    private function convertWeightToMetric(float $lbs): float {
+        return round($lbs * 0.453592, 1);
+    }
+
+    private function convertWeightToImperial(float $kg): float {
+        return round($kg * 2.20462, 1);
     }
 } 

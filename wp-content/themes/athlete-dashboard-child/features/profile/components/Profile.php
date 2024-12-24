@@ -33,24 +33,49 @@ class Profile {
 
     private function init(): void {
         add_action('wp_ajax_update_profile', [$this, 'handleProfileUpdate']);
+        add_action('athlete_dashboard_profile_form', [$this, 'render_form']);
+        add_action('wp_enqueue_scripts', [$this, 'enqueueAssets']);
+    }
+
+    public function enqueueAssets(): void {
+        // Enqueue form styles
+        wp_enqueue_style(
+            'profile-form',
+            get_stylesheet_directory_uri() . '/features/profile/assets/css/profile-form.css',
+            [],
+            filemtime(get_stylesheet_directory() . '/features/profile/assets/css/profile-form.css')
+        );
+
+        // Enqueue form scripts
+        wp_enqueue_script(
+            'profile-form',
+            get_stylesheet_directory_uri() . '/features/profile/assets/js/profile-form.js',
+            ['jquery'],
+            filemtime(get_stylesheet_directory() . '/features/profile/assets/js/profile-form.js'),
+            true
+        );
+
+        // Localize script with AJAX URL and nonce
+        wp_localize_script('profile-form', 'profileConfig', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('profile_nonce')
+        ]);
     }
 
     public function render_form(): void {
         try {
-            $form = new Form('profile-form', 
-                $this->profile_data->getFields(),
-                $this->profile_data->toArray(),
-                [
-                    'context' => 'modal',
-                    'submitText' => __('Save Profile', 'athlete-dashboard-child'),
-                    'showLoader' => true,
-                    'classes' => ['profile-form'],
-                    'attributes' => [
-                        'data-form-context' => 'modal'
-                    ]
-                ]
-            );
-            $form->render();
+            $template_path = get_stylesheet_directory() . '/features/profile/templates/profile-form.php';
+            if (!file_exists($template_path)) {
+                throw new \Exception('Profile form template not found');
+            }
+
+            // Setup template variables
+            $fields = $this->profile_data->getFields();
+            $data = $this->profile_data->toArray();
+            $context = 'modal'; // Default context is modal
+            
+            // Include the template
+            include $template_path;
         } catch (\Exception $e) {
             error_log('Failed to render profile form: ' . $e->getMessage());
             echo '<div class="error">Failed to load profile form. Please try again later.</div>';

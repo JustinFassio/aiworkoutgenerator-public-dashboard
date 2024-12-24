@@ -8,18 +8,29 @@
 namespace AthleteDashboard\Features\TrainingPersona;
 
 use AthleteDashboard\Features\TrainingPersona\Components\TrainingPersona;
+use AthleteDashboard\Features\TrainingPersona\Models\TrainingPersonaData;
+use AthleteDashboard\Features\TrainingPersona\Services\TrainingPersonaService;
+use AthleteDashboard\Features\TrainingPersona\Goals\Components\GoalTracking;
+use AthleteDashboard\Features\TrainingPersona\Goals\Models\Goal;
+use AthleteDashboard\Features\TrainingPersona\Goals\Services\GoalService;
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-// Load required files
-require_once get_stylesheet_directory() . '/features/training-persona/models/TrainingPersonaData.php';
-require_once get_stylesheet_directory() . '/features/training-persona/services/TrainingPersonaService.php';
-require_once get_stylesheet_directory() . '/features/training-persona/components/TrainingPersona.php';
+// Load dependencies in correct order
+require_once __DIR__ . '/models/TrainingPersonaData.php';
+require_once __DIR__ . '/services/TrainingPersonaService.php';
+require_once __DIR__ . '/components/TrainingPersona.php';
+
+// Load goal tracking components
+require_once __DIR__ . '/goals/models/Goal.php';
+require_once __DIR__ . '/goals/services/GoalService.php';
+require_once __DIR__ . '/goals/components/GoalTracking.php';
 
 class TrainingPersonaFeature {
     private static ?TrainingPersona $instance = null;
+    private static ?GoalTracking $goal_tracking = null;
 
     public static function init(): void {
         add_action('init', [self::class, 'setup']);
@@ -27,14 +38,18 @@ class TrainingPersonaFeature {
     }
 
     public static function setup(): void {
+        // Initialize components
+        self::$goal_tracking = new GoalTracking();
+
         // Enqueue assets
         add_action('wp_enqueue_scripts', [self::class, 'enqueue_assets']);
         
         // Initialize AJAX handlers
         add_action('wp_ajax_update_training_persona', [self::getInstance(), 'handlePersonaUpdate']);
         add_action('wp_ajax_export_training_persona', [self::getInstance(), 'handle_export_request']);
-        add_action('wp_ajax_track_goal_progress', [self::class, 'handle_goal_progress']);
-        add_action('wp_ajax_get_goal_progress', [self::class, 'handle_get_progress']);
+        add_action('wp_ajax_track_goal_progress', [self::$goal_tracking, 'handleAjaxTrackGoal']);
+        add_action('wp_ajax_get_goal_progress', [self::$goal_tracking, 'handleAjaxGetGoalProgress']);
+        add_action('wp_ajax_delete_goal_progress', [self::$goal_tracking, 'handleAjaxDeleteGoalProgress']);
 
         // Add form render action
         add_action('athlete_dashboard_training_persona_form', [self::getInstance(), 'render_form']);
@@ -44,42 +59,6 @@ class TrainingPersonaFeature {
         // Add admin hooks
         add_action('show_user_profile', [self::getInstance(), 'render_admin_fields']);
         add_action('edit_user_profile', [self::getInstance(), 'render_admin_fields']);
-    }
-
-    public static function handle_goal_progress(): void {
-        check_ajax_referer('training_persona_nonce', 'training_persona_nonce');
-
-        if (!isset($_POST['goal_id'], $_POST['progress'])) {
-            wp_send_json_error('Missing required parameters');
-            return;
-        }
-
-        $goal_id = sanitize_text_field($_POST['goal_id']);
-        $progress = floatval($_POST['progress']);
-
-        $result = self::getInstance()->track_goal_progress($goal_id, $progress);
-        if ($result) {
-            wp_send_json_success([
-                'message' => __('Progress updated successfully', 'athlete-dashboard-child'),
-                'goal_id' => $goal_id,
-                'progress' => $progress
-            ]);
-        } else {
-            wp_send_json_error([
-                'message' => __('Failed to update progress', 'athlete-dashboard-child')
-            ]);
-        }
-    }
-
-    public static function handle_get_progress(): void {
-        check_ajax_referer('training_persona_nonce', 'training_persona_nonce');
-
-        $goal_id = isset($_GET['goal_id']) ? sanitize_text_field($_GET['goal_id']) : null;
-        $progress = self::getInstance()->get_goal_progress($goal_id);
-
-        wp_send_json_success([
-            'progress' => $progress
-        ]);
     }
 
     public static function enqueue_assets(): void {
@@ -110,30 +89,45 @@ class TrainingPersonaFeature {
             true
         );
 
-        // Register main script with dependency on form handler
+        // Register goal tracking script
         wp_register_script(
-            'athlete-training-persona',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
+            'athlete-goal-tracking',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/goal-tracking.js',
             ['jquery', 'athlete-training-persona-form-handler'],
             $version,
             true
         );
 
-        // Localize script data
+        // Register main script with dependencies
+        wp_register_script(
+            'athlete-training-persona',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona.js',
+            ['jquery', 'athlete-training-persona-form-handler', 'athlete-goal-tracking'],
+            $version,
+            true
+        );
+
+        // Localize scripts
         wp_localize_script('athlete-training-persona', 'trainingPersonaData', [
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('training_persona_nonce'),
             'user_id' => get_current_user_id(),
             'i18n' => [
+                'saveSuccess' => __('Training persona saved successfully', 'athlete-dashboard-child'),
+                'saveError' => __('Failed to save training persona', 'athlete-dashboard-child'),
                 'exportSuccess' => __('Data exported successfully', 'athlete-dashboard-child'),
-                'exportError' => __('Failed to export data', 'athlete-dashboard-child'),
-                'progressSuccess' => __('Progress updated successfully', 'athlete-dashboard-child'),
-                'progressError' => __('Failed to update progress', 'athlete-dashboard-child')
+                'exportError' => __('Failed to export data', 'athlete-dashboard-child')
             ]
+        ]);
+
+        wp_localize_script('athlete-goal-tracking', 'goalData', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('goal_nonce')
         ]);
 
         // Enqueue scripts in correct order
         wp_enqueue_script('athlete-training-persona-form-handler');
+        wp_enqueue_script('athlete-goal-tracking');
         wp_enqueue_script('athlete-training-persona');
     }
 

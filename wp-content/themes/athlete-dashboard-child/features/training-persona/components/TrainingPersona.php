@@ -10,7 +10,6 @@ namespace AthleteDashboard\Features\TrainingPersona\Components;
 
 use AthleteDashboard\Features\TrainingPersona\Services\TrainingPersonaService;
 use AthleteDashboard\Features\TrainingPersona\Models\TrainingPersonaData;
-use AthleteDashboard\Features\Shared\Components\Form;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -37,24 +36,50 @@ class TrainingPersona {
 
     private function init(): void {
         add_action('wp_ajax_update_training_persona', [$this, 'handlePersonaUpdate']);
+        add_action('athlete_dashboard_goal_tracking', [$this, 'render_goal_tracking']);
+        add_action('athlete_dashboard_training_persona_form', [$this, 'render_form']);
+        add_action('wp_enqueue_scripts', [$this, 'enqueueAssets']);
+    }
+
+    public function enqueueAssets(): void {
+        // Enqueue form styles
+        wp_enqueue_style(
+            'training-persona-form',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/css/training-persona-modal.css',
+            [],
+            filemtime(get_stylesheet_directory() . '/features/training-persona/assets/css/training-persona-modal.css')
+        );
+
+        // Enqueue form scripts
+        wp_enqueue_script(
+            'training-persona-form',
+            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona-modal.js',
+            ['jquery'],
+            filemtime(get_stylesheet_directory() . '/features/training-persona/assets/js/training-persona-modal.js'),
+            true
+        );
+
+        // Localize script with AJAX URL
+        wp_localize_script('training-persona-form', 'trainingPersonaConfig', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('training_persona_nonce')
+        ]);
     }
 
     public function render_form(): void {
         try {
-            $form = new Form('training-persona-form', 
-                $this->persona_data->getFields(),
-                $this->persona_data->toArray(),
-                [
-                    'context' => 'modal',
-                    'submitText' => __('Save Training Persona', 'athlete-dashboard-child'),
-                    'showLoader' => true,
-                    'classes' => ['training-persona-form'],
-                    'attributes' => [
-                        'data-form-context' => 'modal'
-                    ]
-                ]
-            );
-            $form->render();
+            $template_path = get_stylesheet_directory() . '/features/training-persona/templates/training-persona-form.php';
+            if (!file_exists($template_path)) {
+                throw new \Exception('Training persona form template not found');
+            }
+
+            // Setup template variables
+            $fields = $this->persona_data->getFields();
+            $data = $this->persona_data->toArray();
+            $context = 'modal'; // Default context is modal
+            
+            // Include the template
+            include $template_path;
         } catch (\Exception $e) {
             error_log('Failed to render training persona form: ' . $e->getMessage());
             echo '<div class="error">Failed to load training persona form. Please try again later.</div>';
@@ -462,6 +487,53 @@ class TrainingPersona {
             return $progress_data;
         } catch (\Exception $e) {
             error_log('Failed to get goal progress: ' . $e->getMessage());
+            return [];
+        }
+    }
+
+    public function render_goal_tracking(): void {
+        try {
+            require_once get_stylesheet_directory() . '/features/training-persona/goals/components/GoalTracking.php';
+            require_once get_stylesheet_directory() . '/features/training-persona/goals/services/GoalService.php';
+            require_once get_stylesheet_directory() . '/features/training-persona/goals/models/Goal.php';
+
+            $goals = $this->get_active_goals();
+            $goal_tracking = new \AthleteDashboard\Features\TrainingPersona\Goals\Components\GoalTracking();
+            $goal_tracking->render($goals);
+        } catch (\Exception $e) {
+            error_log('Failed to render goal tracking: ' . $e->getMessage());
+            echo '<div class="error">Failed to load goal tracking. Please try again later.</div>';
+        }
+    }
+
+    private function get_active_goals(): array {
+        try {
+            $goals_data = $this->persona_data->get('goals');
+            if (!is_array($goals_data)) {
+                return [];
+            }
+
+            $goals = [];
+            foreach ($goals_data as $goal) {
+                if (!isset($goal['type'], $goal['label'])) {
+                    continue;
+                }
+
+                $goal_id = sanitize_title($goal['label']);
+                $goals[] = new \AthleteDashboard\Features\TrainingPersona\Goals\Models\Goal(
+                    $goal_id,
+                    $goal['label'],
+                    $goal['type'],
+                    0, // Initial progress
+                    $this->get_goal_description($goal['label'])
+                );
+            }
+
+            return array_map(function($goal) {
+                return $goal->toArray();
+            }, $goals);
+        } catch (\Exception $e) {
+            error_log('Failed to get active goals: ' . $e->getMessage());
             return [];
         }
     }

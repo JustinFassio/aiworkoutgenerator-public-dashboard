@@ -110,6 +110,61 @@ if (!defined('ABSPATH')) {
                         </select>
                     </div>
 
+                <?php elseif ($config['type'] === 'tag_input'): ?>
+                    <div class="tag-input-container">
+                        <div class="tag-input-wrapper">
+                            <div class="tag-list">
+                                <?php
+                                $current_tags = $data[$field] ?? [];
+                                if (is_string($current_tags)) {
+                                    $current_tags = json_decode(stripslashes($current_tags), true) ?? [];
+                                }
+                                if (!empty($current_tags) && is_array($current_tags)):
+                                    foreach ($current_tags as $tag):
+                                        if (isset($tag['label'])):
+                                ?>
+                                    <div class="tag-item" data-value='<?php echo esc_attr(json_encode($tag)); ?>'>
+                                        <span class="tag-text"><?php echo esc_html($tag['label']); ?></span>
+                                        <button type="button" class="remove-tag" aria-label="Remove <?php echo esc_attr($tag['label']); ?>">×</button>
+                                    </div>
+                                <?php
+                                        endif;
+                                    endforeach;
+                                endif;
+                                ?>
+                            </div>
+                            <input type="text" 
+                                   class="tag-input" 
+                                   placeholder="Type or select injuries..."
+                                   autocomplete="off"
+                                   aria-label="Add or select injuries">
+                        </div>
+                        
+                        <div class="tag-suggestions" role="listbox" aria-label="Injury suggestions">
+                            <?php foreach ($config['predefined_options'] as $key => $label): ?>
+                                <div class="tag-suggestion" 
+                                     role="option"
+                                     data-value="<?php echo esc_attr($key); ?>"
+                                     data-type="predefined">
+                                    <?php echo esc_html($label); ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <input type="hidden" 
+                               name="<?php echo esc_attr($field); ?>" 
+                               id="<?php echo esc_attr($field); ?>"
+                               value="<?php echo esc_attr(is_array($current_tags) ? json_encode($current_tags) : '[]'); ?>"
+                               <?php echo !empty($config['required']) ? 'required' : ''; ?>>
+                    </div>
+
+                <?php elseif ($config['type'] === 'textarea'): ?>
+                    <textarea name="<?php echo esc_attr($field); ?>" 
+                              id="<?php echo esc_attr($field); ?>"
+                              <?php echo $config['required'] ? 'required' : ''; ?>>
+                        <?php echo esc_textarea($data[$field] ?? ''); ?>
+                    </textarea>
+
                 <?php else: ?>
                     <input type="<?php echo esc_attr($config['type']); ?>"
                            name="<?php echo esc_attr($field); ?>"

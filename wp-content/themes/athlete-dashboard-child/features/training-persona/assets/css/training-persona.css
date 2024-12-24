@@ -25,7 +25,8 @@
 
 /* Form Groups */
 .form-group {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    order: 0;
 }
 
 .form-group label {
@@ -57,7 +58,7 @@
 /* Textarea Specific */
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 180px;
     max-height: 300px;
     line-height: 1.5;
     font-family: inherit;
@@ -67,6 +68,65 @@
     outline: none;
     border-color: var(--green-highlight);
     box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
+}
+
+/* Measurement Groups */
+.measurement-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    position: relative;
+}
+
+.measurement-group .measurement-value {
+    flex: 2;
+    min-width: 0;
+    max-width: 120px;
+}
+
+.measurement-group .unit-selector {
+    flex: 1;
+    width: 80px;
+    min-width: 80px;
+    padding: 0.75rem;
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Unit Selector Hover/Focus States */
+.measurement-group .unit-selector:hover {
+    background-color: var(--charcoal-medium);
+    border-color: var(--green-highlight);
+}
+
+.measurement-group .unit-selector:focus {
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.1);
+    outline: none;
+}
+
+/* Measurement Value Styling */
+.measurement-group input[type="number"].measurement-value {
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.measurement-group select.measurement-value {
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* Focus States */
@@ -84,20 +144,6 @@
     margin-top: 0.25rem;
 }
 
-/* Character Counter */
-.form-group {
-    position: relative;
-}
-
-.form-group .char-counter {
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-    pointer-events: none;
-}
-
 /* Form Actions */
 .form-actions {
     margin-top: 2rem;
@@ -106,6 +152,7 @@
     text-align: right;
 }
 
+/* Submit Button */
 .submit-button {
     background: var(--green-highlight);
     color: var(--charcoal-dark);
@@ -126,77 +173,21 @@
     transform: translateY(-1px);
 }
 
-/* Modal Context Adjustments */
-.training-persona-form[data-form-context="modal"] {
-    background: transparent;
-    padding: 0;
+.submit-button:disabled {
+    background: var(--charcoal-light);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+    transform: none;
 }
 
-.modal-body .form-group {
-    margin-bottom: 1.5rem;
+/* Loading State */
+.button-loader .spin {
+    animation: spin 1s linear infinite;
 }
 
-.modal-body .form-group:last-child {
-    margin-bottom: 0;
-}
-
-.modal-body input,
-.modal-body select,
-.modal-body textarea {
-    background-color: var(--charcoal-dark);
-    border: 1px solid var(--charcoal-border);
-    border-radius: 6px;
-    color: #ffffff;
-    transition: all 0.2s ease;
-}
-
-.modal-body input:hover,
-.modal-body select:hover,
-.modal-body textarea:hover {
-    background-color: #333333;
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.modal-body input:focus,
-.modal-body select:focus,
-.modal-body textarea:focus {
-    background-color: #383838;
-    border-color: var(--green-highlight);
-    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.1);
-}
-
-/* Select Styling */
-.form-group select {
-    appearance: none;
-    -webkit-appearance: none;
-    padding-right: 2rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    background-size: 16px;
-    cursor: pointer;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .form-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    .form-actions {
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        text-align: center;
-    }
-
-    .submit-button {
-        width: 100%;
-        justify-content: center;
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -225,6 +216,43 @@
     border: 1px solid var(--error-red);
 }
 
+/* Number Input Styling */
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Multi Select Styling */
+.form-group select.multi-select {
+    height: auto;
+    min-height: 120px;
+    padding: 0.5rem;
+    max-width: none;
+}
+
+.form-group select.multi-select option {
+    padding: 0.5rem;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.form-group select.multi-select option:checked {
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
+}
+
+.form-group select.multi-select option:hover {
+    background: var(--charcoal-light);
+}
+
 /* Goals Section */
 .form-group[data-field="goals"],
 .form-group[data-field="goals_detail"] {
@@ -246,26 +274,26 @@
     max-width: none;
 }
 
-/* Goals Description Textarea Styling */
-.form-group[data-field="goals_detail"] textarea {
-    font-family: monospace;
-    line-height: 1.6;
-    padding: 1rem;
-    white-space: pre-wrap;
-    min-height: 200px;
+.form-group[data-field="goals"] select {
+    min-height: 180px;
 }
 
-/* Admin View Goals Description Styling */
-.training-persona-value.textarea {
-    font-family: monospace;
-    line-height: 1.6;
-    white-space: pre-wrap;
+.form-group[data-field="goals"] .selected-goals {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    min-height: 80px;
+    background: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.5;
 }
 
-.training-persona-value.textarea strong {
-    color: var(--green-highlight);
-    display: block;
-    margin-top: 1rem;
+.form-group[data-field="goals"] .selected-goals:empty::before {
+    content: "No goals selected";
+    color: var(--text-tertiary);
+    font-style: italic;
 }
 
 /* Character Counter */
@@ -283,39 +311,367 @@
     pointer-events: none;
 }
 
-@media (max-width: 768px) {
-    .form-group[data-field="goals"],
-    .form-group[data-field="goals_detail"] {
-        grid-column: 1 / -1;
-    }
+/* Tag Input Styling */
+.tag-input-container {
+    position: relative;
+    width: 100%;
 }
 
-/* Admin View Styling */
-.training-persona-value {
-    background: #f0f0f1;
-    border: 1px solid #c3c4c7;
+.tag-input-wrapper {
+    min-height: 44px;
+    padding: 0.5rem;
+    background: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
     border-radius: 4px;
-    padding: 0.75rem;
-    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: text;
 }
 
-.training-persona-value.empty {
-    color: #646970;
-    font-style: italic;
+.tag-input-wrapper:focus-within {
+    border-color: var(--green-highlight);
+    box-shadow: 0 0 0 2px rgba(221, 255, 14, 0.2);
 }
 
-.training-persona-value.multi-value {
+.tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.training-persona-value .tag-item {
-    display: inline-block;
-    padding: 0.5rem 0.75rem;
-    background: #fff;
-    border: 1px solid #c3c4c7;
-    border-radius: 4px;
+.tag-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--charcoal-medium);
+    border: 1px solid var(--charcoal-border);
+    border-radius: 16px;
     font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-} 
+    color: #ffffff;
+}
+
+.tag-item.predefined {
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
+    border-color: transparent;
+}
+
+.tag-item .remove-tag {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.tag-item .remove-tag:hover {
+    opacity: 1;
+}
+
+.tag-input {
+    flex: 1;
+    min-width: 120px;
+    border: none !important;
+    background: transparent !important;
+    padding: 0.25rem !important;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+.tag-input:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+.tag-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.tag-suggestion {
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.tag-suggestion:hover {
+    background: var(--charcoal-medium);
+}
+
+.tag-suggestion.selected {
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
+}
+
+.tag-input-wrapper:focus-within + .tag-suggestions {
+    display: block;
+}
+
+/* Scrollbar Styling for Suggestions */
+.tag-suggestions::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tag-suggestions::-webkit-scrollbar-track {
+    background: var(--charcoal-dark);
+}
+
+.tag-suggestions::-webkit-scrollbar-thumb {
+    background: var(--charcoal-light);
+    border-radius: 4px;
+}
+
+.tag-suggestions::-webkit-scrollbar-thumb:hover {
+    background: var(--green-highlight);
+}
+
+/* Modal Context Adjustments */
+.training-persona-form[data-form-context="modal"] {
+    background: transparent;
+    padding: 0;
+}
+
+.modal-body .tag-input-container {
+    margin-bottom: 1rem;
+}
+
+.modal-body .tag-input-wrapper {
+    background: var(--charcoal-medium);
+    border: 1px solid var(--charcoal-border);
+    min-height: 44px;
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+.modal-body .tag-input {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff;
+    font-size: 0.875rem;
+    padding: 0.25rem !important;
+    margin: 0;
+    min-width: 150px;
+}
+
+.modal-body .tag-suggestions {
+    background: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
+    border-radius: 6px;
+    margin-top: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1100;
+}
+
+.modal-body .tag-suggestion {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-body .tag-suggestion:hover {
+    background: var(--charcoal-medium);
+}
+
+.modal-body .tag-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--charcoal-dark);
+    border: 1px solid var(--charcoal-border);
+    border-radius: 16px;
+    font-size: 0.875rem;
+    color: #ffffff;
+    margin: 0.25rem;
+}
+
+.modal-body .tag-item.predefined {
+    background: var(--green-highlight);
+    color: var(--charcoal-dark);
+    border-color: transparent;
+}
+
+.modal-body .tag-item .remove-tag {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.modal-body .tag-item .remove-tag:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Goals Description Textarea Styling */
+.form-group[data-field="goals_detail"] textarea {
+    font-family: monospace;
+    line-height: 1.6;
+    padding: 1rem;
+    white-space: pre-wrap;
+    min-height: 200px;
+}
+
+/* Admin View Goals Description Styling */
+.goals-description {
+    font-family: monospace;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.goals-description strong {
+    color: var(--green-highlight);
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Admin Context Adjustments */
+.training-persona-form-admin {
+    background: transparent;
+    padding: 0;
+    max-width: none;
+}
+
+/* WordPress Admin Table Styles */
+.form-table .measurement-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    max-width: 25em;
+}
+
+.form-table .measurement-group .measurement-value {
+    flex: 2;
+}
+
+.form-table .measurement-group .unit-selector {
+    flex: 1;
+    max-width: 100px;
+}
+
+.form-table .required {
+    color: #d63638;
+    margin-left: 0.25rem;
+}
+
+/* Ensure proper spacing in admin context */
+.form-table th {
+    padding-top: 1rem;
+}
+
+.form-table td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.form-table .description {
+    font-size: 13px;
+    margin: 4px 0 0;
+    color: #646970;
+    font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .measurement-group {
+        flex-direction: column;
+    }
+
+    .measurement-group .unit-selector {
+        width: 100%;
+    }
+
+    .form-actions {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .submit-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .measurement-group {
+        gap: 0.5rem;
+    }
+
+    .measurement-group .measurement-value {
+        max-width: none;
+    }
+
+    .measurement-group .unit-selector {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .form-group[data-field="goals"],
+    .form-group[data-field="goals_detail"] {
+        grid-column: 1 / -1;
+    }
+
+    .form-table .measurement-group {
+        max-width: 100%;
+    }
+    
+    .form-table td input[type="number"],
+    .form-table td select {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 0.5rem;
+    }
+    
+    .form-table .measurement-group {
+        flex-direction: column;
+    }
+    
+    .form-table .measurement-group .unit-selector {
+        max-width: none;
+    }
+}
+
+/* Modal Size Adjustment */
+.modal-content {
+    max-width: 1000px;
+    margin: 2rem;
+}
