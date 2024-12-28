@@ -1,0 +1,74 @@
+@use "sass:color";
+
+// Colors
+$color-primary: #007bff;
+$color-surface: #ffffff;
+$color-text: #2c3338;
+$color-border: #dcdcde;
+$color-error: #d63638;
+$color-success: #00a32a;
+
+// Typography
+$font-family-base: system-ui, -apple-system, sans-serif;
+$font-size-base: 1rem;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+// Spacing
+$spacing-unit: 0.25rem;
+$spacing-small: $spacing-unit;
+$spacing-medium: $spacing-unit * 2;
+$spacing-large: $spacing-unit * 4;
+
+// Layout
+$border-radius: 4px;
+$transition-base: 0.2s ease-in-out;
+$grid-gap: $spacing-medium;
+
+// Export as CSS custom properties
+:root {
+    // Colors
+    --ad-color-primary: #{$color-primary};
+    --ad-color-surface: #{$color-surface};
+    --ad-color-text: #{$color-text};
+    --ad-color-border: #{$color-border};
+    --ad-color-error: #{$color-error};
+    --ad-color-success: #{$color-success};
+
+    // Typography
+    --ad-font-family: #{$font-family-base};
+    --ad-font-size-base: #{$font-size-base};
+    --ad-font-weight-normal: #{$font-weight-normal};
+    --ad-font-weight-medium: #{$font-weight-medium};
+    --ad-font-weight-bold: #{$font-weight-bold};
+
+    // Spacing
+    --ad-spacing-unit: #{$spacing-unit};
+    --ad-spacing-small: #{$spacing-small};
+    --ad-spacing-medium: #{$spacing-medium};
+    --ad-spacing-large: #{$spacing-large};
+
+    // Layout
+    --ad-border-radius: #{$border-radius};
+    --ad-transition: #{$transition-base};
+    --ad-grid-gap: #{$grid-gap};
+
+    // Status colors
+    --ad-color-success-bg: #{color.adjust($color-success, $alpha: -0.9)};
+    --ad-color-success-text: #{color.adjust($color-success, $lightness: -10%)};
+    --ad-color-error-bg: #{color.adjust($color-error, $alpha: -0.9)};
+    --ad-color-error-text: #{color.adjust($color-error, $lightness: -10%)};
+}
+
+// Export mixins
+@mixin focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 2px color.adjust($color-primary, $alpha: -0.8);
+}
+
+@mixin responsive-grid($min-width: 300px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    gap: $grid-gap;
+} 

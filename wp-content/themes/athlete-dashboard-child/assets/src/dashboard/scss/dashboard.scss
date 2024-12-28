@@ -1,0 +1,340 @@
+// Dashboard Variables
+$dashboard: (
+  'bg': #f0f2f5,
+  'text': #1d2327,
+  'border': #dcdcde,
+  'primary': #2271b1,
+  'primary-hover': #135e96,
+  'error': #d63638
+);
+
+$layout: (
+  'header-height': 60px,
+  'sidebar-width': 250px,
+  'content-padding': 2rem,
+  'gap': 1rem
+);
+
+$modal: (
+  'bg': #fff,
+  'text': map-get($dashboard, 'text'),
+  'border': map-get($dashboard, 'border'),
+  'radius': 4px,
+  'shadow': 0 2px 8px rgba(0, 0, 0, 0.15),
+  'padding': 1.5rem,
+  'gap': 1rem,
+  'title-size': 1.25rem,
+  'title-weight': 600,
+  'text-size': 1rem,
+  'line-height': 1.4,
+  'transition': 0.2s ease-in-out
+);
+
+$input: (
+  'height': 2.5rem,
+  'padding': 0.5rem 0.75rem,
+  'border': map-get($dashboard, 'border'),
+  'border-focus': map-get($dashboard, 'primary'),
+  'radius': map-get($modal, 'radius')
+);
+
+$button: (
+  'padding': 0.5rem 1rem,
+  'radius': map-get($modal, 'radius'),
+  'primary-bg': map-get($dashboard, 'primary'),
+  'primary-text': #fff,
+  'primary-border': map-get($dashboard, 'primary'),
+  'secondary-bg': transparent,
+  'secondary-text': map-get($dashboard, 'text'),
+  'secondary-border': map-get($dashboard, 'border')
+);
+
+// Root Variables
+:root {
+  @each $key, $value in $dashboard {
+    --dashboard-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $layout {
+    --dashboard-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $modal {
+    --dashboard-modal-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $input {
+    --dashboard-input-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $button {
+    --dashboard-button-#{$key}: #{$value};
+  }
+}
+
+// Dashboard Layout
+.athlete-dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: var(--dashboard-sidebar-width) 1fr;
+  grid-template-rows: var(--dashboard-header-height) 1fr auto;
+  min-height: 100vh;
+  background: var(--dashboard-bg);
+}
+
+// Header Component
+.dashboard-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--dashboard-content-padding);
+  background: var(--dashboard-modal-bg);
+  border-bottom: 1px solid var(--dashboard-border);
+
+  .header-brand {
+    h1 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  .header-nav {
+    flex: 1;
+    margin: 0 2rem;
+  }
+
+  .header-menu {
+    display: flex;
+    gap: var(--dashboard-gap);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// User Menu
+.user-menu {
+  position: relative;
+
+  &-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--dashboard-modal-bg);
+    border: 1px solid var(--dashboard-border);
+    border-radius: var(--dashboard-modal-radius);
+    padding: 0.5rem;
+    min-width: 150px;
+    box-shadow: var(--dashboard-modal-shadow);
+  }
+}
+
+// Sidebar Component
+.dashboard-sidebar {
+  grid-area: sidebar;
+  background: var(--dashboard-modal-bg);
+  border-right: 1px solid var(--dashboard-border);
+  padding: var(--dashboard-content-padding);
+
+  .sidebar-nav {
+    margin-bottom: var(--dashboard-content-padding);
+  }
+}
+
+// Navigation Menus
+.sidebar-menu,
+.feature-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: var(--dashboard-text);
+    text-decoration: none;
+    border-radius: var(--dashboard-modal-radius);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.feature-menu {
+  .current a {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+// Main Content
+.dashboard-content {
+  grid-area: main;
+  padding: var(--dashboard-content-padding);
+  overflow-y: auto;
+}
+
+// Footer Component
+.dashboard-footer {
+  grid-area: footer;
+  background: var(--dashboard-modal-bg);
+  border-top: 1px solid var(--dashboard-border);
+  padding: var(--dashboard-content-padding);
+}
+
+// Modal Component
+.dashboard-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+
+  &.is-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-container {
+    position: relative;
+    background: var(--dashboard-modal-bg);
+    border-radius: var(--dashboard-modal-radius);
+    box-shadow: var(--dashboard-modal-shadow);
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem;
+    z-index: 1;
+  }
+
+  .modal-header {
+    padding: var(--dashboard-modal-padding);
+    border-bottom: 1px solid var(--dashboard-modal-border);
+
+    h2 {
+      margin: 0;
+      font-size: var(--dashboard-modal-title-size);
+      font-weight: var(--dashboard-modal-title-weight);
+    }
+  }
+
+  .modal-content {
+    padding: var(--dashboard-modal-padding);
+  }
+
+  .modal-footer {
+    padding: var(--dashboard-modal-padding);
+    border-top: 1px solid var(--dashboard-modal-border);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--dashboard-modal-gap);
+  }
+
+  .button {
+    padding: var(--dashboard-button-padding);
+    border-radius: var(--dashboard-button-radius);
+    font-size: var(--dashboard-modal-text-size);
+    line-height: var(--dashboard-modal-line-height);
+    cursor: pointer;
+    transition: var(--dashboard-modal-transition);
+
+    &-primary {
+      background: var(--dashboard-button-primary-bg);
+      color: var(--dashboard-button-primary-text);
+      border: 1px solid var(--dashboard-button-primary-border);
+
+      &:hover {
+        background: var(--dashboard-primary-hover);
+        border-color: var(--dashboard-primary-hover);
+      }
+    }
+
+    &-secondary {
+      background: var(--dashboard-button-secondary-bg);
+      color: var(--dashboard-button-secondary-text);
+      border: 1px solid var(--dashboard-button-secondary-border);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+// Modal Animation
+.dashboard-modal.is-active .modal-container {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .athlete-dashboard {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    display: none;
+  }
+
+  .dashboard-header {
+    padding: 0 1rem;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .dashboard-content {
+    padding: 1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+} 

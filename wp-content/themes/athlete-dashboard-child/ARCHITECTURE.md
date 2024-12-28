@@ -1,168 +1,274 @@
 # Athlete Dashboard Architecture
 
 ## Overview
-This document outlines the architecture of the Athlete Dashboard WordPress child theme, following a Feature-First architecture pattern.
+
+The Athlete Dashboard is built on a modular, event-driven architecture that emphasizes feature independence and clean separation of concerns. Each feature is self-contained and communicates with other features through a standardized event system. The codebase is written in TypeScript for enhanced type safety and developer experience.
+
+## Core Concepts
+
+### Feature System
+
+Features are independent modules that implement the `FeatureInterface`. Each feature:
+- Has its own directory structure
+- Manages its own assets and dependencies
+- Handles its own modals and UI components
+- Emits and listens to events for inter-feature communication
+- Uses TypeScript for type safety
+
+```typescript
+interface FeatureInterface {
+    register(): void;
+    init(): void;
+    getIdentifier(): string;
+    getMetadata(): Record<string, unknown>;
+    isEnabled(): boolean;
+}
+```
+
+### Event System
+
+The dashboard uses a unified event system for feature communication:
+- Events are namespaced by feature
+- Both PHP and TypeScript events are supported
+- Events are typed with TypeScript interfaces
+- Debug mode provides event logging
+- Type-safe event handling
+
+```typescript
+// Event type definitions
+interface ProfileUpdateEvent {
+    height: number;
+    weight: number;
+    goals: string[];
+}
+
+// Event constants
+export const DashboardEvents = {
+    PROFILE_UPDATE: 'profile:update' as const,
+    MODALS_READY: 'dashboard:modals:ready' as const,
+} as const;
+
+// Emit typed events
+Events.emit<ProfileUpdateEvent>(DashboardEvents.PROFILE_UPDATE, {
+    height: 180,
+    weight: 75,
+    goals: ['strength', 'endurance']
+});
+
+// Listen for typed events
+Events.on<ProfileUpdateEvent>(DashboardEvents.PROFILE_UPDATE, (detail) => {
+    // TypeScript knows the shape of detail
+    console.log(detail.height, detail.weight, detail.goals);
+});
+```
+
+### Asset Management
+
+Assets are managed using Vite:
+- Feature-specific assets are co-located with features
+- TypeScript for enhanced development experience
+- SCSS modules for scoped styling
+- Shared styles use CSS custom properties
+- Development includes HMR support
+- Production builds are optimized and hashed
 
 ## Directory Structure
 
 ```
-athlete-dashboard/
-├── core/                           # Core framework functionality
-│   ├── auth/                      # Authentication and authorization
-│   ├── database/                  # Database abstractions and migrations
-│   ├── wordpress/                 # WordPress integration utilities
-│   └── divi/                      # DIVI builder integration
-├── features/                      # Feature modules
-│   ├── squat-progress/           # Squat progress tracking feature
-│   │   ├── components/           # UI components
-│   │   ├── services/            # Business logic
-│   │   ├── models/             # Data models
-│   │   ├── hooks/              # WordPress hooks
-│   │   ├── api/                # API endpoints
-│   │   ├── tests/             # Feature-specific tests
-│   │   ├── styles/            # Feature-specific styles
-│   │   └── index.php          # Feature entry point
-│   ├── bench-press/            # Bench press tracking feature
-│   ├── deadlift/              # Deadlift tracking feature
-│   ├── body-composition/      # Body composition tracking
-│   ├── workout-log/           # Workout logging feature
-│   └── goals/                 # Goals tracking feature
-├── shared/                     # Shared utilities and components
-│   ├── components/            # Reusable UI components
-│   ├── helpers/              # Utility functions
-│   ├── styles/               # Global styles
-│   └── scripts/              # Global scripts
-├── tests/                     # Global test configuration
-├── vendor/                    # Third-party dependencies
-└── assets/                    # Compiled assets
-
+athlete-dashboard-child/
+├── dashboard/
+│   ├── core/           # Core system classes
+│   ├── contracts/      # TypeScript interfaces
+│   ├── abstracts/      # Abstract base classes
+│   ├── assets/         # Shared assets
+│   └── templates/      # Base templates
+├── features/
+│   ├── profile/        # Profile feature
+│   │   ├── assets/     # Feature assets
+│   │   │   ├── js/    # TypeScript modules
+│   │   │   └── scss/  # SCSS modules
+│   │   ├── components/ # UI components
+│   │   ├── templates/  # Feature templates
+│   │   ├── tests/      # Feature tests
+│   │   ├── index.php   # Feature registration
+│   │   └── README.md   # Feature documentation
+│   └── training/       # Training feature
+├── assets/            # Compiled assets
+│   ├── src/          # Source files
+│   └── dist/         # Built files
+└── tests/            # Global tests
 ```
 
-## Feature Module Structure
-Each feature follows this standard structure:
+## Feature Development
 
-```
-feature-name/
-├── components/                # UI Components
-│   ├── Feature.php           # Main feature component
-│   └── FeatureWidget.php     # WordPress widget if needed
-├── services/                 # Business Logic
-│   ├── FeatureService.php    # Main service class
-│   └── DataCalculator.php    # Calculations/processing
-├── models/                   # Data Models
-│   └── FeatureModel.php      # Data structure and validation
-├── hooks/                    # WordPress Integration
-│   └── feature-hooks.php     # Actions and filters
-├── api/                      # REST API
-│   └── feature-endpoints.php # API routes
-├── tests/                    # Tests
-│   ├── Unit/
-│   └── Integration/
-├── styles/                   # Styles
-│   └── feature.scss
-├── scripts/                  # JavaScript
-│   └── feature.js
-└── index.php                # Feature registration
-```
+### Creating a New Feature
 
-## Naming Conventions
+1. Create feature directory structure
+2. Implement `FeatureInterface`
+3. Create TypeScript modules
+4. Register feature assets and templates
+5. Add feature documentation
+6. Implement feature tests
 
-### Files and Directories
-- Feature directories: `kebab-case`
-- PHP classes: `PascalCase`
-- PHP files: `PascalCase.php`
-- JavaScript files: `kebab-case.js`
-- SCSS files: `kebab-case.scss`
+### Feature Guidelines
 
-### Code
-- Classes: `PascalCase`
-- Methods: `camelCase`
-- Properties: `camelCase`
-- Constants: `UPPER_SNAKE_CASE`
-- Hooks: `feature_name_action_name`
-- Database tables: `wp_athlete_feature_name`
+- Keep features independent
+- Use event system for communication
+- Co-locate related code and assets
+- Document public APIs and events
+- Include feature-specific tests
+- Write type-safe TypeScript code
 
-## WordPress Integration
+## Event Guidelines
 
-### Custom Post Types
-- Registered in feature's `hooks/feature-hooks.php`
-- Named with prefix: `ad_feature_name`
+### Naming Conventions
 
-### Meta Fields
-- Prefixed with underscore: `_ad_feature_field`
-- Registered in feature's model class
+- Use `feature:event` format
+- Be specific and descriptive
+- Use past tense for completed actions
+- Include relevant data
+- Define TypeScript interfaces
 
-### REST API Endpoints
-- Base: `athlete-dashboard/v1`
-- Feature endpoints: `athlete-dashboard/v1/feature-name/*`
+Examples:
+```typescript
+// Event type definitions
+interface WorkoutCompletedEvent {
+    id: string;
+    duration: number;
+    exercises: Exercise[];
+    timestamp: string;
+}
 
-## Database Structure
-
-### Core Tables
-```sql
--- Feature specific tables follow this pattern
-CREATE TABLE wp_athlete_feature_name (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    user_id BIGINT UNSIGNED,
-    date_recorded DATETIME,
-    -- feature specific fields
-    created_at DATETIME,
-    updated_at DATETIME,
-    FOREIGN KEY (user_id) REFERENCES wp_users(ID)
-);
+// Event constants
+export const WorkoutEvents = {
+    COMPLETED: 'workout:completed' as const,
+    STARTED: 'workout:started' as const,
+} as const;
 ```
 
-## Testing Strategy
+### Event Data
+
+- Use TypeScript interfaces
+- Include timestamp
+- Provide complete context
+- Validate data structure
+- Type-safe event handling
+
+## Style Guidelines
+
+### Custom Properties
+
+```scss
+:root {
+    /* Colors */
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    
+    /* Typography */
+    --font-family-base: -apple-system, system-ui, sans-serif;
+    --font-size-base: 1rem;
+    
+    /* Spacing */
+    --spacing-unit: 0.25rem;
+    --spacing-large: calc(var(--spacing-unit) * 4);
+}
+```
+
+### SCSS Modules
+
+```scss
+@use 'sass:math';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin responsive($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+```
+
+## Testing
 
 ### Unit Tests
-- Located in feature's `tests/Unit` directory
-- Test individual components and services
-- Follow pattern: `FeatureTest.php`
+
+- Test feature registration
+- Test event handling
+- Test asset loading
+- Test template rendering
+- Test TypeScript types
 
 ### Integration Tests
-- Located in feature's `tests/Integration` directory
-- Test feature as a whole
-- Follow pattern: `FeatureIntegrationTest.php`
 
-## Performance Considerations
+- Test feature interactions
+- Test event propagation
+- Test asset dependencies
+- Test template integration
+- Test type safety
 
-### Caching
-- WordPress transients for API responses
-- Object caching for frequent queries
-- Page caching where appropriate
+## Build System
 
-### Asset Loading
-- Feature-specific assets loaded only when needed
-- Shared assets loaded globally
-- SCSS compilation and JS bundling per feature
+### Development
 
-## Security
+```bash
+# Install dependencies
+npm install
 
-### Data Protection
-- WordPress nonce verification
-- Input sanitization in models
-- Output escaping in templates
-- Role-based access control
+# Start development server
+npm run dev
 
-### API Security
-- WP REST API authentication
-- Rate limiting
-- Data validation
+# Run tests
+npm run test
 
-## Development Workflow
+# Type checking
+npm run check
 
-### Version Control
-- Feature branches: `feature/feature-name`
-- Bug fixes: `fix/issue-description`
-- Release branches: `release/x.x.x`
+# Lint TypeScript
+npm run lint
+```
 
-### Deployment
-- Development -> Staging -> Production
-- Feature-based deployments
-- Database migration handling
+### Production
 
-## Documentation
-- Feature README in each feature directory
-- PHPDoc for classes and methods
-- Inline comments for complex logic
-- API documentation in feature's api directory 
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. Feature not loading
+   - Check feature registration
+   - Verify dependencies
+   - Check console for errors
+   - Verify TypeScript compilation
+
+2. Events not firing
+   - Verify event names
+   - Check event listeners
+   - Enable debug mode
+   - Check type definitions
+
+3. Assets not loading
+   - Check build configuration
+   - Verify asset paths
+   - Clear cache
+   - Check Vite config
+
+### Debug Mode
+
+Enable debug mode to:
+- Log all events
+- Track feature initialization
+- Monitor asset loading
+- Profile performance
+- Debug TypeScript issues
+``` 

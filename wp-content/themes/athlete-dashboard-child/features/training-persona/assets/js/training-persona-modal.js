@@ -1,178 +1,140 @@
+/**
+ * Training Persona Modal Handler
+ * 
+ * Handles training persona modal-specific functionality using the dashboard event system.
+ */
 (function($) {
     'use strict';
 
-    class TrainingPersonaForm {
+    class TrainingPersonaModalHandler {
         constructor() {
+            this.modalId = 'training-persona-modal';
+            this.form = null;
             this.init();
         }
 
         init() {
-            // Initialize form submission
-            $('#training-persona-form').on('submit', (e) => {
-                e.preventDefault();
-                this.handleSubmit($(e.currentTarget));
-            });
-
-            // Initialize form field handlers
-            this.initializeFormFields();
-            this.initializeTagInputs();
-        }
-
-        initializeFormFields() {
-            // Auto-expand textareas
-            const $textareas = $('#training-persona-form textarea.auto-expand');
-            $textareas.each((_, textarea) => {
-                textarea.style.height = 'auto';
-                textarea.style.height = (textarea.scrollHeight) + 'px';
-            });
-
-            $textareas.on('input', (e) => {
-                const textarea = e.target;
-                textarea.style.height = 'auto';
-                textarea.style.height = (textarea.scrollHeight) + 'px';
-            });
-
-            // Handle unit toggles if present
-            $('.unit-selector').on('change', (e) => {
-                const $select = $(e.target);
-                const field = $select.attr('id').replace('_unit', '');
-                const $input = $(`#${field}`);
-                
-                // Trigger a custom event that the feature can listen to
-                $(document).trigger('training_persona_unit_changed', [field, $select.val()]);
+            // Wait for dashboard modal system
+            document.addEventListener('dashboard:modals:ready', () => {
+                this.initializeForm();
+                this.bindEvents();
             });
         }
 
-        initializeTagInputs() {
-            const $containers = $('.tag-input-container');
-            
-            $containers.each((_, container) => {
-                const $container = $(container);
-                const $input = $container.find('.tag-input');
-                const $hiddenInput = $container.find('input[type="hidden"]');
-                const $tagList = $container.find('.tag-list');
-                const $suggestions = $container.find('.tag-suggestions');
-
-                // Handle tag input focus
-                $input.on('focus', () => {
-                    $suggestions.show();
+        initializeForm() {
+            this.form = document.getElementById(`${this.modalId}-form`);
+            if (this.form) {
+                this.form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleSubmit();
                 });
-
-                // Handle clicking outside
-                $(document).on('click', (e) => {
-                    if (!$container.is(e.target) && $container.has(e.target).length === 0) {
-                        $suggestions.hide();
-                    }
-                });
-
-                // Handle suggestion clicks
-                $suggestions.on('click', '.tag-suggestion', (e) => {
-                    const $suggestion = $(e.currentTarget);
-                    this.addTag($container, {
-                        type: $suggestion.data('type'),
-                        value: $suggestion.data('value'),
-                        label: $suggestion.text().trim()
-                    });
-                    $input.val('').focus();
-                });
-
-                // Handle custom tag input
-                $input.on('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ',') {
-                        e.preventDefault();
-                        const value = $input.val().trim();
-                        if (value) {
-                            this.addTag($container, {
-                                type: 'custom',
-                                value: value,
-                                label: value
-                            });
-                            $input.val('');
-                        }
-                    }
-                });
-
-                // Handle tag removal
-                $tagList.on('click', '.remove-tag', (e) => {
-                    $(e.target).closest('.tag-item').remove();
-                    this.updateHiddenInput($container);
-                });
-            });
+            }
         }
 
-        addTag($container, tagData) {
-            const $tagList = $container.find('.tag-list');
-            const $tagItem = $(`
-                <div class="tag-item" data-value='${JSON.stringify(tagData)}'>
-                    <span class="tag-text">${tagData.label}</span>
-                    <button type="button" class="remove-tag" aria-label="Remove ${tagData.label}">×</button>
-                </div>
-            `);
-            $tagList.append($tagItem);
-            this.updateHiddenInput($container);
-        }
-
-        updateHiddenInput($container) {
-            const tags = [];
-            $container.find('.tag-item').each((_, item) => {
-                const tagData = $(item).data('value');
-                if (tagData) {
-                    tags.push(tagData);
+        bindEvents() {
+            // Listen for modal lifecycle events
+            document.addEventListener('dashboard:modal:before_open', (e) => {
+                if (e.detail.modalId === this.modalId) {
+                    this.handleBeforeOpen();
                 }
             });
-            $container.find('input[type="hidden"]').val(JSON.stringify(tags));
+
+            document.addEventListener('dashboard:modal:after_open', (e) => {
+                if (e.detail.modalId === this.modalId) {
+                    this.handleAfterOpen();
+                }
+            });
+
+            document.addEventListener('dashboard:modal:before_close', (e) => {
+                if (e.detail.modalId === this.modalId) {
+                    this.handleBeforeClose();
+                }
+            });
+
+            document.addEventListener('dashboard:modal:after_close', (e) => {
+                if (e.detail.modalId === this.modalId) {
+                    this.handleAfterClose();
+                }
+            });
         }
 
-        handleSubmit($form) {
-            const $submitButton = $form.find('.submit-button');
-            const $loader = $submitButton.find('.button-loader');
-            const $text = $submitButton.find('.button-text');
-            const $messages = $form.find('.form-messages');
+        handleBeforeOpen() {
+            // Reset form if exists
+            if (this.form) {
+                this.form.reset();
+            }
+        }
+
+        handleAfterOpen() {
+            // Focus first input
+            const firstInput = this.form?.querySelector('input:not([type="hidden"]), select');
+            if (firstInput) {
+                firstInput.focus();
+            }
+        }
+
+        handleBeforeClose() {
+            // Trigger form reset event
+            if (this.form) {
+                document.dispatchEvent(new CustomEvent('training-persona:form:reset', {
+                    detail: { form: this.form }
+                }));
+            }
+        }
+
+        handleAfterClose() {
+            // Additional cleanup if needed
+        }
+
+        handleSubmit() {
+            if (!this.form) return;
+
+            const formData = new FormData(this.form);
+            formData.append('action', 'update_training_persona');
+            formData.append('training_persona_nonce', trainingPersonaConfig.nonce);
 
             // Show loading state
-            $text.hide();
-            $loader.show();
-            $submitButton.prop('disabled', true);
+            this.form.classList.add('is-loading');
 
-            // Collect form data
-            const formData = new FormData($form[0]);
-            formData.append('action', 'update_training_persona');
-
-            // Submit form via AJAX
-            $.ajax({
-                url: ajaxurl,
-                type: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: (response) => {
-                    if (response.success) {
-                        $messages.html('<div class="success">' + response.data.message + '</div>');
-                        
-                        // Trigger update event
-                        $(document).trigger('training_persona_updated', [response.data]);
-                        
-                        // Let the dashboard handle modal closing
-                        $(document).trigger('dashboard_modal_close', ['training-persona-modal']);
-                    } else {
-                        $messages.html('<div class="error">' + response.data.message + '</div>');
-                    }
-                },
-                error: () => {
-                    $messages.html('<div class="error">An error occurred. Please try again.</div>');
-                },
-                complete: () => {
-                    // Reset button state
-                    $text.show();
-                    $loader.hide();
-                    $submitButton.prop('disabled', false);
+            fetch(trainingPersonaConfig.ajaxurl, {
+                method: 'POST',
+                body: formData,
+                credentials: 'same-origin'
+            })
+            .then(response => response.json())
+            .then(response => {
+                if (response.success) {
+                    this.showMessage(trainingPersonaConfig.i18n.saveSuccess, 'success');
+                    
+                    // Close modal using event system
+                    document.dispatchEvent(new CustomEvent('dashboard:modal:close', {
+                        detail: { modalId: this.modalId }
+                    }));
+                    
+                    // Trigger success event
+                    document.dispatchEvent(new CustomEvent('training-persona:update:success', {
+                        detail: { data: response.data }
+                    }));
+                } else {
+                    this.showMessage(response.data.message || trainingPersonaConfig.i18n.saveError, 'error');
                 }
+            })
+            .catch(() => {
+                this.showMessage(trainingPersonaConfig.i18n.saveError, 'error');
+            })
+            .finally(() => {
+                this.form.classList.remove('is-loading');
             });
+        }
+
+        showMessage(message, type = 'info') {
+            // Implement message display logic
+            console.log(`${type}: ${message}`);
         }
     }
 
-    // Initialize when document is ready
+    // Initialize handler
     $(document).ready(() => {
-        new TrainingPersonaForm();
+        new TrainingPersonaModalHandler();
     });
 })(jQuery); 

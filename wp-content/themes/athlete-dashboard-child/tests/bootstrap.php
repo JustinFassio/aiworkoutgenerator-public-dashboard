@@ -1,28 +1,27 @@
 <?php
 /**
- * PHPUnit bootstrap file
+ * PHPUnit bootstrap file for WordPress theme testing
  */
 
-// First, let's set up the base path
-define('ATHLETE_DASHBOARD_TEST_DIR', __DIR__);
-define('ATHLETE_DASHBOARD_THEME_DIR', dirname(__DIR__));
-
-// Composer autoloader must be loaded before WP_MOCK
+// First, load Composer's autoloader
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-// Load WP Mock
+// Define WordPress test constants
+define('ABSPATH', dirname(__DIR__) . '/wp-content/');
+define('WP_DEBUG', true);
+define('WP_CONTENT_DIR', ABSPATH . 'wp-content');
+define('WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins');
+define('WPMU_PLUGIN_DIR', WP_CONTENT_DIR . '/mu-plugins');
+
+// Load WordPress test environment
+require_once dirname(__DIR__) . '/vendor/wordpress/wordpress-mock/src/WP_Mock.php';
+
+// Initialize WP_Mock
+WP_Mock::setUsePatchwork(true);
 WP_Mock::bootstrap();
 
-// Load Brain Monkey
-require_once dirname(__DIR__) . '/vendor/brain/monkey/inc/patchwork-loader.php';
-
-// Load test helpers and custom test case classes
+// Load test helpers
 require_once __DIR__ . '/TestCase.php';
-
-// Set up mock functions that we'll use frequently
-function __return_true() { return true; }
-function __return_false() { return false; }
-function __return_null() { return null; }
-function __return_empty_array() { return []; }
-function __return_empty_string() { return ''; }
+require_once __DIR__ . '/FeatureTestCase.php';
+require_once __DIR__ . '/IntegrationTestCase.php';
  

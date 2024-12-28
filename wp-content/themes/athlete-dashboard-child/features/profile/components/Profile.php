@@ -10,7 +10,7 @@ namespace AthleteDashboard\Features\Profile\Components;
 
 use AthleteDashboard\Features\Profile\Services\ProfileService;
 use AthleteDashboard\Features\Profile\Models\ProfileData;
-use AthleteDashboard\Features\Shared\Components\Form;
+use AthleteDashboard\Features\Profile\Components\Modals\ProfileModal;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -19,292 +19,68 @@ if (!defined('ABSPATH')) {
 class Profile {
     private ProfileService $service;
     private ProfileData $profile_data;
+    private ProfileModal $modal;
 
     public function __construct() {
         $this->service = new ProfileService();
         try {
             $this->profile_data = $this->service->getProfileData();
+            $this->modal = new ProfileModal('profile-modal', $this->profile_data->toArray());
             $this->init();
         } catch (\Exception $e) {
             error_log('Profile initialization failed: ' . $e->getMessage());
             $this->profile_data = new ProfileData();
+            $this->modal = new ProfileModal('profile-modal', []);
         }
     }
 
     private function init(): void {
         add_action('wp_ajax_update_profile', [$this, 'handleProfileUpdate']);
         add_action('athlete_dashboard_profile_form', [$this, 'render_form']);
-        add_action('wp_enqueue_scripts', [$this, 'enqueueAssets']);
-    }
-
-    public function enqueueAssets(): void {
-        // Enqueue form styles
-        wp_enqueue_style(
-            'profile-form',
-            get_stylesheet_directory_uri() . '/features/profile/assets/css/profile-form.css',
-            [],
-            filemtime(get_stylesheet_directory() . '/features/profile/assets/css/profile-form.css')
-        );
-
-        // Enqueue form scripts
-        wp_enqueue_script(
-            'profile-form',
-            get_stylesheet_directory_uri() . '/features/profile/assets/js/profile-form.js',
-            ['jquery'],
-            filemtime(get_stylesheet_directory() . '/features/profile/assets/js/profile-form.js'),
-            true
-        );
-
-        // Localize script with AJAX URL and nonce
-        wp_localize_script('profile-form', 'profileConfig', [
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('profile_nonce')
-        ]);
+        add_action('athlete_dashboard_profile_modal', [$this, 'render_modal']);
     }
 
     public function render_form(): void {
         try {
-            $template_path = get_stylesheet_directory() . '/features/profile/templates/profile-form.php';
-            if (!file_exists($template_path)) {
-                throw new \Exception('Profile form template not found');
-            }
-
-            // Setup template variables
-            $fields = $this->profile_data->getFields();
-            $data = $this->profile_data->toArray();
-            $context = 'modal'; // Default context is modal
-            
-            // Include the template
-            include $template_path;
+            $form = new ProfileForm('profile-form', $this->profile_data->getFields(), $this->profile_data->toArray(), [
+                'context' => 'page',
+                'submitText' => __('Save Profile', 'athlete-dashboard-child')
+            ]);
+            $form->render();
         } catch (\Exception $e) {
             error_log('Failed to render profile form: ' . $e->getMessage());
             echo '<div class="error">Failed to load profile form. Please try again later.</div>';
         }
     }
 
-    public function render_admin_fields($user): void {
-        if (!current_user_can('edit_user', $user->ID)) {
-            return;
-        }
-
-        try {
-            $profile_data = $this->service->getProfileData($user->ID);
-            ?>
-            <h3><?php _e('Athlete Profile Information', 'athlete-dashboard-child'); ?></h3>
-            <p class="description" style="margin-bottom: 1rem;">
-                <?php _e('This information can only be edited by the athlete through their dashboard.', 'athlete-dashboard-child'); ?>
-            </p>
-            <table class="form-table" role="presentation">
-                <?php foreach ($profile_data->getFields() as $field => $config): ?>
-                    <?php
-                    // Skip unit fields as they're handled with their parent fields
-                    if (strpos($field, '_unit') !== false) continue;
-                    ?>
-                    <tr>
-                        <th>
-                            <label for="<?php echo esc_attr($field); ?>">
-                                <?php echo esc_html($config['label']); ?>
-                            </label>
-                        </th>
-                        <td>
-                            <?php if ($config['type'] === 'multi_select'): ?>
-                                <?php
-                                $selected_values = $profile_data->get($field);
-                                // Ensure we have an array and it's not empty
-                                $selected_values = is_array($selected_values) ? $selected_values : [];
-                                if (!empty($selected_values)): ?>
-                                    <div class="selected-injuries-admin">
-                                        <?php
-                                        foreach ($selected_values as $value) {
-                                            if (isset($config['options'][$value])) {
-                                                echo '<div class="injury-item">' . esc_html($config['options'][$value]) . '</div>';
-                                            }
-                                        }
-                                        ?>
-                                    </div>
-                                <?php else: ?>
-                                    <div class="selected-injuries-admin empty">
-                                        <?php _e('No injuries reported', 'athlete-dashboard-child'); ?>
-                                    </div>
-                                <?php endif; ?>
-
-                            <?php elseif ($config['type'] === 'height_with_unit'): ?>
-                                <?php
-                                $current_unit = $profile_data->get($field . '_unit') ?? 'imperial';
-                                $value = $profile_data->get($field);
-                                if ($current_unit === 'imperial' && isset($config['imperial_options'][$value])) {
-                                    echo esc_html($config['imperial_options'][$value]);
-                                } else {
-                                    echo esc_html($value . ' ' . strtoupper($config['units'][$current_unit]));
-                                }
-                                ?>
-
-                            <?php elseif ($config['type'] === 'weight_with_unit'): ?>
-                                <?php
-                                $current_unit = $profile_data->get($field . '_unit') ?? 'imperial';
-                                $value = $profile_data->get($field);
-                                echo esc_html($value . ' ' . strtoupper($config['units'][$current_unit]));
-                                ?>
-
-                            <?php elseif ($config['type'] === 'textarea'): ?>
-                                <div class="injury-description">
-                                    <?php
-                                    if ($field === 'injuries_other') {
-                                        $description = $profile_data->get($field);
-                                        $lines = explode("\n", $description);
-                                        foreach ($lines as $line) {
-                                            if (strpos($line, ':') !== false) {
-                                                // This is a header line
-                                                echo '<strong>' . esc_html($line) . '</strong>';
-                                            } else {
-                                                echo esc_html($line) . "\n";
-                                            }
-                                        }
-                                    } else {
-                                        echo nl2br(esc_html($profile_data->get($field)));
-                                    }
-                                    ?>
-                                </div>
-
-                            <?php elseif ($config['type'] === 'tag_input'): ?>
-                                <?php
-                                $injuries = $profile_data->get($field);
-                                if (!empty($injuries) && is_array($injuries)): ?>
-                                    <div class="selected-injuries-admin">
-                                        <?php
-                                        foreach ($injuries as $injury) {
-                                            if (isset($injury['type']) && isset($injury['label'])) {
-                                                echo '<div class="injury-item">' . esc_html($injury['label']) . '</div>';
-                                            }
-                                        }
-                                        ?>
-                                    </div>
-                                <?php else: ?>
-                                    <div class="selected-injuries-admin empty">
-                                        <?php _e('No injuries reported', 'athlete-dashboard-child'); ?>
-                                    </div>
-                                <?php endif; ?>
-
-                            <?php else: ?>
-                                <?php 
-                                $value = $profile_data->get($field);
-                                if ($config['type'] === 'select' && isset($config['options'][$value])) {
-                                    echo esc_html($config['options'][$value]);
-                                } else {
-                                    echo esc_html($value);
-                                }
-                                ?>
-                            <?php endif; ?>
-
-                            <?php if (!empty($config['description'])): ?>
-                                <p class="description"><?php echo esc_html($config['description']); ?></p>
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-
-            <style>
-                .selected-injuries-admin {
-                    background: #f0f0f1;
-                    border: 1px solid #c3c4c7;
-                    border-radius: 4px;
-                    padding: 0.75rem;
-                    min-height: 80px;
-                }
-                .selected-injuries-admin.empty {
-                    color: #646970;
-                    font-style: italic;
-                }
-                .selected-injuries-admin .injury-item {
-                    margin-bottom: 0.5rem;
-                    padding: 0.5rem;
-                    background: #fff;
-                    border: 1px solid #c3c4c7;
-                    border-radius: 4px;
-                }
-                .injury-description {
-                    background: #f0f0f1;
-                    border: 1px solid #c3c4c7;
-                    border-radius: 4px;
-                    padding: 0.75rem;
-                    min-height: 80px;
-                    white-space: pre-wrap;
-                }
-            </style>
-            <?php
-        } catch (\Exception $e) {
-            error_log('Failed to render admin fields: ' . $e->getMessage());
-            ?>
-            <div class="error">
-                <p><?php _e('Failed to load profile data. Please try again later.', 'athlete-dashboard-child'); ?></p>
-            </div>
-            <?php
-        }
-    }
-
-    public function save_admin_fields($user_id): void {
-        if (!current_user_can('edit_user', $user_id)) {
-            return;
-        }
-
-        try {
-            $data = [];
-            foreach (array_keys($this->profile_data->getFields()) as $field) {
-                if (isset($_POST[$field])) {
-                    $data[$field] = sanitize_text_field($_POST[$field]);
-                }
-            }
-
-            $result = $this->service->updateProfile($user_id, $data);
-            if (!$result) {
-                add_settings_error(
-                    'profile_update',
-                    'profile_update_error',
-                    __('Failed to update profile. Please try again.', 'athlete-dashboard-child'),
-                    'error'
-                );
-            }
-        } catch (\Exception $e) {
-            error_log('Failed to save admin fields: ' . $e->getMessage());
-            add_settings_error(
-                'profile_update',
-                'profile_update_error',
-                __('An error occurred while saving profile data.', 'athlete-dashboard-child'),
-                'error'
-            );
-        }
+    public function render_modal(): void {
+        $this->modal->render();
     }
 
     public function handleProfileUpdate(): void {
-        check_ajax_referer('profile_nonce', 'profile_nonce');
-
-        $user_id = get_current_user_id();
-        if (!$user_id) {
-            wp_send_json_error('User not logged in');
-            return;
-        }
-
         try {
-            $data = [];
-            foreach ($_POST as $key => $value) {
-                if ($key !== 'action' && $key !== 'profile_nonce') {
-                    // Handle array data from multi-select fields
-                    if (is_array($value)) {
-                        $data[$key] = array_map('sanitize_text_field', $value);
-                    } else {
-                        $data[$key] = sanitize_text_field($value);
-                    }
-                }
+            // Verify nonce
+            if (!isset($_POST['profile_nonce']) || !wp_verify_nonce($_POST['profile_nonce'], 'profile_nonce')) {
+                throw new \Exception('Invalid security token');
             }
 
-            error_log('Profile Update Data: ' . print_r($data, true)); // Debug log
+            // Get current user ID
+            $user_id = get_current_user_id();
+            if (!$user_id) {
+                throw new \Exception('User not logged in');
+            }
+
+            // Collect and sanitize form data
+            $data = [];
+            foreach ($this->profile_data->getFields() as $field => $config) {
+                if (isset($_POST[$field])) {
+                    $data[$field] = $_POST[$field];
+                }
+            }
 
             $result = $this->service->updateProfile($user_id, $data);
             if ($result) {
                 $updated_data = $this->service->getProfileData($user_id)->toArray();
-                error_log('Updated Profile Data: ' . print_r($updated_data, true)); // Debug log
-                
                 wp_send_json_success([
                     'message' => __('Profile updated successfully', 'athlete-dashboard-child'),
                     'data' => $updated_data

@@ -1,0 +1,107 @@
+@use "sass:color";
+@use "../../../../assets/src/dashboard/scss/tokens" as *;
+
+.training-persona {
+    &__header {
+        margin-bottom: var(--ad-spacing-large);
+        
+        h2 {
+            font-size: calc(var(--ad-font-size-base) * 1.5);
+            font-weight: var(--ad-font-weight-bold);
+            margin: 0 0 var(--ad-spacing-medium);
+        }
+
+        p {
+            color: color.adjust($color-text, $alpha: -0.2);
+            margin: 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--ad-spacing-large);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__field-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--ad-spacing-small);
+
+        label {
+            font-weight: var(--ad-font-weight-medium);
+        }
+
+        .description {
+            font-size: calc(var(--ad-font-size-base) * 0.875);
+            color: color.adjust($color-text, $alpha: -0.3);
+        }
+    }
+
+    &__input {
+        border: 1px solid var(--ad-color-border);
+        border-radius: var(--ad-border-radius);
+        padding: var(--ad-spacing-medium);
+        font-family: inherit;
+        font-size: inherit;
+        width: 100%;
+
+        &:focus {
+            @include focus-ring;
+        }
+
+        &--error {
+            border-color: var(--ad-color-error);
+            background: var(--ad-color-error-bg);
+        }
+    }
+
+    &__error {
+        color: var(--ad-color-error);
+        font-size: calc(var(--ad-font-size-base) * 0.875);
+        margin-top: var(--ad-spacing-small);
+    }
+
+    &__actions {
+        display: flex;
+        gap: var(--ad-spacing-medium);
+        margin-top: var(--ad-spacing-large);
+
+        button {
+            flex: 1;
+        }
+    }
+
+    &__result {
+        margin-top: var(--ad-spacing-large);
+        padding: var(--ad-spacing-large);
+        border-radius: var(--ad-border-radius);
+        background: color.adjust($color-primary, $alpha: -0.95);
+        border: 1px solid color.adjust($color-primary, $alpha: -0.8);
+
+        h3 {
+            font-size: calc(var(--ad-font-size-base) * 1.25);
+            font-weight: var(--ad-font-weight-bold);
+            margin: 0 0 var(--ad-spacing-medium);
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: var(--ad-spacing-medium);
+                background: var(--ad-color-surface);
+                border-radius: var(--ad-border-radius);
+                margin-bottom: var(--ad-spacing-small);
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+} 

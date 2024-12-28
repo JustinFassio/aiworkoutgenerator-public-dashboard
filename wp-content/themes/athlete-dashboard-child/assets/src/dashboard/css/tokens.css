@@ -1,0 +1,56 @@
+/**
+ * Dashboard Style Tokens
+ * 
+ * Defines reusable design tokens that features can opt into.
+ * These maintain visual consistency without forcing implementation details.
+ */
+
+:root {
+    /* Colors */
+    --dashboard-modal-bg: #ffffff;
+    --dashboard-modal-overlay: rgba(0, 0, 0, 0.5);
+    --dashboard-modal-border: #e5e5e5;
+    --dashboard-modal-text: #333333;
+    --dashboard-modal-text-muted: #666666;
+
+    /* Spacing */
+    --dashboard-modal-padding: 1rem;
+    --dashboard-modal-gap: 1rem;
+    --dashboard-modal-border-width: 1px;
+
+    /* Typography */
+    --dashboard-modal-title-size: 1.25rem;
+    --dashboard-modal-title-weight: 600;
+    --dashboard-modal-text-size: 1rem;
+    --dashboard-modal-line-height: 1.5;
+
+    /* Effects */
+    --dashboard-modal-radius: 4px;
+    --dashboard-modal-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    --dashboard-modal-transition: 0.3s ease-out;
+
+    /* Sizes */
+    --dashboard-modal-width-small: 400px;
+    --dashboard-modal-width-medium: 600px;
+    --dashboard-modal-width-large: 800px;
+    --dashboard-modal-max-height: 90vh;
+
+    /* Z-index */
+    --dashboard-modal-z-index: 1000;
+    --dashboard-modal-backdrop-z-index: 999;
+
+    /* Form Elements */
+    --dashboard-input-height: 2.5rem;
+    --dashboard-input-padding: 0.75rem;
+    --dashboard-input-border: #ddd;
+    --dashboard-input-border-focus: #2271b1;
+    --dashboard-input-radius: 4px;
+
+    /* Buttons */
+    --dashboard-button-padding: 0.5rem 1rem;
+    --dashboard-button-radius: 4px;
+    --dashboard-button-primary-bg: #2271b1;
+    --dashboard-button-primary-text: #ffffff;
+    --dashboard-button-secondary-bg: #f0f0f1;
+    --dashboard-button-secondary-text: #2c3338;
+} 

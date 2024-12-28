@@ -1,41 +1,54 @@
-  <div class="nav-card" data-modal-trigger="training-persona-modal">
-    <div class="card-icon">
-      <span class="dashicons dashicons-universal-access"></span>
-    </div>
-    <div class="card-content">
-      <h3>Training Persona</h3>
-      <p>Customize your training experience and goals</p>
-    </div>
-  </div> 
+<?php
+/**
+ * Template Name: Dashboard
+ * 
+ * Main dashboard template that provides the layout structure and coordinates
+ * feature integration through React components.
+ */
 
-  <!-- Profile Modal -->
-  <div class="dashboard-modal" id="profile-modal">
-    <div class="modal-backdrop"></div>
-    <div class="modal-container" data-size="large">
-      <div class="modal-header">
-        <h2>Profile</h2>
-        <button class="close-modal">
-          <span class="dashicons dashicons-no-alt"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php do_action('athlete_dashboard_profile_form'); ?>
-      </div>
-    </div>
-  </div>
+if (!defined('ABSPATH')) {
+    exit;
+}
 
-  <!-- Training Persona Modal -->
-  <div class="dashboard-modal" id="training-persona-modal">
-    <div class="modal-backdrop"></div>
-    <div class="modal-container" data-size="large">
-      <div class="modal-header">
-        <h2>Training Persona</h2>
-        <button class="close-modal">
-          <span class="dashicons dashicons-no-alt"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php do_action('athlete_dashboard_training_persona_form'); ?>
-      </div>
-    </div>
-  </div> 
+use AthleteDashboard\Dashboard\Core\DashboardBridge;
+
+// Initialize dashboard bridge
+DashboardBridge::init();
+
+// Get header with minimal wrapper
+get_header('minimal');
+
+// Render React dashboard container
+DashboardBridge::render();
+
+// Get current feature from URL
+$current_feature = get_query_var('dashboard_feature', 'overview');
+
+// Load feature content into a hidden container that React will mount
+?>
+<div id="dashboard-feature-content" style="display: none;">
+    <?php
+    // Load feature content
+    get_template_part('dashboard/templates/feature-router', null, [
+        'feature' => $current_feature
+    ]);
+    ?>
+</div>
+
+<script>
+    // Initialize feature content
+    document.addEventListener('DOMContentLoaded', function() {
+        const featureContent = document.getElementById('dashboard-feature-content');
+        const dashboardContent = document.querySelector('.dashboard-content');
+        
+        if (featureContent && dashboardContent) {
+            // Move feature content into React dashboard
+            dashboardContent.innerHTML = featureContent.innerHTML;
+            featureContent.remove();
+        }
+    });
+</script>
+
+<?php
+// Get footer with minimal wrapper
+get_footer('minimal'); 

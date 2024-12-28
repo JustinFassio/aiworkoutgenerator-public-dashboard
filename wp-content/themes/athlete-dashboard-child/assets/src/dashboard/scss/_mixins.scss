@@ -1,0 +1,100 @@
+// Media queries
+@mixin media-breakpoint-up($breakpoint) {
+  $min: map-get($breakpoints, $breakpoint);
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  $max: map-get($breakpoints, $breakpoint) - .02;
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+// Typography
+@mixin font-size($size, $line-height: null) {
+  font-size: $size;
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Grid
+@mixin grid($columns: 1, $gap: $spacer) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Transitions
+@mixin transition($property: all) {
+  transition: $property $transition-base;
+}
+
+// Shadows
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+// Truncate text
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Hover focus
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+// Buttons
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%)) {
+  color: color-contrast($background);
+  background-color: $background;
+  border-color: $border;
+
+  @include hover-focus {
+    color: color-contrast($hover-background);
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+}
+
+// Forms
+@mixin form-control-focus {
+  &:focus {
+    color: $dark;
+    background-color: $light;
+    border-color: lighten($primary, 25%);
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba($primary, .25);
+  }
+}
+
+// Gradients
+@mixin gradient-x($start-color: $primary, $end-color: darken($primary, 15%), $start-percent: 0%, $end-percent: 100%) {
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-y($start-color: $primary, $end-color: darken($primary, 15%), $start-percent: 0%, $end-percent: 100%) {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+} 
