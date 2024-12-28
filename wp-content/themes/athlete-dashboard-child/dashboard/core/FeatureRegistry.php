@@ -1,8 +1,8 @@
 <?php
-namespace AthleteWorkouts\Dashboard\Core;
+namespace AthleteDashboard\Dashboard\Core;
 
-use AthleteWorkouts\Dashboard\Contracts\FeatureInterface;
-use AthleteWorkouts\Dashboard\Exceptions\FeatureException;
+use AthleteDashboard\Dashboard\Contracts\FeatureInterface;
+use AthleteDashboard\Dashboard\Exceptions\FeatureException;
 
 class FeatureRegistry {
     private static ?self $instance = null;

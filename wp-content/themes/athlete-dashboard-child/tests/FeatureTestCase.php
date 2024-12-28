@@ -1,9 +1,9 @@
 <?php
 namespace AthleteWorkouts\Tests;
 
-use AthleteWorkouts\Dashboard\Core\FeatureRegistry;
-use AthleteWorkouts\Dashboard\Core\EventManager;
-use AthleteWorkouts\Dashboard\Core\AssetManager;
+use AthleteDashboard\Dashboard\Core\FeatureRegistry;
+use AthleteDashboard\Dashboard\Core\EventManager;
+use AthleteDashboard\Dashboard\Core\AssetManager;
 
 abstract class FeatureTestCase extends TestCase {
     protected FeatureRegistry $registry;

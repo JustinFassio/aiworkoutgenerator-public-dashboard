@@ -1,0 +1,60 @@
+// Colors
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Typography
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Spacing
+$spacing-unit: 1rem;
+$container-padding: $spacing-unit * 2;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Border
+$border-radius: 0.25rem;
+$border-color: rgba(0, 0, 0, 0.125);
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+
+// Z-index
+$z-index-modal: 1050;
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+
+// Export as CSS variables
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --success: #{$success};
+  --danger: #{$danger};
+  --warning: #{$warning};
+  --info: #{$info};
+  --light: #{$light};
+  --dark: #{$dark};
+  
+  --font-family-base: #{$font-family-base};
+  --font-size-base: #{$font-size-base};
+  --line-height-base: #{$line-height-base};
+  
+  --spacing-unit: #{$spacing-unit};
+  --container-padding: #{$container-padding};
+  
+  --border-radius: #{$border-radius};
+  --border-color: #{$border-color};
+  
+  --transition-base: #{$transition-base};
+} 

@@ -1,0 +1,131 @@
+@import 'variables';
+
+// Base styles
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+// Dashboard container
+.athlete-dashboard {
+  padding: var(--container-padding);
+  
+  &__header {
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  &__content {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-unit);
+  }
+}
+
+// Feature grid
+.feature-grid {
+  display: grid;
+  gap: var(--spacing-unit);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+  &__item {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-unit);
+    transition: var(--transition-base);
+    
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// Modal
+.dashboard-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-index-modal);
+  
+  &__content {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-unit);
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  &__header {
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  &__body {
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: calc(var(--spacing-unit) / 2);
+  }
+}
+
+// Buttons
+.button {
+  display: inline-block;
+  padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition-base);
+  
+  &--primary {
+    background: var(--primary);
+    color: white;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  
+  &--secondary {
+    background: var(--secondary);
+    color: white;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+// Forms
+.form-group {
+  margin-bottom: var(--spacing-unit);
+  
+  label {
+    display: block;
+    margin-bottom: calc(var(--spacing-unit) / 4);
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: calc(var(--spacing-unit) / 2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    
+    &:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+  }
+} 

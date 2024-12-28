@@ -100,23 +100,6 @@ class DashboardBridge {
         wp_enqueue_script('react');
         wp_enqueue_script('react-dom');
 
-        // Enqueue dashboard
-        wp_enqueue_script(
-            'athlete-dashboard',
-            get_stylesheet_directory_uri() . '/assets/dist/dashboard/js/components/Dashboard/index.js',
-            ['react', 'react-dom', 'athlete-dashboard-modal'],
-            filemtime(get_stylesheet_directory() . '/assets/dist/dashboard/js/components/Dashboard/index.js'),
-            true
-        );
-
-        // Enqueue dashboard styles
-        wp_enqueue_style(
-            'athlete-dashboard-styles',
-            get_stylesheet_directory_uri() . '/assets/dist/dashboard/scss/dashboard.css',
-            [],
-            filemtime(get_stylesheet_directory() . '/assets/dist/dashboard/scss/dashboard.css')
-        );
-
         // Enqueue Dashicons
         wp_enqueue_style('dashicons');
     }

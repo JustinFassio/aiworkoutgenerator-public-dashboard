@@ -1,164 +1,133 @@
 <?php
-/**
- * Feature Name: Training Persona
- * Description: Manage your training preferences and goals
- * Icon: dashicons-universal-access
- */
 
 namespace AthleteDashboard\Features\TrainingPersona;
 
-use AthleteDashboard\Dashboard\Components\Dashboard;
-use AthleteDashboard\Features\TrainingPersona\Components\Modals\TrainingPersonaModal;
+use AthleteDashboard\Dashboard\Abstracts\AbstractFeature;
+use AthleteDashboard\Features\TrainingPersona\Components\TrainingPersonaForm;
+use AthleteDashboard\Features\TrainingPersona\Api\TrainingPersonaController;
 
-if (!defined('ABSPATH')) {
-    exit;
-}
+class TrainingPersona extends AbstractFeature {
+    protected const FEATURE_ID = 'training-persona';
+    protected const FEATURE_TITLE = 'Training Persona';
+    protected const FEATURE_DESCRIPTION = 'Manage your training preferences and goals';
 
-// Load feature components
-require_once __DIR__ . '/components/TrainingPersona.php';
-require_once __DIR__ . '/components/TrainingPersonaForm.php';
-require_once __DIR__ . '/components/modals/TrainingPersonaModal.php';
+    private ?TrainingPersonaController $api_controller = null;
 
-// Initialize feature
-class TrainingPersona {
-    private static ?TrainingPersona $instance = null;
-
-    public static function getInstance(): TrainingPersona {
-        if (self::$instance === null) {
-            self::$instance = new self();
-        }
-        return self::$instance;
+    public function __construct() {
+        $this->identifier = self::FEATURE_ID;
+        add_action('rest_api_init', [$this, 'register_rest_routes']);
+        add_action('wp_ajax_save_training_persona', [$this, 'handleSave']); // Legacy AJAX support
     }
 
-    private function __construct() {
-        $this->init();
+    public function init(): void {
+        $this->enqueueAssets();
+        $this->register_rest_routes();
     }
 
-    private function init(): void {
-        // Register feature modal
-        add_action('init', [$this, 'registerModal']);
-
-        // Add AJAX handlers
-        add_action('wp_ajax_update_training_persona', [$this, 'handleUpdate']);
-        add_action('wp_ajax_nopriv_update_training_persona', [$this, 'handleUnauthorized']);
+    protected function getFeatureFile(): string {
+        return __FILE__;
     }
 
-    public function registerModal(): void {
-        if (!is_page_template('dashboard.php')) {
+    public function register_rest_routes(): void {
+        $this->api_controller = new TrainingPersonaController();
+        $this->api_controller->register_routes();
+    }
+
+    public function enqueueAssets(): void {
+        if (!is_user_logged_in() || !$this->isEnabled()) {
             return;
         }
 
-        // Create and register modal
-        $modal = new TrainingPersonaModal('training-persona-modal');
-        Dashboard::getInstance()->registerModal($modal);
-    }
-
-    public function handleUpdate(): void {
-        // Verify nonce
-        if (!check_ajax_referer('training_persona_nonce', 'training_persona_nonce', false)) {
-            wp_send_json_error([
-                'message' => __('Invalid security token.', 'athlete-dashboard-child')
-            ]);
-        }
-
-        // Verify user is logged in
-        if (!is_user_logged_in()) {
-            wp_send_json_error([
-                'message' => __('You must be logged in to update your training persona.', 'athlete-dashboard-child')
-            ]);
-        }
-
-        // Get form data
-        $training_level = sanitize_text_field($_POST['training_level'] ?? '');
-        $training_frequency = sanitize_text_field($_POST['training_frequency'] ?? '');
-        $training_goals = array_map('sanitize_text_field', $_POST['training_goals'] ?? []);
-        $preferred_training_time = sanitize_text_field($_POST['preferred_training_time'] ?? '');
-        $additional_notes = sanitize_textarea_field($_POST['additional_notes'] ?? '');
-
-        // Validate required fields
-        if (empty($training_level) || empty($training_frequency) || empty($training_goals)) {
-            wp_send_json_error([
-                'message' => __('Please fill in all required fields.', 'athlete-dashboard-child')
-            ]);
-        }
-
-        // Update user meta
-        $user_id = get_current_user_id();
-        update_user_meta($user_id, '_training_level', $training_level);
-        update_user_meta($user_id, '_training_frequency', $training_frequency);
-        update_user_meta($user_id, '_training_goals', $training_goals);
-        update_user_meta($user_id, '_preferred_training_time', $preferred_training_time);
-        update_user_meta($user_id, '_additional_notes', $additional_notes);
-
-        // Send success response
-        wp_send_json_success([
-            'message' => __('Training persona updated successfully.', 'athlete-dashboard-child'),
-            'data' => [
-                'training_level' => $training_level,
-                'training_frequency' => $training_frequency,
-                'training_goals' => $training_goals,
-                'preferred_training_time' => $preferred_training_time,
-                'additional_notes' => $additional_notes
-            ]
-        ]);
-    }
-
-    public function handleUnauthorized(): void {
-        wp_send_json_error([
-            'message' => __('You must be logged in to update your training persona.', 'athlete-dashboard-child')
-        ]);
-    }
-
-    public function enqueue_assets(): void
-    {
-        if (!$this->is_dashboard_page()) {
-            return;
-        }
-
-        // Enqueue styles
+        // Enqueue PHP-based styles
         wp_enqueue_style(
             'training-persona-styles',
-            get_stylesheet_directory_uri() . '/assets/dist/css/features/training-persona/training-persona.css',
+            $this->getAssetUrl('css/training-persona.css'),
             [],
-            filemtime(get_stylesheet_directory() . '/assets/dist/css/features/training-persona/training-persona.css')
+            filemtime($this->getAssetPath('css/training-persona.css'))
         );
 
-        wp_enqueue_style(
-            'training-persona-modal-styles',
-            get_stylesheet_directory_uri() . '/assets/dist/css/features/training-persona/modal.css',
-            [],
-            filemtime(get_stylesheet_directory() . '/assets/dist/css/features/training-persona/modal.css')
-        );
-
-        // Enqueue scripts
+        // Enqueue React component
         wp_enqueue_script(
-            'training-persona-scripts',
-            get_stylesheet_directory_uri() . '/assets/dist/js/features/training-persona/training-persona.js',
-            ['wp-api'],
-            filemtime(get_stylesheet_directory() . '/assets/dist/js/features/training-persona/training-persona.js'),
+            'training-persona-react',
+            $this->getAssetUrl('js/index.js'),
+            ['wp-element', 'wp-api-fetch'],
+            filemtime($this->getAssetPath('js/index.js')),
             true
         );
-        wp_script_add_data('training-persona-scripts', 'type', 'module');
 
-        wp_enqueue_script(
-            'training-persona-form-handler',
-            get_stylesheet_directory_uri() . '/assets/dist/js/features/training-persona/form-handler.js',
-            ['wp-api'],
-            filemtime(get_stylesheet_directory() . '/assets/dist/js/features/training-persona/form-handler.js'),
-            true
-        );
-        wp_script_add_data('training-persona-form-handler', 'type', 'module');
+        // Localize script with REST API endpoints
+        wp_localize_script('training-persona-react', 'trainingPersonaData', [
+            'endpoints' => [
+                'get' => rest_url('athlete-dashboard/v1/training-persona'),
+                'save' => rest_url('athlete-dashboard/v1/training-persona')
+            ],
+            'nonce' => wp_create_nonce('wp_rest')
+        ]);
+    }
 
-        wp_enqueue_script(
-            'training-persona-modal',
-            get_stylesheet_directory_uri() . '/assets/dist/js/features/training-persona/modal.js',
-            ['wp-api'],
-            filemtime(get_stylesheet_directory() . '/assets/dist/js/features/training-persona/modal.js'),
-            true
-        );
-        wp_script_add_data('training-persona-modal', 'type', 'module');
+    public function render(): void {
+        if (!is_user_logged_in() || !$this->isEnabled()) {
+            return;
+        }
+
+        $user_id = get_current_user_id();
+        $data = $this->getUserData($user_id);
+
+        // Render PHP form for non-JS fallback
+        if (!wp_script_is('training-persona-react', 'done')) {
+            $form = TrainingPersonaForm::create($data);
+            echo $form->render();
+            return;
+        }
+
+        // Render React container
+        $this->renderReactContainer('training-persona-root', [
+            'userData' => $data
+        ]);
+    }
+
+    public function handleSave(): void {
+        check_ajax_referer('training_persona_action', 'nonce');
+
+        if (!is_user_logged_in()) {
+            wp_send_json_error('User not logged in');
+            return;
+        }
+
+        $user_id = get_current_user_id();
+        $data = $this->sanitizeData($_POST);
+
+        update_user_meta($user_id, 'training_persona', $data);
+        wp_send_json_success('Training persona updated successfully');
+    }
+
+    private function getUserData(int $user_id): array {
+        $default_data = [
+            'level' => 'beginner',
+            'goals' => [],
+            'preferences' => [
+                'workoutDuration' => 60,
+                'workoutFrequency' => 3,
+                'preferredTypes' => []
+            ]
+        ];
+
+        $saved_data = get_user_meta($user_id, 'training_persona', true);
+        return is_array($saved_data) ? array_merge($default_data, $saved_data) : $default_data;
+    }
+
+    private function sanitizeData(array $data): array {
+        return [
+            'level' => sanitize_text_field($data['training_level'] ?? 'beginner'),
+            'goals' => isset($data['training_goals']) ? json_decode(stripslashes($data['training_goals']), true) : [],
+            'preferences' => [
+                'workoutDuration' => absint($data['workout_duration'] ?? 60),
+                'workoutFrequency' => absint($data['workout_frequency'] ?? 3),
+                'preferredTypes' => isset($data['preferred_types']) ? json_decode(stripslashes($data['preferred_types']), true) : []
+            ]
+        ];
     }
 }
 
-// Initialize feature
-TrainingPersona::getInstance(); 
+// Initialize the feature
+new TrainingPersona(); 

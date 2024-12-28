@@ -1,0 +1,135 @@
+// Core variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// Reset and base styles
+@import 'reset';
+@import 'typography';
+@import 'layout';
+
+// Core components
+@import '@components/Modal/modal';
+@import '@components/Button/button';
+@import '@components/Form/form';
+
+// Utility classes
+@import 'utilities';
+
+// Theme
+:root {
+    // Colors
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    
+    // Typography
+    --font-family-base: -apple-system, system-ui, sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+    
+    // Spacing
+    --spacing-unit: 0.25rem;
+    --spacing-small: calc(var(--spacing-unit) * 2);
+    --spacing-medium: calc(var(--spacing-unit) * 4);
+    --spacing-large: calc(var(--spacing-unit) * 6);
+    
+    // Border radius
+    --border-radius: 0.25rem;
+    --border-radius-lg: 0.5rem;
+    --border-radius-sm: 0.125rem;
+    
+    // Transitions
+    --transition-base: all 0.2s ease-in-out;
+}
+
+// Dashboard layout
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background-color: var(--color-light);
+
+    &__sidebar {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        padding: var(--spacing-medium);
+    }
+
+    &__main {
+        padding: var(--spacing-medium);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--spacing-large);
+    }
+
+    &__content {
+        background-color: white;
+        border-radius: var(--border-radius);
+        padding: var(--spacing-medium);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Feature container
+.feature {
+    &__header {
+        margin-bottom: var(--spacing-medium);
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-dark);
+    }
+
+    &__description {
+        color: var(--color-secondary);
+        margin-top: var(--spacing-small);
+    }
+
+    &__content {
+        position: relative;
+    }
+}
+
+// Loading states
+.loading {
+    position: relative;
+    min-height: 200px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// Animations
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+} 

@@ -1,8 +1,8 @@
 <?php
-namespace AthleteWorkouts\Dashboard\Abstracts;
+namespace AthleteDashboard\Dashboard\Abstracts;
 
-use AthleteWorkouts\Dashboard\Contracts\FeatureInterface;
-use AthleteWorkouts\Dashboard\Core\AssetManager;
+use AthleteDashboard\Dashboard\Contracts\FeatureInterface;
+use AthleteDashboard\Dashboard\Core\AssetManager;
 
 abstract class AbstractFeature implements FeatureInterface {
     protected static ?self $instance = null;

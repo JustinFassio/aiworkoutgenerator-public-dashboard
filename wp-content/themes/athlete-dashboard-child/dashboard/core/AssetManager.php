@@ -1,5 +1,5 @@
 <?php
-namespace AthleteWorkouts\Dashboard\Core;
+namespace AthleteDashboard\Dashboard\Core;
 
 class AssetManager {
     private static ?self $instance = null;

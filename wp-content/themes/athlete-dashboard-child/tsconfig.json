@@ -1,29 +1,38 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["assets/src/*"],
-      "@components/*": ["assets/src/dashboard/js/components/*"],
-      "@features/*": ["assets/src/dashboard/js/features/*"],
-      "@utils/*": ["assets/src/dashboard/js/utils/*"],
-      "@styles/*": ["assets/src/dashboard/scss/*"]
+      "@dashboard/*": ["dashboard/*"],
+      "@features/*": ["features/*"],
+      "@components/*": ["dashboard/components/*"],
+      "@types/*": ["dashboard/types/*"],
+      "@events": ["dashboard/events.ts"]
     }
   },
-  "include": ["assets/src"],
+  "include": [
+    "dashboard/**/*.ts",
+    "dashboard/**/*.tsx",
+    "features/**/*.ts",
+    "features/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/dist/**"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 } 

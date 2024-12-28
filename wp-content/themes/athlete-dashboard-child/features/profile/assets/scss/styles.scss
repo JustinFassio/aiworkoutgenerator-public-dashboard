@@ -1,0 +1,116 @@
+/* Import global styles */
+@import '@dashboard/styles/variables';
+@import '@dashboard/styles/mixins';
+
+/* Profile-specific variables */
+:root {
+  --profile-avatar-size: 120px;
+  --profile-header-height: 200px;
+}
+
+/* Profile layout */
+.profile {
+  @include card;
+
+  &__header {
+    @include flex-between;
+    margin-bottom: var(--spacing-large);
+  }
+
+  &__avatar {
+    width: var(--profile-avatar-size);
+    height: var(--profile-avatar-size);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: var(--spacing-medium);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__name {
+    @include heading-1;
+    margin-bottom: var(--spacing-small);
+  }
+
+  &__bio {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-medium);
+  }
+}
+
+/* Profile form */
+.profile-form {
+  &__group {
+    margin-bottom: var(--spacing-large);
+  }
+
+  &__label {
+    @extend .form-label;
+  }
+
+  &__field {
+    @extend .form-field;
+  }
+
+  &__actions {
+    @include flex-between;
+    margin-top: var(--spacing-large);
+  }
+
+  &__submit {
+    @extend .button--primary;
+  }
+
+  &__cancel {
+    @extend .button--secondary;
+  }
+}
+
+/* Profile stats */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+
+  &__item {
+    @include card;
+    text-align: center;
+  }
+
+  &__value {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-small);
+  }
+
+  &__label {
+    color: var(--text-color);
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Responsive adjustments */
+@include respond-to('sm') {
+  .profile {
+    &__header {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}
+
+@include respond-to('md') {
+  .profile-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} 

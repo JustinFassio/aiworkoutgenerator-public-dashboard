@@ -1,0 +1,133 @@
+@import '@dashboard/styles/variables';
+@import '@dashboard/styles/mixins';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-index-modal);
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: var(--spacing-medium);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    @include flex-between;
+    padding: var(--spacing-medium);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__title {
+    @include heading-2;
+    margin: 0;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    padding: var(--spacing-small);
+    cursor: pointer;
+    color: var(--text-color);
+    @include transition(color);
+
+    &:hover {
+      color: var(--error-color);
+    }
+  }
+
+  &__body {
+    flex: 1;
+    padding: var(--spacing-medium);
+    overflow-y: auto;
+  }
+
+  &__footer {
+    @include flex-between;
+    padding: var(--spacing-medium);
+    border-top: 1px solid var(--border-color);
+    gap: var(--spacing-medium);
+
+    button {
+      flex: 1;
+    }
+  }
+}
+
+.profile-form {
+  &__avatar {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: var(--spacing-medium);
+      border: 2px solid var(--border-color);
+      object-fit: cover;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  &__group {
+    margin-bottom: var(--spacing-large);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-weight: var(--font-weight-bold);
+
+    input[type="checkbox"] {
+      margin-right: var(--spacing-small);
+    }
+  }
+
+  &__field {
+    @include form-field;
+  }
+}
+
+@include respond-to('sm') {
+  .modal {
+    padding: var(--spacing-medium);
+
+    &__content {
+      max-height: 80vh;
+    }
+  }
+} 

@@ -1,0 +1,44 @@
+/* Global Variables */
+:root {
+  /* Colors */
+  --primary-color: #0073aa;
+  --secondary-color: #23282d;
+  --success-color: #46b450;
+  --error-color: #dc3232;
+  --warning-color: #ffb900;
+  --background-color: #f1f1f1;
+  --text-color: #444;
+  --border-color: #ddd;
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-size-base: 14px;
+  --font-size-small: 12px;
+  --font-size-large: 16px;
+  --line-height-base: 1.4;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+
+  /* Spacing */
+  --spacing-unit: 8px;
+  --spacing-small: var(--spacing-unit);
+  --spacing-medium: calc(var(--spacing-unit) * 2);
+  --spacing-large: calc(var(--spacing-unit) * 3);
+  --spacing-xlarge: calc(var(--spacing-unit) * 4);
+
+  /* Layout */
+  --border-radius: 4px;
+  --container-width: 1200px;
+  --sidebar-width: 280px;
+
+  /* Z-index */
+  --z-index-modal: 1000;
+  --z-index-dropdown: 100;
+  --z-index-header: 90;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+} 

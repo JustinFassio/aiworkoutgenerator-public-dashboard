@@ -1,108 +1,182 @@
 <?php
 /**
- * Profile Component
+ * Profile Feature
  * 
  * Handles profile data management and synchronization between WordPress Admin
- * and Athlete Dashboard interfaces.
+ * and React Dashboard interfaces.
  */
 
 namespace AthleteDashboard\Features\Profile\Components;
 
-use AthleteDashboard\Features\Profile\Services\ProfileService;
-use AthleteDashboard\Features\Profile\Models\ProfileData;
-use AthleteDashboard\Features\Profile\Components\Modals\ProfileModal;
+use AthleteDashboard\Dashboard\Contracts\FeatureInterface;
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-class Profile {
-    private ProfileService $service;
-    private ProfileData $profile_data;
-    private ProfileModal $modal;
+class Profile implements FeatureInterface {
+    private static ?Profile $instance = null;
+    private string $identifier = 'profile';
 
-    public function __construct() {
-        $this->service = new ProfileService();
-        try {
-            $this->profile_data = $this->service->getProfileData();
-            $this->modal = new ProfileModal('profile-modal', $this->profile_data->toArray());
-            $this->init();
-        } catch (\Exception $e) {
-            error_log('Profile initialization failed: ' . $e->getMessage());
-            $this->profile_data = new ProfileData();
-            $this->modal = new ProfileModal('profile-modal', []);
+    /**
+     * Register the feature
+     */
+    public static function register(): void {
+        if (self::$instance === null) {
+            self::$instance = new self();
         }
+        self::$instance->init();
     }
 
-    private function init(): void {
+    /**
+     * Initialize the feature
+     */
+    public function init(): void {
+        // Register feature with dashboard
+        add_filter('athlete_dashboard_features', [$this, 'registerFeature']);
+        
+        // Handle AJAX updates
         add_action('wp_ajax_update_profile', [$this, 'handleProfileUpdate']);
-        add_action('athlete_dashboard_profile_form', [$this, 'render_form']);
-        add_action('athlete_dashboard_profile_modal', [$this, 'render_modal']);
+        
+        // Add admin profile fields
+        add_action('show_user_profile', [$this, 'render_admin_fields']);
+        add_action('edit_user_profile', [$this, 'render_admin_fields']);
+        add_action('personal_options_update', [$this, 'save_admin_fields']);
+        add_action('edit_user_profile_update', [$this, 'save_admin_fields']);
     }
 
-    public function render_form(): void {
-        try {
-            $form = new ProfileForm('profile-form', $this->profile_data->getFields(), $this->profile_data->toArray(), [
-                'context' => 'page',
-                'submitText' => __('Save Profile', 'athlete-dashboard-child')
-            ]);
-            $form->render();
-        } catch (\Exception $e) {
-            error_log('Failed to render profile form: ' . $e->getMessage());
-            echo '<div class="error">Failed to load profile form. Please try again later.</div>';
+    /**
+     * Get the feature identifier
+     */
+    public function getIdentifier(): string {
+        return $this->identifier;
+    }
+
+    /**
+     * Get feature metadata
+     */
+    public function getMetadata(): array {
+        $current_user = wp_get_current_user();
+        
+        return [
+            'id' => $this->identifier,
+            'title' => __('Profile', 'athlete-dashboard'),
+            'description' => __('Update your personal information and preferences.', 'athlete-dashboard'),
+            'icon' => 'dashicons-admin-users',
+            'react_component' => 'Profile',
+            'props' => [
+                'user' => [
+                    'name' => $current_user->display_name,
+                    'email' => $current_user->user_email,
+                    'athlete_type' => get_user_meta($current_user->ID, 'athlete_type', true) ?: 'beginner'
+                ],
+                'onSave' => [
+                    'action' => 'update_profile',
+                    'nonce' => wp_create_nonce('update_profile')
+                ]
+            ]
+        ];
+    }
+
+    /**
+     * Check if the feature is enabled
+     */
+    public function isEnabled(): bool {
+        return true;
+    }
+
+    /**
+     * Register the Profile feature with the dashboard
+     */
+    public function registerFeature(array $features): array {
+        if ($this->isEnabled()) {
+            $features[] = $this->getMetadata();
         }
+        return $features;
     }
 
-    public function render_modal(): void {
-        $this->modal->render();
-    }
-
+    /**
+     * Handle profile update AJAX request
+     */
     public function handleProfileUpdate(): void {
-        try {
-            // Verify nonce
-            if (!isset($_POST['profile_nonce']) || !wp_verify_nonce($_POST['profile_nonce'], 'profile_nonce')) {
-                throw new \Exception('Invalid security token');
-            }
+        check_ajax_referer('update_profile');
 
-            // Get current user ID
-            $user_id = get_current_user_id();
-            if (!$user_id) {
-                throw new \Exception('User not logged in');
-            }
-
-            // Collect and sanitize form data
-            $data = [];
-            foreach ($this->profile_data->getFields() as $field => $config) {
-                if (isset($_POST[$field])) {
-                    $data[$field] = $_POST[$field];
-                }
-            }
-
-            $result = $this->service->updateProfile($user_id, $data);
-            if ($result) {
-                $updated_data = $this->service->getProfileData($user_id)->toArray();
-                wp_send_json_success([
-                    'message' => __('Profile updated successfully', 'athlete-dashboard-child'),
-                    'data' => $updated_data
-                ]);
-            } else {
-                wp_send_json_error([
-                    'message' => __('Failed to update profile', 'athlete-dashboard-child')
-                ]);
-            }
-        } catch (\Exception $e) {
-            error_log('Profile update failed: ' . $e->getMessage());
-            wp_send_json_error([
-                'message' => __('An error occurred while updating profile', 'athlete-dashboard-child')
-            ]);
+        $data = json_decode(file_get_contents('php://input'), true);
+        
+        if (!current_user_can('edit_user', get_current_user_id())) {
+            wp_send_json_error(['message' => __('Permission denied.', 'athlete-dashboard')]);
+            return;
         }
+
+        $user_data = [
+            'ID' => get_current_user_id(),
+            'display_name' => sanitize_text_field($data['name']),
+            'user_email' => sanitize_email($data['email'])
+        ];
+
+        $result = wp_update_user($user_data);
+
+        if (is_wp_error($result)) {
+            wp_send_json_error([
+                'message' => $result->get_error_message()
+            ]);
+            return;
+        }
+
+        // Update athlete type if provided
+        if (isset($data['athlete_type'])) {
+            update_user_meta($user_data['ID'], 'athlete_type', sanitize_text_field($data['athlete_type']));
+        }
+
+        wp_send_json_success([
+            'message' => __('Profile updated successfully.', 'athlete-dashboard'),
+            'user' => [
+                'name' => $user_data['display_name'],
+                'email' => $user_data['user_email'],
+                'athlete_type' => get_user_meta($user_data['ID'], 'athlete_type', true)
+            ]
+        ]);
     }
 
-    public function get_profile_data(): array {
-        return $this->profile_data->toArray();
+    /**
+     * Render additional fields in the WordPress admin user profile
+     * 
+     * @param WP_User $user The user object being edited
+     */
+    public function render_admin_fields($user): void {
+        if (!current_user_can('edit_user', $user->ID)) {
+            return;
+        }
+        ?>
+        <h2><?php _e('Athlete Dashboard Settings', 'athlete-dashboard'); ?></h2>
+        <table class="form-table">
+            <tr>
+                <th><label for="athlete_type"><?php _e('Athlete Type', 'athlete-dashboard'); ?></label></th>
+                <td>
+                    <select name="athlete_type" id="athlete_type">
+                        <option value="beginner" <?php selected(get_user_meta($user->ID, 'athlete_type', true), 'beginner'); ?>><?php _e('Beginner', 'athlete-dashboard'); ?></option>
+                        <option value="intermediate" <?php selected(get_user_meta($user->ID, 'athlete_type', true), 'intermediate'); ?>><?php _e('Intermediate', 'athlete-dashboard'); ?></option>
+                        <option value="advanced" <?php selected(get_user_meta($user->ID, 'athlete_type', true), 'advanced'); ?>><?php _e('Advanced', 'athlete-dashboard'); ?></option>
+                    </select>
+                    <p class="description"><?php _e('Select the athlete\'s experience level', 'athlete-dashboard'); ?></p>
+                </td>
+            </tr>
+        </table>
+        <?php
     }
 
-    public function get_fields(): array {
-        return $this->profile_data->getFields();
+    /**
+     * Save the custom admin fields
+     * 
+     * @param int $user_id The ID of the user being edited
+     */
+    public function save_admin_fields($user_id): void {
+        if (!current_user_can('edit_user', $user_id)) {
+            return;
+        }
+
+        if (isset($_POST['athlete_type'])) {
+            update_user_meta($user_id, 'athlete_type', sanitize_text_field($_POST['athlete_type']));
+        }
     }
 } 

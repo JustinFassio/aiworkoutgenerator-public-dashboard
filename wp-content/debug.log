@@ -50980,3 +50980,1137 @@ Stack trace:
 )
 
 [27-Dec-2024 23:54:27 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:18:24 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:18:24 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:18:24 UTC] Raw meta value for injuries: 
+[28-Dec-2024 00:18:24 UTC] Processed value for injuries: Array
+(
+)
+
+[28-Dec-2024 00:18:24 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:18:28 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:18:28 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:18:28 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:19:50 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:19:50 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:19:50 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:19:51 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:19:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:19:51 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:19:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:19:51 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:19:51 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:19:51 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:19:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:19:51 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:21:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:21:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:21:35 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:22:44 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:22:44 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:22:44 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:22:44 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:22:44 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:22:44 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:22:44 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:22:44 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:22:44 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:22:44 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:22:44 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:22:45 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:46:51 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:46:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:46:51 UTC] Raw meta value for injuries: 
+[28-Dec-2024 00:46:51 UTC] Processed value for injuries: Array
+(
+)
+
+[28-Dec-2024 00:46:51 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:46:55 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:46:55 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:46:55 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:46:55 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:46:55 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:46:55 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:46:55 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:46:55 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:46:55 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:46:55 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:46:55 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:46:55 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:31 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:31 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:31 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:52:34 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:34 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:34 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:34 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:34 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:34 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:34 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:52:35 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:52:35 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:54:44 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:54:44 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:54:44 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:56:23 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:23 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:23 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:56:37 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:37 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:37 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:56:39 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:39 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:39 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 00:56:42 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 00:56:42 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:51 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:51 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:51 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class AthleteDashboard\Features\Profile\Components\Profile does not have a method "render_admin_fields" in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(876): do_action('show_user_profi...', Object(WP_User))
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#4 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php on line 324
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Raw meta value for injuries: [{"value":"Arch","type":"custom","label":"Arch"}]
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] Processed value for injuries: Array
+(
+    [0] => Array
+        (
+            [value] => Arch
+            [type] => custom
+            [label] => Arch
+        )
+
+)
+
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:00:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:03:27 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Features\Profile\Components\Profile" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/index.php:17
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/index.php on line 17
+[28-Dec-2024 01:03:30 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Features\Profile\Components\Profile" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/index.php:17
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin.php(34): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(10): require_once('/Users/justinfa...')
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#7 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/profile/index.php on line 17
+[28-Dec-2024 01:03:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[28-Dec-2024 01:03:30 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[28-Dec-2024 01:08:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:08:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:08:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:11:48 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/dashboard/scss/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 81
+[28-Dec-2024 01:11:48 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/dashboard/js/components/Dashboard/index.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 89
+[28-Dec-2024 01:11:48 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:11:48 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:11:48 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:21:17 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/dashboard/scss/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 81
+[28-Dec-2024 01:21:17 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/dashboard/js/components/Dashboard/index.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 89
+[28-Dec-2024 01:21:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:21:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:21:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 01:26:57 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 02:14:53 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/main.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 81
+[28-Dec-2024 02:14:54 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 02:14:54 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 02:15:49 UTC] Automatic updates starting...
+[28-Dec-2024 02:15:49 UTC]   Automatic plugin updates starting...
+[28-Dec-2024 02:15:49 UTC]   Automatic plugin updates complete.
+[28-Dec-2024 02:15:49 UTC] Automatic updates complete.
+[28-Dec-2024 02:17:49 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 02:19:50 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 02:21:50 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 02:23:51 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 02:25:52 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 13:08:59 UTC] PHP Fatal error:  Access level to AthleteDashboard\Features\TrainingPersona\TrainingPersona::init() must be public (as in class AthleteDashboard\Dashboard\Contracts\FeatureInterface) in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 30
+[28-Dec-2024 13:11:00 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:11:10 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#7 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:13:01 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:15:02 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:16:56 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:17:56 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:19:57 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:20:48 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#7 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:21:58 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 16
+[28-Dec-2024 13:23:59 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Components\Form" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php:12
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php(13): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/components/TrainingPersonaForm.php on line 12
+[28-Dec-2024 13:24:47 UTC] PHP Fatal error:  Uncaught Error: Interface "AthleteDashboard\Core\Feature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:8
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 8
+[28-Dec-2024 13:26:00 UTC] PHP Fatal error:  Uncaught Error: Interface "AthleteDashboard\Core\Feature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:8
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#5 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 8
+[28-Dec-2024 13:30:58 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Core\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:8
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 8
+[28-Dec-2024 13:36:46 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Core\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 13:53:58 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Core\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 13:58:16 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Core\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:01:19 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Core\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:03:14 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:03:26 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:03:40 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:07:22 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(13): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#6 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:07:28 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/justinfa...')
+#5 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:07:29 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Abstracts\AbstractFeature" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:9
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(30): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin.php(34): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(10): require_once('/Users/justinfa...')
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#7 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 9
+[28-Dec-2024 14:08:54 UTC] PHP Fatal error:  Uncaught Error: Interface "AthleteWorkouts\Dashboard\Contracts\FeatureInterface" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/abstracts/AbstractFeature.php:7
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php(18): require_once()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-settings.php(668): include('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-config.php(105): require_once('/Users/justinfa...')
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-load.php(50): require_once('/Users/justinfa...')
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/admin.php(34): require_once('/Users/justinfa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/user-edit.php(10): require_once('/Users/justinfa...')
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-admin/profile.php(18): require_once('/Users/justinfa...')
+#7 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/abstracts/AbstractFeature.php on line 7
+[28-Dec-2024 14:10:55 UTC] PHP Fatal error:  Class AthleteDashboard\Features\TrainingPersona\TrainingPersona contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (AthleteDashboard\Dashboard\Abstracts\AbstractFeature::getFeatureFile, AthleteDashboard\Dashboard\Contracts\FeatureInterface::init) in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 0
+[28-Dec-2024 14:11:59 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Dashboard\Core\DashboardBridge" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/templates/dashboard.php:16
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(19): require_once('/Users/justinfa...')
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#3 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/templates/dashboard.php on line 16
+[28-Dec-2024 14:13:45 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/main.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 93
+[28-Dec-2024 14:13:45 UTC] PHP Warning:  Undefined variable $registry in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/core/init.php on line 44
+[28-Dec-2024 14:13:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getFeatures() on null in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/core/init.php:44
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(326): AthleteDashboard\Dashboard\Core\{closure}(Array)
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/post-template.php(859): apply_filters('body_class', Array, Array)
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/post-template.php(622): get_body_class(Array)
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/header-minimal.php(19): body_class('athlete-dashboa...')
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/template.php(810): require_once('/Users/justinfa...')
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/template.php(745): load_template('/Users/justinfa...', true, Array)
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/templates/dashboard.php(19): get_header('minimal')
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/template-loader.php(106): include('/Users/justinfa...')
+#10 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(19): require_once('/Users/justinfa...')
+#11 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#12 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/core/init.php on line 44
+[28-Dec-2024 14:13:45 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:16:27 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/assets/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 93
+[28-Dec-2024 14:16:27 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/dashboard/assets/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 101
+[28-Dec-2024 14:16:27 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:16:27 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:16:27 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:16:27 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:16:27 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:16:27 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:16:27 UTC] Automatic updates starting...
+[28-Dec-2024 14:16:27 UTC]   Automatic plugin updates starting...
+[28-Dec-2024 14:16:27 UTC]   Automatic plugin updates complete.
+[28-Dec-2024 14:16:28 UTC] Automatic updates complete.
+[28-Dec-2024 14:18:38 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:18:38 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:18:38 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:18:38 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:27:53 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:27:53 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:27:53 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:27:54 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:32:44 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:32:44 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:32:44 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:32:44 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:39:13 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:39:13 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:39:14 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:39:14 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:39:14 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:39:14 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Features\TrainingPersona\Api\TrainingPersonaController" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:32
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): AthleteDashboard\Features\TrainingPersona\TrainingPersona->register_rest_routes(Object(WP_REST_Server))
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/rest-api.php(589): do_action('rest_api_init', Object(WP_REST_Server))
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/rest-api.php(413): rest_get_server()
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp.php(813): WP->parse_request('')
+#10 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php(1336): WP->main('')
+#11 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(16): wp()
+#12 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#13 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 32
+[28-Dec-2024 14:39:14 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:49:10 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:49:10 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 260
+[28-Dec-2024 14:49:10 UTC] PHP Warning:  filemtime(): stat failed for /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/functions.php on line 268
+[28-Dec-2024 14:49:10 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 14:49:10 UTC] PHP Fatal error:  Uncaught Error: Class "AthleteDashboard\Features\TrainingPersona\Api\TrainingPersonaController" not found in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php:32
+Stack trace:
+#0 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): AthleteDashboard\Features\TrainingPersona\TrainingPersona->register_rest_routes(Object(WP_REST_Server))
+#1 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/rest-api.php(589): do_action('rest_api_init', Object(WP_REST_Server))
+#4 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/rest-api.php(413): rest_get_server()
+#5 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#8 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/class-wp.php(813): WP->parse_request('')
+#10 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php(1336): WP->main('')
+#11 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-blog-header.php(16): wp()
+#12 /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/index.php(17): require('/Users/justinfa...')
+#13 {main}
+  thrown in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/training-persona/index.php on line 32
+[28-Dec-2024 14:56:04 UTC] Dashboard CSS file not found at: /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/css/dashboard.css
+[28-Dec-2024 14:56:04 UTC] Dashboard JS file not found at: /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/assets/dist/js/dashboard.js
+[28-Dec-2024 14:56:04 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:56:04 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:56:04 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 14:56:04 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085
+[28-Dec-2024 15:46:44 UTC] Dashboard CSS file not found in any of the expected locations
+[28-Dec-2024 15:46:44 UTC] Dashboard JS file not found in any of the expected locations
+[28-Dec-2024 15:46:44 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/README.template.md/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 15:46:44 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/app/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 15:46:44 UTC] PHP Warning:  file_get_contents(/Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-content/themes/athlete-dashboard-child/features/overview/index.php): Failed to open stream: No such file or directory in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6864
+[28-Dec-2024 15:46:44 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/justinfassio/Local Sites/aiworkoutgenerator-local/app/public/wp-includes/functions.php on line 6085

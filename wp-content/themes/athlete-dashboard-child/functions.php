@@ -12,10 +12,20 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
-// Load dashboard framework
+// Load dashboard framework core files in correct order
 require_once __DIR__ . '/dashboard/contracts/FeatureInterface.php';
-require_once __DIR__ . '/dashboard/contracts/ModalInterface.php';
+require_once __DIR__ . '/dashboard/abstracts/AbstractFeature.php';
+require_once __DIR__ . '/dashboard/components/Form/Form.php';
 require_once __DIR__ . '/dashboard/components/Dashboard.php';
+require_once __DIR__ . '/dashboard/components/Header.php';
+require_once __DIR__ . '/dashboard/components/Footer.php';
+require_once __DIR__ . '/dashboard/components/Sidebar.php';
+require_once __DIR__ . '/dashboard/core/FeatureRegistry.php';
+require_once __DIR__ . '/dashboard/core/DependencyManager.php';
+require_once __DIR__ . '/dashboard/core/AssetManager.php';
+require_once __DIR__ . '/dashboard/core/EventManager.php';
+require_once __DIR__ . '/dashboard/core/dashboard-bridge.php';
+require_once __DIR__ . '/dashboard/core/init.php';
 
 // Load features
 $features_dir = __DIR__ . '/features';
@@ -68,39 +78,103 @@ function athlete_dashboard_enqueue_assets() {
         wp_get_theme()->get('Version')
     );
 
-    // jQuery (ensure it's loaded)
-    wp_enqueue_script('jquery');
+    // Only proceed with dashboard assets if we're on the dashboard template
+    if (!is_page_template('dashboard.php')) {
+        return;
+    }
 
-    // Dashboard specific assets
-    if (is_page_template('dashboard.php')) {
-        // Dashboard styles
-        wp_enqueue_style(
-            'athlete-dashboard-styles',
-            get_stylesheet_directory_uri() . '/assets/dist/css/dashboard/dashboard.css',
-            array('athlete-dashboard-style', 'dashicons'),
-            wp_get_theme()->get('Version')
-        );
+    // Define possible asset paths (in order of preference)
+    $asset_paths = [
+        'new' => [
+            'css' => '/assets/dist/css/dashboard.css',
+            'js' => '/assets/dist/js/dashboard.js'
+        ],
+        'legacy' => [
+            'css' => '/dashboard/assets/css/dashboard.css',
+            'js' => '/dashboard/assets/js/dashboard.js'
+        ]
+    ];
 
-        // Dashboard scripts
-        wp_register_script(
-            'dashboard-scripts',
-            get_stylesheet_directory_uri() . '/assets/dist/js/dashboard/dashboard.js',
-            array('jquery'),
-            wp_get_theme()->get('Version'),
-            true
-        );
-        wp_script_add_data('dashboard-scripts', 'type', 'module');
+    // Find and enqueue CSS
+    $css_file = '';
+    foreach ($asset_paths as $path_set) {
+        $temp_path = get_stylesheet_directory() . $path_set['css'];
+        if (file_exists($temp_path)) {
+            $css_file = $temp_path;
+            wp_enqueue_style(
+                'athlete-dashboard-core-styles',
+                get_stylesheet_directory_uri() . $path_set['css'],
+                ['athlete-dashboard-style'],
+                filemtime($temp_path)
+            );
+            break;
+        }
+    }
+    if (!$css_file) {
+        error_log('Dashboard CSS file not found in any of the expected locations');
+    }
 
-        // Localize scripts
-        wp_localize_script('dashboard-scripts', 'athleteDashboard', array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('dashboard_nonce')
-        ));
+    // Find and enqueue JS
+    $js_file = '';
+    foreach ($asset_paths as $path_set) {
+        $temp_path = get_stylesheet_directory() . $path_set['js'];
+        if (file_exists($temp_path)) {
+            $js_file = $temp_path;
+            wp_enqueue_script(
+                'athlete-dashboard-core-scripts',
+                get_stylesheet_directory_uri() . $path_set['js'],
+                ['wp-api', 'wp-element'],
+                filemtime($temp_path),
+                true
+            );
+            wp_script_add_data('athlete-dashboard-core-scripts', 'type', 'module');
+            break;
+        }
+    }
+    if (!$js_file) {
+        error_log('Dashboard JS file not found in any of the expected locations');
+    }
 
-        wp_enqueue_script('dashboard-scripts');
+    // If we found and enqueued the JS file, add the localized data
+    if ($js_file) {
+        $current_user = wp_get_current_user();
+        wp_localize_script('athlete-dashboard-core-scripts', 'athleteDashboardData', [
+            'user' => [
+                'id' => $current_user->ID,
+                'name' => $current_user->display_name,
+                'email' => $current_user->user_email,
+                'roles' => $current_user->roles,
+            ],
+            'restNonce' => wp_create_nonce('wp_rest'),
+            'restUrl' => rest_url('athlete-dashboard/v1'),
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+            'features' => athlete_dashboard_get_active_features(),
+        ]);
     }
 }
 add_action('wp_enqueue_scripts', 'athlete_dashboard_enqueue_assets');
+
+/**
+ * Get active features and their metadata
+ */
+function athlete_dashboard_get_active_features() {
+    $features = ['profile', 'workout', 'training-persona'];
+    $active_features = [];
+
+    foreach ($features as $feature) {
+        $feature_class = ucfirst($feature) . 'Feature';
+        if (class_exists($feature_class)) {
+            $feature_instance = new $feature_class();
+            $active_features[$feature] = [
+                'identifier' => $feature_instance->getIdentifier(),
+                'metadata' => $feature_instance->getMetadata(),
+                'enabled' => $feature_instance->isEnabled(),
+            ];
+        }
+    }
+
+    return $active_features;
+}
 
 /**
  * Add API key settings to WordPress admin

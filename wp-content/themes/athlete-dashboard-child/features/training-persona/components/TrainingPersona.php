@@ -7,9 +7,9 @@
 
 namespace AthleteDashboard\Features\TrainingPersona\Components;
 
+use AthleteDashboard\Dashboard\Components\Modal;
 use AthleteDashboard\Features\TrainingPersona\Services\TrainingPersonaService;
 use AthleteDashboard\Features\TrainingPersona\Models\TrainingPersonaData;
-use AthleteDashboard\Features\TrainingPersona\Components\Modals\TrainingPersonaModal;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
 class TrainingPersona {
     private TrainingPersonaService $service;
     private TrainingPersonaData $persona_data;
-    private TrainingPersonaModal $modal;
+    private Modal $modal;
 
     public function __construct() {
         $this->service = new TrainingPersonaService();
@@ -29,14 +29,18 @@ class TrainingPersona {
             $this->persona_data = new TrainingPersonaData();
         }
         
-        $this->modal = new TrainingPersonaModal('training-persona-modal', $this->persona_data->toArray());
+        $this->modal = new Modal([
+            'id' => 'training-persona-modal',
+            'title' => __('Edit Training Persona', 'athlete-dashboard-child'),
+            'content' => $this->get_modal_content()
+        ]);
+        
         $this->init();
     }
 
     private function init(): void {
         add_action('wp_ajax_update_training_persona', [$this, 'handleTrainingPersonaUpdate']);
         add_action('athlete_dashboard_training_persona_form', [$this, 'render_form']);
-        add_action('athlete_dashboard_training_persona_modal', [$this, 'render_modal']);
         add_action('wp_enqueue_scripts', [$this, 'enqueueAssets']);
     }
 
@@ -47,51 +51,40 @@ class TrainingPersona {
 
         // Enqueue training persona-specific styles
         wp_enqueue_style(
-            'training-persona-form',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/css/training-persona-form.css',
-            [],
-            '1.0.0'
+            'training-persona-styles',
+            get_stylesheet_directory_uri() . '/assets/dist/css/training-persona.css',
+            ['athlete-dashboard-core-styles'],
+            filemtime(get_stylesheet_directory() . '/assets/dist/css/training-persona.css')
         );
 
         // Enqueue training persona-specific scripts
-        wp_register_script(
-            'training-persona-form-handler',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/form-handler.js',
-            ['jquery'],
-            '1.0.0',
+        wp_enqueue_script(
+            'training-persona-scripts',
+            get_stylesheet_directory_uri() . '/assets/dist/js/training-persona/index.js',
+            ['dashboard-core-scripts'],
+            filemtime(get_stylesheet_directory() . '/assets/dist/js/training-persona/index.js'),
             true
         );
+        wp_script_add_data('training-persona-scripts', 'type', 'module');
+    }
 
-        wp_register_script(
-            'training-persona-form',
-            get_stylesheet_directory_uri() . '/features/training-persona/assets/js/training-persona-form.js',
-            ['jquery', 'training-persona-form-handler'],
-            '1.0.0',
-            true
-        );
-
-        wp_enqueue_script('training-persona-form-handler');
-        wp_enqueue_script('training-persona-form');
-
-        // Enqueue modal assets
-        $this->modal->enqueueAssets();
+    private function get_modal_content(): string {
+        ob_start();
+        $this->render_form();
+        return ob_get_clean();
     }
 
     public function render_form(): void {
         try {
             $form = new TrainingPersonaForm('training-persona-form', $this->persona_data->getFields(), $this->persona_data->toArray(), [
-                'context' => 'page',
-                'submitText' => __('Save Training Persona', 'athlete-dashboard-child')
+                'context' => 'modal',
+                'submitText' => __('Save Changes', 'athlete-dashboard-child')
             ]);
             $form->render();
         } catch (\Exception $e) {
             error_log('Failed to render training persona form: ' . $e->getMessage());
             echo '<div class="error">Failed to load training persona form. Please try again later.</div>';
         }
-    }
-
-    public function render_modal(): void {
-        $this->modal->render();
     }
 
     public function handleTrainingPersonaUpdate(): void {

@@ -1,0 +1,125 @@
+/* Import variables and mixins */
+@import 'variables';
+@import 'mixins';
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-medium);
+}
+
+p {
+  margin-bottom: var(--spacing-medium);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  @include transition(color);
+
+  &:hover {
+    color: darken(var(--primary-color), 10%);
+  }
+}
+
+/* Buttons */
+.button {
+  @include button-base;
+  
+  &--primary {
+    background-color: var(--primary-color);
+    color: white;
+
+    &:hover {
+      background-color: darken(var(--primary-color), 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--secondary-color);
+    color: white;
+
+    &:hover {
+      background-color: darken(var(--secondary-color), 10%);
+    }
+  }
+}
+
+/* Forms */
+.form-field {
+  @include form-field;
+  margin-bottom: var(--spacing-medium);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-small);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Layout */
+.container {
+  @include container;
+}
+
+.card {
+  @include card;
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-small { margin-top: var(--spacing-small); }
+.mt-medium { margin-top: var(--spacing-medium); }
+.mt-large { margin-top: var(--spacing-large); }
+
+.mb-small { margin-bottom: var(--spacing-small); }
+.mb-medium { margin-bottom: var(--spacing-medium); }
+.mb-large { margin-bottom: var(--spacing-large); }
+
+.flex-center { @include flex-center; }
+.flex-between { @include flex-between; }
+
+/* Responsive utilities */
+@include respond-to('sm') {
+  .hidden-sm-up { display: none !important; }
+}
+
+@include respond-to('md') {
+  .hidden-md-up { display: none !important; }
+}
+
+@include respond-to('lg') {
+  .hidden-lg-up { display: none !important; }
+}
+
+@include respond-to('xl') {
+  .hidden-xl-up { display: none !important; }
+} 

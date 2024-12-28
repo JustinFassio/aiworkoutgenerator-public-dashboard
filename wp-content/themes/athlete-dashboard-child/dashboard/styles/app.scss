@@ -1,0 +1,31 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+
+    &__sidebar {
+        position: sticky;
+        top: 2rem;
+        height: fit-content;
+    }
+
+    &__main {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+
+        &__sidebar {
+            position: static;
+        }
+    }
+} 
